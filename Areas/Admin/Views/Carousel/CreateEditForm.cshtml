@@ -1,0 +1,25 @@
+@model CarouselItem
+@{
+    if (ViewBag.Action != null)
+    {
+        <form asp-action="@ViewBag.Action" method="post">
+            @{
+                if(ViewBag.Action == nameof(CarouselController.Edit))
+                {
+                   <input asp-for="ID" type="hidden"> 
+                }
+            }
+            
+            <div class="form-group">
+                <label asp-for="ImageSource">Image Source</label>
+                <input asp-for="ImageSource" type="text" class="form-control" placeholder="Enter image source">
+            </div>
+            <div class="form-group">
+                <label asp-for="ImageAlt">Image Alt</label>
+                <input asp-for="ImageAlt" type="text" class="form-control" placeholder="Enter image alt">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+    }
+}

@@ -1,0 +1,12 @@
+﻿@model Product
+@{
+    ViewData["Title"] = "Create";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>CREATE</p>
+
+@{
+    ViewBag.Action = nameof(ProductController.Create);
+}
+<partial name="CreateEditForm" model="Model">
