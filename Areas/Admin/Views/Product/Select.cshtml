@@ -1,48 +1,45 @@
-﻿@model IndexViewModel
-
-@{
-    ViewData["Title"] = "Products";
+﻿@{
+    ViewData["Title"] = "Carousel Items";
 }
+
 <h1>@ViewData["Title"]</h1>
 
-<p>SELECT</p>
+<p>This page shows content of databaseFake</p>
 
-<a class="btn btn-primary" role="button" asp-action="Create">Create new product</a>
+
+<a asp-action="Create">Create new Carousel Item</a>
+
+
 
 <table class="table">
     <thead>
         <tr>
             <th scope="col">ID</th>
             <th scope="col">Name</th>
-            <th scope="col">Category</th>
+            <th scope="col">Price</th>
+            <th scope="col">Image Source</th>
             <th scope="col">Edit</th>
             <th scope="col">Delete</th>
-
         </tr>
     </thead>
     <tbody>
-
-
-        @{
-            if (Model != null && Model.Products != null)
+        @{ 
+            for(int i = 0; i < Model.Count; i++)
             {
-                for (int i = 0; i < Model.Products.Count; i++)
-                {
                 <tr>
-                    <th scope="row">@Model.Products[i].ID</th>
-                    <td>@Model.Products[i].Name</td>
-                    <td>@Model.Products[i].Category</td>
-                    <td> <a asp-action="Edit" asp-route-ID="@Model.Products[i].ID">Edit</a> </td>
-                    <td> <a asp-action="Delete" asp-route-ID="@Model.Products[i].ID" onclick="return ConfirmDelete();">Delete</a> </td>
+                    <th scope="row">@Model[i].ID</th>
+                    <td scope="row">@Model[i].Name</td>
+                    <td scope="row">@Model[i].Price</td>
+                    <td scope="row"><img src="@Model[i].ImageSource" style="max-width:32px;" /></td>
+                    <td scope="row"><a asp-action="Edit" asp-route-ID="@Model[i].ID">Edit</a></td>
+                    <td scope="row"><a asp-action="Delete" asp-route-ID="@Model[i].ID" onclick="return ConfirmDelete();">Delete</a></td>
                 </tr>
-                    }
-                }
             }
+        }
     </tbody>
 </table>
 
 @section Scripts
-{ 
-    <script src="~/js/Alerts.js"></script>
-
+{
+    <script src="~/js/alerts.js"></script>
 }

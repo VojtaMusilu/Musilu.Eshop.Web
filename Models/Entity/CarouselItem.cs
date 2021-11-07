@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 
 namespace Musilu.Eshop.Web.Models.Entity
 {
@@ -13,6 +14,9 @@ namespace Musilu.Eshop.Web.Models.Entity
         [Key]
         [Required]
         public int ID { get; set; }
+
+        [NotMapped]
+        public IFormFile Image { get; set; }
 
         [Required]
         [StringLength(255)]

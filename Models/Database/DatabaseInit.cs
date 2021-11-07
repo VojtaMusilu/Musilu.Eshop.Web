@@ -42,9 +42,9 @@ namespace Musilu.Eshop.Web.Models.Database
         {
             List<Product> Products = new List<Product>();
 
-            Product p1 = new Product() { ID = 0, Name = "phone", Category = "electronics", ImageSource = @"\img\products\1.jpg" };
-            Product p2 = new Product() { ID = 1, Name = "phone 2", Category = "electronics" };
-            Product p3 = new Product() { ID = 2, Name = "shirt", Category = "clothes" };
+            Product p1 = new Product() { Name = "phone", Category = "electronics", ImageSource = @"\img\products\1.jpg" };
+            Product p2 = new Product() { Name = "phone 2", Category = "electronics" };
+            Product p3 = new Product() { Name = "shirt", Category = "clothes" };
 
             Products.Add(p1);
             Products.Add(p2);
