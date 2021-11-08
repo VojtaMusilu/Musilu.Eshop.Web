@@ -33,26 +33,17 @@ namespace Musilu.Eshop.Web.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(CarouselItem carouselItem)
         {
-            if (carouselItem != null && carouselItem.Image != null)
+            if (String.IsNullOrWhiteSpace(carouselItem.ImageSource) == false
+                && String.IsNullOrWhiteSpace(carouselItem.ImageAlt) == false)
             {
-                FileUpload fileUpload = new FileUpload(env.WebRootPath, "img/CarouselItems", "image");
-                carouselItem.ImageSource = await fileUpload.FileUploadAsync(carouselItem.Image);
-                if (String.IsNullOrWhiteSpace(carouselItem.ImageSource) == false)
-                {
-                    /*if(eshopDbContext.CarouselItems!=null && eshopDbContext.CarouselItems.Count > 0)
-                    {
-                        carouselItem.ID = eshopDbContext.CarouselItems.Last().ID + 1;
-                    }*/
-                    eshopDbContext.CarouselItems.Add(carouselItem);
-                    await eshopDbContext.SaveChangesAsync();
-                    return RedirectToAction(nameof(CarouselController.Select));
-                }
+                eshopDbContext.CarouselItems.Add(carouselItem);
+                await eshopDbContext.SaveChangesAsync();
+                return RedirectToAction(nameof(CarouselController.Select));
             }
-            /*
             else
             {
-            }*/
-            return View(carouselItem);
+                return View(carouselItem);
+            }
         }
         public IActionResult Edit(int ID)
         {

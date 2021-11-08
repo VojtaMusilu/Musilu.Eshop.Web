@@ -1,12 +1,14 @@
+@using Musilu.Eshop.Web.Areas.Admin.Controllers
+
 @model CarouselItem
 @{
-    if (ViewBag.Action != null)
+    if (String.IsNullOrWhiteSpace(ViewBag.Action) == false)
     {
         <form asp-action="@ViewBag.Action" method="post">
             @{
                 if(ViewBag.Action == nameof(CarouselController.Edit))
                 {
-                   <input asp-for="ID" type="hidden"> 
+                   <input asp-for="ID" type="hidden" class="form-control"> 
                 }
             }
             

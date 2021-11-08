@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "Carousel Items";
+    ViewData["Title"] = "Products";
 }
 
 <h1>@ViewData["Title"]</h1>
@@ -16,6 +16,7 @@
         <tr>
             <th scope="col">ID</th>
             <th scope="col">Name</th>
+            <th scope="col">Category</th>
             <th scope="col">Price</th>
             <th scope="col">Image Source</th>
             <th scope="col">Edit</th>
@@ -29,6 +30,7 @@
                 <tr>
                     <th scope="row">@Model[i].ID</th>
                     <td scope="row">@Model[i].Name</td>
+                    <td scope="row">@Model[i].Category</td>
                     <td scope="row">@Model[i].Price</td>
                     <td scope="row"><img src="@Model[i].ImageSource" style="max-width:32px;" /></td>
                     <td scope="row"><a asp-action="Edit" asp-route-ID="@Model[i].ID">Edit</a></td>

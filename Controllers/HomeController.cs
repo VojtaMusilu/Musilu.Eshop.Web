@@ -31,7 +31,7 @@ namespace Musilu.Eshop.Web.Controllers
         {
             IndexViewModel indexVM = new IndexViewModel();
             indexVM.CarouselItems = eshopDbContext.CarouselItems.ToList();
-            //indexVM.Products = eshopDbContext.Products.ToList();
+            indexVM.Products = eshopDbContext.Products.ToList();
 
             //IList<CarouselItem> carouselItems = DatabaseFake.CarouselItems;
 

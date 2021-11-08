@@ -36,72 +36,6 @@ namespace Musilu.Eshop.Web.Areas.Admin.Controllers
             return View(pi);
         }
 
-        /*
-        [HttpPost]
-        public IActionResult Create(ProductItem carouselItem)
-        {
-            if (carouselItem != null && carouselItem.Image != null && carouselItem.Name != null/* && carouselItem.Price != null*///)
-        /*{
-            //if (DatabaseFake.CarouselItems != null && DatabaseFake.CarouselItems.Count > 0)
-            {
-                carouselItem.ID = DatabaseFake.CarouselItems.Last().ID + 1;
-            }
-            ProductsFake.CarouselItems.Add(carouselItem);
-            return RedirectToAction(nameof(ProductController.Select));
-        }
-        else
-        {
-            return View(carouselItem);
-        }
-    }
-        */
-        /*
-        public IActionResult Edit(int ID)
-        {
-            ProductItem cifromDb = ProductsFake.CarouselItems.FirstOrDefault(ci => ci.ID == ID);
-            if (cifromDb != null)
-            {
-                return View(cifromDb);
-            }
-            else
-            {
-                return NotFound();
-            }
-
-        }*/
-
-        /*
-        [HttpPost]
-        public IActionResult Edit(ProductItem carouselItem)
-        {
-            ProductItem cifromDb = ProductsFake.CarouselItems.FirstOrDefault(ci => ci.ID == carouselItem.ID);
-            if (cifromDb != null)
-            {
-                cifromDb.ImageSource = carouselItem.ImageSource;
-                cifromDb.Name = carouselItem.Name;
-                cifromDb.Price = carouselItem.Price;
-
-                return RedirectToAction(nameof(CarouselController.Select));
-            }
-            else
-            {
-                return NotFound();
-            }
-        }
-        */
-
-        /*
-        public IActionResult Delete(int ID)
-        {
-            IList<ProductItem> carouselItems = ProductsFake.CarouselItems;
-            ProductItem ci = carouselItems.Where(CarouselItem => CarouselItem.ID == ID).FirstOrDefault();
-            if (ci != null)
-            {
-                carouselItems.Remove(ci);
-            }
-            //return View();
-            return RedirectToAction(nameof(CarouselController.Select));
-        }*/
 
         [HttpPost]
         public async Task<IActionResult> Create(Product carouselItem)
@@ -112,19 +46,13 @@ namespace Musilu.Eshop.Web.Areas.Admin.Controllers
                 carouselItem.ImageSource = await fileUpload.FileUploadAsync(carouselItem.Image);
                 if (String.IsNullOrWhiteSpace(carouselItem.ImageSource) == false)
                 {
-                    /*if(eshopDbContext.CarouselItems!=null && eshopDbContext.CarouselItems.Count > 0)
-                    {
-                        carouselItem.ID = eshopDbContext.CarouselItems.Last().ID + 1;
-                    }*/
+                    
                     eshopDbContext.Products.Add(carouselItem);
                     await eshopDbContext.SaveChangesAsync();
                     return RedirectToAction(nameof(ProductController.Select));
                 }
             }
-            /*
-            else
-            {
-            }*/
+
             return View(carouselItem);
         }
         public IActionResult Edit(int ID)
@@ -160,9 +88,10 @@ namespace Musilu.Eshop.Web.Areas.Admin.Controllers
                 }
                 cifromDb.ImageAlt = carouselItem.ImageAlt;
                 cifromDb.Name = carouselItem.Name;
+                cifromDb.Category = carouselItem.Category;
                 cifromDb.Price = carouselItem.Price;
                 await eshopDbContext.SaveChangesAsync();
-                return RedirectToAction(nameof(CarouselController.Select));
+                return RedirectToAction(nameof(ProductController.Select));
             }
             else
             {
@@ -178,7 +107,7 @@ namespace Musilu.Eshop.Web.Areas.Admin.Controllers
                 carouselItems.Remove(ci);
                 await eshopDbContext.SaveChangesAsync();
             }
-            //return View();
+
             return RedirectToAction(nameof(CarouselController.Select));
         }
     }
