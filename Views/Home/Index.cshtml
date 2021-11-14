@@ -107,70 +107,94 @@
 
 
 
-            <div class="container">
+            <div class="container px-4 px-lg-5 mt-5 ">
                 @{
                     int count = 0;
                     for (int i = 0; i < Model.Products.Count; i += 3)
                     {
                         count = Model.Products.Count - i;
-                                <div class="row">
-                                    
-                                    <div class="col">
-                                        @{
-                                            if (count > 0)
-                                            {
+                        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
 
-                                                <div class="card">
-                                                    <img src="@Model.Products[i].ImageSource" class="card-img-top" alt="@Model.Products[i].ImageAlt">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">@Model.Products[i].Name</h5>
-                                                        <a asp-action="Detail" asp-route-ID="@Model.Products[i].ID" class="btn btn-primary">Detail</a>
-                                                        <a href="#" class="btn btn-primary">Přidat do košíku</a>
-                                                    </div>
-                                                </div>
-                                            }
-                                        }
-                                    </div>
-                                    <div class="col">
-                                        @{
-                                            if (count > 1)
-                                            {
-                                                <div class="card">
-                                                    <img src="@Model.Products[i+1].ImageSource" class="card-img-top" alt="@Model.Products[i+1].ImageAlt">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">@Model.Products[i + 1].Name</h5>
-                                                        <a href="#" class="btn btn-primary">Detail</a>
-                                                        <a href="#" class="btn btn-primary">Přidat do košíku</a>
-                                                    </div>
-                                                </div>
-                                            }
-                                        }
-                                    </div>
-                                    <div class="col">
-                                        @{ 
-                                            if (count > 2)
-                                            {
-                                                <div class="card">
-                                                    <img src="@Model.Products[i+2].ImageSource" class="card-img-top" alt="@Model.Products[i+2].ImageAlt">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">@Model.Products[i + 2].Name</h5>
-                                                        <a href="#" class="btn btn-primary">Detail</a>
-                                                        <a href="#" class="btn btn-primary">Přidat do košíku</a>
-                                                    </div>
-                                                </div>
-                                            } 
-                                        }
-                                    </div>
-                                </div>
+                            <div class="col mb-5">
+                                @{
+                                    if (count > 0)
+                                    {
 
-                            }
-                        
+                                        <div class="card">
+                                            <img src="@Model.Products[i].ImageSource" class="card-img-top" alt="@Model.Products[i].ImageAlt">
+                                            <div class="card-body">
+                                                <h5 class="card-title">@Model.Products[i].Name</h5>
+                                                <h6>@Model.Products[i].Price</h6>
+                                                <a asp-action="Detail" asp-route-ID="@Model.Products[i].ID" class="btn btn-primary">Detail</a>
+                                                <a href="#" class="btn btn-primary">Přidat do košíku</a>
+                                            </div>
+                                        </div>
+                                    }
+                                }
+                            </div>
+                            <div class="col">
+                                @{
+                                    if (count > 1)
+                                    {
+                                        <div class="card">
+                                            <img src="@Model.Products[i+1].ImageSource" class="card-img-top" alt="@Model.Products[i+1].ImageAlt">
+                                            <div class="card-body">
+                                                <h5 class="card-title">@Model.Products[i + 1].Name</h5>
+                                                <h6>@Model.Products[i + 1].Price</h6>
+                                                <a asp-action="Detail" asp-route-ID="@Model.Products[i+1].ID" class="btn btn-primary">Detail</a>
+                                                <a href="#" class="btn btn-primary">Přidat do košíku</a>
+                                            </div>
+                                        </div>
+                                    }
+                                }
+                            </div>
+                            <div class="col">
+                                @{
+                                    if (count > 2)
+                                    {
+                                        <div class="card">
+                                            <img src="@Model.Products[i+2].ImageSource" class="card-img-top" alt="@Model.Products[i+2].ImageAlt">
+                                            <div class="card-body">
+                                                <h5 class="card-title">@Model.Products[i + 2].Name</h5>
+                                                <h6>@Model.Products[i + 2].Price</h6>
+                                                <a asp-action="Detail" asp-route-ID="@Model.Products[i+2].ID" class="btn btn-primary">Detail</a>
+                                                <a href="#" class="btn btn-primary">Přidat do košíku</a>
+                                            </div>
+                                        </div>
+                                    }
+                                }
+                            </div>
+                        </div>
                     }
-
+                }
             </div>
-
-
-
         }
     }
+
+
+    <section class="py-5">
+        <div class="container px-4 px-lg-5 mt-5">
+            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Fancy Product</h5>
+                                <!-- Product price-->
+                                $40.00 - $80.00
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 </div>

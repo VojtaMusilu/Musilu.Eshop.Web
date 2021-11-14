@@ -30,37 +30,33 @@ namespace Musilu.Eshop.Web.Areas.Admin.Controllers
         {
             return View();
         }
-        public IActionResult Detail(int id)
-        {
-            Product pi = eshopDbContext.Products.FirstOrDefault(p => p.ID == id);
-            return View(pi);
-        }
+        
 
 
         [HttpPost]
-        public async Task<IActionResult> Create(Product carouselItem)
+        public async Task<IActionResult> Create(Product product)
         {
-            if (carouselItem != null && carouselItem.Image != null)
+            if (product != null && product.Image != null)
             {
                 FileUpload fileUpload = new FileUpload(env.WebRootPath, "img/ProductItems", "image");
-                carouselItem.ImageSource = await fileUpload.FileUploadAsync(carouselItem.Image);
-                if (String.IsNullOrWhiteSpace(carouselItem.ImageSource) == false)
+                product.ImageSource = await fileUpload.FileUploadAsync(product.Image);
+                if (String.IsNullOrWhiteSpace(product.ImageSource) == false)
                 {
                     
-                    eshopDbContext.Products.Add(carouselItem);
+                    eshopDbContext.Products.Add(product);
                     await eshopDbContext.SaveChangesAsync();
                     return RedirectToAction(nameof(ProductController.Select));
                 }
             }
 
-            return View(carouselItem);
+            return View(product);
         }
         public IActionResult Edit(int ID)
         {
-            Product cifromDb = eshopDbContext.Products.FirstOrDefault(ci => ci.ID == ID);
-            if (cifromDb != null)
+            Product product = eshopDbContext.Products.FirstOrDefault(p => p.ID == ID);
+            if (product != null)
             {
-                return View(cifromDb);
+                return View(product);
             }
             else
             {
@@ -70,26 +66,27 @@ namespace Musilu.Eshop.Web.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(Product carouselItem)
+        public async Task<IActionResult> Edit(Product newProduct)
         {
-            Product cifromDb = eshopDbContext.Products.FirstOrDefault(ci => ci.ID == carouselItem.ID);
-            if (cifromDb != null)
+            Product product = eshopDbContext.Products.FirstOrDefault(ci => ci.ID == newProduct.ID);
+            if (product != null)
             {
 
-                if (carouselItem != null && carouselItem.Image != null)
+                if (newProduct != null && newProduct.Image != null)
                 {
                     FileUpload fileUpload = new FileUpload(env.WebRootPath, "img/ProductItems", "image");
-                    carouselItem.ImageSource = await fileUpload.FileUploadAsync(carouselItem.Image);
+                    newProduct.ImageSource = await fileUpload.FileUploadAsync(newProduct.Image);
 
-                    if (String.IsNullOrWhiteSpace(carouselItem.ImageSource) == false)
+                    if (String.IsNullOrWhiteSpace(newProduct.ImageSource) == false)
                     {
-                        cifromDb.ImageSource = carouselItem.ImageSource;
+                        product.ImageSource = newProduct.ImageSource;
                     }
                 }
-                cifromDb.ImageAlt = carouselItem.ImageAlt;
-                cifromDb.Name = carouselItem.Name;
-                cifromDb.Category = carouselItem.Category;
-                cifromDb.Price = carouselItem.Price;
+                product.ImageAlt = newProduct.ImageAlt;
+                product.Name = newProduct.Name;
+                product.Category = newProduct.Category;
+                product.Price = newProduct.Price;
+                product.Description = newProduct.Description;
                 await eshopDbContext.SaveChangesAsync();
                 return RedirectToAction(nameof(ProductController.Select));
             }

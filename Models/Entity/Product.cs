@@ -24,6 +24,8 @@ namespace Musilu.Eshop.Web.Models.Entity
         [Required]
         public double Price { get; set; }
 
+        public string Description { get; set; }
+
         [NotMapped]
         public IFormFile Image { get; set; }
 
