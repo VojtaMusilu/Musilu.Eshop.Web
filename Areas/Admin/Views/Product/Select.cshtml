@@ -19,6 +19,7 @@
             <th scope="col">Category</th>
             <th scope="col">Price</th>
             <th scope="col">Image Source</th>
+            <th scope="col">Image</th>
             <th scope="col">Edit</th>
             <th scope="col">Delete</th>
         </tr>
@@ -32,6 +33,7 @@
                     <td scope="row">@Model[i].Name</td>
                     <td scope="row">@Model[i].Category</td>
                     <td scope="row">@Model[i].Price</td>
+                    <td scope="row">@Model[i].ImageSource</td>
                     <td scope="row"><img src="@Model[i].ImageSource" style="max-width:32px;" /></td>
                     <td scope="row"><a asp-action="Edit" asp-route-ID="@Model[i].ID">Edit</a></td>
                     <td scope="row"><a asp-action="Delete" asp-route-ID="@Model[i].ID" onclick="return ConfirmDelete();">Delete</a></td>
