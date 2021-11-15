@@ -74,7 +74,7 @@ namespace Musilu.Eshop.Web.Areas.Admin.Controllers
 
                 if (newProduct != null && newProduct.Image != null)
                 {
-                    FileUpload fileUpload = new FileUpload(env.WebRootPath, "img/ProductItems", "image");
+                    FileUpload fileUpload = new FileUpload(env.WebRootPath, "img/Products", "image");
                     newProduct.ImageSource = await fileUpload.FileUploadAsync(newProduct.Image);
 
                     if (String.IsNullOrWhiteSpace(newProduct.ImageSource) == false)

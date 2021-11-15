@@ -33,17 +33,22 @@ namespace Musilu.Eshop.Web.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(CarouselItem carouselItem)
         {
-            if (String.IsNullOrWhiteSpace(carouselItem.ImageSource) == false
-                && String.IsNullOrWhiteSpace(carouselItem.ImageAlt) == false)
+
+            FileUpload fileUpload = new FileUpload(env.WebRootPath, "img/CarouselItems", "image");
+            if (fileUpload.CheckFileContent(carouselItem.Image) && fileUpload.CheckFileLength(carouselItem.Image))
             {
-                eshopDbContext.CarouselItems.Add(carouselItem);
-                await eshopDbContext.SaveChangesAsync();
-                return RedirectToAction(nameof(CarouselController.Select));
+                carouselItem.ImageSource = await fileUpload.FileUploadAsync(carouselItem.Image);
+                ModelState.Clear();
+                TryValidateModel(carouselItem);
+                if (ModelState.IsValid)
+                {
+                    eshopDbContext.CarouselItems.Add(carouselItem);
+                    await eshopDbContext.SaveChangesAsync();
+                    return RedirectToAction(nameof(CarouselController.Select));
+                }
             }
-            else
-            {
-                return View(carouselItem);
-            }
+            return View(carouselItem);
+
         }
         public IActionResult Edit(int ID)
         {
@@ -60,25 +65,39 @@ namespace Musilu.Eshop.Web.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(CarouselItem carouselItem)
+        public async Task<IActionResult> Edit(CarouselItem cItem)
         {
-            CarouselItem cifromDb = eshopDbContext.CarouselItems.FirstOrDefault(ci => ci.ID == carouselItem.ID);
-            if (cifromDb != null)
+            CarouselItem carouselItem = eshopDbContext.CarouselItems.FirstOrDefault(ci => ci.ID == cItem.ID);
+            if (carouselItem != null)
             {
 
-                if (carouselItem != null && carouselItem.Image != null)
+                if (cItem != null && cItem.Image != null)
                 {
                     FileUpload fileUpload = new FileUpload(env.WebRootPath, "img/CarouselItems", "image");
-                    carouselItem.ImageSource = await fileUpload.FileUploadAsync(carouselItem.Image);
 
-                    if (String.IsNullOrWhiteSpace(carouselItem.ImageSource) == false)
+                    if (fileUpload.CheckFileContent(cItem.Image) && fileUpload.CheckFileLength(cItem.Image))
                     {
-                        cifromDb.ImageSource = carouselItem.ImageSource;
+                        cItem.ImageSource = await fileUpload.FileUploadAsync(cItem.Image);
+                        carouselItem.ImageSource = cItem.ImageSource;
                     }
                 }
-                cifromDb.ImageAlt = carouselItem.ImageAlt;
-                await eshopDbContext.SaveChangesAsync();
-                return RedirectToAction(nameof(CarouselController.Select));
+                else
+                {
+                    cItem.ImageSource = "-";
+                }
+
+                ModelState.Clear();
+                TryValidateModel(carouselItem);
+
+                if (ModelState.IsValid)
+                {
+                    carouselItem.ImageAlt = cItem.ImageAlt;
+                    await eshopDbContext.SaveChangesAsync();
+                    return RedirectToAction(nameof(CarouselController.Select));
+                }
+
+                return NotFound();
+
             }
             else
             {
@@ -94,7 +113,6 @@ namespace Musilu.Eshop.Web.Areas.Admin.Controllers
                 carouselItems.Remove(ci);
                 await eshopDbContext.SaveChangesAsync();
             }
-            //return View();
             return RedirectToAction(nameof(CarouselController.Select));
         }
     }
