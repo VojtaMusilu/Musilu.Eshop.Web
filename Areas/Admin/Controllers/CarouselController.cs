@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -8,10 +9,12 @@ using System.Threading.Tasks;
 using Musilu.Eshop.Web.Models.Database;
 using Musilu.Eshop.Web.Models.Entity;
 using Musilu.Eshop.Web.Models.Implementation;
+using Musilu.Eshop.Web.Models.Identity;
 
 namespace Musilu.Eshop.Web.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = nameof(Roles.Admin) + ", " + nameof(Roles.Manager))]
     public class CarouselController : Controller
     {
         readonly EshopDbContext eshopDbContext;

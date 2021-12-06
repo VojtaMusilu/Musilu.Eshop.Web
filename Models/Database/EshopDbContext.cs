@@ -1,8 +1,12 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
+﻿using Musilu.Eshop.Web.Models.Database.Configuration;
 using Musilu.Eshop.Web.Models.Entity;
 using Musilu.Eshop.Web.Models.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Musilu.Eshop.Web.Models.Database
 {
@@ -10,6 +14,9 @@ namespace Musilu.Eshop.Web.Models.Database
 	{
 		public DbSet<CarouselItem> CarouselItems { get; set; }
 		public DbSet<Product> Products { get; set; }
+
+		public DbSet<OrderItem> OrderItems { get; set; }
+		public DbSet<Order> Orders { get; set; }
 
 		public EshopDbContext(DbContextOptions options) : base(options)
 		{
@@ -20,7 +27,7 @@ namespace Musilu.Eshop.Web.Models.Database
         {
             base.OnModelCreating(builder);
 
-
+			builder.ApplyConfiguration<Order>(new OrderConfiguration());
 
 			foreach (var entity in builder.Model.GetEntityTypes())
 				{

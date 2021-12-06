@@ -126,7 +126,13 @@
                                                 <h5 class="card-title">@Model.Products[i].Name</h5>
                                                 <h6>@Model.Products[i].Price</h6>
                                                 <a asp-action="Detail" asp-route-ID="@Model.Products[i].ID" class="btn btn-primary">Detail</a>
-                                                <a href="#" class="btn btn-primary">Přidat do košíku</a>
+                                                <div class="d-flex">
+                                                    <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
+                                                    <button class="btn btn-outline-dark flex-shrink-0" type="button" onclick="Buy(@Model.Products[i].ID,'@Url.Action("AddOrderItemsToSession", "CustomerOrderNotCart", new { Area = "Customer" })', '#total_price', '@System.Globalization.CultureInfo.CurrentCulture.Name')">
+                                                        <i class="bi-cart-fill me-1"></i>
+                                                        Add to cart
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
                                     }
@@ -142,7 +148,13 @@
                                                 <h5 class="card-title">@Model.Products[i + 1].Name</h5>
                                                 <h6>@Model.Products[i + 1].Price</h6>
                                                 <a asp-action="Detail" asp-route-ID="@Model.Products[i+1].ID" class="btn btn-primary">Detail</a>
-                                                <a href="#" class="btn btn-primary">Přidat do košíku</a>
+                                                <div class="d-flex">
+                                                    <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
+                                                    <button class="btn btn-outline-dark flex-shrink-0" type="button" onclick="Buy(@Model.Products[i+1].ID,'@Url.Action("AddOrderItemsToSession", "CustomerOrderNotCart", new { Area = "Customer" })', '#total_price', '@System.Globalization.CultureInfo.CurrentCulture.Name')">
+                                                        <i class="bi-cart-fill me-1"></i>
+                                                        Add to cart
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
                                     }
@@ -158,7 +170,13 @@
                                                 <h5 class="card-title">@Model.Products[i + 2].Name</h5>
                                                 <h6>@Model.Products[i + 2].Price</h6>
                                                 <a asp-action="Detail" asp-route-ID="@Model.Products[i+2].ID" class="btn btn-primary">Detail</a>
-                                                <a href="#" class="btn btn-primary">Přidat do košíku</a>
+                                                <div class="d-flex">
+                                                    <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
+                                                    <button class="btn btn-outline-dark flex-shrink-0" type="button" onclick="Buy(@Model.Products[i+2].ID,'@Url.Action("AddOrderItemsToSession", "CustomerOrderNotCart", new { Area = "Customer" })', '#total_price', '@System.Globalization.CultureInfo.CurrentCulture.Name')">
+                                                        <i class="bi-cart-fill me-1"></i>
+                                                        Add to cart
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
                                     }
@@ -196,5 +214,5 @@
                 </div>
             </div>
         </div>
-
+</section>
 </div>
