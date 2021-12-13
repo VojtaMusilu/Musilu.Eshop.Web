@@ -35,6 +35,7 @@ namespace Musilu.Eshop.Web.Controllers
 
         public IActionResult Index()
         {
+            _logger.LogInformation("Loaded Home Index");
             IndexViewModel indexVM = new IndexViewModel();
             indexVM.CarouselItems = eshopDbContext.CarouselItems.ToList();
             indexVM.Products = eshopDbContext.Products.ToList();

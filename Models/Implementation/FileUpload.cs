@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -42,9 +41,8 @@ namespace Musilu.Eshop.Web.Models.Implementation
             {
                 var fileName = Path.GetFileNameWithoutExtension(img.FileName);
                 var fileExtension = Path.GetExtension(img.FileName);
-                var fileNameGenerated = Path.GetRandomFileName();
 
-                var fileRelative = Path.Combine(FolderName, fileNameGenerated + fileExtension);
+                var fileRelative = Path.Combine(FolderName, fileName + fileExtension);
                 var filePath = Path.Combine(RootPath, fileRelative);
 
                 Directory.CreateDirectory(Path.Combine(RootPath, FolderName));

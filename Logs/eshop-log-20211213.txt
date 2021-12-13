@@ -1,0 +1,1276 @@
+2021-12-13T08:15:14.0328384+01:00  [INF] Entity Framework Core "5.0.12" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-13T08:15:14.6037889+01:00  [INF] Executed DbCommand ("21"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'Musilu.Eshop'" (0723d8ff)
+2021-12-13T08:15:14.9933419+01:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM `CarouselItem` AS `c`" (0723d8ff)
+2021-12-13T08:15:15.0674775+01:00  [INF] User profile is available. Using '"C:\Users\v_musilu\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2021-12-13T08:15:15.3304373+01:00  [INF] Executed DbCommand ("65"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2021-12-13T08:15:15.4806611+01:00  [WRN] Role "(null)" validation failed: "DuplicateRoleName". (60d773c7)
+2021-12-13T08:15:15.5015135+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2021-12-13T08:15:15.5074681+01:00  [WRN] Role "(null)" validation failed: "DuplicateRoleName". (60d773c7)
+2021-12-13T08:15:15.5120466+01:00  [INF] Executed DbCommand ("0"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2021-12-13T08:15:15.5156950+01:00  [WRN] Role "(null)" validation failed: "DuplicateRoleName". (60d773c7)
+2021-12-13T08:15:15.5573337+01:00  [INF] Executed DbCommand ("13"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2021-12-13T08:15:15.6655277+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2021-12-13T08:15:16.0745513+01:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2021-12-13T08:15:16.0777250+01:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-12-13T08:15:16.0808572+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-12-13T08:15:16.0876655+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-12-13T08:15:16.0935648+01:00  [INF] Content root path: "C:\Users\v_musilu\Downloads\Musilu.Eshop.Web-main\Musilu.Eshop.Web-main" (b5d60022)
+2021-12-13T08:15:17.4499515+01:00 0HMDU1183L1JI:00000001 [INF] Request starting HTTP/2 GET https://localhost:5001/ - - (ca22a1cb)
+2021-12-13T08:15:17.5467663+01:00 0HMDU1183L1JI:00000001 [INF] Executing endpoint '"Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)"' (500cc934)
+2021-12-13T08:15:17.5763657+01:00 0HMDU1183L1JI:00000001 [INF] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "Musilu.Eshop.Web.Controllers.HomeController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-13T08:15:17.5836298+01:00 0HMDU1183L1JI:00000001 [INF] Loaded Home Index (d3450aae)
+2021-12-13T08:15:17.5859041+01:00 0HMDU1183L1JI:00000001 [INF] Entity Framework Core "5.0.12" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-13T08:15:17.5959389+01:00 0HMDU1183L1JI:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`ID`, `c`.`ImageAlt`, `c`.`ImageSource`
+FROM `CarouselItem` AS `c`" (0723d8ff)
+2021-12-13T08:15:17.6119357+01:00 0HMDU1183L1JI:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `p`.`ID`, `p`.`Category`, `p`.`Description`, `p`.`ImageAlt`, `p`.`ImageSource`, `p`.`Name`, `p`.`Price`
+FROM `Products` AS `p`" (0723d8ff)
+2021-12-13T08:15:17.6655657+01:00 0HMDU1183L1JI:00000001 [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2021-12-13T08:15:17.8522787+01:00 0HMDU1183L1JI:00000001 [INF] Executed ViewResult - view "Index" executed in 188.0905ms. (f66409e9)
+2021-12-13T08:15:17.8531972+01:00 0HMDU1183L1JI:00000001 [INF] Executed action "Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)" in 275.9716ms (afa2e885)
+2021-12-13T08:15:17.8533337+01:00 0HMDU1183L1JI:00000001 [INF] Executed endpoint '"Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-13T08:15:17.8683464+01:00 0HMDU1183L1JI:00000001 [INF] Request finished HTTP/2 GET https://localhost:5001/ - - - 200 - text/html;+charset=utf-8 423.0906ms (791a596a)
+2021-12-13T08:15:17.9296566+01:00 0HMDU1183L1JI:00000007 [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/shsnozj2.jbr.jpg - - (ca22a1cb)
+2021-12-13T08:15:17.9298305+01:00 0HMDU1183L1JI:00000009 [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/2zzrhjsy.dzn.jpg - - (ca22a1cb)
+2021-12-13T08:15:17.9299293+01:00 0HMDU1183L1JI:0000000B [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/tj5jv3hb.oia.jpg - - (ca22a1cb)
+2021-12-13T08:15:17.9255009+01:00 0HMDU1183L1JI:00000005 [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/hxyvawvj.jka.jpg - - (ca22a1cb)
+2021-12-13T08:15:17.9300680+01:00 0HMDU1183L1JI:00000003 [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - (ca22a1cb)
+2021-12-13T08:15:17.9333956+01:00 0HMDU1183L1JI:0000000B [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/tj5jv3hb.oia.jpg - - - 404 0 - 3.4587ms (791a596a)
+2021-12-13T08:15:17.9333957+01:00 0HMDU1183L1JI:00000009 [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/2zzrhjsy.dzn.jpg - - - 404 0 - 3.5752ms (791a596a)
+2021-12-13T08:15:17.9334228+01:00 0HMDU1183L1JI:00000005 [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/hxyvawvj.jka.jpg - - - 404 0 - 8.0291ms (791a596a)
+2021-12-13T08:15:17.9335823+01:00 0HMDU1183L1JI:0000000D [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/ens0zky1.cod.jpg - - (ca22a1cb)
+2021-12-13T08:15:17.9340210+01:00 0HMDU1183L1JI:00000003 [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - - 404 0 - 7.9191ms (791a596a)
+2021-12-13T08:15:17.9341840+01:00 0HMDU1183L1JI:00000007 [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/shsnozj2.jbr.jpg - - - 404 0 - 3.7473ms (791a596a)
+2021-12-13T08:15:17.9370476+01:00 0HMDU1183L1JI:0000000D [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/ens0zky1.cod.jpg - - - 404 0 - 3.4050ms (791a596a)
+2021-12-13T08:15:17.9517576+01:00 0HMDU1183L1JI:0000000F [INF] Request starting HTTP/2 GET https://localhost:5001/img/it.jpg - - (ca22a1cb)
+2021-12-13T08:15:17.9530588+01:00 0HMDU1183L1JI:0000000F [INF] Request finished HTTP/2 GET https://localhost:5001/img/it.jpg - - - 404 0 - 0.6923ms (791a596a)
+2021-12-13T08:16:09.6430701+01:00 0HMDU1183L1JJ:00000001 [INF] Request starting HTTP/2 GET https://localhost:5001/ - - (ca22a1cb)
+2021-12-13T08:16:09.6435835+01:00 0HMDU1183L1JJ:00000001 [INF] Executing endpoint '"Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)"' (500cc934)
+2021-12-13T08:16:09.6441075+01:00 0HMDU1183L1JJ:00000001 [INF] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "Musilu.Eshop.Web.Controllers.HomeController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-13T08:16:09.6476321+01:00 0HMDU1183L1JJ:00000001 [INF] Loaded Home Index (d3450aae)
+2021-12-13T08:16:09.6792352+01:00 0HMDU1183L1JJ:00000001 [INF] Entity Framework Core "5.0.12" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-13T08:16:09.6815980+01:00 0HMDU1183L1JJ:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`ID`, `c`.`ImageAlt`, `c`.`ImageSource`
+FROM `CarouselItem` AS `c`" (0723d8ff)
+2021-12-13T08:16:09.6828062+01:00 0HMDU1183L1JJ:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `p`.`ID`, `p`.`Category`, `p`.`Description`, `p`.`ImageAlt`, `p`.`ImageSource`, `p`.`Name`, `p`.`Price`
+FROM `Products` AS `p`" (0723d8ff)
+2021-12-13T08:16:09.6836344+01:00 0HMDU1183L1JJ:00000001 [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2021-12-13T08:16:09.6886052+01:00 0HMDU1183L1JJ:00000001 [INF] Executed ViewResult - view "Index" executed in 5.1989ms. (f66409e9)
+2021-12-13T08:16:09.6887549+01:00 0HMDU1183L1JJ:00000001 [INF] Executed action "Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)" in 44.578ms (afa2e885)
+2021-12-13T08:16:09.6888190+01:00 0HMDU1183L1JJ:00000001 [INF] Executed endpoint '"Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-13T08:16:09.6890423+01:00 0HMDU1183L1JJ:00000001 [INF] Request finished HTTP/2 GET https://localhost:5001/ - - - 200 - text/html;+charset=utf-8 46.2165ms (791a596a)
+2021-12-13T08:16:09.7327017+01:00 0HMDU1183L1JJ:00000003 [INF] Request starting HTTP/2 GET https://localhost:5001/lib/bootstrap/dist/css/bootstrap.min.css - - (ca22a1cb)
+2021-12-13T08:16:09.7327017+01:00 0HMDU1183L1JJ:00000005 [INF] Request starting HTTP/2 GET https://localhost:5001/css/site.css - - (ca22a1cb)
+2021-12-13T08:16:09.7330942+01:00 0HMDU1183L1JJ:00000007 [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - (ca22a1cb)
+2021-12-13T08:16:09.7367459+01:00 0HMDU1183L1JJ:00000009 [INF] Request starting HTTP/2 GET https://localhost:5001/lib/jquery/dist/jquery.min.js - - (ca22a1cb)
+2021-12-13T08:16:09.7382567+01:00 0HMDU1183L1JJ:00000007 [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - - 404 0 - 5.1077ms (791a596a)
+2021-12-13T08:16:09.7384038+01:00 0HMDU1183L1JJ:0000000B [INF] Request starting HTTP/2 GET https://localhost:5001/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - (ca22a1cb)
+2021-12-13T08:16:09.7516094+01:00 0HMDU1183L1JJ:00000005 [INF] Sending file. Request path: '"/css/site.css"'. Physical path: '"C:\Users\v_musilu\Downloads\Musilu.Eshop.Web-main\Musilu.Eshop.Web-main\wwwroot\css\site.css"' (27b0a520)
+2021-12-13T08:16:09.7522944+01:00 0HMDU1183L1JJ:00000005 [INF] Request finished HTTP/2 GET https://localhost:5001/css/site.css - - - 200 2959 text/css 19.5908ms (791a596a)
+2021-12-13T08:16:09.7525434+01:00 0HMDU1183L1JJ:0000000D [INF] Request starting HTTP/2 GET https://localhost:5001/js/site.js?v=BxFAw9RUJ1E4NycpKEjCNDeoSvr4RPHixdBq5wDnkeY - - (ca22a1cb)
+2021-12-13T08:16:09.7535332+01:00 0HMDU1183L1JJ:0000000D [INF] Sending file. Request path: '"/js/site.js"'. Physical path: '"C:\Users\v_musilu\Downloads\Musilu.Eshop.Web-main\Musilu.Eshop.Web-main\wwwroot\js\site.js"' (27b0a520)
+2021-12-13T08:16:09.7536884+01:00 0HMDU1183L1JJ:0000000D [INF] Request finished HTTP/2 GET https://localhost:5001/js/site.js?v=BxFAw9RUJ1E4NycpKEjCNDeoSvr4RPHixdBq5wDnkeY - - - 200 226 application/javascript 1.1041ms (791a596a)
+2021-12-13T08:16:09.7537994+01:00 0HMDU1183L1JJ:0000000F [INF] Request starting HTTP/2 GET https://localhost:5001/img/1.jpg - - (ca22a1cb)
+2021-12-13T08:16:09.7772801+01:00 0HMDU1183L1JJ:00000011 [INF] Request starting HTTP/2 GET https://localhost:5001/img/2.jpg - - (ca22a1cb)
+2021-12-13T08:16:09.7873115+01:00 0HMDU1183L1JJ:00000013 [INF] Request starting HTTP/2 GET https://localhost:5001/img/CarouselItems/bsx2ipsd.00h.jpg - - (ca22a1cb)
+2021-12-13T08:16:09.7873761+01:00 0HMDU1183L1JJ:00000015 [INF] Request starting HTTP/2 GET https://localhost:5001/img/CarouselItems/ofb5hfyw.p0t.jpg - - (ca22a1cb)
+2021-12-13T08:16:09.7975925+01:00 0HMDU1183L1JJ:00000017 [INF] Request starting HTTP/2 GET https://localhost:5001/img/CarouselItems/e0oighjb.m2c.jpg - - (ca22a1cb)
+2021-12-13T08:16:09.7977414+01:00 0HMDU1183L1JJ:00000019 [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/hxyvawvj.jka.jpg - - (ca22a1cb)
+2021-12-13T08:16:09.8058012+01:00 0HMDU1183L1JJ:0000001B [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/shsnozj2.jbr.jpg - - (ca22a1cb)
+2021-12-13T08:16:09.8200545+01:00 0HMDU1183L1JJ:0000001F [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/2zzrhjsy.dzn.jpg - - (ca22a1cb)
+2021-12-13T08:16:09.8200545+01:00 0HMDU1183L1JJ:0000001D [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/tj5jv3hb.oia.jpg - - (ca22a1cb)
+2021-12-13T08:16:09.8201059+01:00 0HMDU1183L1JJ:00000023 [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/nldw451r.xpj.jpg - - (ca22a1cb)
+2021-12-13T08:16:09.8202296+01:00 0HMDU1183L1JJ:00000021 [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/ens0zky1.cod.jpg - - (ca22a1cb)
+2021-12-13T08:16:09.8208947+01:00 0HMDU1183L1JJ:00000025 [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/b3wr3mxj.ou0.jpg - - (ca22a1cb)
+2021-12-13T08:16:09.8543478+01:00 0HMDU1183L1JJ:0000001F [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/2zzrhjsy.dzn.jpg - - - 404 0 - 34.3567ms (791a596a)
+2021-12-13T08:16:09.8555543+01:00 0HMDU1183L1JJ:00000021 [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/ens0zky1.cod.jpg - - - 404 0 - 35.2584ms (791a596a)
+2021-12-13T08:16:09.8557429+01:00 0HMDU1183L1JJ:0000001D [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/tj5jv3hb.oia.jpg - - - 404 0 - 35.7931ms (791a596a)
+2021-12-13T08:16:09.8558861+01:00 0HMDU1183L1JJ:0000001B [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/shsnozj2.jbr.jpg - - - 404 0 - 50.2267ms (791a596a)
+2021-12-13T08:16:09.8607985+01:00 0HMDU1183L1JJ:00000019 [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/hxyvawvj.jka.jpg - - - 404 0 - 61.1938ms (791a596a)
+2021-12-13T08:16:09.9142083+01:00 0HMDU1183L1JJ:00000009 [INF] Sending file. Request path: '"/lib/jquery/dist/jquery.min.js"'. Physical path: '"C:\Users\v_musilu\Downloads\Musilu.Eshop.Web-main\Musilu.Eshop.Web-main\wwwroot\lib\jquery\dist\jquery.min.js"' (27b0a520)
+2021-12-13T08:16:09.9143143+01:00 0HMDU1183L1JJ:0000000B [INF] Sending file. Request path: '"/lib/bootstrap/dist/js/bootstrap.bundle.min.js"'. Physical path: '"C:\Users\v_musilu\Downloads\Musilu.Eshop.Web-main\Musilu.Eshop.Web-main\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js"' (27b0a520)
+2021-12-13T08:16:09.9152009+01:00 0HMDU1183L1JJ:0000000B [INF] Request finished HTTP/2 GET https://localhost:5001/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 200 78635 application/javascript 176.7168ms (791a596a)
+2021-12-13T08:16:09.9152012+01:00 0HMDU1183L1JJ:00000009 [INF] Request finished HTTP/2 GET https://localhost:5001/lib/jquery/dist/jquery.min.js - - - 200 89476 application/javascript 178.4378ms (791a596a)
+2021-12-13T08:16:09.9159471+01:00 0HMDU1183L1JJ:00000017 [INF] Sending file. Request path: '"/img/CarouselItems/e0oighjb.m2c.jpg"'. Physical path: '"C:\Users\v_musilu\Downloads\Musilu.Eshop.Web-main\Musilu.Eshop.Web-main\wwwroot\img\CarouselItems\e0oighjb.m2c.jpg"' (27b0a520)
+2021-12-13T08:16:09.9169010+01:00 0HMDU1183L1JJ:00000017 [INF] Request finished HTTP/2 GET https://localhost:5001/img/CarouselItems/e0oighjb.m2c.jpg - - - 200 82883 image/jpeg 119.3568ms (791a596a)
+2021-12-13T08:16:09.9365657+01:00 0HMDU1183L1JJ:00000003 [INF] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.min.css"'. Physical path: '"C:\Users\v_musilu\Downloads\Musilu.Eshop.Web-main\Musilu.Eshop.Web-main\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css"' (27b0a520)
+2021-12-13T08:16:09.9467596+01:00 0HMDU1183L1JJ:00000003 [INF] Request finished HTTP/2 GET https://localhost:5001/lib/bootstrap/dist/css/bootstrap.min.css - - - 200 155758 text/css 214.0396ms (791a596a)
+2021-12-13T08:16:09.9482501+01:00 0HMDU1183L1JJ:00000023 [INF] Sending file. Request path: '"/img/ProductItems/nldw451r.xpj.jpg"'. Physical path: '"C:\Users\v_musilu\Downloads\Musilu.Eshop.Web-main\Musilu.Eshop.Web-main\wwwroot\img\ProductItems\nldw451r.xpj.jpg"' (27b0a520)
+2021-12-13T08:16:09.9485093+01:00 0HMDU1183L1JJ:00000023 [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/nldw451r.xpj.jpg - - - 200 178420 image/jpeg 128.3559ms (791a596a)
+2021-12-13T08:16:09.9487174+01:00 0HMDU1183L1JJ:0000000F [INF] Sending file. Request path: '"/img/1.jpg"'. Physical path: '"C:\Users\v_musilu\Downloads\Musilu.Eshop.Web-main\Musilu.Eshop.Web-main\wwwroot\img\1.jpg"' (27b0a520)
+2021-12-13T08:16:09.9488760+01:00 0HMDU1183L1JJ:0000000F [INF] Request finished HTTP/2 GET https://localhost:5001/img/1.jpg - - - 200 117502 image/jpeg 195.0328ms (791a596a)
+2021-12-13T08:16:09.9658069+01:00 0HMDU1183L1JJ:00000013 [INF] Sending file. Request path: '"/img/CarouselItems/bsx2ipsd.00h.jpg"'. Physical path: '"C:\Users\v_musilu\Downloads\Musilu.Eshop.Web-main\Musilu.Eshop.Web-main\wwwroot\img\CarouselItems\bsx2ipsd.00h.jpg"' (27b0a520)
+2021-12-13T08:16:09.9660459+01:00 0HMDU1183L1JJ:00000013 [INF] Request finished HTTP/2 GET https://localhost:5001/img/CarouselItems/bsx2ipsd.00h.jpg - - - 200 178420 image/jpeg 178.9462ms (791a596a)
+2021-12-13T08:16:09.9662854+01:00 0HMDU1183L1JJ:00000027 [INF] Request starting HTTP/2 GET https://localhost:5001/img/it.jpg - - (ca22a1cb)
+2021-12-13T08:16:09.9667783+01:00 0HMDU1183L1JJ:00000027 [INF] Request finished HTTP/2 GET https://localhost:5001/img/it.jpg - - - 404 0 - 0.4853ms (791a596a)
+2021-12-13T08:16:10.0046347+01:00 0HMDU1183L1JJ:00000025 [INF] Sending file. Request path: '"/img/ProductItems/b3wr3mxj.ou0.jpg"'. Physical path: '"C:\Users\v_musilu\Downloads\Musilu.Eshop.Web-main\Musilu.Eshop.Web-main\wwwroot\img\ProductItems\b3wr3mxj.ou0.jpg"' (27b0a520)
+2021-12-13T08:16:10.0051872+01:00 0HMDU1183L1JJ:00000011 [INF] Sending file. Request path: '"/img/2.jpg"'. Physical path: '"C:\Users\v_musilu\Downloads\Musilu.Eshop.Web-main\Musilu.Eshop.Web-main\wwwroot\img\2.jpg"' (27b0a520)
+2021-12-13T08:16:10.0051460+01:00 0HMDU1183L1JJ:00000025 [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/b3wr3mxj.ou0.jpg - - - 200 826200 image/jpeg 184.0219ms (791a596a)
+2021-12-13T08:16:10.0053152+01:00 0HMDU1183L1JJ:00000011 [INF] Request finished HTTP/2 GET https://localhost:5001/img/2.jpg - - - 200 826200 image/jpeg 228.0420ms (791a596a)
+2021-12-13T08:16:10.0125531+01:00 0HMDU1183L1JJ:00000015 [INF] Sending file. Request path: '"/img/CarouselItems/ofb5hfyw.p0t.jpg"'. Physical path: '"C:\Users\v_musilu\Downloads\Musilu.Eshop.Web-main\Musilu.Eshop.Web-main\wwwroot\img\CarouselItems\ofb5hfyw.p0t.jpg"' (27b0a520)
+2021-12-13T08:16:10.0127689+01:00 0HMDU1183L1JJ:00000015 [INF] Request finished HTTP/2 GET https://localhost:5001/img/CarouselItems/ofb5hfyw.p0t.jpg - - - 200 826200 image/jpeg 225.3077ms (791a596a)
+2021-12-13T08:16:10.0728811+01:00 0HMDU1183L1JJ:00000029 [INF] Request starting HTTP/2 GET https://localhost:5001/favicon.ico - - (ca22a1cb)
+2021-12-13T08:16:10.0812458+01:00 0HMDU1183L1JJ:00000029 [INF] Sending file. Request path: '"/favicon.ico"'. Physical path: '"C:\Users\v_musilu\Downloads\Musilu.Eshop.Web-main\Musilu.Eshop.Web-main\wwwroot\favicon.ico"' (27b0a520)
+2021-12-13T08:16:10.0826211+01:00 0HMDU1183L1JJ:00000029 [INF] Request finished HTTP/2 GET https://localhost:5001/favicon.ico - - - 200 5430 image/x-icon 9.4430ms (791a596a)
+2021-12-13T08:16:16.7761571+01:00 0HMDU1183L1JJ:0000002B [INF] Request starting HTTP/2 GET https://localhost:5001/Home/Detail/7 - - (ca22a1cb)
+2021-12-13T08:16:16.7770104+01:00 0HMDU1183L1JJ:0000002B [INF] Executing endpoint '"Musilu.Eshop.Web.Controllers.HomeController.Detail (Musilu.Eshop.Web)"' (500cc934)
+2021-12-13T08:16:16.7999476+01:00 0HMDU1183L1JJ:0000002B [INF] Route matched with "{action = \"Detail\", controller = \"Home\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Detail(Int32)" on controller "Musilu.Eshop.Web.Controllers.HomeController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-13T08:16:16.8163756+01:00 0HMDU1183L1JJ:0000002B [INF] Entity Framework Core "5.0.12" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-13T08:16:16.8247612+01:00 0HMDU1183L1JJ:0000002B [INF] Executed DbCommand ("2"ms) [Parameters=["@__id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `p`.`ID`, `p`.`Category`, `p`.`Description`, `p`.`ImageAlt`, `p`.`ImageSource`, `p`.`Name`, `p`.`Price`
+FROM `Products` AS `p`
+WHERE `p`.`ID` = @__id_0
+LIMIT 1" (0723d8ff)
+2021-12-13T08:16:16.8258264+01:00 0HMDU1183L1JJ:0000002B [INF] Executing ViewResult, running view "Detail". (c83d0e25)
+2021-12-13T08:16:16.8383274+01:00 0HMDU1183L1JJ:0000002B [INF] Executed ViewResult - view "Detail" executed in 13.1772ms. (f66409e9)
+2021-12-13T08:16:16.8384143+01:00 0HMDU1183L1JJ:0000002B [INF] Executed action "Musilu.Eshop.Web.Controllers.HomeController.Detail (Musilu.Eshop.Web)" in 38.3921ms (afa2e885)
+2021-12-13T08:16:16.8384769+01:00 0HMDU1183L1JJ:0000002B [INF] Executed endpoint '"Musilu.Eshop.Web.Controllers.HomeController.Detail (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-13T08:16:16.8387184+01:00 0HMDU1183L1JJ:0000002B [INF] Request finished HTTP/2 GET https://localhost:5001/Home/Detail/7 - - - 200 - text/html;+charset=utf-8 63.0856ms (791a596a)
+2021-12-13T08:16:16.8572984+01:00 0HMDU1183L1JJ:0000002D [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - (ca22a1cb)
+2021-12-13T08:16:16.8572953+01:00 0HMDU1183L1JJ:0000002F [INF] Request starting HTTP/2 GET https://localhost:5001/js/Product.js - - (ca22a1cb)
+2021-12-13T08:16:16.8581231+01:00 0HMDU1183L1JJ:0000002D [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - - 404 0 - 0.8368ms (791a596a)
+2021-12-13T08:16:16.8665700+01:00 0HMDU1183L1JJ:00000031 [INF] Request starting HTTP/2 GET https://localhost:5001/js/Product.min.js - - (ca22a1cb)
+2021-12-13T08:16:16.8763233+01:00 0HMDU1183L1JJ:0000002F [INF] Sending file. Request path: '"/js/Product.js"'. Physical path: '"C:\Users\v_musilu\Downloads\Musilu.Eshop.Web-main\Musilu.Eshop.Web-main\wwwroot\js\Product.js"' (27b0a520)
+2021-12-13T08:16:16.8764789+01:00 0HMDU1183L1JJ:0000002F [INF] Request finished HTTP/2 GET https://localhost:5001/js/Product.js - - - 200 766 application/javascript 19.1778ms (791a596a)
+2021-12-13T08:16:16.8769907+01:00 0HMDU1183L1JJ:00000031 [INF] Sending file. Request path: '"/js/Product.min.js"'. Physical path: '"C:\Users\v_musilu\Downloads\Musilu.Eshop.Web-main\Musilu.Eshop.Web-main\wwwroot\js\Product.min.js"' (27b0a520)
+2021-12-13T08:16:16.8786382+01:00 0HMDU1183L1JJ:00000031 [INF] Request finished HTTP/2 GET https://localhost:5001/js/Product.min.js - - - 200 367 application/javascript 11.5121ms (791a596a)
+2021-12-13T08:16:18.3047591+01:00 0HMDU1183L1JJ:00000033 [INF] Request starting HTTP/2 POST https://localhost:5001/Customer/CustomerOrderNotCart/AddOrderItemsToSession application/x-www-form-urlencoded;+charset=UTF-8 11 (ca22a1cb)
+2021-12-13T08:16:18.3097935+01:00 0HMDU1183L1JJ:00000033 [INF] Authorization failed. "These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Customer)" (d3883ae7)
+2021-12-13T08:16:18.3124838+01:00 0HMDU1183L1JJ:00000033 [INF] AuthenticationScheme: "Identity.Application" was challenged. (d45f1f38)
+2021-12-13T08:16:18.3128863+01:00 0HMDU1183L1JJ:00000033 [INF] Request finished HTTP/2 POST https://localhost:5001/Customer/CustomerOrderNotCart/AddOrderItemsToSession application/x-www-form-urlencoded;+charset=UTF-8 11 - 401 0 - 8.1294ms (791a596a)
+2021-12-13T08:16:35.9699367+01:00 0HMDU1183L1JJ:00000035 [INF] Request starting HTTP/2 GET https://localhost:5001/Security/Account/Login - - (ca22a1cb)
+2021-12-13T08:16:35.9714502+01:00 0HMDU1183L1JJ:00000035 [INF] Executing endpoint '"Musilu.Eshop.Web.Areas.Security.Controllers.AccountController.Login (Musilu.Eshop.Web)"' (500cc934)
+2021-12-13T08:16:35.9726661+01:00 0HMDU1183L1JJ:00000035 [INF] Route matched with "{area = \"Security\", action = \"Login\", controller = \"Account\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Login()" on controller "Musilu.Eshop.Web.Areas.Security.Controllers.AccountController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-13T08:16:35.9774198+01:00 0HMDU1183L1JJ:00000035 [INF] Executing ViewResult, running view "Login". (c83d0e25)
+2021-12-13T08:16:36.0226580+01:00 0HMDU1183L1JJ:00000035 [INF] Executed ViewResult - view "Login" executed in 45.964ms. (f66409e9)
+2021-12-13T08:16:36.0227627+01:00 0HMDU1183L1JJ:00000035 [INF] Executed action "Musilu.Eshop.Web.Areas.Security.Controllers.AccountController.Login (Musilu.Eshop.Web)" in 50.0386ms (afa2e885)
+2021-12-13T08:16:36.0228135+01:00 0HMDU1183L1JJ:00000035 [INF] Executed endpoint '"Musilu.Eshop.Web.Areas.Security.Controllers.AccountController.Login (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-13T08:16:36.0229784+01:00 0HMDU1183L1JJ:00000035 [INF] Request finished HTTP/2 GET https://localhost:5001/Security/Account/Login - - - 200 - text/html;+charset=utf-8 53.0596ms (791a596a)
+2021-12-13T08:16:36.0450900+01:00 0HMDU1183L1JJ:00000037 [INF] Request starting HTTP/2 GET https://localhost:5001/css/login.css - - (ca22a1cb)
+2021-12-13T08:16:36.0451675+01:00 0HMDU1183L1JJ:00000039 [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - (ca22a1cb)
+2021-12-13T08:16:36.0459708+01:00 0HMDU1183L1JJ:00000039 [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - - 404 0 - 0.8681ms (791a596a)
+2021-12-13T08:16:36.0550967+01:00 0HMDU1183L1JJ:00000037 [INF] Sending file. Request path: '"/css/login.css"'. Physical path: '"C:\Users\v_musilu\Downloads\Musilu.Eshop.Web-main\Musilu.Eshop.Web-main\wwwroot\css\login.css"' (27b0a520)
+2021-12-13T08:16:36.0552390+01:00 0HMDU1183L1JJ:00000037 [INF] Request finished HTTP/2 GET https://localhost:5001/css/login.css - - - 200 2739 text/css 10.2780ms (791a596a)
+2021-12-13T08:16:42.2214167+01:00 0HMDU1183L1JJ:0000003B [INF] Request starting HTTP/2 POST https://localhost:5001/Security/Account/Login application/x-www-form-urlencoded 213 (ca22a1cb)
+2021-12-13T08:16:42.2265495+01:00 0HMDU1183L1JJ:0000003B [INF] Executing endpoint '"Musilu.Eshop.Web.Areas.Security.Controllers.AccountController.Login (Musilu.Eshop.Web)"' (500cc934)
+2021-12-13T08:16:42.2356202+01:00 0HMDU1183L1JJ:0000003B [INF] Route matched with "{area = \"Security\", action = \"Login\", controller = \"Account\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Musilu.Eshop.Web.Models.ViewModels.LoginViewModel)" on controller "Musilu.Eshop.Web.Areas.Security.Controllers.AccountController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-13T08:16:42.2638453+01:00 0HMDU1183L1JJ:0000003B [INF] Entity Framework Core "5.0.12" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-13T08:16:42.2669508+01:00 0HMDU1183L1JJ:0000003B [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2021-12-13T08:16:42.3004515+01:00 0HMDU1183L1JJ:0000003B [WRN] Invalid password for user. (6d284782)
+2021-12-13T08:16:42.3027660+01:00 0HMDU1183L1JJ:0000003B [WRN] User failed to provide the correct password. (a25e98da)
+2021-12-13T08:16:42.3179567+01:00 0HMDU1183L1JJ:0000003B [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2021-12-13T08:16:42.3345550+01:00 0HMDU1183L1JJ:0000003B [INF] Executed DbCommand ("2"ms) [Parameters=["@__normalizedEmail_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedEmail` = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2021-12-13T08:16:42.4527441+01:00 0HMDU1183L1JJ:0000003B [INF] Executed DbCommand ("5"ms) [Parameters=["@p16='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p17='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""UPDATE `Users` SET `AccessFailedCount` = @p0, `ConcurrencyStamp` = @p1, `Email` = @p2, `EmailConfirmed` = @p3, `FirstName` = @p4, `LastName` = @p5, `LockoutEnabled` = @p6, `LockoutEnd` = @p7, `NormalizedEmail` = @p8, `NormalizedUserName` = @p9, `PasswordHash` = @p10, `PhoneNumber` = @p11, `PhoneNumberConfirmed` = @p12, `SecurityStamp` = @p13, `TwoFactorEnabled` = @p14, `UserName` = @p15
+WHERE `Id` = @p16 AND `ConcurrencyStamp` = @p17;
+SELECT ROW_COUNT();" (0723d8ff)
+2021-12-13T08:16:42.4754118+01:00 0HMDU1183L1JJ:0000003B [INF] Executing ViewResult, running view "Login". (c83d0e25)
+2021-12-13T08:16:42.4779163+01:00 0HMDU1183L1JJ:0000003B [INF] Executed ViewResult - view "Login" executed in 2.5355ms. (f66409e9)
+2021-12-13T08:16:42.4790021+01:00 0HMDU1183L1JJ:0000003B [INF] Executed action "Musilu.Eshop.Web.Areas.Security.Controllers.AccountController.Login (Musilu.Eshop.Web)" in 243.3026ms (afa2e885)
+2021-12-13T08:16:42.4794958+01:00 0HMDU1183L1JJ:0000003B [INF] Executed endpoint '"Musilu.Eshop.Web.Areas.Security.Controllers.AccountController.Login (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-13T08:16:42.4812059+01:00 0HMDU1183L1JJ:0000003B [INF] Request finished HTTP/2 POST https://localhost:5001/Security/Account/Login application/x-www-form-urlencoded 213 - 200 - text/html;+charset=utf-8 259.8119ms (791a596a)
+2021-12-13T08:16:42.4903997+01:00 0HMDU1183L1JJ:0000003D [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - (ca22a1cb)
+2021-12-13T08:16:42.4910506+01:00 0HMDU1183L1JJ:0000003D [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - - 404 0 - 0.6653ms (791a596a)
+2021-12-13T08:17:25.0143589+01:00 0HMDU1183L1JJ:0000003F [INF] Request starting HTTP/2 POST https://localhost:5001/Security/Account/Login application/x-www-form-urlencoded 210 (ca22a1cb)
+2021-12-13T08:17:25.0146933+01:00 0HMDU1183L1JJ:0000003F [INF] Executing endpoint '"Musilu.Eshop.Web.Areas.Security.Controllers.AccountController.Login (Musilu.Eshop.Web)"' (500cc934)
+2021-12-13T08:17:25.0148135+01:00 0HMDU1183L1JJ:0000003F [INF] Route matched with "{area = \"Security\", action = \"Login\", controller = \"Account\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Musilu.Eshop.Web.Models.ViewModels.LoginViewModel)" on controller "Musilu.Eshop.Web.Areas.Security.Controllers.AccountController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-13T08:17:25.0283433+01:00 0HMDU1183L1JJ:0000003F [INF] Entity Framework Core "5.0.12" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-13T08:17:25.0369395+01:00 0HMDU1183L1JJ:0000003F [INF] Executed DbCommand ("6"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2021-12-13T08:17:25.0608452+01:00 0HMDU1183L1JJ:0000003F [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2021-12-13T08:17:25.0698758+01:00 0HMDU1183L1JJ:0000003F [INF] Executed DbCommand ("7"ms) [Parameters=["@__normalizedEmail_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedEmail` = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2021-12-13T08:17:25.0757634+01:00 0HMDU1183L1JJ:0000003F [INF] Executed DbCommand ("1"ms) [Parameters=["@p16='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p17='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""UPDATE `Users` SET `AccessFailedCount` = @p0, `ConcurrencyStamp` = @p1, `Email` = @p2, `EmailConfirmed` = @p3, `FirstName` = @p4, `LastName` = @p5, `LockoutEnabled` = @p6, `LockoutEnd` = @p7, `NormalizedEmail` = @p8, `NormalizedUserName` = @p9, `PasswordHash` = @p10, `PhoneNumber` = @p11, `PhoneNumberConfirmed` = @p12, `SecurityStamp` = @p13, `TwoFactorEnabled` = @p14, `UserName` = @p15
+WHERE `Id` = @p16 AND `ConcurrencyStamp` = @p17;
+SELECT ROW_COUNT();" (0723d8ff)
+2021-12-13T08:17:25.1666404+01:00 0HMDU1183L1JJ:0000003F [INF] Executed DbCommand ("21"ms) [Parameters=["@__user_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`ClaimType`, `u`.`ClaimValue`, `u`.`UserId`
+FROM `UserClaims` AS `u`
+WHERE `u`.`UserId` = @__user_Id_0" (0723d8ff)
+2021-12-13T08:17:25.2047436+01:00 0HMDU1183L1JJ:0000003F [INF] Executed DbCommand ("8"ms) [Parameters=["@__userId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Name`
+FROM `UserRoles` AS `u`
+INNER JOIN `Roles` AS `r` ON `u`.`RoleId` = `r`.`Id`
+WHERE `u`.`UserId` = @__userId_0" (0723d8ff)
+2021-12-13T08:17:25.2092426+01:00 0HMDU1183L1JJ:0000003F [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2021-12-13T08:17:25.2247376+01:00 0HMDU1183L1JJ:0000003F [INF] Executed DbCommand ("8"ms) [Parameters=["@__role_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`ClaimType`, `r`.`ClaimValue`
+FROM `RoleClaims` AS `r`
+WHERE `r`.`RoleId` = @__role_Id_0" (0723d8ff)
+2021-12-13T08:17:25.2285385+01:00 0HMDU1183L1JJ:0000003F [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2021-12-13T08:17:25.2326327+01:00 0HMDU1183L1JJ:0000003F [INF] Executed DbCommand ("1"ms) [Parameters=["@__role_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`ClaimType`, `r`.`ClaimValue`
+FROM `RoleClaims` AS `r`
+WHERE `r`.`RoleId` = @__role_Id_0" (0723d8ff)
+2021-12-13T08:17:25.2362227+01:00 0HMDU1183L1JJ:0000003F [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2021-12-13T08:17:25.2391340+01:00 0HMDU1183L1JJ:0000003F [INF] Executed DbCommand ("1"ms) [Parameters=["@__role_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`ClaimType`, `r`.`ClaimValue`
+FROM `RoleClaims` AS `r`
+WHERE `r`.`RoleId` = @__role_Id_0" (0723d8ff)
+2021-12-13T08:17:25.2455759+01:00 0HMDU1183L1JJ:0000003F [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2021-12-13T08:17:25.2475052+01:00 0HMDU1183L1JJ:0000003F [INF] Executing RedirectResult, redirecting to "/". (d98d540e)
+2021-12-13T08:17:25.2476966+01:00 0HMDU1183L1JJ:0000003F [INF] Executed action "Musilu.Eshop.Web.Areas.Security.Controllers.AccountController.Login (Musilu.Eshop.Web)" in 232.8405ms (afa2e885)
+2021-12-13T08:17:25.2477306+01:00 0HMDU1183L1JJ:0000003F [INF] Executed endpoint '"Musilu.Eshop.Web.Areas.Security.Controllers.AccountController.Login (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-13T08:17:25.2479448+01:00 0HMDU1183L1JJ:0000003F [INF] Request finished HTTP/2 POST https://localhost:5001/Security/Account/Login application/x-www-form-urlencoded 210 - 302 0 - 233.6158ms (791a596a)
+2021-12-13T08:17:25.2504670+01:00 0HMDU1183L1JJ:00000041 [INF] Request starting HTTP/2 GET https://localhost:5001/ - - (ca22a1cb)
+2021-12-13T08:17:25.2550424+01:00 0HMDU1183L1JJ:00000041 [INF] Executing endpoint '"Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)"' (500cc934)
+2021-12-13T08:17:25.2551840+01:00 0HMDU1183L1JJ:00000041 [INF] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "Musilu.Eshop.Web.Controllers.HomeController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-13T08:17:25.2567854+01:00 0HMDU1183L1JJ:00000041 [INF] Loaded Home Index (d3450aae)
+2021-12-13T08:17:25.2571409+01:00 0HMDU1183L1JJ:00000041 [INF] Entity Framework Core "5.0.12" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-13T08:17:25.2579309+01:00 0HMDU1183L1JJ:00000041 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`ID`, `c`.`ImageAlt`, `c`.`ImageSource`
+FROM `CarouselItem` AS `c`" (0723d8ff)
+2021-12-13T08:17:25.2589760+01:00 0HMDU1183L1JJ:00000041 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `p`.`ID`, `p`.`Category`, `p`.`Description`, `p`.`ImageAlt`, `p`.`ImageSource`, `p`.`Name`, `p`.`Price`
+FROM `Products` AS `p`" (0723d8ff)
+2021-12-13T08:17:25.2593210+01:00 0HMDU1183L1JJ:00000041 [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2021-12-13T08:17:25.2635109+01:00 0HMDU1183L1JJ:00000041 [INF] Executed ViewResult - view "Index" executed in 4.2026ms. (f66409e9)
+2021-12-13T08:17:25.2635834+01:00 0HMDU1183L1JJ:00000041 [INF] Executed action "Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)" in 8.3541ms (afa2e885)
+2021-12-13T08:17:25.2636199+01:00 0HMDU1183L1JJ:00000041 [INF] Executed endpoint '"Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-13T08:17:25.2637616+01:00 0HMDU1183L1JJ:00000041 [INF] Request finished HTTP/2 GET https://localhost:5001/ - - - 200 - text/html;+charset=utf-8 13.4003ms (791a596a)
+2021-12-13T08:17:25.2793205+01:00 0HMDU1183L1JJ:00000043 [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - (ca22a1cb)
+2021-12-13T08:17:25.2796333+01:00 0HMDU1183L1JJ:00000045 [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/hxyvawvj.jka.jpg - - (ca22a1cb)
+2021-12-13T08:17:25.2851778+01:00 0HMDU1183L1JJ:00000043 [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - - 404 0 - 5.8581ms (791a596a)
+2021-12-13T08:17:25.2902639+01:00 0HMDU1183L1JJ:00000047 [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/shsnozj2.jbr.jpg - - (ca22a1cb)
+2021-12-13T08:17:25.2902660+01:00 0HMDU1183L1JJ:00000045 [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/hxyvawvj.jka.jpg - - - 404 0 - 10.2370ms (791a596a)
+2021-12-13T08:17:25.2905465+01:00 0HMDU1183L1JJ:00000049 [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/tj5jv3hb.oia.jpg - - (ca22a1cb)
+2021-12-13T08:17:25.2954415+01:00 0HMDU1183L1JJ:0000004B [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/2zzrhjsy.dzn.jpg - - (ca22a1cb)
+2021-12-13T08:17:25.2958162+01:00 0HMDU1183L1JJ:00000049 [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/tj5jv3hb.oia.jpg - - - 404 0 - 5.2989ms (791a596a)
+2021-12-13T08:17:25.2959693+01:00 0HMDU1183L1JJ:0000004D [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/ens0zky1.cod.jpg - - (ca22a1cb)
+2021-12-13T08:17:25.2961314+01:00 0HMDU1183L1JJ:0000004B [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/2zzrhjsy.dzn.jpg - - - 404 0 - 0.6924ms (791a596a)
+2021-12-13T08:17:25.2963650+01:00 0HMDU1183L1JJ:00000047 [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/shsnozj2.jbr.jpg - - - 404 0 - 6.0966ms (791a596a)
+2021-12-13T08:17:25.3018093+01:00 0HMDU1183L1JJ:0000004D [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/ens0zky1.cod.jpg - - - 404 0 - 5.8474ms (791a596a)
+2021-12-13T08:17:27.9048212+01:00 0HMDU1183L1JJ:0000004F [INF] Request starting HTTP/2 GET https://localhost:5001/Home/Detail/7 - - (ca22a1cb)
+2021-12-13T08:17:27.9088165+01:00 0HMDU1183L1JJ:0000004F [INF] Executing endpoint '"Musilu.Eshop.Web.Controllers.HomeController.Detail (Musilu.Eshop.Web)"' (500cc934)
+2021-12-13T08:17:27.9090779+01:00 0HMDU1183L1JJ:0000004F [INF] Route matched with "{action = \"Detail\", controller = \"Home\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Detail(Int32)" on controller "Musilu.Eshop.Web.Controllers.HomeController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-13T08:17:27.9107295+01:00 0HMDU1183L1JJ:0000004F [INF] Entity Framework Core "5.0.12" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-13T08:17:27.9132139+01:00 0HMDU1183L1JJ:0000004F [INF] Executed DbCommand ("1"ms) [Parameters=["@__id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `p`.`ID`, `p`.`Category`, `p`.`Description`, `p`.`ImageAlt`, `p`.`ImageSource`, `p`.`Name`, `p`.`Price`
+FROM `Products` AS `p`
+WHERE `p`.`ID` = @__id_0
+LIMIT 1" (0723d8ff)
+2021-12-13T08:17:27.9138930+01:00 0HMDU1183L1JJ:0000004F [INF] Executing ViewResult, running view "Detail". (c83d0e25)
+2021-12-13T08:17:27.9160126+01:00 0HMDU1183L1JJ:0000004F [INF] Executed ViewResult - view "Detail" executed in 2.1932ms. (f66409e9)
+2021-12-13T08:17:27.9161437+01:00 0HMDU1183L1JJ:0000004F [INF] Executed action "Musilu.Eshop.Web.Controllers.HomeController.Detail (Musilu.Eshop.Web)" in 6.9962ms (afa2e885)
+2021-12-13T08:17:27.9162007+01:00 0HMDU1183L1JJ:0000004F [INF] Executed endpoint '"Musilu.Eshop.Web.Controllers.HomeController.Detail (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-13T08:17:27.9165461+01:00 0HMDU1183L1JJ:0000004F [INF] Request finished HTTP/2 GET https://localhost:5001/Home/Detail/7 - - - 200 - text/html;+charset=utf-8 11.7459ms (791a596a)
+2021-12-13T08:17:27.9622380+01:00 0HMDU1183L1JJ:00000051 [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - (ca22a1cb)
+2021-12-13T08:17:27.9630043+01:00 0HMDU1183L1JJ:00000051 [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - - 404 0 - 0.9780ms (791a596a)
+2021-12-13T08:17:28.6487787+01:00 0HMDU1183L1JJ:00000053 [INF] Request starting HTTP/2 POST https://localhost:5001/Customer/CustomerOrderNotCart/AddOrderItemsToSession application/x-www-form-urlencoded;+charset=UTF-8 11 (ca22a1cb)
+2021-12-13T08:17:28.6544569+01:00 0HMDU1183L1JJ:00000053 [INF] Authorization was successful. (0d575a54)
+2021-12-13T08:17:28.6546251+01:00 0HMDU1183L1JJ:00000053 [INF] Executing endpoint '"Musilu.Eshop.Web.Areas.Customer.Controllers.CustomerOrderNotCartController.AddOrderItemsToSession (Musilu.Eshop.Web)"' (500cc934)
+2021-12-13T08:17:28.6557090+01:00 0HMDU1183L1JJ:00000053 [INF] Route matched with "{area = \"Customer\", action = \"AddOrderItemsToSession\", controller = \"CustomerOrderNotCart\"}". Executing controller action with signature "Double AddOrderItemsToSession(System.Nullable`1[System.Int32])" on controller "Musilu.Eshop.Web.Areas.Customer.Controllers.CustomerOrderNotCartController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-13T08:17:33.5748587+01:00 0HMDU1183L1JJ:00000053 [INF] Entity Framework Core "5.0.12" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-13T08:17:33.5791662+01:00 0HMDU1183L1JJ:00000053 [INF] Executed DbCommand ("0"ms) [Parameters=["@__productId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `p`.`ID`, `p`.`Category`, `p`.`Description`, `p`.`ImageAlt`, `p`.`ImageSource`, `p`.`Name`, `p`.`Price`
+FROM `Products` AS `p`
+WHERE `p`.`ID` = @__productId_0
+LIMIT 1" (0723d8ff)
+2021-12-13T08:17:33.8530408+01:00 0HMDU1183L1JJ:00000053 [INF] Executing "ObjectResult", writing value of type '"System.Double"'. (605b4265)
+2021-12-13T08:17:33.8694038+01:00 0HMDU1183L1JJ:00000053 [INF] Executed action "Musilu.Eshop.Web.Areas.Customer.Controllers.CustomerOrderNotCartController.AddOrderItemsToSession (Musilu.Eshop.Web)" in 5213.6051ms (afa2e885)
+2021-12-13T08:17:33.8694789+01:00 0HMDU1183L1JJ:00000053 [INF] Executed endpoint '"Musilu.Eshop.Web.Areas.Customer.Controllers.CustomerOrderNotCartController.AddOrderItemsToSession (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-13T08:17:33.8705330+01:00 0HMDU1183L1JJ:00000053 [INF] Session started; Key:"75b90032-4d17-4c29-fdcf-246ee68b96ae", Id:"80efb90d-29b1-f939-54da-932525743aa0" (1d7cf8c0)
+2021-12-13T08:17:33.8717543+01:00 0HMDU1183L1JJ:00000053 [INF] Request finished HTTP/2 POST https://localhost:5001/Customer/CustomerOrderNotCart/AddOrderItemsToSession application/x-www-form-urlencoded;+charset=UTF-8 11 - 200 - application/json;+charset=utf-8 5223.1697ms (791a596a)
+2021-12-13T09:01:26.0163218+01:00  [INF] Entity Framework Core "5.0.12" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-13T09:01:26.4069787+01:00  [INF] Executed DbCommand ("16"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'Musilu.Eshop'" (0723d8ff)
+2021-12-13T09:01:26.5750243+01:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM `CarouselItem` AS `c`" (0723d8ff)
+2021-12-13T09:01:26.6250142+01:00  [INF] User profile is available. Using '"C:\Users\v_musilu\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2021-12-13T09:01:26.7380685+01:00  [INF] Executed DbCommand ("19"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2021-12-13T09:01:26.8095058+01:00  [WRN] Role "(null)" validation failed: "DuplicateRoleName". (60d773c7)
+2021-12-13T09:01:26.8311974+01:00  [INF] Executed DbCommand ("7"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2021-12-13T09:01:26.8382389+01:00  [WRN] Role "(null)" validation failed: "DuplicateRoleName". (60d773c7)
+2021-12-13T09:01:26.8421412+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2021-12-13T09:01:26.8439567+01:00  [WRN] Role "(null)" validation failed: "DuplicateRoleName". (60d773c7)
+2021-12-13T09:01:26.8554225+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2021-12-13T09:01:26.8959357+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2021-12-13T09:01:27.2944668+01:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2021-12-13T09:01:27.2965588+01:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-12-13T09:01:27.2991487+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-12-13T09:01:27.3011520+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-12-13T09:01:27.3031691+01:00  [INF] Content root path: "C:\Users\v_musilu\Downloads\Musilu.Eshop.Web-main\Musilu.Eshop.Web-main" (b5d60022)
+2021-12-13T09:01:28.4608066+01:00 0HMDU1R1VJEG8:00000001 [INF] Request starting HTTP/2 GET https://localhost:5001/ - - (ca22a1cb)
+2021-12-13T09:01:28.5619924+01:00 0HMDU1R1VJEG8:00000001 [INF] Executing endpoint '"Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)"' (500cc934)
+2021-12-13T09:01:28.5953734+01:00 0HMDU1R1VJEG8:00000001 [INF] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "Musilu.Eshop.Web.Controllers.HomeController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-13T09:01:28.6054113+01:00 0HMDU1R1VJEG8:00000001 [INF] Loaded Home Index (d3450aae)
+2021-12-13T09:01:28.6078400+01:00 0HMDU1R1VJEG8:00000001 [INF] Entity Framework Core "5.0.12" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-13T09:01:28.6188766+01:00 0HMDU1R1VJEG8:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`ID`, `c`.`ImageAlt`, `c`.`ImageSource`
+FROM `CarouselItem` AS `c`" (0723d8ff)
+2021-12-13T09:01:28.6343879+01:00 0HMDU1R1VJEG8:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `p`.`ID`, `p`.`Category`, `p`.`Description`, `p`.`ImageAlt`, `p`.`ImageSource`, `p`.`Name`, `p`.`Price`
+FROM `Products` AS `p`" (0723d8ff)
+2021-12-13T09:01:28.6920779+01:00 0HMDU1R1VJEG8:00000001 [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2021-12-13T09:01:28.9089831+01:00 0HMDU1R1VJEG8:00000001 [INF] Executed ViewResult - view "Index" executed in 218.3088ms. (f66409e9)
+2021-12-13T09:01:28.9100543+01:00 0HMDU1R1VJEG8:00000001 [INF] Executed action "Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)" in 313.8645ms (afa2e885)
+2021-12-13T09:01:28.9102404+01:00 0HMDU1R1VJEG8:00000001 [INF] Executed endpoint '"Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-13T09:01:28.9198597+01:00 0HMDU1R1VJEG8:00000001 [INF] Request finished HTTP/2 GET https://localhost:5001/ - - - 200 - text/html;+charset=utf-8 463.3981ms (791a596a)
+2021-12-13T09:01:28.9811469+01:00 0HMDU1R1VJEG8:00000005 [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/shsnozj2.jbr.jpg - - (ca22a1cb)
+2021-12-13T09:01:28.9850051+01:00 0HMDU1R1VJEG8:00000003 [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - (ca22a1cb)
+2021-12-13T09:01:28.9853463+01:00 0HMDU1R1VJEG8:00000007 [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/hxyvawvj.jka.jpg - - (ca22a1cb)
+2021-12-13T09:01:28.9856791+01:00 0HMDU1R1VJEG8:0000000B [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/2zzrhjsy.dzn.jpg - - (ca22a1cb)
+2021-12-13T09:01:28.9857072+01:00 0HMDU1R1VJEG8:00000009 [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/tj5jv3hb.oia.jpg - - (ca22a1cb)
+2021-12-13T09:01:28.9875996+01:00 0HMDU1R1VJEG8:00000005 [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/shsnozj2.jbr.jpg - - - 404 0 - 6.5659ms (791a596a)
+2021-12-13T09:01:28.9875813+01:00 0HMDU1R1VJEG8:0000000B [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/2zzrhjsy.dzn.jpg - - - 404 0 - 1.8319ms (791a596a)
+2021-12-13T09:01:28.9876239+01:00 0HMDU1R1VJEG8:00000009 [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/tj5jv3hb.oia.jpg - - - 404 0 - 1.9275ms (791a596a)
+2021-12-13T09:01:28.9877336+01:00 0HMDU1R1VJEG8:0000000D [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/ens0zky1.cod.jpg - - (ca22a1cb)
+2021-12-13T09:01:28.9882685+01:00 0HMDU1R1VJEG8:00000003 [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - - 404 0 - 2.6371ms (791a596a)
+2021-12-13T09:01:28.9884001+01:00 0HMDU1R1VJEG8:00000007 [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/hxyvawvj.jka.jpg - - - 404 0 - 2.1546ms (791a596a)
+2021-12-13T09:01:28.9911923+01:00 0HMDU1R1VJEG8:0000000D [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/ens0zky1.cod.jpg - - - 404 0 - 3.3617ms (791a596a)
+2021-12-13T09:01:29.0114838+01:00 0HMDU1R1VJEG8:0000000F [INF] Request starting HTTP/2 GET https://localhost:5001/img/it.jpg - - (ca22a1cb)
+2021-12-13T09:01:29.0122952+01:00 0HMDU1R1VJEG8:0000000F [INF] Request finished HTTP/2 GET https://localhost:5001/img/it.jpg - - - 404 0 - 0.7711ms (791a596a)
+2021-12-13T09:02:57.2491765+01:00  [INF] Entity Framework Core "5.0.12" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-13T09:02:57.5985395+01:00  [INF] Executed DbCommand ("15"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'Musilu.Eshop'" (0723d8ff)
+2021-12-13T09:02:57.7634650+01:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM `CarouselItem` AS `c`" (0723d8ff)
+2021-12-13T09:02:57.8152640+01:00  [INF] User profile is available. Using '"C:\Users\v_musilu\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2021-12-13T09:02:57.9334260+01:00  [INF] Executed DbCommand ("17"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2021-12-13T09:02:57.9840559+01:00  [WRN] Role "(null)" validation failed: "DuplicateRoleName". (60d773c7)
+2021-12-13T09:02:58.0010361+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2021-12-13T09:02:58.0162089+01:00  [WRN] Role "(null)" validation failed: "DuplicateRoleName". (60d773c7)
+2021-12-13T09:02:58.0378758+01:00  [INF] Executed DbCommand ("10"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2021-12-13T09:02:58.0412481+01:00  [WRN] Role "(null)" validation failed: "DuplicateRoleName". (60d773c7)
+2021-12-13T09:02:58.0569729+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2021-12-13T09:02:58.1013164+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2021-12-13T09:02:58.3715969+01:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2021-12-13T09:02:58.3738643+01:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-12-13T09:02:58.3762347+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-12-13T09:02:58.3781802+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-12-13T09:02:58.3803072+01:00  [INF] Content root path: "C:\Users\v_musilu\Downloads\Musilu.Eshop.Web-main\Musilu.Eshop.Web-main" (b5d60022)
+2021-12-13T09:02:59.5009359+01:00 0HMDU1RT4HP1L:00000001 [INF] Request starting HTTP/2 GET https://localhost:5001/ - - (ca22a1cb)
+2021-12-13T09:02:59.6098325+01:00 0HMDU1RT4HP1L:00000001 [INF] Executing endpoint '"Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)"' (500cc934)
+2021-12-13T09:02:59.6390154+01:00 0HMDU1RT4HP1L:00000001 [INF] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "Musilu.Eshop.Web.Controllers.HomeController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-13T09:02:59.6486184+01:00 0HMDU1RT4HP1L:00000001 [INF] Loaded Home Index (d3450aae)
+2021-12-13T09:02:59.6510772+01:00 0HMDU1RT4HP1L:00000001 [INF] Entity Framework Core "5.0.12" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-13T09:02:59.6615442+01:00 0HMDU1RT4HP1L:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`ID`, `c`.`ImageAlt`, `c`.`ImageSource`
+FROM `CarouselItem` AS `c`" (0723d8ff)
+2021-12-13T09:02:59.6828926+01:00 0HMDU1RT4HP1L:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `p`.`ID`, `p`.`Category`, `p`.`Description`, `p`.`ImageAlt`, `p`.`ImageSource`, `p`.`Name`, `p`.`Price`
+FROM `Products` AS `p`" (0723d8ff)
+2021-12-13T09:02:59.7616305+01:00 0HMDU1RT4HP1L:00000001 [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2021-12-13T09:02:59.9681929+01:00 0HMDU1RT4HP1L:00000001 [INF] Executed ViewResult - view "Index" executed in 208.4892ms. (f66409e9)
+2021-12-13T09:02:59.9691707+01:00 0HMDU1RT4HP1L:00000001 [INF] Executed action "Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)" in 328.9321ms (afa2e885)
+2021-12-13T09:02:59.9693580+01:00 0HMDU1RT4HP1L:00000001 [INF] Executed endpoint '"Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-13T09:02:59.9885549+01:00 0HMDU1RT4HP1L:00000001 [INF] Request finished HTTP/2 GET https://localhost:5001/ - - - 200 - text/html;+charset=utf-8 490.6699ms (791a596a)
+2021-12-13T09:03:00.0318131+01:00 0HMDU1RT4HP1L:00000003 [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - (ca22a1cb)
+2021-12-13T09:03:00.0321083+01:00 0HMDU1RT4HP1L:00000005 [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/hxyvawvj.jka.jpg - - (ca22a1cb)
+2021-12-13T09:03:00.0359189+01:00 0HMDU1RT4HP1L:00000007 [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/shsnozj2.jbr.jpg - - (ca22a1cb)
+2021-12-13T09:03:00.0360373+01:00 0HMDU1RT4HP1L:00000005 [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/hxyvawvj.jka.jpg - - - 404 0 - 3.8585ms (791a596a)
+2021-12-13T09:03:00.0360365+01:00 0HMDU1RT4HP1L:00000003 [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - - 404 0 - 4.1994ms (791a596a)
+2021-12-13T09:03:00.0361856+01:00 0HMDU1RT4HP1L:00000009 [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/tj5jv3hb.oia.jpg - - (ca22a1cb)
+2021-12-13T09:03:00.0361917+01:00 0HMDU1RT4HP1L:0000000B [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/2zzrhjsy.dzn.jpg - - (ca22a1cb)
+2021-12-13T09:03:00.0373832+01:00 0HMDU1RT4HP1L:0000000D [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/ens0zky1.cod.jpg - - (ca22a1cb)
+2021-12-13T09:03:00.0383246+01:00 0HMDU1RT4HP1L:00000009 [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/tj5jv3hb.oia.jpg - - - 404 0 - 2.1078ms (791a596a)
+2021-12-13T09:03:00.0383246+01:00 0HMDU1RT4HP1L:0000000D [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/ens0zky1.cod.jpg - - - 404 0 - 0.9470ms (791a596a)
+2021-12-13T09:03:00.0383247+01:00 0HMDU1RT4HP1L:00000007 [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/shsnozj2.jbr.jpg - - - 404 0 - 2.3512ms (791a596a)
+2021-12-13T09:03:00.0383963+01:00 0HMDU1RT4HP1L:0000000B [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/2zzrhjsy.dzn.jpg - - - 404 0 - 2.0960ms (791a596a)
+2021-12-13T09:03:00.0524765+01:00 0HMDU1RT4HP1L:0000000F [INF] Request starting HTTP/2 GET https://localhost:5001/img/it.jpg - - (ca22a1cb)
+2021-12-13T09:03:00.0535758+01:00 0HMDU1RT4HP1L:0000000F [INF] Request finished HTTP/2 GET https://localhost:5001/img/it.jpg - - - 404 0 - 1.1004ms (791a596a)
+2021-12-13T09:03:18.4138317+01:00 0HMDU1RT4HP1L:00000011 [INF] Request starting HTTP/2 GET https://localhost:5001/css/site.css - - (ca22a1cb)
+2021-12-13T09:03:18.4524527+01:00 0HMDU1RT4HP1L:00000011 [INF] Sending file. Request path: '"/css/site.css"'. Physical path: '"C:\Users\v_musilu\Downloads\Musilu.Eshop.Web-main\Musilu.Eshop.Web-main\wwwroot\css\site.css"' (27b0a520)
+2021-12-13T09:03:18.4527260+01:00 0HMDU1RT4HP1L:00000011 [INF] Request finished HTTP/2 GET https://localhost:5001/css/site.css - - - 200 3213 text/css 38.9782ms (791a596a)
+2021-12-13T09:03:23.5439840+01:00 0HMDU1RT4HP1L:00000013 [INF] Request starting HTTP/2 GET https://localhost:5001/ - - (ca22a1cb)
+2021-12-13T09:03:23.5465079+01:00 0HMDU1RT4HP1L:00000013 [INF] Executing endpoint '"Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)"' (500cc934)
+2021-12-13T09:03:23.5472196+01:00 0HMDU1RT4HP1L:00000013 [INF] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "Musilu.Eshop.Web.Controllers.HomeController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-13T09:03:23.5525951+01:00 0HMDU1RT4HP1L:00000013 [INF] Loaded Home Index (d3450aae)
+2021-12-13T09:03:23.5960797+01:00 0HMDU1RT4HP1L:00000013 [INF] Entity Framework Core "5.0.12" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-13T09:03:23.6021086+01:00 0HMDU1RT4HP1L:00000013 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`ID`, `c`.`ImageAlt`, `c`.`ImageSource`
+FROM `CarouselItem` AS `c`" (0723d8ff)
+2021-12-13T09:03:23.6043590+01:00 0HMDU1RT4HP1L:00000013 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `p`.`ID`, `p`.`Category`, `p`.`Description`, `p`.`ImageAlt`, `p`.`ImageSource`, `p`.`Name`, `p`.`Price`
+FROM `Products` AS `p`" (0723d8ff)
+2021-12-13T09:03:23.6052630+01:00 0HMDU1RT4HP1L:00000013 [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2021-12-13T09:03:23.6089294+01:00 0HMDU1RT4HP1L:00000013 [INF] Executed ViewResult - view "Index" executed in 3.9037ms. (f66409e9)
+2021-12-13T09:03:23.6090690+01:00 0HMDU1RT4HP1L:00000013 [INF] Executed action "Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)" in 61.7572ms (afa2e885)
+2021-12-13T09:03:23.6091582+01:00 0HMDU1RT4HP1L:00000013 [INF] Executed endpoint '"Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-13T09:03:23.6093982+01:00 0HMDU1RT4HP1L:00000013 [INF] Request finished HTTP/2 GET https://localhost:5001/ - - - 200 - text/html;+charset=utf-8 65.7486ms (791a596a)
+2021-12-13T09:03:23.6613581+01:00 0HMDU1RT4HP1L:00000015 [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - (ca22a1cb)
+2021-12-13T09:03:23.6712316+01:00 0HMDU1RT4HP1L:00000017 [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/hxyvawvj.jka.jpg - - (ca22a1cb)
+2021-12-13T09:03:23.6718122+01:00 0HMDU1RT4HP1L:00000019 [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/shsnozj2.jbr.jpg - - (ca22a1cb)
+2021-12-13T09:03:23.6720056+01:00 0HMDU1RT4HP1L:0000001B [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/tj5jv3hb.oia.jpg - - (ca22a1cb)
+2021-12-13T09:03:23.6727605+01:00 0HMDU1RT4HP1L:0000001D [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/2zzrhjsy.dzn.jpg - - (ca22a1cb)
+2021-12-13T09:03:23.6734175+01:00 0HMDU1RT4HP1L:00000017 [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/hxyvawvj.jka.jpg - - - 404 0 - 2.3548ms (791a596a)
+2021-12-13T09:03:23.6734173+01:00 0HMDU1RT4HP1L:00000019 [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/shsnozj2.jbr.jpg - - - 404 0 - 1.5561ms (791a596a)
+2021-12-13T09:03:23.6734478+01:00 0HMDU1RT4HP1L:0000001B [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/tj5jv3hb.oia.jpg - - - 404 0 - 1.4940ms (791a596a)
+2021-12-13T09:03:23.6735438+01:00 0HMDU1RT4HP1L:0000001F [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/ens0zky1.cod.jpg - - (ca22a1cb)
+2021-12-13T09:03:23.6736501+01:00 0HMDU1RT4HP1L:0000001D [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/2zzrhjsy.dzn.jpg - - - 404 0 - 0.9941ms (791a596a)
+2021-12-13T09:03:23.6737432+01:00 0HMDU1RT4HP1L:00000015 [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - - 404 0 - 14.1691ms (791a596a)
+2021-12-13T09:03:23.6739400+01:00 0HMDU1RT4HP1L:0000001F [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/ens0zky1.cod.jpg - - - 404 0 - 0.3879ms (791a596a)
+2021-12-13T09:03:32.0031727+01:00  [INF] Entity Framework Core "5.0.12" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-13T09:03:32.3298770+01:00  [INF] Executed DbCommand ("12"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'Musilu.Eshop'" (0723d8ff)
+2021-12-13T09:03:32.5254977+01:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM `CarouselItem` AS `c`" (0723d8ff)
+2021-12-13T09:03:32.5674536+01:00  [INF] User profile is available. Using '"C:\Users\v_musilu\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2021-12-13T09:03:32.7154068+01:00  [INF] Executed DbCommand ("18"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2021-12-13T09:03:32.7705728+01:00  [WRN] Role "(null)" validation failed: "DuplicateRoleName". (60d773c7)
+2021-12-13T09:03:32.7953195+01:00  [INF] Executed DbCommand ("7"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2021-12-13T09:03:32.7999342+01:00  [WRN] Role "(null)" validation failed: "DuplicateRoleName". (60d773c7)
+2021-12-13T09:03:32.8037252+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2021-12-13T09:03:32.8051006+01:00  [WRN] Role "(null)" validation failed: "DuplicateRoleName". (60d773c7)
+2021-12-13T09:03:32.8204507+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2021-12-13T09:03:32.8601990+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2021-12-13T09:03:33.1008782+01:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2021-12-13T09:03:33.1225364+01:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-12-13T09:03:33.1250364+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-12-13T09:03:33.1266960+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-12-13T09:03:33.1282243+01:00  [INF] Content root path: "C:\Users\v_musilu\Downloads\Musilu.Eshop.Web-main\Musilu.Eshop.Web-main" (b5d60022)
+2021-12-13T09:03:34.1276365+01:00 0HMDU1S7EO7HP:00000001 [INF] Request starting HTTP/2 GET https://localhost:5001/ - - (ca22a1cb)
+2021-12-13T09:03:34.2277237+01:00 0HMDU1S7EO7HP:00000001 [INF] Executing endpoint '"Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)"' (500cc934)
+2021-12-13T09:03:34.2554336+01:00 0HMDU1S7EO7HP:00000001 [INF] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "Musilu.Eshop.Web.Controllers.HomeController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-13T09:03:34.2671181+01:00 0HMDU1S7EO7HP:00000001 [INF] Loaded Home Index (d3450aae)
+2021-12-13T09:03:34.2705887+01:00 0HMDU1S7EO7HP:00000001 [INF] Entity Framework Core "5.0.12" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-13T09:03:34.2805642+01:00 0HMDU1S7EO7HP:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`ID`, `c`.`ImageAlt`, `c`.`ImageSource`
+FROM `CarouselItem` AS `c`" (0723d8ff)
+2021-12-13T09:03:34.3002339+01:00 0HMDU1S7EO7HP:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `p`.`ID`, `p`.`Category`, `p`.`Description`, `p`.`ImageAlt`, `p`.`ImageSource`, `p`.`Name`, `p`.`Price`
+FROM `Products` AS `p`" (0723d8ff)
+2021-12-13T09:03:34.3555556+01:00 0HMDU1S7EO7HP:00000001 [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2021-12-13T09:03:34.5813180+01:00 0HMDU1S7EO7HP:00000001 [INF] Executed ViewResult - view "Index" executed in 224.6321ms. (f66409e9)
+2021-12-13T09:03:34.5824177+01:00 0HMDU1S7EO7HP:00000001 [INF] Executed action "Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)" in 325.975ms (afa2e885)
+2021-12-13T09:03:34.5825726+01:00 0HMDU1S7EO7HP:00000001 [INF] Executed endpoint '"Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-13T09:03:34.5901826+01:00 0HMDU1S7EO7HP:00000001 [INF] Request finished HTTP/2 GET https://localhost:5001/ - - - 200 - text/html;+charset=utf-8 468.2252ms (791a596a)
+2021-12-13T09:03:34.6347715+01:00 0HMDU1S7EO7HP:00000007 [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/hxyvawvj.jka.jpg - - (ca22a1cb)
+2021-12-13T09:03:34.6350214+01:00 0HMDU1S7EO7HP:00000009 [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/shsnozj2.jbr.jpg - - (ca22a1cb)
+2021-12-13T09:03:34.6347716+01:00 0HMDU1S7EO7HP:00000003 [INF] Request starting HTTP/2 GET https://localhost:5001/css/site.css - - (ca22a1cb)
+2021-12-13T09:03:34.6355740+01:00 0HMDU1S7EO7HP:0000000B [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/tj5jv3hb.oia.jpg - - (ca22a1cb)
+2021-12-13T09:03:34.6356617+01:00 0HMDU1S7EO7HP:00000005 [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - (ca22a1cb)
+2021-12-13T09:03:34.6397513+01:00 0HMDU1S7EO7HP:00000005 [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - - 404 0 - 5.0388ms (791a596a)
+2021-12-13T09:03:34.6397532+01:00 0HMDU1S7EO7HP:00000009 [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/shsnozj2.jbr.jpg - - - 404 0 - 4.8537ms (791a596a)
+2021-12-13T09:03:34.6397515+01:00 0HMDU1S7EO7HP:0000000B [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/tj5jv3hb.oia.jpg - - - 404 0 - 4.1000ms (791a596a)
+2021-12-13T09:03:34.6399166+01:00 0HMDU1S7EO7HP:0000000F [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/ens0zky1.cod.jpg - - (ca22a1cb)
+2021-12-13T09:03:34.6399210+01:00 0HMDU1S7EO7HP:0000000D [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/2zzrhjsy.dzn.jpg - - (ca22a1cb)
+2021-12-13T09:03:34.6402023+01:00 0HMDU1S7EO7HP:00000007 [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/hxyvawvj.jka.jpg - - - 404 0 - 4.8866ms (791a596a)
+2021-12-13T09:03:34.6457385+01:00 0HMDU1S7EO7HP:0000000F [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/ens0zky1.cod.jpg - - - 404 0 - 5.7930ms (791a596a)
+2021-12-13T09:03:34.6457385+01:00 0HMDU1S7EO7HP:0000000D [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/2zzrhjsy.dzn.jpg - - - 404 0 - 5.7633ms (791a596a)
+2021-12-13T09:03:34.6457874+01:00 0HMDU1S7EO7HP:00000003 [INF] The file "/css/site.css" was not modified (f1f8d725)
+2021-12-13T09:03:34.6470298+01:00 0HMDU1S7EO7HP:00000003 [INF] Request finished HTTP/2 GET https://localhost:5001/css/site.css - - - 304 - text/css 12.3204ms (791a596a)
+2021-12-13T09:03:34.6778748+01:00 0HMDU1S7EO7HP:00000011 [INF] Request starting HTTP/2 GET https://localhost:5001/img/it.jpg - - (ca22a1cb)
+2021-12-13T09:03:34.6799412+01:00 0HMDU1S7EO7HP:00000011 [INF] Request finished HTTP/2 GET https://localhost:5001/img/it.jpg - - - 404 0 - 1.9937ms (791a596a)
+2021-12-13T09:07:46.8905924+01:00  [INF] Entity Framework Core "5.0.12" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-13T09:07:47.2762792+01:00  [INF] Executed DbCommand ("16"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'Musilu.Eshop'" (0723d8ff)
+2021-12-13T09:07:47.4352336+01:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM `CarouselItem` AS `c`" (0723d8ff)
+2021-12-13T09:07:47.4952949+01:00  [INF] User profile is available. Using '"C:\Users\v_musilu\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2021-12-13T09:07:47.6243181+01:00  [INF] Executed DbCommand ("17"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2021-12-13T09:07:47.6808291+01:00  [WRN] Role "(null)" validation failed: "DuplicateRoleName". (60d773c7)
+2021-12-13T09:07:47.7065623+01:00  [INF] Executed DbCommand ("6"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2021-12-13T09:07:47.7122011+01:00  [WRN] Role "(null)" validation failed: "DuplicateRoleName". (60d773c7)
+2021-12-13T09:07:47.7165077+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2021-12-13T09:07:47.7190500+01:00  [WRN] Role "(null)" validation failed: "DuplicateRoleName". (60d773c7)
+2021-12-13T09:07:47.7379761+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2021-12-13T09:07:47.7786351+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2021-12-13T09:07:48.0290232+01:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2021-12-13T09:07:48.0309795+01:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-12-13T09:07:48.0340921+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-12-13T09:07:48.0358802+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-12-13T09:07:48.0377712+01:00  [INF] Content root path: "C:\Users\v_musilu\Downloads\Musilu.Eshop.Web-main\Musilu.Eshop.Web-main" (b5d60022)
+2021-12-13T09:07:49.0728344+01:00 0HMDU1UJFJF4J:00000001 [INF] Request starting HTTP/2 GET https://localhost:5001/ - - (ca22a1cb)
+2021-12-13T09:07:49.2241648+01:00 0HMDU1UJFJF4J:00000001 [INF] Executing endpoint '"Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)"' (500cc934)
+2021-12-13T09:07:49.2993162+01:00 0HMDU1UJFJF4J:00000001 [INF] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "Musilu.Eshop.Web.Controllers.HomeController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-13T09:07:49.3516463+01:00 0HMDU1UJFJF4J:00000001 [INF] Loaded Home Index (d3450aae)
+2021-12-13T09:07:49.3539050+01:00 0HMDU1UJFJF4J:00000001 [INF] Entity Framework Core "5.0.12" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-13T09:07:49.3654863+01:00 0HMDU1UJFJF4J:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`ID`, `c`.`ImageAlt`, `c`.`ImageSource`
+FROM `CarouselItem` AS `c`" (0723d8ff)
+2021-12-13T09:07:49.3878401+01:00 0HMDU1UJFJF4J:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `p`.`ID`, `p`.`Category`, `p`.`Description`, `p`.`ImageAlt`, `p`.`ImageSource`, `p`.`Name`, `p`.`Price`
+FROM `Products` AS `p`" (0723d8ff)
+2021-12-13T09:07:49.4581657+01:00 0HMDU1UJFJF4J:00000001 [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2021-12-13T09:07:49.7582863+01:00 0HMDU1UJFJF4J:00000001 [INF] Executed ViewResult - view "Index" executed in 308.1815ms. (f66409e9)
+2021-12-13T09:07:49.7592447+01:00 0HMDU1UJFJF4J:00000001 [INF] Executed action "Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)" in 458.9899ms (afa2e885)
+2021-12-13T09:07:49.7595859+01:00 0HMDU1UJFJF4J:00000001 [INF] Executed endpoint '"Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-13T09:07:49.7678961+01:00 0HMDU1UJFJF4J:00000001 [INF] Request finished HTTP/2 GET https://localhost:5001/ - - - 200 - text/html;+charset=utf-8 699.4294ms (791a596a)
+2021-12-13T09:12:26.7375330+01:00  [INF] Entity Framework Core "5.0.12" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-13T09:12:27.1084972+01:00  [INF] Executed DbCommand ("12"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'Musilu.Eshop'" (0723d8ff)
+2021-12-13T09:12:27.3011204+01:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM `CarouselItem` AS `c`" (0723d8ff)
+2021-12-13T09:12:27.3410149+01:00  [INF] User profile is available. Using '"C:\Users\v_musilu\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2021-12-13T09:12:27.4703550+01:00  [INF] Executed DbCommand ("16"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2021-12-13T09:12:27.5286294+01:00  [WRN] Role "(null)" validation failed: "DuplicateRoleName". (60d773c7)
+2021-12-13T09:12:27.5481796+01:00  [INF] Executed DbCommand ("5"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2021-12-13T09:12:27.5535577+01:00  [WRN] Role "(null)" validation failed: "DuplicateRoleName". (60d773c7)
+2021-12-13T09:12:27.5573491+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2021-12-13T09:12:27.5594217+01:00  [WRN] Role "(null)" validation failed: "DuplicateRoleName". (60d773c7)
+2021-12-13T09:12:27.5755858+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2021-12-13T09:12:27.6217769+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2021-12-13T09:12:27.9925953+01:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2021-12-13T09:12:27.9943346+01:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-12-13T09:12:27.9964261+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-12-13T09:12:27.9978948+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-12-13T09:12:27.9997739+01:00  [INF] Content root path: "C:\Users\v_musilu\Downloads\Musilu.Eshop.Web-main\Musilu.Eshop.Web-main" (b5d60022)
+2021-12-13T09:12:29.1072704+01:00 0HMDU216TR2OP:00000001 [INF] Request starting HTTP/2 GET https://localhost:5001/ - - (ca22a1cb)
+2021-12-13T09:12:29.3827549+01:00 0HMDU216TR2OP:00000001 [INF] Executing endpoint '"Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)"' (500cc934)
+2021-12-13T09:12:29.4073038+01:00 0HMDU216TR2OP:00000001 [INF] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "Musilu.Eshop.Web.Controllers.HomeController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-13T09:12:29.4179355+01:00 0HMDU216TR2OP:00000001 [INF] Loaded Home Index (d3450aae)
+2021-12-13T09:12:29.4202564+01:00 0HMDU216TR2OP:00000001 [INF] Entity Framework Core "5.0.12" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-13T09:12:29.4344264+01:00 0HMDU216TR2OP:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`ID`, `c`.`ImageAlt`, `c`.`ImageSource`
+FROM `CarouselItem` AS `c`" (0723d8ff)
+2021-12-13T09:12:29.4555091+01:00 0HMDU216TR2OP:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `p`.`ID`, `p`.`Category`, `p`.`Description`, `p`.`ImageAlt`, `p`.`ImageSource`, `p`.`Name`, `p`.`Price`
+FROM `Products` AS `p`" (0723d8ff)
+2021-12-13T09:12:29.5175715+01:00 0HMDU216TR2OP:00000001 [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2021-12-13T09:12:29.7621319+01:00 0HMDU216TR2OP:00000001 [INF] Executed ViewResult - view "Index" executed in 241.4331ms. (f66409e9)
+2021-12-13T09:12:29.7632636+01:00 0HMDU216TR2OP:00000001 [INF] Executed action "Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)" in 355.0277ms (afa2e885)
+2021-12-13T09:12:29.7634869+01:00 0HMDU216TR2OP:00000001 [INF] Executed endpoint '"Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-13T09:12:29.7730669+01:00 0HMDU216TR2OP:00000001 [INF] Request finished HTTP/2 GET https://localhost:5001/ - - - 200 - text/html;+charset=utf-8 671.1026ms (791a596a)
+2021-12-13T09:12:29.8223976+01:00 0HMDU216TR2OP:00000005 [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - (ca22a1cb)
+2021-12-13T09:12:29.8223956+01:00 0HMDU216TR2OP:00000003 [INF] Request starting HTTP/2 GET https://localhost:5001/css/site.css - - (ca22a1cb)
+2021-12-13T09:12:29.8226178+01:00 0HMDU216TR2OP:00000007 [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/hxyvawvj.jka.jpg - - (ca22a1cb)
+2021-12-13T09:12:29.8228495+01:00 0HMDU216TR2OP:00000009 [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/shsnozj2.jbr.jpg - - (ca22a1cb)
+2021-12-13T09:12:29.8229390+01:00 0HMDU216TR2OP:0000000B [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/tj5jv3hb.oia.jpg - - (ca22a1cb)
+2021-12-13T09:12:29.8295400+01:00 0HMDU216TR2OP:00000007 [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/hxyvawvj.jka.jpg - - - 404 0 - 6.7885ms (791a596a)
+2021-12-13T09:12:29.8295624+01:00 0HMDU216TR2OP:0000000B [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/tj5jv3hb.oia.jpg - - - 404 0 - 6.6077ms (791a596a)
+2021-12-13T09:12:29.8295624+01:00 0HMDU216TR2OP:00000005 [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - - 404 0 - 7.4412ms (791a596a)
+2021-12-13T09:12:29.8297147+01:00 0HMDU216TR2OP:0000000F [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/ens0zky1.cod.jpg - - (ca22a1cb)
+2021-12-13T09:12:29.8297212+01:00 0HMDU216TR2OP:0000000D [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/2zzrhjsy.dzn.jpg - - (ca22a1cb)
+2021-12-13T09:12:29.8300164+01:00 0HMDU216TR2OP:00000009 [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/shsnozj2.jbr.jpg - - - 404 0 - 6.6551ms (791a596a)
+2021-12-13T09:12:29.8302679+01:00 0HMDU216TR2OP:0000000F [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/ens0zky1.cod.jpg - - - 404 0 - 0.5386ms (791a596a)
+2021-12-13T09:12:29.8332071+01:00 0HMDU216TR2OP:0000000D [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/2zzrhjsy.dzn.jpg - - - 404 0 - 3.4417ms (791a596a)
+2021-12-13T09:12:29.8344509+01:00 0HMDU216TR2OP:00000003 [INF] The file "/css/site.css" was not modified (f1f8d725)
+2021-12-13T09:12:29.8403178+01:00 0HMDU216TR2OP:00000003 [INF] Request finished HTTP/2 GET https://localhost:5001/css/site.css - - - 304 - text/css 17.5290ms (791a596a)
+2021-12-13T09:12:29.8513487+01:00 0HMDU216TR2OP:00000011 [INF] Request starting HTTP/2 GET https://localhost:5001/img/it.jpg - - (ca22a1cb)
+2021-12-13T09:12:29.8520633+01:00 0HMDU216TR2OP:00000011 [INF] Request finished HTTP/2 GET https://localhost:5001/img/it.jpg - - - 404 0 - 0.6399ms (791a596a)
+2021-12-13T09:12:33.0117389+01:00 0HMDU216TR2OP:00000013 [INF] Request starting HTTP/2 GET https://localhost:5001/Security/Account/Login - - (ca22a1cb)
+2021-12-13T09:12:33.0170597+01:00 0HMDU216TR2OP:00000013 [INF] Executing endpoint '"Musilu.Eshop.Web.Areas.Security.Controllers.AccountController.Login (Musilu.Eshop.Web)"' (500cc934)
+2021-12-13T09:12:33.0188658+01:00 0HMDU216TR2OP:00000013 [INF] Route matched with "{area = \"Security\", action = \"Login\", controller = \"Account\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Login()" on controller "Musilu.Eshop.Web.Areas.Security.Controllers.AccountController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-13T09:12:33.0221695+01:00 0HMDU216TR2OP:00000013 [INF] Executing ViewResult, running view "Login". (c83d0e25)
+2021-12-13T09:12:33.0743917+01:00 0HMDU216TR2OP:00000013 [INF] Executed ViewResult - view "Login" executed in 53.6812ms. (f66409e9)
+2021-12-13T09:12:33.0745342+01:00 0HMDU216TR2OP:00000013 [INF] Executed action "Musilu.Eshop.Web.Areas.Security.Controllers.AccountController.Login (Musilu.Eshop.Web)" in 55.6093ms (afa2e885)
+2021-12-13T09:12:33.0746050+01:00 0HMDU216TR2OP:00000013 [INF] Executed endpoint '"Musilu.Eshop.Web.Areas.Security.Controllers.AccountController.Login (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-13T09:12:33.0749571+01:00 0HMDU216TR2OP:00000013 [INF] Request finished HTTP/2 GET https://localhost:5001/Security/Account/Login - - - 200 - text/html;+charset=utf-8 65.6719ms (791a596a)
+2021-12-13T09:12:33.0965122+01:00 0HMDU216TR2OP:00000015 [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - (ca22a1cb)
+2021-12-13T09:12:33.0986576+01:00 0HMDU216TR2OP:00000015 [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - - 404 0 - 1.9393ms (791a596a)
+2021-12-13T09:12:33.1071180+01:00 0HMDU216TR2OP:00000017 [INF] Request starting HTTP/2 GET https://localhost:5001/css/login.css - - (ca22a1cb)
+2021-12-13T09:12:33.1076451+01:00 0HMDU216TR2OP:00000017 [INF] The file "/css/login.css" was not modified (f1f8d725)
+2021-12-13T09:12:33.1078992+01:00 0HMDU216TR2OP:00000017 [INF] Request finished HTTP/2 GET https://localhost:5001/css/login.css - - - 304 - text/css 0.7677ms (791a596a)
+2021-12-13T09:12:37.5207033+01:00 0HMDU216TR2OP:00000019 [INF] Request starting HTTP/2 POST https://localhost:5001/Security/Account/Login application/x-www-form-urlencoded 210 (ca22a1cb)
+2021-12-13T09:12:37.5220667+01:00 0HMDU216TR2OP:00000019 [INF] Executing endpoint '"Musilu.Eshop.Web.Areas.Security.Controllers.AccountController.Login (Musilu.Eshop.Web)"' (500cc934)
+2021-12-13T09:12:37.5386230+01:00 0HMDU216TR2OP:00000019 [INF] Route matched with "{area = \"Security\", action = \"Login\", controller = \"Account\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Musilu.Eshop.Web.Models.ViewModels.LoginViewModel)" on controller "Musilu.Eshop.Web.Areas.Security.Controllers.AccountController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-13T09:12:37.6144824+01:00 0HMDU216TR2OP:00000019 [INF] Entity Framework Core "5.0.12" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-13T09:12:37.6200174+01:00 0HMDU216TR2OP:00000019 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2021-12-13T09:12:37.7421667+01:00 0HMDU216TR2OP:00000019 [INF] Executed DbCommand ("4"ms) [Parameters=["@__user_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`ClaimType`, `u`.`ClaimValue`, `u`.`UserId`
+FROM `UserClaims` AS `u`
+WHERE `u`.`UserId` = @__user_Id_0" (0723d8ff)
+2021-12-13T09:12:37.7737045+01:00 0HMDU216TR2OP:00000019 [INF] Executed DbCommand ("1"ms) [Parameters=["@__userId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Name`
+FROM `UserRoles` AS `u`
+INNER JOIN `Roles` AS `r` ON `u`.`RoleId` = `r`.`Id`
+WHERE `u`.`UserId` = @__userId_0" (0723d8ff)
+2021-12-13T09:12:37.7784628+01:00 0HMDU216TR2OP:00000019 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2021-12-13T09:12:37.7859448+01:00 0HMDU216TR2OP:00000019 [INF] Executed DbCommand ("1"ms) [Parameters=["@__role_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`ClaimType`, `r`.`ClaimValue`
+FROM `RoleClaims` AS `r`
+WHERE `r`.`RoleId` = @__role_Id_0" (0723d8ff)
+2021-12-13T09:12:37.7898355+01:00 0HMDU216TR2OP:00000019 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2021-12-13T09:12:37.7936028+01:00 0HMDU216TR2OP:00000019 [INF] Executed DbCommand ("1"ms) [Parameters=["@__role_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`ClaimType`, `r`.`ClaimValue`
+FROM `RoleClaims` AS `r`
+WHERE `r`.`RoleId` = @__role_Id_0" (0723d8ff)
+2021-12-13T09:12:37.7965048+01:00 0HMDU216TR2OP:00000019 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2021-12-13T09:12:37.7993881+01:00 0HMDU216TR2OP:00000019 [INF] Executed DbCommand ("1"ms) [Parameters=["@__role_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`ClaimType`, `r`.`ClaimValue`
+FROM `RoleClaims` AS `r`
+WHERE `r`.`RoleId` = @__role_Id_0" (0723d8ff)
+2021-12-13T09:12:37.8060164+01:00 0HMDU216TR2OP:00000019 [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2021-12-13T09:12:37.8096624+01:00 0HMDU216TR2OP:00000019 [INF] Executing RedirectResult, redirecting to "/". (d98d540e)
+2021-12-13T09:12:37.8103915+01:00 0HMDU216TR2OP:00000019 [INF] Executed action "Musilu.Eshop.Web.Areas.Security.Controllers.AccountController.Login (Musilu.Eshop.Web)" in 271.6963ms (afa2e885)
+2021-12-13T09:12:37.8107863+01:00 0HMDU216TR2OP:00000019 [INF] Executed endpoint '"Musilu.Eshop.Web.Areas.Security.Controllers.AccountController.Login (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-13T09:12:37.8124184+01:00 0HMDU216TR2OP:00000019 [INF] Request finished HTTP/2 POST https://localhost:5001/Security/Account/Login application/x-www-form-urlencoded 210 - 302 0 - 291.7336ms (791a596a)
+2021-12-13T09:12:37.8156794+01:00 0HMDU216TR2OP:0000001B [INF] Request starting HTTP/2 GET https://localhost:5001/ - - (ca22a1cb)
+2021-12-13T09:12:37.8219743+01:00 0HMDU216TR2OP:0000001B [INF] Executing endpoint '"Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)"' (500cc934)
+2021-12-13T09:12:37.8222049+01:00 0HMDU216TR2OP:0000001B [INF] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "Musilu.Eshop.Web.Controllers.HomeController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-13T09:12:37.8251964+01:00 0HMDU216TR2OP:0000001B [INF] Loaded Home Index (d3450aae)
+2021-12-13T09:12:37.8256279+01:00 0HMDU216TR2OP:0000001B [INF] Entity Framework Core "5.0.12" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-13T09:12:37.8264668+01:00 0HMDU216TR2OP:0000001B [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`ID`, `c`.`ImageAlt`, `c`.`ImageSource`
+FROM `CarouselItem` AS `c`" (0723d8ff)
+2021-12-13T09:12:37.8272948+01:00 0HMDU216TR2OP:0000001B [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `p`.`ID`, `p`.`Category`, `p`.`Description`, `p`.`ImageAlt`, `p`.`ImageSource`, `p`.`Name`, `p`.`Price`
+FROM `Products` AS `p`" (0723d8ff)
+2021-12-13T09:12:37.8276364+01:00 0HMDU216TR2OP:0000001B [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2021-12-13T09:12:37.8323919+01:00 0HMDU216TR2OP:0000001B [INF] Executed ViewResult - view "Index" executed in 4.8015ms. (f66409e9)
+2021-12-13T09:12:37.8325466+01:00 0HMDU216TR2OP:0000001B [INF] Executed action "Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)" in 10.2849ms (afa2e885)
+2021-12-13T09:12:37.8326019+01:00 0HMDU216TR2OP:0000001B [INF] Executed endpoint '"Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-13T09:12:37.8327772+01:00 0HMDU216TR2OP:0000001B [INF] Request finished HTTP/2 GET https://localhost:5001/ - - - 200 - text/html;+charset=utf-8 17.0939ms (791a596a)
+2021-12-13T09:12:37.8596176+01:00 0HMDU216TR2OP:0000001D [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - (ca22a1cb)
+2021-12-13T09:12:37.8607744+01:00 0HMDU216TR2OP:0000001F [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/hxyvawvj.jka.jpg - - (ca22a1cb)
+2021-12-13T09:12:37.8624775+01:00 0HMDU216TR2OP:0000001D [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - - 404 0 - 2.8703ms (791a596a)
+2021-12-13T09:12:37.8669936+01:00 0HMDU216TR2OP:00000021 [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/shsnozj2.jbr.jpg - - (ca22a1cb)
+2021-12-13T09:12:37.8732356+01:00 0HMDU216TR2OP:00000023 [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/tj5jv3hb.oia.jpg - - (ca22a1cb)
+2021-12-13T09:12:37.8738474+01:00 0HMDU216TR2OP:00000025 [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/2zzrhjsy.dzn.jpg - - (ca22a1cb)
+2021-12-13T09:12:37.8741174+01:00 0HMDU216TR2OP:00000027 [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/ens0zky1.cod.jpg - - (ca22a1cb)
+2021-12-13T09:12:37.8754148+01:00 0HMDU216TR2OP:0000001F [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/hxyvawvj.jka.jpg - - - 404 0 - 14.6055ms (791a596a)
+2021-12-13T09:12:37.8867163+01:00 0HMDU216TR2OP:00000021 [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/shsnozj2.jbr.jpg - - - 404 0 - 19.7131ms (791a596a)
+2021-12-13T09:12:37.8867162+01:00 0HMDU216TR2OP:00000025 [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/2zzrhjsy.dzn.jpg - - - 404 0 - 12.8794ms (791a596a)
+2021-12-13T09:12:37.8867412+01:00 0HMDU216TR2OP:00000023 [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/tj5jv3hb.oia.jpg - - - 404 0 - 13.7223ms (791a596a)
+2021-12-13T09:12:37.8868774+01:00 0HMDU216TR2OP:00000027 [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/ens0zky1.cod.jpg - - - 404 0 - 12.7443ms (791a596a)
+2021-12-13T09:12:42.1315965+01:00 0HMDU216TR2OP:00000029 [INF] Request starting HTTP/2 GET https://localhost:5001/Admin/OrderItems - - (ca22a1cb)
+2021-12-13T09:12:42.1413851+01:00 0HMDU216TR2OP:00000029 [INF] Authorization was successful. (0d575a54)
+2021-12-13T09:12:42.1423003+01:00 0HMDU216TR2OP:00000029 [INF] Executing endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.OrderItemsController.Index (Musilu.Eshop.Web)"' (500cc934)
+2021-12-13T09:12:42.1459766+01:00 0HMDU216TR2OP:00000029 [INF] Route matched with "{area = \"Admin\", action = \"Index\", controller = \"OrderItems\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "Musilu.Eshop.Web.Areas.Admin.Controllers.OrderItemsController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-13T09:12:42.1506361+01:00 0HMDU216TR2OP:00000029 [INF] Entity Framework Core "5.0.12" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-13T09:12:42.2011779+01:00 0HMDU216TR2OP:00000029 [ERR] Failed executing DbCommand ("9"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `o`.`ID`, `o`.`Amount`, `o`.`OrderID`, `o`.`Price`, `o`.`ProductID`, `o0`.`ID`, `o0`.`DateTimeCreated`, `o0`.`OrderNumber`, `o0`.`TotalPrice`, `o0`.`UserId`, `p`.`ID`, `p`.`Category`, `p`.`Description`, `p`.`ImageAlt`, `p`.`ImageSource`, `p`.`Name`, `p`.`Price`
+FROM `OrderItem` AS `o`
+INNER JOIN `Order` AS `o0` ON `o`.`OrderID` = `o0`.`ID`
+INNER JOIN `Products` AS `p` ON `o`.`ProductID` = `p`.`ID`" (627a98df)
+2021-12-13T09:12:42.2847098+01:00 0HMDU216TR2OP:00000029 [ERR] An exception occurred while iterating over the results of a query for context type '"Musilu.Eshop.Web.Models.Database.EshopDbContext"'."
+""MySqlConnector.MySqlException (0x80004005): Table 'musilu.eshop.orderitem' doesn't exist
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsyncAwaited(ValueTask`1 task) in /_/src/MySqlConnector/Core/ServerSession.cs:line 890
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 50
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 135
+   at MySqlConnector.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 444
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList`1 commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 60
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 319
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 312
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()" (f5c7ac34)
+MySqlConnector.MySqlException (0x80004005): Table 'musilu.eshop.orderitem' doesn't exist
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsyncAwaited(ValueTask`1 task) in /_/src/MySqlConnector/Core/ServerSession.cs:line 890
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 50
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 135
+   at MySqlConnector.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 444
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList`1 commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 60
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 319
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 312
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Musilu.Eshop.Web.Areas.Admin.Controllers.OrderItemsController.Index() in C:\Users\v_musilu\Downloads\Musilu.Eshop.Web-main\Musilu.Eshop.Web-main\Areas\Admin\Controllers\OrderItemsController.cs:line 30
+2021-12-13T09:12:42.4484180+01:00 0HMDU216TR2OP:00000029 [INF] Executed action "Musilu.Eshop.Web.Areas.Admin.Controllers.OrderItemsController.Index (Musilu.Eshop.Web)" in 302.3051ms (afa2e885)
+2021-12-13T09:12:42.4491506+01:00 0HMDU216TR2OP:00000029 [INF] Executed endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.OrderItemsController.Index (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-13T09:12:42.4680846+01:00 0HMDU216TR2OP:00000029 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+MySqlConnector.MySqlException (0x80004005): Table 'musilu.eshop.orderitem' doesn't exist
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsyncAwaited(ValueTask`1 task) in /_/src/MySqlConnector/Core/ServerSession.cs:line 890
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 50
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 135
+   at MySqlConnector.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 444
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList`1 commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 60
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 319
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 312
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Musilu.Eshop.Web.Areas.Admin.Controllers.OrderItemsController.Index() in C:\Users\v_musilu\Downloads\Musilu.Eshop.Web-main\Musilu.Eshop.Web-main\Areas\Admin\Controllers\OrderItemsController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-12-13T09:12:42.5120083+01:00 0HMDU216TR2OP:00000029 [INF] Request finished HTTP/2 GET https://localhost:5001/Admin/OrderItems - - - 500 - text/html;+charset=utf-8 380.4328ms (791a596a)
+2021-12-13T09:12:46.1127384+01:00 0HMDU216TR2OP:0000002B [INF] Request starting HTTP/2 GET https://localhost:5001/Admin/Orders - - (ca22a1cb)
+2021-12-13T09:12:46.1173592+01:00 0HMDU216TR2OP:0000002B [INF] Authorization was successful. (0d575a54)
+2021-12-13T09:12:46.1175252+01:00 0HMDU216TR2OP:0000002B [INF] Executing endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.OrdersController.Index (Musilu.Eshop.Web)"' (500cc934)
+2021-12-13T09:12:46.1294019+01:00 0HMDU216TR2OP:0000002B [INF] Route matched with "{area = \"Admin\", action = \"Index\", controller = \"Orders\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "Musilu.Eshop.Web.Areas.Admin.Controllers.OrdersController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-13T09:12:46.1306197+01:00 0HMDU216TR2OP:0000002B [INF] Entity Framework Core "5.0.12" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-13T09:12:46.1567918+01:00 0HMDU216TR2OP:0000002B [ERR] Failed executing DbCommand ("9"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `o`.`ID`, `o`.`DateTimeCreated`, `o`.`OrderNumber`, `o`.`TotalPrice`, `o`.`UserId`, `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Order` AS `o`
+INNER JOIN `Users` AS `u` ON `o`.`UserId` = `u`.`Id`" (627a98df)
+2021-12-13T09:12:46.1745183+01:00 0HMDU216TR2OP:0000002B [ERR] An exception occurred while iterating over the results of a query for context type '"Musilu.Eshop.Web.Models.Database.EshopDbContext"'."
+""MySqlConnector.MySqlException (0x80004005): Table 'musilu.eshop.order' doesn't exist
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsyncAwaited(ValueTask`1 task) in /_/src/MySqlConnector/Core/ServerSession.cs:line 890
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 50
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 135
+   at MySqlConnector.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 444
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList`1 commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 60
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 319
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 312
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()" (f5c7ac34)
+MySqlConnector.MySqlException (0x80004005): Table 'musilu.eshop.order' doesn't exist
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsyncAwaited(ValueTask`1 task) in /_/src/MySqlConnector/Core/ServerSession.cs:line 890
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 50
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 135
+   at MySqlConnector.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 444
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList`1 commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 60
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 319
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 312
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Musilu.Eshop.Web.Areas.Admin.Controllers.OrdersController.Index() in C:\Users\v_musilu\Downloads\Musilu.Eshop.Web-main\Musilu.Eshop.Web-main\Areas\Admin\Controllers\OrdersController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+2021-12-13T09:12:46.2697015+01:00 0HMDU216TR2OP:0000002B [INF] Executed action "Musilu.Eshop.Web.Areas.Admin.Controllers.OrdersController.Index (Musilu.Eshop.Web)" in 140.1891ms (afa2e885)
+2021-12-13T09:12:46.2699032+01:00 0HMDU216TR2OP:0000002B [INF] Executed endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.OrdersController.Index (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-13T09:12:46.2846892+01:00 0HMDU216TR2OP:0000002B [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+MySqlConnector.MySqlException (0x80004005): Table 'musilu.eshop.order' doesn't exist
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsyncAwaited(ValueTask`1 task) in /_/src/MySqlConnector/Core/ServerSession.cs:line 890
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 50
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 135
+   at MySqlConnector.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 444
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList`1 commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 60
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 319
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 312
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Musilu.Eshop.Web.Areas.Admin.Controllers.OrdersController.Index() in C:\Users\v_musilu\Downloads\Musilu.Eshop.Web-main\Musilu.Eshop.Web-main\Areas\Admin\Controllers\OrdersController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-12-13T09:12:46.3093792+01:00 0HMDU216TR2OP:0000002B [INF] Request finished HTTP/2 GET https://localhost:5001/Admin/Orders - - - 500 - text/html;+charset=utf-8 196.4352ms (791a596a)
+2021-12-13T09:12:51.4734532+01:00 0HMDU216TR2OP:0000002D [INF] Request starting HTTP/2 GET https://localhost:5001/Admin/Product/Select - - (ca22a1cb)
+2021-12-13T09:12:51.4774013+01:00 0HMDU216TR2OP:0000002D [INF] Executing endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Select (Musilu.Eshop.Web)"' (500cc934)
+2021-12-13T09:12:51.4818600+01:00 0HMDU216TR2OP:0000002D [INF] Route matched with "{area = \"Admin\", action = \"Select\", controller = \"Product\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Select()" on controller "Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-13T09:12:51.4826044+01:00 0HMDU216TR2OP:0000002D [INF] Entity Framework Core "5.0.12" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-13T09:12:51.4849373+01:00 0HMDU216TR2OP:0000002D [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `p`.`ID`, `p`.`Category`, `p`.`Description`, `p`.`ImageAlt`, `p`.`ImageSource`, `p`.`Name`, `p`.`Price`
+FROM `Products` AS `p`" (0723d8ff)
+2021-12-13T09:12:51.4866791+01:00 0HMDU216TR2OP:0000002D [INF] Executing ViewResult, running view "Select". (c83d0e25)
+2021-12-13T09:12:51.5999900+01:00 0HMDU216TR2OP:0000002D [INF] Executed ViewResult - view "Select" executed in 114.0756ms. (f66409e9)
+2021-12-13T09:12:51.6001145+01:00 0HMDU216TR2OP:0000002D [INF] Executed action "Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Select (Musilu.Eshop.Web)" in 118.1739ms (afa2e885)
+2021-12-13T09:12:51.6001783+01:00 0HMDU216TR2OP:0000002D [INF] Executed endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Select (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-13T09:12:51.6003509+01:00 0HMDU216TR2OP:0000002D [INF] Request finished HTTP/2 GET https://localhost:5001/Admin/Product/Select - - - 200 - text/html;+charset=utf-8 126.9872ms (791a596a)
+2021-12-13T09:12:51.6270226+01:00 0HMDU216TR2OP:0000002F [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - (ca22a1cb)
+2021-12-13T09:12:51.6270226+01:00 0HMDU216TR2OP:00000031 [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/hxyvawvj.jka.jpg - - (ca22a1cb)
+2021-12-13T09:12:51.6338966+01:00 0HMDU216TR2OP:00000031 [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/hxyvawvj.jka.jpg - - - 404 0 - 6.7728ms (791a596a)
+2021-12-13T09:12:51.6339254+01:00 0HMDU216TR2OP:0000002F [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - - 404 0 - 6.9068ms (791a596a)
+2021-12-13T09:12:51.6340979+01:00 0HMDU216TR2OP:00000033 [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/shsnozj2.jbr.jpg - - (ca22a1cb)
+2021-12-13T09:12:51.6344660+01:00 0HMDU216TR2OP:00000035 [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/tj5jv3hb.oia.jpg - - (ca22a1cb)
+2021-12-13T09:12:51.6348591+01:00 0HMDU216TR2OP:00000037 [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/2zzrhjsy.dzn.jpg - - (ca22a1cb)
+2021-12-13T09:12:51.6370472+01:00 0HMDU216TR2OP:00000033 [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/shsnozj2.jbr.jpg - - - 404 0 - 2.8878ms (791a596a)
+2021-12-13T09:12:51.6371060+01:00 0HMDU216TR2OP:00000035 [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/tj5jv3hb.oia.jpg - - - 404 0 - 2.7808ms (791a596a)
+2021-12-13T09:12:51.6371709+01:00 0HMDU216TR2OP:00000039 [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/ens0zky1.cod.jpg - - (ca22a1cb)
+2021-12-13T09:12:51.6373448+01:00 0HMDU216TR2OP:0000003B [INF] Request starting HTTP/2 GET https://localhost:5001/js/alerts.js - - (ca22a1cb)
+2021-12-13T09:12:51.6376124+01:00 0HMDU216TR2OP:0000003B [INF] The file "/js/alerts.js" was not modified (f1f8d725)
+2021-12-13T09:12:51.6376337+01:00 0HMDU216TR2OP:00000037 [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/2zzrhjsy.dzn.jpg - - - 404 0 - 2.8583ms (791a596a)
+2021-12-13T09:12:51.6377498+01:00 0HMDU216TR2OP:0000003B [INF] Request finished HTTP/2 GET https://localhost:5001/js/alerts.js - - - 304 - application/javascript 0.4017ms (791a596a)
+2021-12-13T09:12:51.6378883+01:00 0HMDU216TR2OP:00000039 [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/ens0zky1.cod.jpg - - - 404 0 - 0.7196ms (791a596a)
+2021-12-13T09:12:57.2999403+01:00 0HMDU216TR2OP:0000003D [INF] Request starting HTTP/2 GET https://localhost:5001/Admin/Product/Delete/2 - - (ca22a1cb)
+2021-12-13T09:12:57.3016091+01:00 0HMDU216TR2OP:0000003D [INF] Executing endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Delete (Musilu.Eshop.Web)"' (500cc934)
+2021-12-13T09:12:57.3068355+01:00 0HMDU216TR2OP:0000003D [INF] Route matched with "{area = \"Admin\", action = \"Delete\", controller = \"Product\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32)" on controller "Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-13T09:12:57.3127282+01:00 0HMDU216TR2OP:0000003D [INF] Entity Framework Core "5.0.12" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-13T09:12:57.3172671+01:00 0HMDU216TR2OP:0000003D [INF] Executed DbCommand ("0"ms) [Parameters=["@__ID_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `p`.`ID`, `p`.`Category`, `p`.`Description`, `p`.`ImageAlt`, `p`.`ImageSource`, `p`.`Name`, `p`.`Price`
+FROM `Products` AS `p`
+WHERE `p`.`ID` = @__ID_0
+LIMIT 1" (0723d8ff)
+2021-12-13T09:12:57.4451570+01:00 0HMDU216TR2OP:0000003D [INF] Executed DbCommand ("3"ms) [Parameters=["@p0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""DELETE FROM `Products`
+WHERE `ID` = @p0;
+SELECT ROW_COUNT();" (0723d8ff)
+2021-12-13T09:12:57.4759583+01:00 0HMDU216TR2OP:0000003D [INF] Executing RedirectResult, redirecting to "/Admin/Product/Select". (d98d540e)
+2021-12-13T09:12:57.4760552+01:00 0HMDU216TR2OP:0000003D [INF] Executed action "Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Delete (Musilu.Eshop.Web)" in 168.809ms (afa2e885)
+2021-12-13T09:12:57.4761033+01:00 0HMDU216TR2OP:0000003D [INF] Executed endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Delete (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-13T09:12:57.4763084+01:00 0HMDU216TR2OP:0000003D [INF] Request finished HTTP/2 GET https://localhost:5001/Admin/Product/Delete/2 - - - 302 0 - 176.4253ms (791a596a)
+2021-12-13T09:12:57.4786685+01:00 0HMDU216TR2OP:0000003F [INF] Request starting HTTP/2 GET https://localhost:5001/Admin/Product/Select - - (ca22a1cb)
+2021-12-13T09:12:57.4791964+01:00 0HMDU216TR2OP:0000003F [INF] Executing endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Select (Musilu.Eshop.Web)"' (500cc934)
+2021-12-13T09:12:57.4793376+01:00 0HMDU216TR2OP:0000003F [INF] Route matched with "{area = \"Admin\", action = \"Select\", controller = \"Product\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Select()" on controller "Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-13T09:12:57.4796785+01:00 0HMDU216TR2OP:0000003F [INF] Entity Framework Core "5.0.12" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-13T09:12:57.4805887+01:00 0HMDU216TR2OP:0000003F [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `p`.`ID`, `p`.`Category`, `p`.`Description`, `p`.`ImageAlt`, `p`.`ImageSource`, `p`.`Name`, `p`.`Price`
+FROM `Products` AS `p`" (0723d8ff)
+2021-12-13T09:12:57.4808378+01:00 0HMDU216TR2OP:0000003F [INF] Executing ViewResult, running view "Select". (c83d0e25)
+2021-12-13T09:12:57.4817689+01:00 0HMDU216TR2OP:0000003F [INF] Executed ViewResult - view "Select" executed in 0.9007ms. (f66409e9)
+2021-12-13T09:12:57.4818624+01:00 0HMDU216TR2OP:0000003F [INF] Executed action "Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Select (Musilu.Eshop.Web)" in 2.4516ms (afa2e885)
+2021-12-13T09:12:57.4819066+01:00 0HMDU216TR2OP:0000003F [INF] Executed endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Select (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-13T09:12:57.4820815+01:00 0HMDU216TR2OP:0000003F [INF] Request finished HTTP/2 GET https://localhost:5001/Admin/Product/Select - - - 200 - text/html;+charset=utf-8 3.4679ms (791a596a)
+2021-12-13T09:12:57.5018902+01:00 0HMDU216TR2OP:00000041 [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - (ca22a1cb)
+2021-12-13T09:12:57.5027101+01:00 0HMDU216TR2OP:00000043 [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/shsnozj2.jbr.jpg - - (ca22a1cb)
+2021-12-13T09:12:57.5030494+01:00 0HMDU216TR2OP:00000041 [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - - 404 0 - 1.1934ms (791a596a)
+2021-12-13T09:12:57.5046669+01:00 0HMDU216TR2OP:00000043 [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/shsnozj2.jbr.jpg - - - 404 0 - 1.0623ms (791a596a)
+2021-12-13T09:12:57.5080571+01:00 0HMDU216TR2OP:00000045 [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/tj5jv3hb.oia.jpg - - (ca22a1cb)
+2021-12-13T09:12:57.5123901+01:00 0HMDU216TR2OP:00000047 [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/2zzrhjsy.dzn.jpg - - (ca22a1cb)
+2021-12-13T09:12:57.5124422+01:00 0HMDU216TR2OP:00000049 [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/ens0zky1.cod.jpg - - (ca22a1cb)
+2021-12-13T09:12:57.5127425+01:00 0HMDU216TR2OP:00000045 [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/tj5jv3hb.oia.jpg - - - 404 0 - 6.2098ms (791a596a)
+2021-12-13T09:12:57.5131536+01:00 0HMDU216TR2OP:00000049 [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/ens0zky1.cod.jpg - - - 404 0 - 0.7019ms (791a596a)
+2021-12-13T09:12:57.5131969+01:00 0HMDU216TR2OP:00000047 [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/2zzrhjsy.dzn.jpg - - - 404 0 - 0.8236ms (791a596a)
+2021-12-13T09:12:59.5099470+01:00 0HMDU216TR2OP:0000004B [INF] Request starting HTTP/2 GET https://localhost:5001/Admin/Product/Delete/3 - - (ca22a1cb)
+2021-12-13T09:12:59.5115000+01:00 0HMDU216TR2OP:0000004B [INF] Executing endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Delete (Musilu.Eshop.Web)"' (500cc934)
+2021-12-13T09:12:59.5120737+01:00 0HMDU216TR2OP:0000004B [INF] Route matched with "{area = \"Admin\", action = \"Delete\", controller = \"Product\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32)" on controller "Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-13T09:12:59.5142144+01:00 0HMDU216TR2OP:0000004B [INF] Entity Framework Core "5.0.12" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-13T09:12:59.5179961+01:00 0HMDU216TR2OP:0000004B [INF] Executed DbCommand ("1"ms) [Parameters=["@__ID_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `p`.`ID`, `p`.`Category`, `p`.`Description`, `p`.`ImageAlt`, `p`.`ImageSource`, `p`.`Name`, `p`.`Price`
+FROM `Products` AS `p`
+WHERE `p`.`ID` = @__ID_0
+LIMIT 1" (0723d8ff)
+2021-12-13T09:12:59.5304138+01:00 0HMDU216TR2OP:0000004B [INF] Executed DbCommand ("2"ms) [Parameters=["@p0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""DELETE FROM `Products`
+WHERE `ID` = @p0;
+SELECT ROW_COUNT();" (0723d8ff)
+2021-12-13T09:12:59.5342844+01:00 0HMDU216TR2OP:0000004B [INF] Executing RedirectResult, redirecting to "/Admin/Product/Select". (d98d540e)
+2021-12-13T09:12:59.5344563+01:00 0HMDU216TR2OP:0000004B [INF] Executed action "Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Delete (Musilu.Eshop.Web)" in 22.2537ms (afa2e885)
+2021-12-13T09:12:59.5345182+01:00 0HMDU216TR2OP:0000004B [INF] Executed endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Delete (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-13T09:12:59.5350057+01:00 0HMDU216TR2OP:0000004B [INF] Request finished HTTP/2 GET https://localhost:5001/Admin/Product/Delete/3 - - - 302 0 - 25.0866ms (791a596a)
+2021-12-13T09:12:59.5373890+01:00 0HMDU216TR2OP:0000004D [INF] Request starting HTTP/2 GET https://localhost:5001/Admin/Product/Select - - (ca22a1cb)
+2021-12-13T09:12:59.5378784+01:00 0HMDU216TR2OP:0000004D [INF] Executing endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Select (Musilu.Eshop.Web)"' (500cc934)
+2021-12-13T09:12:59.5380360+01:00 0HMDU216TR2OP:0000004D [INF] Route matched with "{area = \"Admin\", action = \"Select\", controller = \"Product\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Select()" on controller "Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-13T09:12:59.5383141+01:00 0HMDU216TR2OP:0000004D [INF] Entity Framework Core "5.0.12" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-13T09:12:59.5395427+01:00 0HMDU216TR2OP:0000004D [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `p`.`ID`, `p`.`Category`, `p`.`Description`, `p`.`ImageAlt`, `p`.`ImageSource`, `p`.`Name`, `p`.`Price`
+FROM `Products` AS `p`" (0723d8ff)
+2021-12-13T09:12:59.5418069+01:00 0HMDU216TR2OP:0000004D [INF] Executing ViewResult, running view "Select". (c83d0e25)
+2021-12-13T09:12:59.5446204+01:00 0HMDU216TR2OP:0000004D [INF] Executed ViewResult - view "Select" executed in 3.1202ms. (f66409e9)
+2021-12-13T09:12:59.5447529+01:00 0HMDU216TR2OP:0000004D [INF] Executed action "Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Select (Musilu.Eshop.Web)" in 6.6533ms (afa2e885)
+2021-12-13T09:12:59.5448149+01:00 0HMDU216TR2OP:0000004D [INF] Executed endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Select (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-13T09:12:59.5449866+01:00 0HMDU216TR2OP:0000004D [INF] Request finished HTTP/2 GET https://localhost:5001/Admin/Product/Select - - - 200 - text/html;+charset=utf-8 7.6165ms (791a596a)
+2021-12-13T09:12:59.5704982+01:00 0HMDU216TR2OP:0000004F [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - (ca22a1cb)
+2021-12-13T09:12:59.5705075+01:00 0HMDU216TR2OP:00000051 [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/tj5jv3hb.oia.jpg - - (ca22a1cb)
+2021-12-13T09:12:59.5712894+01:00 0HMDU216TR2OP:0000004F [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - - 404 0 - 0.7820ms (791a596a)
+2021-12-13T09:12:59.5713469+01:00 0HMDU216TR2OP:00000051 [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/tj5jv3hb.oia.jpg - - - 404 0 - 0.8065ms (791a596a)
+2021-12-13T09:12:59.5782187+01:00 0HMDU216TR2OP:00000055 [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/ens0zky1.cod.jpg - - (ca22a1cb)
+2021-12-13T09:12:59.5782371+01:00 0HMDU216TR2OP:00000053 [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/2zzrhjsy.dzn.jpg - - (ca22a1cb)
+2021-12-13T09:12:59.5789324+01:00 0HMDU216TR2OP:00000055 [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/ens0zky1.cod.jpg - - - 404 0 - 0.7108ms (791a596a)
+2021-12-13T09:12:59.5789389+01:00 0HMDU216TR2OP:00000053 [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/2zzrhjsy.dzn.jpg - - - 404 0 - 0.6833ms (791a596a)
+2021-12-13T09:13:01.1846325+01:00 0HMDU216TR2OP:00000057 [INF] Request starting HTTP/2 GET https://localhost:5001/Admin/Product/Delete/4 - - (ca22a1cb)
+2021-12-13T09:13:01.1856693+01:00 0HMDU216TR2OP:00000057 [INF] Executing endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Delete (Musilu.Eshop.Web)"' (500cc934)
+2021-12-13T09:13:01.1858940+01:00 0HMDU216TR2OP:00000057 [INF] Route matched with "{area = \"Admin\", action = \"Delete\", controller = \"Product\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32)" on controller "Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-13T09:13:01.1863548+01:00 0HMDU216TR2OP:00000057 [INF] Entity Framework Core "5.0.12" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-13T09:13:01.1876242+01:00 0HMDU216TR2OP:00000057 [INF] Executed DbCommand ("0"ms) [Parameters=["@__ID_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `p`.`ID`, `p`.`Category`, `p`.`Description`, `p`.`ImageAlt`, `p`.`ImageSource`, `p`.`Name`, `p`.`Price`
+FROM `Products` AS `p`
+WHERE `p`.`ID` = @__ID_0
+LIMIT 1" (0723d8ff)
+2021-12-13T09:13:01.1951736+01:00 0HMDU216TR2OP:00000057 [INF] Executed DbCommand ("2"ms) [Parameters=["@p0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""DELETE FROM `Products`
+WHERE `ID` = @p0;
+SELECT ROW_COUNT();" (0723d8ff)
+2021-12-13T09:13:01.2000336+01:00 0HMDU216TR2OP:00000057 [INF] Executing RedirectResult, redirecting to "/Admin/Product/Select". (d98d540e)
+2021-12-13T09:13:01.2001455+01:00 0HMDU216TR2OP:00000057 [INF] Executed action "Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Delete (Musilu.Eshop.Web)" in 14.1799ms (afa2e885)
+2021-12-13T09:13:01.2002054+01:00 0HMDU216TR2OP:00000057 [INF] Executed endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Delete (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-13T09:13:01.2004290+01:00 0HMDU216TR2OP:00000057 [INF] Request finished HTTP/2 GET https://localhost:5001/Admin/Product/Delete/4 - - - 302 0 - 16.1107ms (791a596a)
+2021-12-13T09:13:01.2034987+01:00 0HMDU216TR2OP:00000059 [INF] Request starting HTTP/2 GET https://localhost:5001/Admin/Product/Select - - (ca22a1cb)
+2021-12-13T09:13:01.2042630+01:00 0HMDU216TR2OP:00000059 [INF] Executing endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Select (Musilu.Eshop.Web)"' (500cc934)
+2021-12-13T09:13:01.2044728+01:00 0HMDU216TR2OP:00000059 [INF] Route matched with "{area = \"Admin\", action = \"Select\", controller = \"Product\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Select()" on controller "Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-13T09:13:01.2050533+01:00 0HMDU216TR2OP:00000059 [INF] Entity Framework Core "5.0.12" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-13T09:13:01.2060523+01:00 0HMDU216TR2OP:00000059 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `p`.`ID`, `p`.`Category`, `p`.`Description`, `p`.`ImageAlt`, `p`.`ImageSource`, `p`.`Name`, `p`.`Price`
+FROM `Products` AS `p`" (0723d8ff)
+2021-12-13T09:13:01.2063709+01:00 0HMDU216TR2OP:00000059 [INF] Executing ViewResult, running view "Select". (c83d0e25)
+2021-12-13T09:13:01.2072216+01:00 0HMDU216TR2OP:00000059 [INF] Executed ViewResult - view "Select" executed in 0.864ms. (f66409e9)
+2021-12-13T09:13:01.2072951+01:00 0HMDU216TR2OP:00000059 [INF] Executed action "Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Select (Musilu.Eshop.Web)" in 2.7565ms (afa2e885)
+2021-12-13T09:13:01.2073905+01:00 0HMDU216TR2OP:00000059 [INF] Executed endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Select (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-13T09:13:01.2077463+01:00 0HMDU216TR2OP:00000059 [INF] Request finished HTTP/2 GET https://localhost:5001/Admin/Product/Select - - - 200 - text/html;+charset=utf-8 4.2619ms (791a596a)
+2021-12-13T09:13:01.2358166+01:00 0HMDU216TR2OP:0000005B [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - (ca22a1cb)
+2021-12-13T09:13:01.2358246+01:00 0HMDU216TR2OP:0000005D [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/2zzrhjsy.dzn.jpg - - (ca22a1cb)
+2021-12-13T09:13:01.2366294+01:00 0HMDU216TR2OP:0000005F [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/ens0zky1.cod.jpg - - (ca22a1cb)
+2021-12-13T09:13:01.2367626+01:00 0HMDU216TR2OP:0000005B [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - - 404 0 - 0.9665ms (791a596a)
+2021-12-13T09:13:01.2368140+01:00 0HMDU216TR2OP:0000005D [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/2zzrhjsy.dzn.jpg - - - 404 0 - 1.0005ms (791a596a)
+2021-12-13T09:13:01.2371127+01:00 0HMDU216TR2OP:0000005F [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/ens0zky1.cod.jpg - - - 404 0 - 0.5498ms (791a596a)
+2021-12-13T09:13:02.8726129+01:00 0HMDU216TR2OP:00000061 [INF] Request starting HTTP/2 GET https://localhost:5001/Admin/Product/Delete/5 - - (ca22a1cb)
+2021-12-13T09:13:02.8731036+01:00 0HMDU216TR2OP:00000061 [INF] Executing endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Delete (Musilu.Eshop.Web)"' (500cc934)
+2021-12-13T09:13:02.8732156+01:00 0HMDU216TR2OP:00000061 [INF] Route matched with "{area = \"Admin\", action = \"Delete\", controller = \"Product\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32)" on controller "Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-13T09:13:02.8736222+01:00 0HMDU216TR2OP:00000061 [INF] Entity Framework Core "5.0.12" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-13T09:13:02.8748738+01:00 0HMDU216TR2OP:00000061 [INF] Executed DbCommand ("0"ms) [Parameters=["@__ID_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `p`.`ID`, `p`.`Category`, `p`.`Description`, `p`.`ImageAlt`, `p`.`ImageSource`, `p`.`Name`, `p`.`Price`
+FROM `Products` AS `p`
+WHERE `p`.`ID` = @__ID_0
+LIMIT 1" (0723d8ff)
+2021-12-13T09:13:02.8844806+01:00 0HMDU216TR2OP:00000061 [INF] Executed DbCommand ("2"ms) [Parameters=["@p0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""DELETE FROM `Products`
+WHERE `ID` = @p0;
+SELECT ROW_COUNT();" (0723d8ff)
+2021-12-13T09:13:02.8876616+01:00 0HMDU216TR2OP:00000061 [INF] Executing RedirectResult, redirecting to "/Admin/Product/Select". (d98d540e)
+2021-12-13T09:13:02.8877897+01:00 0HMDU216TR2OP:00000061 [INF] Executed action "Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Delete (Musilu.Eshop.Web)" in 14.5248ms (afa2e885)
+2021-12-13T09:13:02.8878533+01:00 0HMDU216TR2OP:00000061 [INF] Executed endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Delete (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-13T09:13:02.8881826+01:00 0HMDU216TR2OP:00000061 [INF] Request finished HTTP/2 GET https://localhost:5001/Admin/Product/Delete/5 - - - 302 0 - 15.5803ms (791a596a)
+2021-12-13T09:13:02.8908993+01:00 0HMDU216TR2OP:00000063 [INF] Request starting HTTP/2 GET https://localhost:5001/Admin/Product/Select - - (ca22a1cb)
+2021-12-13T09:13:02.8913883+01:00 0HMDU216TR2OP:00000063 [INF] Executing endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Select (Musilu.Eshop.Web)"' (500cc934)
+2021-12-13T09:13:02.8915018+01:00 0HMDU216TR2OP:00000063 [INF] Route matched with "{area = \"Admin\", action = \"Select\", controller = \"Product\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Select()" on controller "Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-13T09:13:02.8918169+01:00 0HMDU216TR2OP:00000063 [INF] Entity Framework Core "5.0.12" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-13T09:13:02.8930949+01:00 0HMDU216TR2OP:00000063 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `p`.`ID`, `p`.`Category`, `p`.`Description`, `p`.`ImageAlt`, `p`.`ImageSource`, `p`.`Name`, `p`.`Price`
+FROM `Products` AS `p`" (0723d8ff)
+2021-12-13T09:13:02.8935122+01:00 0HMDU216TR2OP:00000063 [INF] Executing ViewResult, running view "Select". (c83d0e25)
+2021-12-13T09:13:02.8959688+01:00 0HMDU216TR2OP:00000063 [INF] Executed ViewResult - view "Select" executed in 2.4618ms. (f66409e9)
+2021-12-13T09:13:02.8960824+01:00 0HMDU216TR2OP:00000063 [INF] Executed action "Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Select (Musilu.Eshop.Web)" in 4.5116ms (afa2e885)
+2021-12-13T09:13:02.8961431+01:00 0HMDU216TR2OP:00000063 [INF] Executed endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Select (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-13T09:13:02.8964112+01:00 0HMDU216TR2OP:00000063 [INF] Request finished HTTP/2 GET https://localhost:5001/Admin/Product/Select - - - 200 - text/html;+charset=utf-8 5.5403ms (791a596a)
+2021-12-13T09:13:02.9257837+01:00 0HMDU216TR2OP:00000065 [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - (ca22a1cb)
+2021-12-13T09:13:02.9257778+01:00 0HMDU216TR2OP:00000067 [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/ens0zky1.cod.jpg - - (ca22a1cb)
+2021-12-13T09:13:02.9290575+01:00 0HMDU216TR2OP:00000065 [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - - 404 0 - 3.4746ms (791a596a)
+2021-12-13T09:13:02.9310768+01:00 0HMDU216TR2OP:00000067 [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/ens0zky1.cod.jpg - - - 404 0 - 5.2912ms (791a596a)
+2021-12-13T09:13:06.1198082+01:00 0HMDU216TR2OP:00000069 [INF] Request starting HTTP/2 GET https://localhost:5001/Admin/Product/Delete/6 - - (ca22a1cb)
+2021-12-13T09:13:06.1221365+01:00 0HMDU216TR2OP:00000069 [INF] Executing endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Delete (Musilu.Eshop.Web)"' (500cc934)
+2021-12-13T09:13:06.1222903+01:00 0HMDU216TR2OP:00000069 [INF] Route matched with "{area = \"Admin\", action = \"Delete\", controller = \"Product\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32)" on controller "Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-13T09:13:06.1231595+01:00 0HMDU216TR2OP:00000069 [INF] Entity Framework Core "5.0.12" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-13T09:13:06.1247210+01:00 0HMDU216TR2OP:00000069 [INF] Executed DbCommand ("0"ms) [Parameters=["@__ID_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `p`.`ID`, `p`.`Category`, `p`.`Description`, `p`.`ImageAlt`, `p`.`ImageSource`, `p`.`Name`, `p`.`Price`
+FROM `Products` AS `p`
+WHERE `p`.`ID` = @__ID_0
+LIMIT 1" (0723d8ff)
+2021-12-13T09:13:06.1329335+01:00 0HMDU216TR2OP:00000069 [INF] Executed DbCommand ("4"ms) [Parameters=["@p0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""DELETE FROM `Products`
+WHERE `ID` = @p0;
+SELECT ROW_COUNT();" (0723d8ff)
+2021-12-13T09:13:06.1367538+01:00 0HMDU216TR2OP:00000069 [INF] Executing RedirectResult, redirecting to "/Admin/Product/Select". (d98d540e)
+2021-12-13T09:13:06.1368545+01:00 0HMDU216TR2OP:00000069 [INF] Executed action "Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Delete (Musilu.Eshop.Web)" in 14.5077ms (afa2e885)
+2021-12-13T09:13:06.1369035+01:00 0HMDU216TR2OP:00000069 [INF] Executed endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Delete (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-13T09:13:06.1371355+01:00 0HMDU216TR2OP:00000069 [INF] Request finished HTTP/2 GET https://localhost:5001/Admin/Product/Delete/6 - - - 302 0 - 17.4489ms (791a596a)
+2021-12-13T09:13:06.1401750+01:00 0HMDU216TR2OP:0000006B [INF] Request starting HTTP/2 GET https://localhost:5001/Admin/Product/Select - - (ca22a1cb)
+2021-12-13T09:13:06.1407054+01:00 0HMDU216TR2OP:0000006B [INF] Executing endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Select (Musilu.Eshop.Web)"' (500cc934)
+2021-12-13T09:13:06.1408195+01:00 0HMDU216TR2OP:0000006B [INF] Route matched with "{area = \"Admin\", action = \"Select\", controller = \"Product\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Select()" on controller "Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-13T09:13:06.1410689+01:00 0HMDU216TR2OP:0000006B [INF] Entity Framework Core "5.0.12" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-13T09:13:06.1421014+01:00 0HMDU216TR2OP:0000006B [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `p`.`ID`, `p`.`Category`, `p`.`Description`, `p`.`ImageAlt`, `p`.`ImageSource`, `p`.`Name`, `p`.`Price`
+FROM `Products` AS `p`" (0723d8ff)
+2021-12-13T09:13:06.1423775+01:00 0HMDU216TR2OP:0000006B [INF] Executing ViewResult, running view "Select". (c83d0e25)
+2021-12-13T09:13:06.1432201+01:00 0HMDU216TR2OP:0000006B [INF] Executed ViewResult - view "Select" executed in 0.8638ms. (f66409e9)
+2021-12-13T09:13:06.1433367+01:00 0HMDU216TR2OP:0000006B [INF] Executed action "Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Select (Musilu.Eshop.Web)" in 2.4611ms (afa2e885)
+2021-12-13T09:13:06.1433958+01:00 0HMDU216TR2OP:0000006B [INF] Executed endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Select (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-13T09:13:06.1435268+01:00 0HMDU216TR2OP:0000006B [INF] Request finished HTTP/2 GET https://localhost:5001/Admin/Product/Select - - - 200 - text/html;+charset=utf-8 3.3658ms (791a596a)
+2021-12-13T09:13:06.1746007+01:00 0HMDU216TR2OP:0000006D [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - (ca22a1cb)
+2021-12-13T09:13:06.1752088+01:00 0HMDU216TR2OP:0000006D [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - - 404 0 - 0.6319ms (791a596a)
+2021-12-13T09:13:10.9472832+01:00 0HMDU216TR2OP:0000006F [INF] Request starting HTTP/2 GET https://localhost:5001/Admin/Carousel/Select - - (ca22a1cb)
+2021-12-13T09:13:10.9488096+01:00 0HMDU216TR2OP:0000006F [INF] Authorization was successful. (0d575a54)
+2021-12-13T09:13:10.9490826+01:00 0HMDU216TR2OP:0000006F [INF] Executing endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.CarouselController.Select (Musilu.Eshop.Web)"' (500cc934)
+2021-12-13T09:13:10.9520025+01:00 0HMDU216TR2OP:0000006F [INF] Route matched with "{area = \"Admin\", action = \"Select\", controller = \"Carousel\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Select()" on controller "Musilu.Eshop.Web.Areas.Admin.Controllers.CarouselController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-13T09:13:10.9537785+01:00 0HMDU216TR2OP:0000006F [INF] Entity Framework Core "5.0.12" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-13T09:13:10.9547552+01:00 0HMDU216TR2OP:0000006F [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`ID`, `c`.`ImageAlt`, `c`.`ImageSource`
+FROM `CarouselItem` AS `c`" (0723d8ff)
+2021-12-13T09:13:10.9563286+01:00 0HMDU216TR2OP:0000006F [INF] Executing ViewResult, running view "Select". (c83d0e25)
+2021-12-13T09:13:10.9777951+01:00 0HMDU216TR2OP:0000006F [INF] Executed ViewResult - view "Select" executed in 22.4347ms. (f66409e9)
+2021-12-13T09:13:10.9778854+01:00 0HMDU216TR2OP:0000006F [INF] Executed action "Musilu.Eshop.Web.Areas.Admin.Controllers.CarouselController.Select (Musilu.Eshop.Web)" in 25.654ms (afa2e885)
+2021-12-13T09:13:10.9779267+01:00 0HMDU216TR2OP:0000006F [INF] Executed endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.CarouselController.Select (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-13T09:13:10.9780437+01:00 0HMDU216TR2OP:0000006F [INF] Request finished HTTP/2 GET https://localhost:5001/Admin/Carousel/Select - - - 200 - text/html;+charset=utf-8 30.7848ms (791a596a)
+2021-12-13T09:13:11.0101356+01:00 0HMDU216TR2OP:00000071 [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - (ca22a1cb)
+2021-12-13T09:13:11.0114601+01:00 0HMDU216TR2OP:00000071 [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - - 404 0 - 1.3105ms (791a596a)
+2021-12-13T09:13:14.4655815+01:00 0HMDU216TR2OP:00000073 [INF] Request starting HTTP/2 GET https://localhost:5001/Admin/Product/Select - - (ca22a1cb)
+2021-12-13T09:13:14.4677558+01:00 0HMDU216TR2OP:00000073 [INF] Executing endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Select (Musilu.Eshop.Web)"' (500cc934)
+2021-12-13T09:13:14.4681023+01:00 0HMDU216TR2OP:00000073 [INF] Route matched with "{area = \"Admin\", action = \"Select\", controller = \"Product\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Select()" on controller "Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-13T09:13:14.4688405+01:00 0HMDU216TR2OP:00000073 [INF] Entity Framework Core "5.0.12" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-13T09:13:14.4701703+01:00 0HMDU216TR2OP:00000073 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `p`.`ID`, `p`.`Category`, `p`.`Description`, `p`.`ImageAlt`, `p`.`ImageSource`, `p`.`Name`, `p`.`Price`
+FROM `Products` AS `p`" (0723d8ff)
+2021-12-13T09:13:14.4704346+01:00 0HMDU216TR2OP:00000073 [INF] Executing ViewResult, running view "Select". (c83d0e25)
+2021-12-13T09:13:14.4729790+01:00 0HMDU216TR2OP:00000073 [INF] Executed ViewResult - view "Select" executed in 2.546ms. (f66409e9)
+2021-12-13T09:13:14.4730694+01:00 0HMDU216TR2OP:00000073 [INF] Executed action "Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Select (Musilu.Eshop.Web)" in 4.8242ms (afa2e885)
+2021-12-13T09:13:14.4731193+01:00 0HMDU216TR2OP:00000073 [INF] Executed endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Select (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-13T09:13:14.4732586+01:00 0HMDU216TR2OP:00000073 [INF] Request finished HTTP/2 GET https://localhost:5001/Admin/Product/Select - - - 200 - text/html;+charset=utf-8 7.7236ms (791a596a)
+2021-12-13T09:13:14.5031967+01:00 0HMDU216TR2OP:00000075 [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - (ca22a1cb)
+2021-12-13T09:13:14.5044893+01:00 0HMDU216TR2OP:00000075 [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - - 404 0 - 1.4034ms (791a596a)
+2021-12-13T09:13:16.3944084+01:00 0HMDU216TR2OP:00000077 [INF] Request starting HTTP/2 GET https://localhost:5001/Admin/Product/Create - - (ca22a1cb)
+2021-12-13T09:13:16.3951211+01:00 0HMDU216TR2OP:00000077 [INF] Executing endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Create (Musilu.Eshop.Web)"' (500cc934)
+2021-12-13T09:13:16.3980285+01:00 0HMDU216TR2OP:00000077 [INF] Route matched with "{area = \"Admin\", action = \"Create\", controller = \"Product\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Create()" on controller "Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-13T09:13:16.4007987+01:00 0HMDU216TR2OP:00000077 [INF] Executing ViewResult, running view "Create". (c83d0e25)
+2021-12-13T09:13:16.4628399+01:00 0HMDU216TR2OP:00000077 [INF] Executed ViewResult - view "Create" executed in 64.3067ms. (f66409e9)
+2021-12-13T09:13:16.4629146+01:00 0HMDU216TR2OP:00000077 [INF] Executed action "Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Create (Musilu.Eshop.Web)" in 64.7971ms (afa2e885)
+2021-12-13T09:13:16.4629594+01:00 0HMDU216TR2OP:00000077 [INF] Executed endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Create (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-13T09:13:16.4630542+01:00 0HMDU216TR2OP:00000077 [INF] Request finished HTTP/2 GET https://localhost:5001/Admin/Product/Create - - - 200 - text/html;+charset=utf-8 68.7447ms (791a596a)
+2021-12-13T09:13:16.4879188+01:00 0HMDU216TR2OP:00000079 [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - (ca22a1cb)
+2021-12-13T09:13:16.4923084+01:00 0HMDU216TR2OP:00000079 [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - - 404 0 - 5.3081ms (791a596a)
+2021-12-13T09:13:50.3951118+01:00 0HMDU216TR2OP:0000007B [INF] Request starting HTTP/2 POST https://localhost:5001/Admin/Product/Create multipart/form-data;+boundary=----WebKitFormBoundary3NojNAS0Y3WUUoIq 179399 (ca22a1cb)
+2021-12-13T09:13:50.3975809+01:00 0HMDU216TR2OP:0000007B [INF] Executing endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Create (Musilu.Eshop.Web)"' (500cc934)
+2021-12-13T09:13:50.4020536+01:00 0HMDU216TR2OP:0000007B [INF] Route matched with "{area = \"Admin\", action = \"Create\", controller = \"Product\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Musilu.Eshop.Web.Models.Entity.Product)" on controller "Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-13T09:13:50.4590486+01:00 0HMDU216TR2OP:0000007B [INF] Entity Framework Core "5.0.12" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-13T09:13:50.4937435+01:00 0HMDU216TR2OP:0000007B [INF] Executed DbCommand ("3"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 50), @p3='?' (Size = 255), @p4='?' (Size = 4000), @p5='?' (DbType = Double)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO `Products` (`Category`, `Description`, `ImageAlt`, `ImageSource`, `Name`, `Price`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT `ID`
+FROM `Products`
+WHERE ROW_COUNT() = 1 AND `ID` = LAST_INSERT_ID();" (0723d8ff)
+2021-12-13T09:13:50.5129245+01:00 0HMDU216TR2OP:0000007B [INF] Executing RedirectResult, redirecting to "/Admin/Product/Select". (d98d540e)
+2021-12-13T09:13:50.5130070+01:00 0HMDU216TR2OP:0000007B [INF] Executed action "Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Create (Musilu.Eshop.Web)" in 110.8971ms (afa2e885)
+2021-12-13T09:13:50.5130350+01:00 0HMDU216TR2OP:0000007B [INF] Executed endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Create (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-13T09:13:50.5137198+01:00 0HMDU216TR2OP:0000007B [INF] Request finished HTTP/2 POST https://localhost:5001/Admin/Product/Create multipart/form-data;+boundary=----WebKitFormBoundary3NojNAS0Y3WUUoIq 179399 - 302 0 - 118.5968ms (791a596a)
+2021-12-13T09:13:50.5164136+01:00 0HMDU216TR2OP:0000007D [INF] Request starting HTTP/2 GET https://localhost:5001/Admin/Product/Select - - (ca22a1cb)
+2021-12-13T09:13:50.5169029+01:00 0HMDU216TR2OP:0000007D [INF] Executing endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Select (Musilu.Eshop.Web)"' (500cc934)
+2021-12-13T09:13:50.5170555+01:00 0HMDU216TR2OP:0000007D [INF] Route matched with "{area = \"Admin\", action = \"Select\", controller = \"Product\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Select()" on controller "Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-13T09:13:50.5173495+01:00 0HMDU216TR2OP:0000007D [INF] Entity Framework Core "5.0.12" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-13T09:13:50.5182615+01:00 0HMDU216TR2OP:0000007D [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `p`.`ID`, `p`.`Category`, `p`.`Description`, `p`.`ImageAlt`, `p`.`ImageSource`, `p`.`Name`, `p`.`Price`
+FROM `Products` AS `p`" (0723d8ff)
+2021-12-13T09:13:50.5185216+01:00 0HMDU216TR2OP:0000007D [INF] Executing ViewResult, running view "Select". (c83d0e25)
+2021-12-13T09:13:50.5192553+01:00 0HMDU216TR2OP:0000007D [INF] Executed ViewResult - view "Select" executed in 0.7795ms. (f66409e9)
+2021-12-13T09:13:50.5193335+01:00 0HMDU216TR2OP:0000007D [INF] Executed action "Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Select (Musilu.Eshop.Web)" in 2.2292ms (afa2e885)
+2021-12-13T09:13:50.5194104+01:00 0HMDU216TR2OP:0000007D [INF] Executed endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Select (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-13T09:13:50.5195510+01:00 0HMDU216TR2OP:0000007D [INF] Request finished HTTP/2 GET https://localhost:5001/Admin/Product/Select - - - 200 - text/html;+charset=utf-8 3.1789ms (791a596a)
+2021-12-13T09:13:50.5518626+01:00 0HMDU216TR2OP:0000007F [INF] Request starting HTTP/2 GET https://localhost:5001/css/site.css - - (ca22a1cb)
+2021-12-13T09:13:50.5523528+01:00 0HMDU216TR2OP:0000007F [INF] The file "/css/site.css" was not modified (f1f8d725)
+2021-12-13T09:13:50.5525628+01:00 0HMDU216TR2OP:0000007F [INF] Request finished HTTP/2 GET https://localhost:5001/css/site.css - - - 304 - text/css 0.7086ms (791a596a)
+2021-12-13T09:13:50.5528134+01:00 0HMDU216TR2OP:00000081 [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - (ca22a1cb)
+2021-12-13T09:13:50.5538015+01:00 0HMDU216TR2OP:00000083 [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/xogn5azu.bcw.jpg - - (ca22a1cb)
+2021-12-13T09:13:50.5548397+01:00 0HMDU216TR2OP:00000081 [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - - 404 0 - 2.0135ms (791a596a)
+2021-12-13T09:13:50.6113126+01:00 0HMDU216TR2OP:00000083 [INF] Sending file. Request path: '"/img/ProductItems/xogn5azu.bcw.jpg"'. Physical path: '"C:\Users\v_musilu\Downloads\Musilu.Eshop.Web-main\Musilu.Eshop.Web-main\wwwroot\img\ProductItems\xogn5azu.bcw.jpg"' (27b0a520)
+2021-12-13T09:13:50.6115202+01:00 0HMDU216TR2OP:00000083 [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/xogn5azu.bcw.jpg - - - 200 178420 image/jpeg 57.9198ms (791a596a)
+2021-12-13T09:14:28.7900369+01:00 0HMDU216TR2OQ:00000001 [INF] Request starting HTTP/2 GET https://localhost:5001/Admin/Product/Select - - (ca22a1cb)
+2021-12-13T09:14:28.7906859+01:00 0HMDU216TR2OQ:00000001 [INF] Executing endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Select (Musilu.Eshop.Web)"' (500cc934)
+2021-12-13T09:14:28.7908067+01:00 0HMDU216TR2OQ:00000001 [INF] Route matched with "{area = \"Admin\", action = \"Select\", controller = \"Product\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Select()" on controller "Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-13T09:14:28.7912345+01:00 0HMDU216TR2OQ:00000001 [INF] Entity Framework Core "5.0.12" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-13T09:14:28.7924469+01:00 0HMDU216TR2OQ:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `p`.`ID`, `p`.`Category`, `p`.`Description`, `p`.`ImageAlt`, `p`.`ImageSource`, `p`.`Name`, `p`.`Price`
+FROM `Products` AS `p`" (0723d8ff)
+2021-12-13T09:14:28.7928269+01:00 0HMDU216TR2OQ:00000001 [INF] Executing ViewResult, running view "Select". (c83d0e25)
+2021-12-13T09:14:28.7951938+01:00 0HMDU216TR2OQ:00000001 [INF] Accessing expired session, Key:"75b90032-4d17-4c29-fdcf-246ee68b96ae" (08c5a9e7)
+2021-12-13T09:14:28.7955503+01:00 0HMDU216TR2OQ:00000001 [INF] Executed ViewResult - view "Select" executed in 2.8136ms. (f66409e9)
+2021-12-13T09:14:28.7956141+01:00 0HMDU216TR2OQ:00000001 [INF] Executed action "Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Select (Musilu.Eshop.Web)" in 4.7395ms (afa2e885)
+2021-12-13T09:14:28.7956584+01:00 0HMDU216TR2OQ:00000001 [INF] Executed endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Select (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-13T09:14:28.7958279+01:00 0HMDU216TR2OQ:00000001 [INF] Request finished HTTP/2 GET https://localhost:5001/Admin/Product/Select - - - 200 - text/html;+charset=utf-8 6.0134ms (791a596a)
+2021-12-13T09:14:28.8271007+01:00 0HMDU216TR2OQ:00000003 [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - (ca22a1cb)
+2021-12-13T09:14:28.8340017+01:00 0HMDU216TR2OQ:00000003 [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - - 404 0 - 1.6692ms (791a596a)
+2021-12-13T09:14:28.8378643+01:00 0HMDU216TR2OQ:00000005 [INF] Request starting HTTP/2 GET https://localhost:5001/js/alerts.js - - (ca22a1cb)
+2021-12-13T09:14:28.8380781+01:00 0HMDU216TR2OQ:00000007 [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/xogn5azu.bcw.jpg - - (ca22a1cb)
+2021-12-13T09:14:28.8662864+01:00 0HMDU216TR2OQ:00000005 [INF] Sending file. Request path: '"/js/alerts.js"'. Physical path: '"C:\Users\v_musilu\Downloads\Musilu.Eshop.Web-main\Musilu.Eshop.Web-main\wwwroot\js\alerts.js"' (27b0a520)
+2021-12-13T09:14:28.8663932+01:00 0HMDU216TR2OQ:00000005 [INF] Request finished HTTP/2 GET https://localhost:5001/js/alerts.js - - - 200 87 application/javascript 28.6096ms (791a596a)
+2021-12-13T09:14:28.8690837+01:00 0HMDU216TR2OQ:00000007 [INF] Sending file. Request path: '"/img/ProductItems/xogn5azu.bcw.jpg"'. Physical path: '"C:\Users\v_musilu\Downloads\Musilu.Eshop.Web-main\Musilu.Eshop.Web-main\wwwroot\img\ProductItems\xogn5azu.bcw.jpg"' (27b0a520)
+2021-12-13T09:14:28.8692270+01:00 0HMDU216TR2OQ:00000007 [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/xogn5azu.bcw.jpg - - - 200 178420 image/jpeg 31.1930ms (791a596a)
+2021-12-13T09:14:28.8725590+01:00 0HMDU216TR2OQ:00000009 [INF] Request starting HTTP/2 GET https://localhost:5001/img/it.jpg - - (ca22a1cb)
+2021-12-13T09:14:28.8729149+01:00 0HMDU216TR2OQ:00000009 [INF] Request finished HTTP/2 GET https://localhost:5001/img/it.jpg - - - 404 0 - 0.4570ms (791a596a)
+2021-12-13T09:14:30.3067126+01:00 0HMDU216TR2OQ:0000000B [INF] Request starting HTTP/2 GET https://localhost:5001/Admin/Product/Create - - (ca22a1cb)
+2021-12-13T09:14:30.3068972+01:00 0HMDU216TR2OQ:0000000B [INF] Executing endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Create (Musilu.Eshop.Web)"' (500cc934)
+2021-12-13T09:14:30.3070428+01:00 0HMDU216TR2OQ:0000000B [INF] Route matched with "{area = \"Admin\", action = \"Create\", controller = \"Product\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Create()" on controller "Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-13T09:14:30.3072784+01:00 0HMDU216TR2OQ:0000000B [INF] Executing ViewResult, running view "Create". (c83d0e25)
+2021-12-13T09:14:30.3089842+01:00 0HMDU216TR2OQ:0000000B [INF] Accessing expired session, Key:"75b90032-4d17-4c29-fdcf-246ee68b96ae" (08c5a9e7)
+2021-12-13T09:14:30.3092895+01:00 0HMDU216TR2OQ:0000000B [INF] Executed ViewResult - view "Create" executed in 2.0328ms. (f66409e9)
+2021-12-13T09:14:30.3093527+01:00 0HMDU216TR2OQ:0000000B [INF] Executed action "Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Create (Musilu.Eshop.Web)" in 2.2694ms (afa2e885)
+2021-12-13T09:14:30.3094688+01:00 0HMDU216TR2OQ:0000000B [INF] Executed endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Create (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-13T09:14:30.3102927+01:00 0HMDU216TR2OQ:0000000B [INF] Request finished HTTP/2 GET https://localhost:5001/Admin/Product/Create - - - 200 - text/html;+charset=utf-8 3.5811ms (791a596a)
+2021-12-13T09:14:30.3416017+01:00 0HMDU216TR2OQ:0000000D [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - (ca22a1cb)
+2021-12-13T09:14:30.3420077+01:00 0HMDU216TR2OQ:0000000D [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - - 404 0 - 0.9901ms (791a596a)
