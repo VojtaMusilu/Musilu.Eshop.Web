@@ -103,9 +103,36 @@ namespace Musilu.Eshop.Tests
         public async Task CarouselCreate_InvalidFailure()
         {
             //zkuste doplnit tak, aby objekt pro CarouselItem nebyl validní, což bude správný výsledek testu ;-)
-            
-            //pozn. to aby test neprosel je v tuto chvili napsano schvalne, aby vas to upozornilo, ze mate jeste neco udelat
-            Assert.True(false);
+
+            // Arrange
+            var mockIWebHostEnvironment = new Mock<IWebHostEnvironment>();
+            mockIWebHostEnvironment.Setup(webHostEnv => webHostEnv.WebRootPath).Returns(Directory.GetCurrentDirectory());
+
+
+            DbContextOptions options = new DbContextOptionsBuilder<EshopDbContext>()
+                                       .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
+                                       .Options;
+            var databaseContext = new EshopDbContext(options);
+            databaseContext.Database.EnsureCreated();
+
+
+            CarouselController controller = new CarouselController(databaseContext, mockIWebHostEnvironment.Object);
+            controller.ObjectValidator = new ObjectValidator();
+            IActionResult iActionResult = null;
+
+            CarouselItem testCarousel = GetTestCarouselItemInvalid();
+
+            iActionResult = await controller.Create(testCarousel);
+
+            // Assert
+            ViewResult redirectFail = Assert.IsType<ViewResult>(iActionResult);
+            Assert.Matches(redirectFail.ToString(), nameof(CarouselController.Select));
+
+
+            int carouselCount = (await databaseContext.CarouselItems.ToListAsync()).Count;
+            Assert.Equal(0, carouselCount);
+
+
         }
 
 
@@ -117,6 +144,15 @@ namespace Musilu.Eshop.Tests
                 ImageSource = null,
                 ImageAlt = "image",
                 Image = iff
+            };
+        }
+
+        CarouselItem GetTestCarouselItemInvalid()
+        {
+            return new CarouselItem()
+            {
+                ImageSource = null,
+                ImageAlt = "imageNull"
             };
         }
 
