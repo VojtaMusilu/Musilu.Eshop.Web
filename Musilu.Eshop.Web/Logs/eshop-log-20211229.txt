@@ -1,0 +1,829 @@
+2021-12-29T15:57:24.8055460+01:00  [INF] Entity Framework Core "5.0.11" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-29T15:57:25.5797335+01:00  [INF] Executed DbCommand ("59"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'Musilu.Eshop'" (0723d8ff)
+2021-12-29T15:57:26.1754659+01:00  [INF] Executed DbCommand ("14"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM `CarouselItem` AS `c`" (0723d8ff)
+2021-12-29T15:57:26.2845692+01:00  [INF] User profile is available. Using '"C:\Users\vojte\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2021-12-29T15:57:26.4559599+01:00  [ERR] Failed executing DbCommand ("23"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedName_0
+LIMIT 1" (627a98df)
+2021-12-29T15:57:26.6682288+01:00  [ERR] An exception occurred while iterating over the results of a query for context type '"Musilu.Eshop.Web.Models.Database.EshopDbContext"'."
+""MySqlConnector.MySqlException (0x80004005): Table 'musilu.eshop.roles' doesn't exist
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 50
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 135
+   at MySqlConnector.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 444
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList`1 commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 60
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 319
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 312
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()" (f5c7ac34)
+MySqlConnector.MySqlException (0x80004005): Table 'musilu.eshop.roles' doesn't exist
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 50
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 135
+   at MySqlConnector.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 444
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList`1 commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 60
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 319
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 312
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2021-12-29T16:05:23.2488177+01:00  [INF] Entity Framework Core "5.0.11" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-29T16:05:23.6765814+01:00  [INF] Executed DbCommand ("11"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='Musilu.Eshop' AND TABLE_NAME='__EFMigrationsHistory';" (0723d8ff)
+2021-12-29T16:05:23.6872734+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='Musilu.Eshop' AND TABLE_NAME='__EFMigrationsHistory';" (0723d8ff)
+2021-12-29T16:05:23.6995795+01:00  [INF] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `MigrationId`, `ProductVersion`
+FROM `__EFMigrationsHistory`
+ORDER BY `MigrationId`;" (0723d8ff)
+2021-12-29T16:05:23.7246425+01:00  [INF] Applying migration '"20211122083120_MySql_1.0.2"'. (0e2ac64d)
+2021-12-29T16:05:23.8988121+01:00  [INF] Executed DbCommand ("65"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE `Roles` (
+    `Id` int NOT NULL AUTO_INCREMENT,
+    `Name` varchar(256) CHARACTER SET utf8mb4 NULL,
+    `NormalizedName` varchar(256) CHARACTER SET utf8mb4 NULL,
+    `ConcurrencyStamp` longtext CHARACTER SET utf8mb4 NULL,
+    CONSTRAINT `PK_Roles` PRIMARY KEY (`Id`)
+) CHARACTER SET utf8mb4;" (0723d8ff)
+2021-12-29T16:05:23.9511514+01:00  [INF] Executed DbCommand ("52"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE `Users` (
+    `Id` int NOT NULL AUTO_INCREMENT,
+    `FirstName` longtext CHARACTER SET utf8mb4 NULL,
+    `LastName` longtext CHARACTER SET utf8mb4 NULL,
+    `UserName` varchar(256) CHARACTER SET utf8mb4 NULL,
+    `NormalizedUserName` varchar(256) CHARACTER SET utf8mb4 NULL,
+    `Email` varchar(256) CHARACTER SET utf8mb4 NULL,
+    `NormalizedEmail` varchar(256) CHARACTER SET utf8mb4 NULL,
+    `EmailConfirmed` tinyint(1) NOT NULL,
+    `PasswordHash` longtext CHARACTER SET utf8mb4 NULL,
+    `SecurityStamp` longtext CHARACTER SET utf8mb4 NULL,
+    `ConcurrencyStamp` longtext CHARACTER SET utf8mb4 NULL,
+    `PhoneNumber` longtext CHARACTER SET utf8mb4 NULL,
+    `PhoneNumberConfirmed` tinyint(1) NOT NULL,
+    `TwoFactorEnabled` tinyint(1) NOT NULL,
+    `LockoutEnd` datetime(6) NULL,
+    `LockoutEnabled` tinyint(1) NOT NULL,
+    `AccessFailedCount` int NOT NULL,
+    CONSTRAINT `PK_Users` PRIMARY KEY (`Id`)
+) CHARACTER SET utf8mb4;" (0723d8ff)
+2021-12-29T16:05:24.0133881+01:00  [INF] Executed DbCommand ("62"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE `RoleClaims` (
+    `Id` int NOT NULL AUTO_INCREMENT,
+    `RoleId` int NOT NULL,
+    `ClaimType` longtext CHARACTER SET utf8mb4 NULL,
+    `ClaimValue` longtext CHARACTER SET utf8mb4 NULL,
+    CONSTRAINT `PK_RoleClaims` PRIMARY KEY (`Id`),
+    CONSTRAINT `FK_RoleClaims_Roles_RoleId` FOREIGN KEY (`RoleId`) REFERENCES `Roles` (`Id`) ON DELETE CASCADE
+) CHARACTER SET utf8mb4;" (0723d8ff)
+2021-12-29T16:05:24.0908771+01:00  [INF] Executed DbCommand ("77"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE `UserClaims` (
+    `Id` int NOT NULL AUTO_INCREMENT,
+    `UserId` int NOT NULL,
+    `ClaimType` longtext CHARACTER SET utf8mb4 NULL,
+    `ClaimValue` longtext CHARACTER SET utf8mb4 NULL,
+    CONSTRAINT `PK_UserClaims` PRIMARY KEY (`Id`),
+    CONSTRAINT `FK_UserClaims_Users_UserId` FOREIGN KEY (`UserId`) REFERENCES `Users` (`Id`) ON DELETE CASCADE
+) CHARACTER SET utf8mb4;" (0723d8ff)
+2021-12-29T16:05:24.1542955+01:00  [INF] Executed DbCommand ("63"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE `UserLogins` (
+    `LoginProvider` varchar(255) CHARACTER SET utf8mb4 NOT NULL,
+    `ProviderKey` varchar(255) CHARACTER SET utf8mb4 NOT NULL,
+    `ProviderDisplayName` longtext CHARACTER SET utf8mb4 NULL,
+    `UserId` int NOT NULL,
+    CONSTRAINT `PK_UserLogins` PRIMARY KEY (`LoginProvider`, `ProviderKey`),
+    CONSTRAINT `FK_UserLogins_Users_UserId` FOREIGN KEY (`UserId`) REFERENCES `Users` (`Id`) ON DELETE CASCADE
+) CHARACTER SET utf8mb4;" (0723d8ff)
+2021-12-29T16:05:24.2800475+01:00  [INF] Executed DbCommand ("125"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE `UserRoles` (
+    `UserId` int NOT NULL,
+    `RoleId` int NOT NULL,
+    CONSTRAINT `PK_UserRoles` PRIMARY KEY (`UserId`, `RoleId`),
+    CONSTRAINT `FK_UserRoles_Roles_RoleId` FOREIGN KEY (`RoleId`) REFERENCES `Roles` (`Id`) ON DELETE CASCADE,
+    CONSTRAINT `FK_UserRoles_Users_UserId` FOREIGN KEY (`UserId`) REFERENCES `Users` (`Id`) ON DELETE CASCADE
+) CHARACTER SET utf8mb4;" (0723d8ff)
+2021-12-29T16:05:24.3846287+01:00  [INF] Executed DbCommand ("104"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE `UserTokens` (
+    `UserId` int NOT NULL,
+    `LoginProvider` varchar(255) CHARACTER SET utf8mb4 NOT NULL,
+    `Name` varchar(255) CHARACTER SET utf8mb4 NOT NULL,
+    `Value` longtext CHARACTER SET utf8mb4 NULL,
+    CONSTRAINT `PK_UserTokens` PRIMARY KEY (`UserId`, `LoginProvider`, `Name`),
+    CONSTRAINT `FK_UserTokens_Users_UserId` FOREIGN KEY (`UserId`) REFERENCES `Users` (`Id`) ON DELETE CASCADE
+) CHARACTER SET utf8mb4;" (0723d8ff)
+2021-12-29T16:05:24.4900696+01:00  [INF] Executed DbCommand ("105"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE INDEX `IX_RoleClaims_RoleId` ON `RoleClaims` (`RoleId`);" (0723d8ff)
+2021-12-29T16:05:24.5261568+01:00  [INF] Executed DbCommand ("36"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE UNIQUE INDEX `RoleNameIndex` ON `Roles` (`NormalizedName`);" (0723d8ff)
+2021-12-29T16:05:24.5615544+01:00  [INF] Executed DbCommand ("35"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE INDEX `IX_UserClaims_UserId` ON `UserClaims` (`UserId`);" (0723d8ff)
+2021-12-29T16:05:24.6053114+01:00  [INF] Executed DbCommand ("44"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE INDEX `IX_UserLogins_UserId` ON `UserLogins` (`UserId`);" (0723d8ff)
+2021-12-29T16:05:24.6420700+01:00  [INF] Executed DbCommand ("37"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE INDEX `IX_UserRoles_RoleId` ON `UserRoles` (`RoleId`);" (0723d8ff)
+2021-12-29T16:05:24.6812493+01:00  [INF] Executed DbCommand ("39"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE INDEX `EmailIndex` ON `Users` (`NormalizedEmail`);" (0723d8ff)
+2021-12-29T16:05:24.7179765+01:00  [INF] Executed DbCommand ("37"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE UNIQUE INDEX `UserNameIndex` ON `Users` (`NormalizedUserName`);" (0723d8ff)
+2021-12-29T16:05:24.7293617+01:00  [INF] Executed DbCommand ("11"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO `__EFMigrationsHistory` (`MigrationId`, `ProductVersion`)
+VALUES ('20211122083120_MySql_1.0.2', '5.0.11');" (0723d8ff)
+2021-12-29T16:05:40.7766864+01:00  [INF] Entity Framework Core "5.0.11" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-29T16:05:41.1536624+01:00  [INF] Executed DbCommand ("12"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'Musilu.Eshop'" (0723d8ff)
+2021-12-29T16:05:41.3254528+01:00  [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM `CarouselItem` AS `c`" (0723d8ff)
+2021-12-29T16:05:41.3707782+01:00  [INF] User profile is available. Using '"C:\Users\vojte\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2021-12-29T16:05:41.4972925+01:00  [INF] Executed DbCommand ("24"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2021-12-29T16:05:41.7950924+01:00  [INF] Executed DbCommand ("4"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?' (Size = 256), @p2='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO `Roles` (`ConcurrencyStamp`, `Name`, `NormalizedName`)
+VALUES (@p0, @p1, @p2);
+SELECT `Id`
+FROM `Roles`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();" (0723d8ff)
+2021-12-29T16:05:41.8385705+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2021-12-29T16:05:41.8603177+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?' (Size = 256), @p2='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO `Roles` (`ConcurrencyStamp`, `Name`, `NormalizedName`)
+VALUES (@p0, @p1, @p2);
+SELECT `Id`
+FROM `Roles`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();" (0723d8ff)
+2021-12-29T16:05:41.8734748+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2021-12-29T16:05:41.8790541+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?' (Size = 256), @p2='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO `Roles` (`ConcurrencyStamp`, `Name`, `NormalizedName`)
+VALUES (@p0, @p1, @p2);
+SELECT `Id`
+FROM `Roles`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();" (0723d8ff)
+2021-12-29T16:05:41.9709911+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2021-12-29T16:05:42.0374623+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2021-12-29T16:05:42.0499134+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedEmail_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedEmail` = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2021-12-29T16:05:42.1053103+01:00  [INF] Executed DbCommand ("3"ms) [Parameters=["@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO `Users` (`AccessFailedCount`, `ConcurrencyStamp`, `Email`, `EmailConfirmed`, `FirstName`, `LastName`, `LockoutEnabled`, `LockoutEnd`, `NormalizedEmail`, `NormalizedUserName`, `PasswordHash`, `PhoneNumber`, `PhoneNumberConfirmed`, `SecurityStamp`, `TwoFactorEnabled`, `UserName`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+SELECT `Id`
+FROM `Users`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();" (0723d8ff)
+2021-12-29T16:05:42.1404413+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedRoleName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedRoleName_0
+LIMIT 2" (0723d8ff)
+2021-12-29T16:05:42.1645290+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`UserId`, `u`.`RoleId`
+FROM `UserRoles` AS `u`
+WHERE (`u`.`UserId` = @__p_0) AND (`u`.`RoleId` = @__p_1)
+LIMIT 1" (0723d8ff)
+2021-12-29T16:05:42.1689614+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedRoleName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedRoleName_0
+LIMIT 2" (0723d8ff)
+2021-12-29T16:05:42.1833779+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2021-12-29T16:05:42.1874072+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedEmail_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedEmail` = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2021-12-29T16:05:42.2288661+01:00  [INF] Executed DbCommand ("28"ms) [Parameters=["@p0='?' (DbType = Int32), @p1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO `UserRoles` (`RoleId`, `UserId`)
+VALUES (@p0, @p1);" (0723d8ff)
+2021-12-29T16:05:42.2340333+01:00  [INF] Executed DbCommand ("3"ms) [Parameters=["@p16='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p17='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""UPDATE `Users` SET `AccessFailedCount` = @p0, `ConcurrencyStamp` = @p1, `Email` = @p2, `EmailConfirmed` = @p3, `FirstName` = @p4, `LastName` = @p5, `LockoutEnabled` = @p6, `LockoutEnd` = @p7, `NormalizedEmail` = @p8, `NormalizedUserName` = @p9, `PasswordHash` = @p10, `PhoneNumber` = @p11, `PhoneNumberConfirmed` = @p12, `SecurityStamp` = @p13, `TwoFactorEnabled` = @p14, `UserName` = @p15
+WHERE `Id` = @p16 AND `ConcurrencyStamp` = @p17;
+SELECT ROW_COUNT();" (0723d8ff)
+2021-12-29T16:05:42.2477210+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedRoleName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedRoleName_0
+LIMIT 2" (0723d8ff)
+2021-12-29T16:05:42.2512574+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`UserId`, `u`.`RoleId`
+FROM `UserRoles` AS `u`
+WHERE (`u`.`UserId` = @__p_0) AND (`u`.`RoleId` = @__p_1)
+LIMIT 1" (0723d8ff)
+2021-12-29T16:05:42.2539317+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedRoleName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedRoleName_0
+LIMIT 2" (0723d8ff)
+2021-12-29T16:05:42.2567821+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2021-12-29T16:05:42.2595969+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedEmail_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedEmail` = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2021-12-29T16:05:42.2640486+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@p0='?' (DbType = Int32), @p1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO `UserRoles` (`RoleId`, `UserId`)
+VALUES (@p0, @p1);" (0723d8ff)
+2021-12-29T16:05:42.2650352+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@p16='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p17='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""UPDATE `Users` SET `AccessFailedCount` = @p0, `ConcurrencyStamp` = @p1, `Email` = @p2, `EmailConfirmed` = @p3, `FirstName` = @p4, `LastName` = @p5, `LockoutEnabled` = @p6, `LockoutEnd` = @p7, `NormalizedEmail` = @p8, `NormalizedUserName` = @p9, `PasswordHash` = @p10, `PhoneNumber` = @p11, `PhoneNumberConfirmed` = @p12, `SecurityStamp` = @p13, `TwoFactorEnabled` = @p14, `UserName` = @p15
+WHERE `Id` = @p16 AND `ConcurrencyStamp` = @p17;
+SELECT ROW_COUNT();" (0723d8ff)
+2021-12-29T16:05:42.2770289+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedRoleName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedRoleName_0
+LIMIT 2" (0723d8ff)
+2021-12-29T16:05:42.2830815+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`UserId`, `u`.`RoleId`
+FROM `UserRoles` AS `u`
+WHERE (`u`.`UserId` = @__p_0) AND (`u`.`RoleId` = @__p_1)
+LIMIT 1" (0723d8ff)
+2021-12-29T16:05:42.2857540+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedRoleName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedRoleName_0
+LIMIT 2" (0723d8ff)
+2021-12-29T16:05:42.2886861+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2021-12-29T16:05:42.2923082+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedEmail_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedEmail` = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2021-12-29T16:05:42.2973557+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@p0='?' (DbType = Int32), @p1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO `UserRoles` (`RoleId`, `UserId`)
+VALUES (@p0, @p1);" (0723d8ff)
+2021-12-29T16:05:42.2984001+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@p16='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p17='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""UPDATE `Users` SET `AccessFailedCount` = @p0, `ConcurrencyStamp` = @p1, `Email` = @p2, `EmailConfirmed` = @p3, `FirstName` = @p4, `LastName` = @p5, `LockoutEnabled` = @p6, `LockoutEnd` = @p7, `NormalizedEmail` = @p8, `NormalizedUserName` = @p9, `PasswordHash` = @p10, `PhoneNumber` = @p11, `PhoneNumberConfirmed` = @p12, `SecurityStamp` = @p13, `TwoFactorEnabled` = @p14, `UserName` = @p15
+WHERE `Id` = @p16 AND `ConcurrencyStamp` = @p17;
+SELECT ROW_COUNT();" (0723d8ff)
+2021-12-29T16:05:42.3451518+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2021-12-29T16:05:42.3557862+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2021-12-29T16:05:42.3586849+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedEmail_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedEmail` = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2021-12-29T16:05:42.4104957+01:00  [INF] Executed DbCommand ("46"ms) [Parameters=["@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO `Users` (`AccessFailedCount`, `ConcurrencyStamp`, `Email`, `EmailConfirmed`, `FirstName`, `LastName`, `LockoutEnabled`, `LockoutEnd`, `NormalizedEmail`, `NormalizedUserName`, `PasswordHash`, `PhoneNumber`, `PhoneNumberConfirmed`, `SecurityStamp`, `TwoFactorEnabled`, `UserName`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+SELECT `Id`
+FROM `Users`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();" (0723d8ff)
+2021-12-29T16:05:42.4550933+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedRoleName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedRoleName_0
+LIMIT 2" (0723d8ff)
+2021-12-29T16:05:42.4602270+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`UserId`, `u`.`RoleId`
+FROM `UserRoles` AS `u`
+WHERE (`u`.`UserId` = @__p_0) AND (`u`.`RoleId` = @__p_1)
+LIMIT 1" (0723d8ff)
+2021-12-29T16:05:42.4628311+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedRoleName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedRoleName_0
+LIMIT 2" (0723d8ff)
+2021-12-29T16:05:42.4654512+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2021-12-29T16:05:42.4674941+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedEmail_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedEmail` = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2021-12-29T16:05:42.4711114+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@p0='?' (DbType = Int32), @p1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO `UserRoles` (`RoleId`, `UserId`)
+VALUES (@p0, @p1);" (0723d8ff)
+2021-12-29T16:05:42.4725403+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@p16='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p17='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""UPDATE `Users` SET `AccessFailedCount` = @p0, `ConcurrencyStamp` = @p1, `Email` = @p2, `EmailConfirmed` = @p3, `FirstName` = @p4, `LastName` = @p5, `LockoutEnabled` = @p6, `LockoutEnd` = @p7, `NormalizedEmail` = @p8, `NormalizedUserName` = @p9, `PasswordHash` = @p10, `PhoneNumber` = @p11, `PhoneNumberConfirmed` = @p12, `SecurityStamp` = @p13, `TwoFactorEnabled` = @p14, `UserName` = @p15
+WHERE `Id` = @p16 AND `ConcurrencyStamp` = @p17;
+SELECT ROW_COUNT();" (0723d8ff)
+2021-12-29T16:05:42.5399332+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedRoleName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedRoleName_0
+LIMIT 2" (0723d8ff)
+2021-12-29T16:05:42.5449572+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`UserId`, `u`.`RoleId`
+FROM `UserRoles` AS `u`
+WHERE (`u`.`UserId` = @__p_0) AND (`u`.`RoleId` = @__p_1)
+LIMIT 1" (0723d8ff)
+2021-12-29T16:05:42.5475132+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedRoleName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedRoleName_0
+LIMIT 2" (0723d8ff)
+2021-12-29T16:05:42.5501676+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2021-12-29T16:05:42.5528803+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedEmail_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedEmail` = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2021-12-29T16:05:42.5573111+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@p0='?' (DbType = Int32), @p1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO `UserRoles` (`RoleId`, `UserId`)
+VALUES (@p0, @p1);" (0723d8ff)
+2021-12-29T16:05:42.5584520+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@p16='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p17='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""UPDATE `Users` SET `AccessFailedCount` = @p0, `ConcurrencyStamp` = @p1, `Email` = @p2, `EmailConfirmed` = @p3, `FirstName` = @p4, `LastName` = @p5, `LockoutEnabled` = @p6, `LockoutEnd` = @p7, `NormalizedEmail` = @p8, `NormalizedUserName` = @p9, `PasswordHash` = @p10, `PhoneNumber` = @p11, `PhoneNumberConfirmed` = @p12, `SecurityStamp` = @p13, `TwoFactorEnabled` = @p14, `UserName` = @p15
+WHERE `Id` = @p16 AND `ConcurrencyStamp` = @p17;
+SELECT ROW_COUNT();" (0723d8ff)
+2021-12-29T16:05:43.1323268+01:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2021-12-29T16:05:43.1343391+01:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-12-29T16:05:43.1362912+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-12-29T16:05:43.1380332+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-12-29T16:05:43.1398130+01:00  [INF] Content root path: "D:\Program Files\VisualStudio\Musilu.Eshop.Web\Musilu.Eshop.Web\Musilu.Eshop.Web" (b5d60022)
+2021-12-29T16:05:44.0658112+01:00 0HMEARINK8O0O:00000001 [INF] Request starting HTTP/2 GET https://localhost:5001/ - - (ca22a1cb)
+2021-12-29T16:05:44.1573586+01:00 0HMEARINK8O0O:00000001 [INF] Executing endpoint '"Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)"' (500cc934)
+2021-12-29T16:05:44.1773882+01:00 0HMEARINK8O0O:00000001 [INF] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "Musilu.Eshop.Web.Controllers.HomeController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-29T16:05:44.1859342+01:00 0HMEARINK8O0O:00000001 [INF] Loaded Home Index (d3450aae)
+2021-12-29T16:05:44.1887010+01:00 0HMEARINK8O0O:00000001 [INF] Entity Framework Core "5.0.11" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-29T16:05:44.1971165+01:00 0HMEARINK8O0O:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`ID`, `c`.`ImageAlt`, `c`.`ImageSource`
+FROM `CarouselItem` AS `c`" (0723d8ff)
+2021-12-29T16:05:44.2125862+01:00 0HMEARINK8O0O:00000001 [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `p`.`ID`, `p`.`Category`, `p`.`Description`, `p`.`ImageAlt`, `p`.`ImageSource`, `p`.`Name`, `p`.`Price`
+FROM `Products` AS `p`" (0723d8ff)
+2021-12-29T16:05:44.2824727+01:00 0HMEARINK8O0O:00000001 [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2021-12-29T16:05:44.4966202+01:00 0HMEARINK8O0O:00000001 [INF] Executed ViewResult - view "Index" executed in 225.6107ms. (f66409e9)
+2021-12-29T16:05:44.4974045+01:00 0HMEARINK8O0O:00000001 [INF] Executed action "Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)" in 319.4906ms (afa2e885)
+2021-12-29T16:05:44.4974838+01:00 0HMEARINK8O0O:00000001 [INF] Executed endpoint '"Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-29T16:05:44.5048026+01:00 0HMEARINK8O0O:00000001 [INF] Request finished HTTP/2 GET https://localhost:5001/ - - - 200 - text/html;+charset=utf-8 441.9477ms (791a596a)
+2021-12-29T16:05:44.5315104+01:00 0HMEARINK8O0O:00000007 [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - (ca22a1cb)
+2021-12-29T16:05:44.5315104+01:00 0HMEARINK8O0O:00000005 [INF] Request starting HTTP/2 GET https://localhost:5001/css/site.css - - (ca22a1cb)
+2021-12-29T16:05:44.5327127+01:00 0HMEARINK8O0O:00000003 [INF] Request starting HTTP/2 GET https://localhost:5001/lib/bootstrap/dist/css/bootstrap.min.css - - (ca22a1cb)
+2021-12-29T16:05:44.5470687+01:00 0HMEARINK8O0O:00000007 [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - - 404 0 - 16.8938ms (791a596a)
+2021-12-29T16:05:44.5734404+01:00 0HMEARINK8O0O:00000005 [INF] Sending file. Request path: '"/css/site.css"'. Physical path: '"D:\Program Files\VisualStudio\Musilu.Eshop.Web\Musilu.Eshop.Web\Musilu.Eshop.Web\wwwroot\css\site.css"' (27b0a520)
+2021-12-29T16:05:44.5738561+01:00 0HMEARINK8O0O:00000005 [INF] Request finished HTTP/2 GET https://localhost:5001/css/site.css - - - 200 3096 text/css 43.6842ms (791a596a)
+2021-12-29T16:05:44.5809241+01:00 0HMEARINK8O0O:00000009 [INF] Request starting HTTP/2 GET https://localhost:5001/lib/jquery/dist/jquery.min.js - - (ca22a1cb)
+2021-12-29T16:05:44.5815778+01:00 0HMEARINK8O0O:0000000B [INF] Request starting HTTP/2 GET https://localhost:5001/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - (ca22a1cb)
+2021-12-29T16:05:44.5974810+01:00 0HMEARINK8O0O:0000000D [INF] Request starting HTTP/2 GET https://localhost:5001/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - (ca22a1cb)
+2021-12-29T16:05:44.5980171+01:00 0HMEARINK8O0O:0000000F [INF] Request starting HTTP/2 GET https://localhost:5001/img/CarouselItems/adxdqax3.gz3.jpg - - (ca22a1cb)
+2021-12-29T16:05:44.5983963+01:00 0HMEARINK8O0O:00000011 [INF] Request starting HTTP/2 GET https://localhost:5001/img/3.jpg - - (ca22a1cb)
+2021-12-29T16:05:44.6006934+01:00 0HMEARINK8O0O:0000000D [INF] Sending file. Request path: '"/js/site.js"'. Physical path: '"D:\Program Files\VisualStudio\Musilu.Eshop.Web\Musilu.Eshop.Web\Musilu.Eshop.Web\wwwroot\js\site.js"' (27b0a520)
+2021-12-29T16:05:44.6011191+01:00 0HMEARINK8O0O:00000013 [INF] Request starting HTTP/2 GET https://localhost:5001/img/CarouselItems/jsfqjsxy.s1v.png - - (ca22a1cb)
+2021-12-29T16:05:44.6013875+01:00 0HMEARINK8O0O:0000000D [INF] Request finished HTTP/2 GET https://localhost:5001/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - - 200 230 application/javascript 3.7783ms (791a596a)
+2021-12-29T16:05:44.6014270+01:00 0HMEARINK8O0O:00000015 [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/5bysv2zz.lu4.jpg - - (ca22a1cb)
+2021-12-29T16:05:44.6016374+01:00 0HMEARINK8O0O:00000017 [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/eotsxlsz.mlv.jpg - - (ca22a1cb)
+2021-12-29T16:05:44.6017802+01:00 0HMEARINK8O0O:00000019 [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/krn4bv0d.pbn.jpeg - - (ca22a1cb)
+2021-12-29T16:05:44.6017944+01:00 0HMEARINK8O0O:0000001B [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/nmvjnbr1.aud.jpg - - (ca22a1cb)
+2021-12-29T16:05:44.6090179+01:00 0HMEARINK8O0O:00000003 [INF] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.min.css"'. Physical path: '"D:\Program Files\VisualStudio\Musilu.Eshop.Web\Musilu.Eshop.Web\Musilu.Eshop.Web\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css"' (27b0a520)
+2021-12-29T16:05:44.6106870+01:00 0HMEARINK8O0O:00000003 [INF] Request finished HTTP/2 GET https://localhost:5001/lib/bootstrap/dist/css/bootstrap.min.css - - - 200 155764 text/css 80.5799ms (791a596a)
+2021-12-29T16:05:44.6231249+01:00 0HMEARINK8O0O:0000001D [INF] Request starting HTTP/2 GET https://localhost:5001/img/it.jpg - - (ca22a1cb)
+2021-12-29T16:05:44.6271184+01:00 0HMEARINK8O0O:0000001D [INF] Request finished HTTP/2 GET https://localhost:5001/img/it.jpg - - - 404 0 - 4.0255ms (791a596a)
+2021-12-29T16:05:44.6349850+01:00 0HMEARINK8O0O:00000015 [INF] Sending file. Request path: '"/img/ProductItems/5bysv2zz.lu4.jpg"'. Physical path: '"D:\Program Files\VisualStudio\Musilu.Eshop.Web\Musilu.Eshop.Web\Musilu.Eshop.Web\wwwroot\img\ProductItems\5bysv2zz.lu4.jpg"' (27b0a520)
+2021-12-29T16:05:44.6351738+01:00 0HMEARINK8O0O:00000015 [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/5bysv2zz.lu4.jpg - - - 200 35897 image/jpeg 33.7605ms (791a596a)
+2021-12-29T16:05:44.6937536+01:00 0HMEARINK8O0O:00000019 [INF] Sending file. Request path: '"/img/ProductItems/krn4bv0d.pbn.jpeg"'. Physical path: '"D:\Program Files\VisualStudio\Musilu.Eshop.Web\Musilu.Eshop.Web\Musilu.Eshop.Web\wwwroot\img\ProductItems\krn4bv0d.pbn.jpeg"' (27b0a520)
+2021-12-29T16:05:44.6939093+01:00 0HMEARINK8O0O:00000019 [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/krn4bv0d.pbn.jpeg - - - 200 54737 image/jpeg 92.2036ms (791a596a)
+2021-12-29T16:05:44.6940677+01:00 0HMEARINK8O0O:0000001B [INF] Sending file. Request path: '"/img/ProductItems/nmvjnbr1.aud.jpg"'. Physical path: '"D:\Program Files\VisualStudio\Musilu.Eshop.Web\Musilu.Eshop.Web\Musilu.Eshop.Web\wwwroot\img\ProductItems\nmvjnbr1.aud.jpg"' (27b0a520)
+2021-12-29T16:05:44.6942520+01:00 0HMEARINK8O0O:0000001B [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/nmvjnbr1.aud.jpg - - - 200 73613 image/jpeg 92.4850ms (791a596a)
+2021-12-29T16:05:44.6956892+01:00 0HMEARINK8O0O:00000017 [INF] Sending file. Request path: '"/img/ProductItems/eotsxlsz.mlv.jpg"'. Physical path: '"D:\Program Files\VisualStudio\Musilu.Eshop.Web\Musilu.Eshop.Web\Musilu.Eshop.Web\wwwroot\img\ProductItems\eotsxlsz.mlv.jpg"' (27b0a520)
+2021-12-29T16:05:44.6958482+01:00 0HMEARINK8O0O:00000017 [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/eotsxlsz.mlv.jpg - - - 200 132882 image/jpeg 94.2236ms (791a596a)
+2021-12-29T16:05:44.7102134+01:00 0HMEARINK8O0O:0000000B [INF] Sending file. Request path: '"/lib/bootstrap/dist/js/bootstrap.bundle.min.js"'. Physical path: '"D:\Program Files\VisualStudio\Musilu.Eshop.Web\Musilu.Eshop.Web\Musilu.Eshop.Web\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js"' (27b0a520)
+2021-12-29T16:05:44.7104341+01:00 0HMEARINK8O0O:0000000B [INF] Request finished HTTP/2 GET https://localhost:5001/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 200 78641 application/javascript 128.8888ms (791a596a)
+2021-12-29T16:05:44.8754564+01:00 0HMEARINK8O0O:00000009 [INF] Sending file. Request path: '"/lib/jquery/dist/jquery.min.js"'. Physical path: '"D:\Program Files\VisualStudio\Musilu.Eshop.Web\Musilu.Eshop.Web\Musilu.Eshop.Web\wwwroot\lib\jquery\dist\jquery.min.js"' (27b0a520)
+2021-12-29T16:05:44.8756119+01:00 0HMEARINK8O0O:00000009 [INF] Request finished HTTP/2 GET https://localhost:5001/lib/jquery/dist/jquery.min.js - - - 200 89478 application/javascript 294.6990ms (791a596a)
+2021-12-29T16:05:44.8991850+01:00 0HMEARINK8O0O:00000011 [INF] Sending file. Request path: '"/img/3.jpg"'. Physical path: '"D:\Program Files\VisualStudio\Musilu.Eshop.Web\Musilu.Eshop.Web\Musilu.Eshop.Web\wwwroot\img\3.jpg"' (27b0a520)
+2021-12-29T16:05:44.8994468+01:00 0HMEARINK8O0O:00000011 [INF] Request finished HTTP/2 GET https://localhost:5001/img/3.jpg - - - 200 82883 image/jpeg 301.1210ms (791a596a)
+2021-12-29T16:05:44.9056019+01:00 0HMEARINK8O0O:0000000F [INF] Sending file. Request path: '"/img/CarouselItems/adxdqax3.gz3.jpg"'. Physical path: '"D:\Program Files\VisualStudio\Musilu.Eshop.Web\Musilu.Eshop.Web\Musilu.Eshop.Web\wwwroot\img\CarouselItems\adxdqax3.gz3.jpg"' (27b0a520)
+2021-12-29T16:05:44.9067380+01:00 0HMEARINK8O0O:0000000F [INF] Request finished HTTP/2 GET https://localhost:5001/img/CarouselItems/adxdqax3.gz3.jpg - - - 200 81444 image/jpeg 308.4862ms (791a596a)
+2021-12-29T16:05:44.9081103+01:00 0HMEARINK8O0O:00000013 [INF] Sending file. Request path: '"/img/CarouselItems/jsfqjsxy.s1v.png"'. Physical path: '"D:\Program Files\VisualStudio\Musilu.Eshop.Web\Musilu.Eshop.Web\Musilu.Eshop.Web\wwwroot\img\CarouselItems\jsfqjsxy.s1v.png"' (27b0a520)
+2021-12-29T16:05:44.9082699+01:00 0HMEARINK8O0O:00000013 [INF] Request finished HTTP/2 GET https://localhost:5001/img/CarouselItems/jsfqjsxy.s1v.png - - - 200 87127 image/png 307.3527ms (791a596a)
+2021-12-29T16:05:44.9278992+01:00 0HMEARINK8O0O:0000001F [INF] Request starting HTTP/2 GET https://localhost:5001/favicon.ico - - (ca22a1cb)
+2021-12-29T16:05:44.9448370+01:00 0HMEARINK8O0O:0000001F [INF] Sending file. Request path: '"/favicon.ico"'. Physical path: '"D:\Program Files\VisualStudio\Musilu.Eshop.Web\Musilu.Eshop.Web\Musilu.Eshop.Web\wwwroot\favicon.ico"' (27b0a520)
+2021-12-29T16:05:44.9451360+01:00 0HMEARINK8O0O:0000001F [INF] Request finished HTTP/2 GET https://localhost:5001/favicon.ico - - - 200 5430 image/x-icon 17.1464ms (791a596a)
+2021-12-29T16:06:11.1577168+01:00 0HMEARINK8O0O:00000021 [INF] Request starting HTTP/2 GET https://localhost:5001/Security/Account/Login - - (ca22a1cb)
+2021-12-29T16:06:11.1584740+01:00 0HMEARINK8O0O:00000021 [INF] Executing endpoint '"Musilu.Eshop.Web.Areas.Security.Controllers.AccountController.Login (Musilu.Eshop.Web)"' (500cc934)
+2021-12-29T16:06:11.1603338+01:00 0HMEARINK8O0O:00000021 [INF] Route matched with "{area = \"Security\", action = \"Login\", controller = \"Account\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Login()" on controller "Musilu.Eshop.Web.Areas.Security.Controllers.AccountController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-29T16:06:11.1652450+01:00 0HMEARINK8O0O:00000021 [INF] Executing ViewResult, running view "Login". (c83d0e25)
+2021-12-29T16:06:11.2217102+01:00 0HMEARINK8O0O:00000021 [INF] Executed ViewResult - view "Login" executed in 58.123ms. (f66409e9)
+2021-12-29T16:06:11.2218087+01:00 0HMEARINK8O0O:00000021 [INF] Executed action "Musilu.Eshop.Web.Areas.Security.Controllers.AccountController.Login (Musilu.Eshop.Web)" in 61.3549ms (afa2e885)
+2021-12-29T16:06:11.2218410+01:00 0HMEARINK8O0O:00000021 [INF] Executed endpoint '"Musilu.Eshop.Web.Areas.Security.Controllers.AccountController.Login (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-29T16:06:11.2220724+01:00 0HMEARINK8O0O:00000021 [INF] Request finished HTTP/2 GET https://localhost:5001/Security/Account/Login - - - 200 - text/html;+charset=utf-8 64.7754ms (791a596a)
+2021-12-29T16:06:11.2473919+01:00 0HMEARINK8O0O:00000023 [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - (ca22a1cb)
+2021-12-29T16:06:11.2477191+01:00 0HMEARINK8O0O:00000025 [INF] Request starting HTTP/2 GET https://localhost:5001/css/login.css - - (ca22a1cb)
+2021-12-29T16:06:11.2507110+01:00 0HMEARINK8O0O:00000023 [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - - 404 0 - 3.2511ms (791a596a)
+2021-12-29T16:06:11.3587849+01:00 0HMEARINK8O0O:00000025 [INF] Sending file. Request path: '"/css/login.css"'. Physical path: '"D:\Program Files\VisualStudio\Musilu.Eshop.Web\Musilu.Eshop.Web\Musilu.Eshop.Web\wwwroot\css\login.css"' (27b0a520)
+2021-12-29T16:06:11.3589108+01:00 0HMEARINK8O0O:00000025 [INF] Request finished HTTP/2 GET https://localhost:5001/css/login.css - - - 200 2739 text/css 111.3468ms (791a596a)
+2021-12-29T16:06:11.3823001+01:00 0HMEARINK8O0O:00000027 [INF] Request starting HTTP/2 GET https://localhost:5001/img/it.jpg - - (ca22a1cb)
+2021-12-29T16:06:11.3837326+01:00 0HMEARINK8O0O:00000027 [INF] Request finished HTTP/2 GET https://localhost:5001/img/it.jpg - - - 404 0 - 1.7353ms (791a596a)
+2021-12-29T16:06:14.6648504+01:00 0HMEARINK8O0O:00000029 [INF] Request starting HTTP/2 POST https://localhost:5001/Security/Account/Login application/x-www-form-urlencoded 213 (ca22a1cb)
+2021-12-29T16:06:14.6670262+01:00 0HMEARINK8O0O:00000029 [INF] Executing endpoint '"Musilu.Eshop.Web.Areas.Security.Controllers.AccountController.Login (Musilu.Eshop.Web)"' (500cc934)
+2021-12-29T16:06:14.6859132+01:00 0HMEARINK8O0O:00000029 [INF] Route matched with "{area = \"Security\", action = \"Login\", controller = \"Account\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Musilu.Eshop.Web.Models.ViewModels.LoginViewModel)" on controller "Musilu.Eshop.Web.Areas.Security.Controllers.AccountController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-29T16:06:14.7475296+01:00 0HMEARINK8O0O:00000029 [INF] Entity Framework Core "5.0.11" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-29T16:06:14.7518979+01:00 0HMEARINK8O0O:00000029 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2021-12-29T16:06:14.7709120+01:00 0HMEARINK8O0O:00000029 [WRN] Invalid password for user. (6d284782)
+2021-12-29T16:06:14.7753323+01:00 0HMEARINK8O0O:00000029 [WRN] User failed to provide the correct password. (a25e98da)
+2021-12-29T16:06:14.7791576+01:00 0HMEARINK8O0O:00000029 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2021-12-29T16:06:14.7872746+01:00 0HMEARINK8O0O:00000029 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedEmail_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedEmail` = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2021-12-29T16:06:14.7929464+01:00 0HMEARINK8O0O:00000029 [INF] Executed DbCommand ("1"ms) [Parameters=["@p16='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p17='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""UPDATE `Users` SET `AccessFailedCount` = @p0, `ConcurrencyStamp` = @p1, `Email` = @p2, `EmailConfirmed` = @p3, `FirstName` = @p4, `LastName` = @p5, `LockoutEnabled` = @p6, `LockoutEnd` = @p7, `NormalizedEmail` = @p8, `NormalizedUserName` = @p9, `PasswordHash` = @p10, `PhoneNumber` = @p11, `PhoneNumberConfirmed` = @p12, `SecurityStamp` = @p13, `TwoFactorEnabled` = @p14, `UserName` = @p15
+WHERE `Id` = @p16 AND `ConcurrencyStamp` = @p17;
+SELECT ROW_COUNT();" (0723d8ff)
+2021-12-29T16:06:14.8065456+01:00 0HMEARINK8O0O:00000029 [INF] Executing ViewResult, running view "Login". (c83d0e25)
+2021-12-29T16:06:14.8097586+01:00 0HMEARINK8O0O:00000029 [INF] Executed ViewResult - view "Login" executed in 3.3317ms. (f66409e9)
+2021-12-29T16:06:14.8106016+01:00 0HMEARINK8O0O:00000029 [INF] Executed action "Musilu.Eshop.Web.Areas.Security.Controllers.AccountController.Login (Musilu.Eshop.Web)" in 124.5944ms (afa2e885)
+2021-12-29T16:06:14.8109601+01:00 0HMEARINK8O0O:00000029 [INF] Executed endpoint '"Musilu.Eshop.Web.Areas.Security.Controllers.AccountController.Login (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-29T16:06:14.8119668+01:00 0HMEARINK8O0O:00000029 [INF] Request finished HTTP/2 POST https://localhost:5001/Security/Account/Login application/x-www-form-urlencoded 213 - 200 - text/html;+charset=utf-8 147.4287ms (791a596a)
+2021-12-29T16:06:14.8440890+01:00 0HMEARINK8O0O:0000002B [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - (ca22a1cb)
+2021-12-29T16:06:14.8444526+01:00 0HMEARINK8O0O:0000002B [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - - 404 0 - 0.4425ms (791a596a)
+2021-12-29T16:06:17.4953267+01:00 0HMEARINK8O0O:0000002D [INF] Request starting HTTP/2 POST https://localhost:5001/Security/Account/Login application/x-www-form-urlencoded 212 (ca22a1cb)
+2021-12-29T16:06:17.4957364+01:00 0HMEARINK8O0O:0000002D [INF] Executing endpoint '"Musilu.Eshop.Web.Areas.Security.Controllers.AccountController.Login (Musilu.Eshop.Web)"' (500cc934)
+2021-12-29T16:06:17.4960266+01:00 0HMEARINK8O0O:0000002D [INF] Route matched with "{area = \"Security\", action = \"Login\", controller = \"Account\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Musilu.Eshop.Web.Models.ViewModels.LoginViewModel)" on controller "Musilu.Eshop.Web.Areas.Security.Controllers.AccountController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-29T16:06:17.5098477+01:00 0HMEARINK8O0O:0000002D [INF] Entity Framework Core "5.0.11" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-29T16:06:17.5157589+01:00 0HMEARINK8O0O:0000002D [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2021-12-29T16:06:17.5271441+01:00 0HMEARINK8O0O:0000002D [WRN] Invalid password for user. (6d284782)
+2021-12-29T16:06:17.5303473+01:00 0HMEARINK8O0O:0000002D [WRN] User failed to provide the correct password. (a25e98da)
+2021-12-29T16:06:17.5345431+01:00 0HMEARINK8O0O:0000002D [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2021-12-29T16:06:17.5368961+01:00 0HMEARINK8O0O:0000002D [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedEmail_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedEmail` = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2021-12-29T16:06:17.5408056+01:00 0HMEARINK8O0O:0000002D [INF] Executed DbCommand ("1"ms) [Parameters=["@p16='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p17='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""UPDATE `Users` SET `AccessFailedCount` = @p0, `ConcurrencyStamp` = @p1, `Email` = @p2, `EmailConfirmed` = @p3, `FirstName` = @p4, `LastName` = @p5, `LockoutEnabled` = @p6, `LockoutEnd` = @p7, `NormalizedEmail` = @p8, `NormalizedUserName` = @p9, `PasswordHash` = @p10, `PhoneNumber` = @p11, `PhoneNumberConfirmed` = @p12, `SecurityStamp` = @p13, `TwoFactorEnabled` = @p14, `UserName` = @p15
+WHERE `Id` = @p16 AND `ConcurrencyStamp` = @p17;
+SELECT ROW_COUNT();" (0723d8ff)
+2021-12-29T16:06:17.5485434+01:00 0HMEARINK8O0O:0000002D [INF] Executing ViewResult, running view "Login". (c83d0e25)
+2021-12-29T16:06:17.5510476+01:00 0HMEARINK8O0O:0000002D [INF] Executed ViewResult - view "Login" executed in 2.4784ms. (f66409e9)
+2021-12-29T16:06:17.5511638+01:00 0HMEARINK8O0O:0000002D [INF] Executed action "Musilu.Eshop.Web.Areas.Security.Controllers.AccountController.Login (Musilu.Eshop.Web)" in 55.0882ms (afa2e885)
+2021-12-29T16:06:17.5512160+01:00 0HMEARINK8O0O:0000002D [INF] Executed endpoint '"Musilu.Eshop.Web.Areas.Security.Controllers.AccountController.Login (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-29T16:06:17.5514947+01:00 0HMEARINK8O0O:0000002D [INF] Request finished HTTP/2 POST https://localhost:5001/Security/Account/Login application/x-www-form-urlencoded 212 - 200 - text/html;+charset=utf-8 56.2134ms (791a596a)
+2021-12-29T16:06:17.5748589+01:00 0HMEARINK8O0O:0000002F [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - (ca22a1cb)
+2021-12-29T16:06:17.5755286+01:00 0HMEARINK8O0O:0000002F [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - - 404 0 - 0.6967ms (791a596a)
+2021-12-29T16:06:18.9818106+01:00 0HMEARINK8O0O:00000031 [INF] Request starting HTTP/2 POST https://localhost:5001/Security/Account/Login application/x-www-form-urlencoded 210 (ca22a1cb)
+2021-12-29T16:06:18.9820237+01:00 0HMEARINK8O0O:00000031 [INF] Executing endpoint '"Musilu.Eshop.Web.Areas.Security.Controllers.AccountController.Login (Musilu.Eshop.Web)"' (500cc934)
+2021-12-29T16:06:18.9821007+01:00 0HMEARINK8O0O:00000031 [INF] Route matched with "{area = \"Security\", action = \"Login\", controller = \"Account\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Musilu.Eshop.Web.Models.ViewModels.LoginViewModel)" on controller "Musilu.Eshop.Web.Areas.Security.Controllers.AccountController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-29T16:06:18.9827502+01:00 0HMEARINK8O0O:00000031 [INF] Entity Framework Core "5.0.11" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-29T16:06:18.9871789+01:00 0HMEARINK8O0O:00000031 [INF] Executed DbCommand ("2"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2021-12-29T16:06:18.9979585+01:00 0HMEARINK8O0O:00000031 [WRN] Invalid password for user. (6d284782)
+2021-12-29T16:06:19.0001007+01:00 0HMEARINK8O0O:00000031 [WRN] User failed to provide the correct password. (a25e98da)
+2021-12-29T16:06:19.0032071+01:00 0HMEARINK8O0O:00000031 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2021-12-29T16:06:19.0060442+01:00 0HMEARINK8O0O:00000031 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedEmail_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedEmail` = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2021-12-29T16:06:19.0111881+01:00 0HMEARINK8O0O:00000031 [INF] Executed DbCommand ("1"ms) [Parameters=["@p16='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p17='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""UPDATE `Users` SET `AccessFailedCount` = @p0, `ConcurrencyStamp` = @p1, `Email` = @p2, `EmailConfirmed` = @p3, `FirstName` = @p4, `LastName` = @p5, `LockoutEnabled` = @p6, `LockoutEnd` = @p7, `NormalizedEmail` = @p8, `NormalizedUserName` = @p9, `PasswordHash` = @p10, `PhoneNumber` = @p11, `PhoneNumberConfirmed` = @p12, `SecurityStamp` = @p13, `TwoFactorEnabled` = @p14, `UserName` = @p15
+WHERE `Id` = @p16 AND `ConcurrencyStamp` = @p17;
+SELECT ROW_COUNT();" (0723d8ff)
+2021-12-29T16:06:19.0181690+01:00 0HMEARINK8O0O:00000031 [INF] Executing ViewResult, running view "Login". (c83d0e25)
+2021-12-29T16:06:19.0189875+01:00 0HMEARINK8O0O:00000031 [INF] Executed ViewResult - view "Login" executed in 0.8526ms. (f66409e9)
+2021-12-29T16:06:19.0190587+01:00 0HMEARINK8O0O:00000031 [INF] Executed action "Musilu.Eshop.Web.Areas.Security.Controllers.AccountController.Login (Musilu.Eshop.Web)" in 36.9252ms (afa2e885)
+2021-12-29T16:06:19.0190898+01:00 0HMEARINK8O0O:00000031 [INF] Executed endpoint '"Musilu.Eshop.Web.Areas.Security.Controllers.AccountController.Login (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-29T16:06:19.0192362+01:00 0HMEARINK8O0O:00000031 [INF] Request finished HTTP/2 POST https://localhost:5001/Security/Account/Login application/x-www-form-urlencoded 210 - 200 - text/html;+charset=utf-8 37.4882ms (791a596a)
+2021-12-29T16:06:19.0514383+01:00 0HMEARINK8O0O:00000033 [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - (ca22a1cb)
+2021-12-29T16:06:19.0523340+01:00 0HMEARINK8O0O:00000033 [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - - 404 0 - 0.8693ms (791a596a)
+2021-12-29T16:08:01.3556085+01:00 0HMEARINK8O0O:00000035 [INF] Request starting HTTP/2 POST https://localhost:5001/Security/Account/Login application/x-www-form-urlencoded 210 (ca22a1cb)
+2021-12-29T16:08:01.3559816+01:00 0HMEARINK8O0O:00000035 [INF] Executing endpoint '"Musilu.Eshop.Web.Areas.Security.Controllers.AccountController.Login (Musilu.Eshop.Web)"' (500cc934)
+2021-12-29T16:08:01.3562077+01:00 0HMEARINK8O0O:00000035 [INF] Route matched with "{area = \"Security\", action = \"Login\", controller = \"Account\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Musilu.Eshop.Web.Models.ViewModels.LoginViewModel)" on controller "Musilu.Eshop.Web.Areas.Security.Controllers.AccountController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-29T16:08:01.3582223+01:00 0HMEARINK8O0O:00000035 [INF] Entity Framework Core "5.0.11" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-29T16:08:01.3664157+01:00 0HMEARINK8O0O:00000035 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2021-12-29T16:08:01.3777148+01:00 0HMEARINK8O0O:00000035 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2021-12-29T16:08:01.3889695+01:00 0HMEARINK8O0O:00000035 [INF] Executed DbCommand ("4"ms) [Parameters=["@__normalizedEmail_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedEmail` = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2021-12-29T16:08:01.3960537+01:00 0HMEARINK8O0O:00000035 [INF] Executed DbCommand ("3"ms) [Parameters=["@p16='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p17='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""UPDATE `Users` SET `AccessFailedCount` = @p0, `ConcurrencyStamp` = @p1, `Email` = @p2, `EmailConfirmed` = @p3, `FirstName` = @p4, `LastName` = @p5, `LockoutEnabled` = @p6, `LockoutEnd` = @p7, `NormalizedEmail` = @p8, `NormalizedUserName` = @p9, `PasswordHash` = @p10, `PhoneNumber` = @p11, `PhoneNumberConfirmed` = @p12, `SecurityStamp` = @p13, `TwoFactorEnabled` = @p14, `UserName` = @p15
+WHERE `Id` = @p16 AND `ConcurrencyStamp` = @p17;
+SELECT ROW_COUNT();" (0723d8ff)
+2021-12-29T16:08:01.4550157+01:00 0HMEARINK8O0O:00000035 [INF] Executed DbCommand ("2"ms) [Parameters=["@__user_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`ClaimType`, `u`.`ClaimValue`, `u`.`UserId`
+FROM `UserClaims` AS `u`
+WHERE `u`.`UserId` = @__user_Id_0" (0723d8ff)
+2021-12-29T16:08:01.4854158+01:00 0HMEARINK8O0O:00000035 [INF] Executed DbCommand ("1"ms) [Parameters=["@__userId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Name`
+FROM `UserRoles` AS `u`
+INNER JOIN `Roles` AS `r` ON `u`.`RoleId` = `r`.`Id`
+WHERE `u`.`UserId` = @__userId_0" (0723d8ff)
+2021-12-29T16:08:01.4902333+01:00 0HMEARINK8O0O:00000035 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2021-12-29T16:08:01.5007796+01:00 0HMEARINK8O0O:00000035 [INF] Executed DbCommand ("1"ms) [Parameters=["@__role_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`ClaimType`, `r`.`ClaimValue`
+FROM `RoleClaims` AS `r`
+WHERE `r`.`RoleId` = @__role_Id_0" (0723d8ff)
+2021-12-29T16:08:01.5044636+01:00 0HMEARINK8O0O:00000035 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2021-12-29T16:08:01.5076891+01:00 0HMEARINK8O0O:00000035 [INF] Executed DbCommand ("1"ms) [Parameters=["@__role_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`ClaimType`, `r`.`ClaimValue`
+FROM `RoleClaims` AS `r`
+WHERE `r`.`RoleId` = @__role_Id_0" (0723d8ff)
+2021-12-29T16:08:01.5102025+01:00 0HMEARINK8O0O:00000035 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2021-12-29T16:08:01.5126635+01:00 0HMEARINK8O0O:00000035 [INF] Executed DbCommand ("1"ms) [Parameters=["@__role_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`ClaimType`, `r`.`ClaimValue`
+FROM `RoleClaims` AS `r`
+WHERE `r`.`RoleId` = @__role_Id_0" (0723d8ff)
+2021-12-29T16:08:01.5204520+01:00 0HMEARINK8O0O:00000035 [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2021-12-29T16:08:01.5229683+01:00 0HMEARINK8O0O:00000035 [INF] Executing RedirectResult, redirecting to "/". (d98d540e)
+2021-12-29T16:08:01.5232439+01:00 0HMEARINK8O0O:00000035 [INF] Executed action "Musilu.Eshop.Web.Areas.Security.Controllers.AccountController.Login (Musilu.Eshop.Web)" in 166.9873ms (afa2e885)
+2021-12-29T16:08:01.5233112+01:00 0HMEARINK8O0O:00000035 [INF] Executed endpoint '"Musilu.Eshop.Web.Areas.Security.Controllers.AccountController.Login (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-29T16:08:01.5236893+01:00 0HMEARINK8O0O:00000035 [INF] Request finished HTTP/2 POST https://localhost:5001/Security/Account/Login application/x-www-form-urlencoded 210 - 302 0 - 168.3441ms (791a596a)
+2021-12-29T16:08:01.5295555+01:00 0HMEARINK8O0O:00000037 [INF] Request starting HTTP/2 GET https://localhost:5001/ - - (ca22a1cb)
+2021-12-29T16:08:01.5348334+01:00 0HMEARINK8O0O:00000037 [INF] Executing endpoint '"Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)"' (500cc934)
+2021-12-29T16:08:01.5349242+01:00 0HMEARINK8O0O:00000037 [INF] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "Musilu.Eshop.Web.Controllers.HomeController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-29T16:08:01.5377246+01:00 0HMEARINK8O0O:00000037 [INF] Loaded Home Index (d3450aae)
+2021-12-29T16:08:01.5382077+01:00 0HMEARINK8O0O:00000037 [INF] Entity Framework Core "5.0.11" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-29T16:08:01.5395952+01:00 0HMEARINK8O0O:00000037 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`ID`, `c`.`ImageAlt`, `c`.`ImageSource`
+FROM `CarouselItem` AS `c`" (0723d8ff)
+2021-12-29T16:08:01.5405487+01:00 0HMEARINK8O0O:00000037 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `p`.`ID`, `p`.`Category`, `p`.`Description`, `p`.`ImageAlt`, `p`.`ImageSource`, `p`.`Name`, `p`.`Price`
+FROM `Products` AS `p`" (0723d8ff)
+2021-12-29T16:08:01.5409652+01:00 0HMEARINK8O0O:00000037 [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2021-12-29T16:08:01.5456992+01:00 0HMEARINK8O0O:00000037 [INF] Executed ViewResult - view "Index" executed in 4.8568ms. (f66409e9)
+2021-12-29T16:08:01.5457697+01:00 0HMEARINK8O0O:00000037 [INF] Executed action "Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)" in 10.8206ms (afa2e885)
+2021-12-29T16:08:01.5458020+01:00 0HMEARINK8O0O:00000037 [INF] Executed endpoint '"Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-29T16:08:01.5459194+01:00 0HMEARINK8O0O:00000037 [INF] Request finished HTTP/2 GET https://localhost:5001/ - - - 200 - text/html;+charset=utf-8 16.4280ms (791a596a)
+2021-12-29T16:08:01.5730076+01:00 0HMEARINK8O0O:00000039 [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - (ca22a1cb)
+2021-12-29T16:08:01.5744852+01:00 0HMEARINK8O0O:00000039 [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - - 404 0 - 1.5343ms (791a596a)
+2021-12-29T16:08:14.0946648+01:00 0HMEARINK8O0O:0000003B [INF] Request starting HTTP/2 GET https://localhost:5001/Home/Detail/4 - - (ca22a1cb)
+2021-12-29T16:08:14.0986690+01:00 0HMEARINK8O0O:0000003B [INF] Executing endpoint '"Musilu.Eshop.Web.Controllers.HomeController.Detail (Musilu.Eshop.Web)"' (500cc934)
+2021-12-29T16:08:14.1002708+01:00 0HMEARINK8O0O:0000003B [INF] Route matched with "{action = \"Detail\", controller = \"Home\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Detail(Int32)" on controller "Musilu.Eshop.Web.Controllers.HomeController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-29T16:08:14.1027756+01:00 0HMEARINK8O0O:0000003B [INF] Entity Framework Core "5.0.11" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-29T16:08:14.1071253+01:00 0HMEARINK8O0O:0000003B [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `p`.`ID`, `p`.`Category`, `p`.`Description`, `p`.`ImageAlt`, `p`.`ImageSource`, `p`.`Name`, `p`.`Price`
+FROM `Products` AS `p`
+WHERE `p`.`ID` = @__id_0
+LIMIT 1" (0723d8ff)
+2021-12-29T16:08:14.1085776+01:00 0HMEARINK8O0O:0000003B [INF] Executing ViewResult, running view "Detail". (c83d0e25)
+2021-12-29T16:08:14.1210034+01:00 0HMEARINK8O0O:0000003B [INF] Executed ViewResult - view "Detail" executed in 13.3026ms. (f66409e9)
+2021-12-29T16:08:14.1210567+01:00 0HMEARINK8O0O:0000003B [INF] Executed action "Musilu.Eshop.Web.Controllers.HomeController.Detail (Musilu.Eshop.Web)" in 20.7357ms (afa2e885)
+2021-12-29T16:08:14.1210850+01:00 0HMEARINK8O0O:0000003B [INF] Executed endpoint '"Musilu.Eshop.Web.Controllers.HomeController.Detail (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-29T16:08:14.1211895+01:00 0HMEARINK8O0O:0000003B [INF] Request finished HTTP/2 GET https://localhost:5001/Home/Detail/4 - - - 200 - text/html;+charset=utf-8 26.7522ms (791a596a)
+2021-12-29T16:08:14.1501987+01:00 0HMEARINK8O0O:0000003D [INF] Request starting HTTP/2 GET https://localhost:5001/js/Product.js - - (ca22a1cb)
+2021-12-29T16:08:14.1505347+01:00 0HMEARINK8O0O:0000003F [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - (ca22a1cb)
+2021-12-29T16:08:14.1508607+01:00 0HMEARINK8O0O:0000003D [INF] Sending file. Request path: '"/js/Product.js"'. Physical path: '"D:\Program Files\VisualStudio\Musilu.Eshop.Web\Musilu.Eshop.Web\Musilu.Eshop.Web\wwwroot\js\Product.js"' (27b0a520)
+2021-12-29T16:08:14.1509203+01:00 0HMEARINK8O0O:0000003D [INF] Request finished HTTP/2 GET https://localhost:5001/js/Product.js - - - 200 766 application/javascript 0.8413ms (791a596a)
+2021-12-29T16:08:14.1512074+01:00 0HMEARINK8O0O:0000003F [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - - 404 0 - 0.8606ms (791a596a)
+2021-12-29T16:08:14.1869909+01:00 0HMEARINK8O0O:00000041 [INF] Request starting HTTP/2 GET https://localhost:5001/js/Product.min.js - - (ca22a1cb)
+2021-12-29T16:08:14.1875138+01:00 0HMEARINK8O0O:00000041 [INF] Sending file. Request path: '"/js/Product.min.js"'. Physical path: '"D:\Program Files\VisualStudio\Musilu.Eshop.Web\Musilu.Eshop.Web\Musilu.Eshop.Web\wwwroot\js\Product.min.js"' (27b0a520)
+2021-12-29T16:08:14.1876045+01:00 0HMEARINK8O0O:00000041 [INF] Request finished HTTP/2 GET https://localhost:5001/js/Product.min.js - - - 200 367 application/javascript 0.6785ms (791a596a)
+2021-12-29T16:08:15.3516091+01:00 0HMEARINK8O0O:00000043 [INF] Request starting HTTP/2 POST https://localhost:5001/Customer/CustomerOrderNotCart/AddOrderItemsToSession application/x-www-form-urlencoded;+charset=UTF-8 11 (ca22a1cb)
+2021-12-29T16:08:15.3618161+01:00 0HMEARINK8O0O:00000043 [INF] Authorization was successful. (0d575a54)
+2021-12-29T16:08:15.3623090+01:00 0HMEARINK8O0O:00000043 [INF] Executing endpoint '"Musilu.Eshop.Web.Areas.Customer.Controllers.CustomerOrderNotCartController.AddOrderItemsToSession (Musilu.Eshop.Web)"' (500cc934)
+2021-12-29T16:08:15.3631774+01:00 0HMEARINK8O0O:00000043 [INF] Route matched with "{area = \"Customer\", action = \"AddOrderItemsToSession\", controller = \"CustomerOrderNotCart\"}". Executing controller action with signature "Double AddOrderItemsToSession(System.Nullable`1[System.Int32])" on controller "Musilu.Eshop.Web.Areas.Customer.Controllers.CustomerOrderNotCartController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-29T16:08:15.3677319+01:00 0HMEARINK8O0O:00000043 [INF] Entity Framework Core "5.0.11" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-29T16:08:15.3715688+01:00 0HMEARINK8O0O:00000043 [INF] Executed DbCommand ("0"ms) [Parameters=["@__productId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `p`.`ID`, `p`.`Category`, `p`.`Description`, `p`.`ImageAlt`, `p`.`ImageSource`, `p`.`Name`, `p`.`Price`
+FROM `Products` AS `p`
+WHERE `p`.`ID` = @__productId_0
+LIMIT 1" (0723d8ff)
+2021-12-29T16:08:15.7164519+01:00 0HMEARINK8O0O:00000043 [INF] Executing "ObjectResult", writing value of type '"System.Double"'. (605b4265)
+2021-12-29T16:08:15.7324416+01:00 0HMEARINK8O0O:00000043 [INF] Executed action "Musilu.Eshop.Web.Areas.Customer.Controllers.CustomerOrderNotCartController.AddOrderItemsToSession (Musilu.Eshop.Web)" in 369.2022ms (afa2e885)
+2021-12-29T16:08:15.7325063+01:00 0HMEARINK8O0O:00000043 [INF] Executed endpoint '"Musilu.Eshop.Web.Areas.Customer.Controllers.CustomerOrderNotCartController.AddOrderItemsToSession (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-29T16:08:15.7332175+01:00 0HMEARINK8O0O:00000043 [INF] Session started; Key:"e45c56c3-f1f6-83ae-b4e9-7efa03b86eb7", Id:"140b21a6-0f20-9c1e-5ae0-37cbb4fe6cc7" (1d7cf8c0)
+2021-12-29T16:08:15.7343430+01:00 0HMEARINK8O0O:00000043 [INF] Request finished HTTP/2 POST https://localhost:5001/Customer/CustomerOrderNotCart/AddOrderItemsToSession application/x-www-form-urlencoded;+charset=UTF-8 11 - 200 - application/json;+charset=utf-8 382.8213ms (791a596a)
+2021-12-29T16:08:22.0458203+01:00 0HMEARINK8O0O:00000045 [INF] Request starting HTTP/2 GET https://localhost:5001/Home/Detail/3 - - (ca22a1cb)
+2021-12-29T16:08:22.0502541+01:00 0HMEARINK8O0O:00000045 [INF] Executing endpoint '"Musilu.Eshop.Web.Controllers.HomeController.Detail (Musilu.Eshop.Web)"' (500cc934)
+2021-12-29T16:08:22.0504631+01:00 0HMEARINK8O0O:00000045 [INF] Route matched with "{action = \"Detail\", controller = \"Home\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Detail(Int32)" on controller "Musilu.Eshop.Web.Controllers.HomeController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-29T16:08:22.0512332+01:00 0HMEARINK8O0O:00000045 [INF] Entity Framework Core "5.0.11" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-29T16:08:22.0535631+01:00 0HMEARINK8O0O:00000045 [INF] Executed DbCommand ("1"ms) [Parameters=["@__id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `p`.`ID`, `p`.`Category`, `p`.`Description`, `p`.`ImageAlt`, `p`.`ImageSource`, `p`.`Name`, `p`.`Price`
+FROM `Products` AS `p`
+WHERE `p`.`ID` = @__id_0
+LIMIT 1" (0723d8ff)
+2021-12-29T16:08:22.0550911+01:00 0HMEARINK8O0O:00000045 [INF] Executing ViewResult, running view "Detail". (c83d0e25)
+2021-12-29T16:08:22.0578367+01:00 0HMEARINK8O0O:00000045 [INF] Executed ViewResult - view "Detail" executed in 2.7889ms. (f66409e9)
+2021-12-29T16:08:22.0579785+01:00 0HMEARINK8O0O:00000045 [INF] Executed action "Musilu.Eshop.Web.Controllers.HomeController.Detail (Musilu.Eshop.Web)" in 7.4612ms (afa2e885)
+2021-12-29T16:08:22.0580294+01:00 0HMEARINK8O0O:00000045 [INF] Executed endpoint '"Musilu.Eshop.Web.Controllers.HomeController.Detail (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-29T16:08:22.0582793+01:00 0HMEARINK8O0O:00000045 [INF] Request finished HTTP/2 GET https://localhost:5001/Home/Detail/3 - - - 200 - text/html;+charset=utf-8 12.4862ms (791a596a)
+2021-12-29T16:08:22.0898938+01:00 0HMEARINK8O0O:00000047 [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - (ca22a1cb)
+2021-12-29T16:08:22.0919829+01:00 0HMEARINK8O0O:00000047 [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - - 404 0 - 2.2684ms (791a596a)
+2021-12-29T16:08:23.9294659+01:00 0HMEARINK8O0O:00000049 [INF] Request starting HTTP/2 POST https://localhost:5001/Customer/CustomerOrderNotCart/AddOrderItemsToSession application/x-www-form-urlencoded;+charset=UTF-8 11 (ca22a1cb)
+2021-12-29T16:08:23.9322129+01:00 0HMEARINK8O0O:00000049 [INF] Authorization was successful. (0d575a54)
+2021-12-29T16:08:23.9322710+01:00 0HMEARINK8O0O:00000049 [INF] Executing endpoint '"Musilu.Eshop.Web.Areas.Customer.Controllers.CustomerOrderNotCartController.AddOrderItemsToSession (Musilu.Eshop.Web)"' (500cc934)
+2021-12-29T16:08:23.9323374+01:00 0HMEARINK8O0O:00000049 [INF] Route matched with "{area = \"Customer\", action = \"AddOrderItemsToSession\", controller = \"CustomerOrderNotCart\"}". Executing controller action with signature "Double AddOrderItemsToSession(System.Nullable`1[System.Int32])" on controller "Musilu.Eshop.Web.Areas.Customer.Controllers.CustomerOrderNotCartController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-29T16:08:23.9328738+01:00 0HMEARINK8O0O:00000049 [INF] Entity Framework Core "5.0.11" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-29T16:08:23.9338108+01:00 0HMEARINK8O0O:00000049 [INF] Executed DbCommand ("0"ms) [Parameters=["@__productId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `p`.`ID`, `p`.`Category`, `p`.`Description`, `p`.`ImageAlt`, `p`.`ImageSource`, `p`.`Name`, `p`.`Price`
+FROM `Products` AS `p`
+WHERE `p`.`ID` = @__productId_0
+LIMIT 1" (0723d8ff)
+2021-12-29T16:08:23.9780160+01:00 0HMEARINK8O0O:00000049 [INF] Executing "ObjectResult", writing value of type '"System.Double"'. (605b4265)
+2021-12-29T16:08:23.9786675+01:00 0HMEARINK8O0O:00000049 [INF] Executed action "Musilu.Eshop.Web.Areas.Customer.Controllers.CustomerOrderNotCartController.AddOrderItemsToSession (Musilu.Eshop.Web)" in 46.2823ms (afa2e885)
+2021-12-29T16:08:23.9787496+01:00 0HMEARINK8O0O:00000049 [INF] Executed endpoint '"Musilu.Eshop.Web.Areas.Customer.Controllers.CustomerOrderNotCartController.AddOrderItemsToSession (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-29T16:08:23.9796040+01:00 0HMEARINK8O0O:00000049 [INF] Request finished HTTP/2 POST https://localhost:5001/Customer/CustomerOrderNotCart/AddOrderItemsToSession application/x-www-form-urlencoded;+charset=UTF-8 11 - 200 - application/json;+charset=utf-8 50.0064ms (791a596a)
+2021-12-29T16:08:29.0935020+01:00 0HMEARINK8O0O:0000004B [INF] Request starting HTTP/2 GET https://localhost:5001/Home/Detail/3 - - (ca22a1cb)
+2021-12-29T16:08:29.0944855+01:00 0HMEARINK8O0O:0000004B [INF] Executing endpoint '"Musilu.Eshop.Web.Controllers.HomeController.Detail (Musilu.Eshop.Web)"' (500cc934)
+2021-12-29T16:08:29.0946664+01:00 0HMEARINK8O0O:0000004B [INF] Route matched with "{action = \"Detail\", controller = \"Home\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Detail(Int32)" on controller "Musilu.Eshop.Web.Controllers.HomeController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-29T16:08:29.0952866+01:00 0HMEARINK8O0O:0000004B [INF] Entity Framework Core "5.0.11" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-29T16:08:29.0964206+01:00 0HMEARINK8O0O:0000004B [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `p`.`ID`, `p`.`Category`, `p`.`Description`, `p`.`ImageAlt`, `p`.`ImageSource`, `p`.`Name`, `p`.`Price`
+FROM `Products` AS `p`
+WHERE `p`.`ID` = @__id_0
+LIMIT 1" (0723d8ff)
+2021-12-29T16:08:29.0965885+01:00 0HMEARINK8O0O:0000004B [INF] Executing ViewResult, running view "Detail". (c83d0e25)
+2021-12-29T16:08:29.0986891+01:00 0HMEARINK8O0O:0000004B [INF] Executed ViewResult - view "Detail" executed in 2.1107ms. (f66409e9)
+2021-12-29T16:08:29.0987509+01:00 0HMEARINK8O0O:0000004B [INF] Executed action "Musilu.Eshop.Web.Controllers.HomeController.Detail (Musilu.Eshop.Web)" in 4.0314ms (afa2e885)
+2021-12-29T16:08:29.0987792+01:00 0HMEARINK8O0O:0000004B [INF] Executed endpoint '"Musilu.Eshop.Web.Controllers.HomeController.Detail (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-29T16:08:29.1036801+01:00 0HMEARINK8O0O:0000004B [INF] Request finished HTTP/2 GET https://localhost:5001/Home/Detail/3 - - - 200 - text/html;+charset=utf-8 10.0205ms (791a596a)
+2021-12-29T16:08:29.1273375+01:00 0HMEARINK8O0O:0000004D [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - (ca22a1cb)
+2021-12-29T16:08:29.1281952+01:00 0HMEARINK8O0O:0000004D [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - - 404 0 - 0.9248ms (791a596a)
+2021-12-29T16:08:32.7670521+01:00 0HMEARINK8O0O:0000004F [INF] Request starting HTTP/2 GET https://localhost:5001/ - - (ca22a1cb)
+2021-12-29T16:08:32.7682810+01:00 0HMEARINK8O0O:0000004F [INF] Executing endpoint '"Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)"' (500cc934)
+2021-12-29T16:08:32.7684005+01:00 0HMEARINK8O0O:0000004F [INF] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "Musilu.Eshop.Web.Controllers.HomeController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-29T16:08:32.7703559+01:00 0HMEARINK8O0O:0000004F [INF] Loaded Home Index (d3450aae)
+2021-12-29T16:08:32.7706413+01:00 0HMEARINK8O0O:0000004F [INF] Entity Framework Core "5.0.11" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-29T16:08:32.7715090+01:00 0HMEARINK8O0O:0000004F [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`ID`, `c`.`ImageAlt`, `c`.`ImageSource`
+FROM `CarouselItem` AS `c`" (0723d8ff)
+2021-12-29T16:08:32.7720919+01:00 0HMEARINK8O0O:0000004F [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `p`.`ID`, `p`.`Category`, `p`.`Description`, `p`.`ImageAlt`, `p`.`ImageSource`, `p`.`Name`, `p`.`Price`
+FROM `Products` AS `p`" (0723d8ff)
+2021-12-29T16:08:32.7724361+01:00 0HMEARINK8O0O:0000004F [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2021-12-29T16:08:32.7742172+01:00 0HMEARINK8O0O:0000004F [INF] Executed ViewResult - view "Index" executed in 1.7895ms. (f66409e9)
+2021-12-29T16:08:32.7743492+01:00 0HMEARINK8O0O:0000004F [INF] Executed action "Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)" in 5.9142ms (afa2e885)
+2021-12-29T16:08:32.7744136+01:00 0HMEARINK8O0O:0000004F [INF] Executed endpoint '"Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-29T16:08:32.7746880+01:00 0HMEARINK8O0O:0000004F [INF] Request finished HTTP/2 GET https://localhost:5001/ - - - 200 - text/html;+charset=utf-8 7.6803ms (791a596a)
+2021-12-29T16:08:32.8178670+01:00 0HMEARINK8O0O:00000051 [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - (ca22a1cb)
+2021-12-29T16:08:32.8186241+01:00 0HMEARINK8O0O:00000051 [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - - 404 0 - 0.8327ms (791a596a)
+2021-12-29T16:08:47.9672966+01:00 0HMEARINK8O0O:00000053 [INF] Request starting HTTP/2 GET https://localhost:5001/Customer/CustomerOrders - - (ca22a1cb)
+2021-12-29T16:08:47.9692087+01:00 0HMEARINK8O0O:00000053 [INF] Authorization was successful. (0d575a54)
+2021-12-29T16:08:47.9693509+01:00 0HMEARINK8O0O:00000053 [INF] Executing endpoint '"Musilu.Eshop.Web.Areas.Customer.Controllers.CustomerOrdersController.Index (Musilu.Eshop.Web)"' (500cc934)
+2021-12-29T16:08:47.9729340+01:00 0HMEARINK8O0O:00000053 [INF] Route matched with "{area = \"Customer\", action = \"Index\", controller = \"CustomerOrders\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "Musilu.Eshop.Web.Areas.Customer.Controllers.CustomerOrdersController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-29T16:08:48.0749878+01:00 0HMEARINK8O0O:00000053 [INF] Entity Framework Core "5.0.11" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-29T16:08:48.0869880+01:00 0HMEARINK8O0O:00000053 [INF] Executed DbCommand ("2"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`Id` = @__p_0
+LIMIT 1" (0723d8ff)
+2021-12-29T16:08:48.1734088+01:00 0HMEARINK8O0O:00000053 [ERR] Failed executing DbCommand ("6"ms) [Parameters=["@__currentUser_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `o`.`ID`, `o`.`DateTimeCreated`, `o`.`OrderNumber`, `o`.`TotalPrice`, `o`.`UserId`, `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`, `t`.`ID`, `t`.`Amount`, `t`.`OrderID`, `t`.`Price`, `t`.`ProductID`, `t`.`ID0`, `t`.`Category`, `t`.`Description`, `t`.`ImageAlt`, `t`.`ImageSource`, `t`.`Name`, `t`.`Price0`
+FROM `Order` AS `o`
+INNER JOIN `Users` AS `u` ON `o`.`UserId` = `u`.`Id`
+LEFT JOIN (
+    SELECT `o0`.`ID`, `o0`.`Amount`, `o0`.`OrderID`, `o0`.`Price`, `o0`.`ProductID`, `p`.`ID` AS `ID0`, `p`.`Category`, `p`.`Description`, `p`.`ImageAlt`, `p`.`ImageSource`, `p`.`Name`, `p`.`Price` AS `Price0`
+    FROM `OrderItem` AS `o0`
+    INNER JOIN `Products` AS `p` ON `o0`.`ProductID` = `p`.`ID`
+) AS `t` ON `o`.`ID` = `t`.`OrderID`
+WHERE `o`.`UserId` = @__currentUser_Id_0
+ORDER BY `o`.`ID`, `u`.`Id`, `t`.`ID`, `t`.`ID0`" (627a98df)
+2021-12-29T16:08:48.2493341+01:00 0HMEARINK8O0O:00000053 [ERR] An exception occurred while iterating over the results of a query for context type '"Musilu.Eshop.Web.Models.Database.EshopDbContext"'."
+""MySqlConnector.MySqlException (0x80004005): Table 'musilu.eshop.order' doesn't exist
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsyncAwaited(ValueTask`1 task) in /_/src/MySqlConnector/Core/ServerSession.cs:line 890
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 50
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 119
+   at MySqlConnector.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 444
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList`1 commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 60
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 320
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 312
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()" (f5c7ac34)
+MySqlConnector.MySqlException (0x80004005): Table 'musilu.eshop.order' doesn't exist
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsyncAwaited(ValueTask`1 task) in /_/src/MySqlConnector/Core/ServerSession.cs:line 890
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 50
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 119
+   at MySqlConnector.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 444
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList`1 commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 60
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 320
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 312
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+2021-12-29T16:08:48.3912526+01:00 0HMEARINK8O0O:00000053 [INF] Executed action "Musilu.Eshop.Web.Areas.Customer.Controllers.CustomerOrdersController.Index (Musilu.Eshop.Web)" in 418.2049ms (afa2e885)
+2021-12-29T16:08:48.3925990+01:00 0HMEARINK8O0O:00000053 [INF] Executed endpoint '"Musilu.Eshop.Web.Areas.Customer.Controllers.CustomerOrdersController.Index (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-29T16:08:48.4400093+01:00 0HMEARINK8O0O:00000053 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+MySqlConnector.MySqlException (0x80004005): Table 'musilu.eshop.order' doesn't exist
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsyncAwaited(ValueTask`1 task) in /_/src/MySqlConnector/Core/ServerSession.cs:line 890
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 50
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 119
+   at MySqlConnector.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 444
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList`1 commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 60
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 320
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 312
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Musilu.Eshop.Web.Areas.Customer.Controllers.CustomerOrdersController.Index() in D:\Program Files\VisualStudio\Musilu.Eshop.Web\Musilu.Eshop.Web\Musilu.Eshop.Web\Areas\Customer\Controllers\CustomerOrdersController.cs:line 36
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-12-29T16:08:48.4729089+01:00 0HMEARINK8O0O:00000053 [INF] Request finished HTTP/2 GET https://localhost:5001/Customer/CustomerOrders - - - 500 - text/html;+charset=utf-8 505.6568ms (791a596a)
