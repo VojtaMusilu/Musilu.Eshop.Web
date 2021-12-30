@@ -1,0 +1,466 @@
+2021-12-30T17:25:17.6484483+01:00  [INF] Entity Framework Core "5.0.11" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-30T17:25:19.7074104+01:00  [INF] Executed DbCommand ("50"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'Musilu.Eshop'" (0723d8ff)
+2021-12-30T17:25:20.1182877+01:00  [INF] Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM `CarouselItem` AS `c`" (0723d8ff)
+2021-12-30T17:25:20.2123994+01:00  [INF] User profile is available. Using '"C:\Users\vojte\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2021-12-30T17:25:20.6017148+01:00  [INF] Executed DbCommand ("61"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2021-12-30T17:25:20.8302369+01:00  [WRN] Role "(null)" validation failed: "DuplicateRoleName". (60d773c7)
+2021-12-30T17:25:20.8506862+01:00  [INF] Executed DbCommand ("4"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2021-12-30T17:25:20.8569962+01:00  [WRN] Role "(null)" validation failed: "DuplicateRoleName". (60d773c7)
+2021-12-30T17:25:20.8672394+01:00  [INF] Executed DbCommand ("3"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2021-12-30T17:25:20.8716711+01:00  [WRN] Role "(null)" validation failed: "DuplicateRoleName". (60d773c7)
+2021-12-30T17:25:20.8988297+01:00  [INF] Executed DbCommand ("4"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2021-12-30T17:25:21.0374266+01:00  [INF] Executed DbCommand ("4"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2021-12-30T17:25:21.9587650+01:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2021-12-30T17:25:21.9634376+01:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-12-30T17:25:21.9689769+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-12-30T17:25:21.9737050+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-12-30T17:25:21.9780581+01:00  [INF] Content root path: "D:\Program Files\VisualStudio\Musilu.Eshop.Web\Musilu.Eshop.Web\Musilu.Eshop.Web" (b5d60022)
+2021-12-30T17:25:25.5544300+01:00 0HMEBM3T3MN4P:00000001 [INF] Request starting HTTP/2 GET https://localhost:5001/ - - (ca22a1cb)
+2021-12-30T17:25:25.6519047+01:00 0HMEBM3T3MN4P:00000001 [WRN] Error unprotecting the session cookie. (65f95c31)
+System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-12-30T17:25:25.7454155+01:00 0HMEBM3T3MN4P:00000001 [INF] Executing endpoint '"Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)"' (500cc934)
+2021-12-30T17:25:25.7703399+01:00 0HMEBM3T3MN4P:00000001 [INF] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "Musilu.Eshop.Web.Controllers.HomeController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-30T17:25:25.7774383+01:00 0HMEBM3T3MN4P:00000001 [INF] Loaded Home Index (d3450aae)
+2021-12-30T17:25:25.7792010+01:00 0HMEBM3T3MN4P:00000001 [INF] Entity Framework Core "5.0.11" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-30T17:25:25.7905185+01:00 0HMEBM3T3MN4P:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`ID`, `c`.`ImageAlt`, `c`.`ImageSource`
+FROM `CarouselItem` AS `c`" (0723d8ff)
+2021-12-30T17:25:25.8053403+01:00 0HMEBM3T3MN4P:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `p`.`ID`, `p`.`Category`, `p`.`Description`, `p`.`ImageAlt`, `p`.`ImageSource`, `p`.`Name`, `p`.`Price`
+FROM `Products` AS `p`" (0723d8ff)
+2021-12-30T17:25:25.8782483+01:00 0HMEBM3T3MN4P:00000001 [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2021-12-30T17:25:26.1683056+01:00 0HMEBM3T3MN4P:00000001 [INF] Executed ViewResult - view "Index" executed in 297.3699ms. (f66409e9)
+2021-12-30T17:25:26.1696870+01:00 0HMEBM3T3MN4P:00000001 [INF] Executed action "Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)" in 398.3606ms (afa2e885)
+2021-12-30T17:25:26.1697923+01:00 0HMEBM3T3MN4P:00000001 [INF] Executed endpoint '"Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-30T17:25:26.1789463+01:00 0HMEBM3T3MN4P:00000001 [INF] Request finished HTTP/2 GET https://localhost:5001/ - - - 200 - text/html;+charset=utf-8 631.6289ms (791a596a)
+2021-12-30T17:25:26.2125614+01:00 0HMEBM3T3MN4P:00000005 [INF] Request starting HTTP/2 GET https://localhost:5001/css/site.css - - (ca22a1cb)
+2021-12-30T17:25:26.2125671+01:00 0HMEBM3T3MN4P:00000007 [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - (ca22a1cb)
+2021-12-30T17:25:26.2126085+01:00 0HMEBM3T3MN4P:00000003 [INF] Request starting HTTP/2 GET https://localhost:5001/lib/bootstrap/dist/css/bootstrap.min.css - - (ca22a1cb)
+2021-12-30T17:25:26.2198010+01:00 0HMEBM3T3MN4P:00000007 [WRN] Error unprotecting the session cookie. (65f95c31)
+System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-12-30T17:25:26.2260284+01:00 0HMEBM3T3MN4P:00000007 [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - - 404 0 - 13.5273ms (791a596a)
+2021-12-30T17:25:26.2727278+01:00 0HMEBM3T3MN4P:00000005 [INF] Sending file. Request path: '"/css/site.css"'. Physical path: '"D:\Program Files\VisualStudio\Musilu.Eshop.Web\Musilu.Eshop.Web\Musilu.Eshop.Web\wwwroot\css\site.css"' (27b0a520)
+2021-12-30T17:25:26.2729959+01:00 0HMEBM3T3MN4P:00000005 [INF] Request finished HTTP/2 GET https://localhost:5001/css/site.css - - - 200 3096 text/css 60.6450ms (791a596a)
+2021-12-30T17:25:26.2895810+01:00 0HMEBM3T3MN4P:00000009 [INF] Request starting HTTP/2 GET https://localhost:5001/lib/jquery/dist/jquery.min.js - - (ca22a1cb)
+2021-12-30T17:25:26.2936462+01:00 0HMEBM3T3MN4P:0000000B [INF] Request starting HTTP/2 GET https://localhost:5001/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - (ca22a1cb)
+2021-12-30T17:25:26.2943967+01:00 0HMEBM3T3MN4P:0000000D [INF] Request starting HTTP/2 GET https://localhost:5001/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - (ca22a1cb)
+2021-12-30T17:25:26.2975256+01:00 0HMEBM3T3MN4P:0000000D [INF] The file "/js/site.js" was not modified (f1f8d725)
+2021-12-30T17:25:26.2951724+01:00 0HMEBM3T3MN4P:0000000F [INF] Request starting HTTP/2 GET https://localhost:5001/img/CarouselItems/adxdqax3.gz3.jpg - - (ca22a1cb)
+2021-12-30T17:25:26.3078609+01:00 0HMEBM3T3MN4P:0000000F [INF] The file "/img/CarouselItems/adxdqax3.gz3.jpg" was not modified (f1f8d725)
+2021-12-30T17:25:26.3078890+01:00 0HMEBM3T3MN4P:00000011 [INF] Request starting HTTP/2 GET https://localhost:5001/img/3.jpg - - (ca22a1cb)
+2021-12-30T17:25:26.3080007+01:00 0HMEBM3T3MN4P:00000013 [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/5bysv2zz.lu4.jpg - - (ca22a1cb)
+2021-12-30T17:25:26.3081616+01:00 0HMEBM3T3MN4P:00000011 [INF] The file "/img/3.jpg" was not modified (f1f8d725)
+2021-12-30T17:25:26.3081856+01:00 0HMEBM3T3MN4P:00000013 [INF] The file "/img/ProductItems/5bysv2zz.lu4.jpg" was not modified (f1f8d725)
+2021-12-30T17:25:26.3167322+01:00 0HMEBM3T3MN4P:00000015 [INF] Request starting HTTP/2 GET https://localhost:5001/img/CarouselItems/jsfqjsxy.s1v.png - - (ca22a1cb)
+2021-12-30T17:25:26.3182037+01:00 0HMEBM3T3MN4P:00000017 [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/krn4bv0d.pbn.jpeg - - (ca22a1cb)
+2021-12-30T17:25:26.3183395+01:00 0HMEBM3T3MN4P:00000015 [INF] The file "/img/CarouselItems/jsfqjsxy.s1v.png" was not modified (f1f8d725)
+2021-12-30T17:25:26.3183894+01:00 0HMEBM3T3MN4P:00000017 [INF] The file "/img/ProductItems/krn4bv0d.pbn.jpeg" was not modified (f1f8d725)
+2021-12-30T17:25:26.3227540+01:00 0HMEBM3T3MN4P:00000019 [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/eotsxlsz.mlv.jpg - - (ca22a1cb)
+2021-12-30T17:25:26.3232134+01:00 0HMEBM3T3MN4P:0000001B [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/nmvjnbr1.aud.jpg - - (ca22a1cb)
+2021-12-30T17:25:26.3232962+01:00 0HMEBM3T3MN4P:00000019 [INF] The file "/img/ProductItems/eotsxlsz.mlv.jpg" was not modified (f1f8d725)
+2021-12-30T17:25:26.3234468+01:00 0HMEBM3T3MN4P:0000001B [INF] The file "/img/ProductItems/nmvjnbr1.aud.jpg" was not modified (f1f8d725)
+2021-12-30T17:25:26.3241804+01:00 0HMEBM3T3MN4P:00000011 [INF] Request finished HTTP/2 GET https://localhost:5001/img/3.jpg - - - 304 - image/jpeg 16.3358ms (791a596a)
+2021-12-30T17:25:26.3241702+01:00 0HMEBM3T3MN4P:0000000F [INF] Request finished HTTP/2 GET https://localhost:5001/img/CarouselItems/adxdqax3.gz3.jpg - - - 304 - image/jpeg 29.0213ms (791a596a)
+2021-12-30T17:25:26.3242782+01:00 0HMEBM3T3MN4P:00000015 [INF] Request finished HTTP/2 GET https://localhost:5001/img/CarouselItems/jsfqjsxy.s1v.png - - - 304 - image/png 7.6885ms (791a596a)
+2021-12-30T17:25:26.3243487+01:00 0HMEBM3T3MN4P:0000001B [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/nmvjnbr1.aud.jpg - - - 304 - image/jpeg 1.3307ms (791a596a)
+2021-12-30T17:25:26.3244113+01:00 0HMEBM3T3MN4P:0000000D [INF] Request finished HTTP/2 GET https://localhost:5001/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - - 304 - application/javascript 30.1107ms (791a596a)
+2021-12-30T17:25:26.3245277+01:00 0HMEBM3T3MN4P:00000013 [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/5bysv2zz.lu4.jpg - - - 304 - image/jpeg 16.5474ms (791a596a)
+2021-12-30T17:25:26.3248095+01:00 0HMEBM3T3MN4P:00000019 [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/eotsxlsz.mlv.jpg - - - 304 - image/jpeg 2.2091ms (791a596a)
+2021-12-30T17:25:26.3248433+01:00 0HMEBM3T3MN4P:00000017 [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/krn4bv0d.pbn.jpeg - - - 304 - image/jpeg 6.6171ms (791a596a)
+2021-12-30T17:25:26.3380896+01:00 0HMEBM3T3MN4P:00000003 [INF] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.min.css"'. Physical path: '"D:\Program Files\VisualStudio\Musilu.Eshop.Web\Musilu.Eshop.Web\Musilu.Eshop.Web\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css"' (27b0a520)
+2021-12-30T17:25:26.3398397+01:00 0HMEBM3T3MN4P:00000003 [INF] Request finished HTTP/2 GET https://localhost:5001/lib/bootstrap/dist/css/bootstrap.min.css - - - 200 155764 text/css 127.4448ms (791a596a)
+2021-12-30T17:25:26.3712301+01:00 0HMEBM3T3MN4P:0000001D [INF] Request starting HTTP/2 GET https://localhost:5001/img/it.jpg - - (ca22a1cb)
+2021-12-30T17:25:26.3768153+01:00 0HMEBM3T3MN4P:0000001D [WRN] Error unprotecting the session cookie. (65f95c31)
+System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-12-30T17:25:26.3920824+01:00 0HMEBM3T3MN4P:0000001D [INF] Request finished HTTP/2 GET https://localhost:5001/img/it.jpg - - - 404 0 - 20.9706ms (791a596a)
+2021-12-30T17:25:26.4035871+01:00 0HMEBM3T3MN4P:0000000B [INF] Sending file. Request path: '"/lib/bootstrap/dist/js/bootstrap.bundle.min.js"'. Physical path: '"D:\Program Files\VisualStudio\Musilu.Eshop.Web\Musilu.Eshop.Web\Musilu.Eshop.Web\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js"' (27b0a520)
+2021-12-30T17:25:26.4042087+01:00 0HMEBM3T3MN4P:0000000B [INF] Request finished HTTP/2 GET https://localhost:5001/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 200 78641 application/javascript 110.7311ms (791a596a)
+2021-12-30T17:25:26.4246130+01:00 0HMEBM3T3MN4P:00000009 [INF] Sending file. Request path: '"/lib/jquery/dist/jquery.min.js"'. Physical path: '"D:\Program Files\VisualStudio\Musilu.Eshop.Web\Musilu.Eshop.Web\Musilu.Eshop.Web\wwwroot\lib\jquery\dist\jquery.min.js"' (27b0a520)
+2021-12-30T17:25:26.4249208+01:00 0HMEBM3T3MN4P:00000009 [INF] Request finished HTTP/2 GET https://localhost:5001/lib/jquery/dist/jquery.min.js - - - 200 89478 application/javascript 135.4464ms (791a596a)
+2021-12-30T17:25:31.9135776+01:00 0HMEBM3T3MN4P:0000001F [INF] Request starting HTTP/2 GET https://localhost:5001/Security/Account/Login - - (ca22a1cb)
+2021-12-30T17:25:31.9210540+01:00 0HMEBM3T3MN4P:0000001F [WRN] Error unprotecting the session cookie. (65f95c31)
+System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-12-30T17:25:31.9234430+01:00 0HMEBM3T3MN4P:0000001F [INF] Executing endpoint '"Musilu.Eshop.Web.Areas.Security.Controllers.AccountController.Login (Musilu.Eshop.Web)"' (500cc934)
+2021-12-30T17:25:31.9268025+01:00 0HMEBM3T3MN4P:0000001F [INF] Route matched with "{area = \"Security\", action = \"Login\", controller = \"Account\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Login()" on controller "Musilu.Eshop.Web.Areas.Security.Controllers.AccountController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-30T17:25:31.9571801+01:00 0HMEBM3T3MN4P:0000001F [INF] Executing ViewResult, running view "Login". (c83d0e25)
+2021-12-30T17:25:32.1199476+01:00 0HMEBM3T3MN4P:0000001F [INF] Executed ViewResult - view "Login" executed in 189.6009ms. (f66409e9)
+2021-12-30T17:25:32.1203022+01:00 0HMEBM3T3MN4P:0000001F [INF] Executed action "Musilu.Eshop.Web.Areas.Security.Controllers.AccountController.Login (Musilu.Eshop.Web)" in 193.3425ms (afa2e885)
+2021-12-30T17:25:32.1204304+01:00 0HMEBM3T3MN4P:0000001F [INF] Executed endpoint '"Musilu.Eshop.Web.Areas.Security.Controllers.AccountController.Login (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-30T17:25:32.1209005+01:00 0HMEBM3T3MN4P:0000001F [INF] Request finished HTTP/2 GET https://localhost:5001/Security/Account/Login - - - 200 - text/html;+charset=utf-8 207.2946ms (791a596a)
+2021-12-30T17:25:32.1813383+01:00 0HMEBM3T3MN4P:00000021 [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - (ca22a1cb)
+2021-12-30T17:25:32.1825285+01:00 0HMEBM3T3MN4P:00000023 [INF] Request starting HTTP/2 GET https://localhost:5001/css/login.css - - (ca22a1cb)
+2021-12-30T17:25:32.1899096+01:00 0HMEBM3T3MN4P:00000021 [WRN] Error unprotecting the session cookie. (65f95c31)
+System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-12-30T17:25:32.1909903+01:00 0HMEBM3T3MN4P:00000021 [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - - 404 0 - 9.6475ms (791a596a)
+2021-12-30T17:25:32.2266113+01:00 0HMEBM3T3MN4P:00000023 [INF] Sending file. Request path: '"/css/login.css"'. Physical path: '"D:\Program Files\VisualStudio\Musilu.Eshop.Web\Musilu.Eshop.Web\Musilu.Eshop.Web\wwwroot\css\login.css"' (27b0a520)
+2021-12-30T17:25:32.2269568+01:00 0HMEBM3T3MN4P:00000023 [INF] Request finished HTTP/2 GET https://localhost:5001/css/login.css - - - 200 2739 text/css 44.6346ms (791a596a)
+2021-12-30T17:25:33.7520831+01:00 0HMEBM3T3MN4P:00000025 [INF] Request starting HTTP/2 POST https://localhost:5001/Security/Account/Login application/x-www-form-urlencoded 210 (ca22a1cb)
+2021-12-30T17:25:33.7616787+01:00 0HMEBM3T3MN4P:00000025 [WRN] Error unprotecting the session cookie. (65f95c31)
+System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-12-30T17:25:33.7676162+01:00 0HMEBM3T3MN4P:00000025 [INF] Executing endpoint '"Musilu.Eshop.Web.Areas.Security.Controllers.AccountController.Login (Musilu.Eshop.Web)"' (500cc934)
+2021-12-30T17:25:33.8383030+01:00 0HMEBM3T3MN4P:00000025 [INF] Route matched with "{area = \"Security\", action = \"Login\", controller = \"Account\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Musilu.Eshop.Web.Models.ViewModels.LoginViewModel)" on controller "Musilu.Eshop.Web.Areas.Security.Controllers.AccountController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-30T17:25:34.0851642+01:00 0HMEBM3T3MN4P:00000025 [INF] Entity Framework Core "5.0.11" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-30T17:25:34.0985227+01:00 0HMEBM3T3MN4P:00000025 [INF] Executed DbCommand ("3"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2021-12-30T17:25:34.4647295+01:00 0HMEBM3T3MN4P:00000025 [INF] Executed DbCommand ("19"ms) [Parameters=["@__user_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`ClaimType`, `u`.`ClaimValue`, `u`.`UserId`
+FROM `UserClaims` AS `u`
+WHERE `u`.`UserId` = @__user_Id_0" (0723d8ff)
+2021-12-30T17:25:34.6321226+01:00 0HMEBM3T3MN4P:00000025 [INF] Executed DbCommand ("3"ms) [Parameters=["@__userId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Name`
+FROM `UserRoles` AS `u`
+INNER JOIN `Roles` AS `r` ON `u`.`RoleId` = `r`.`Id`
+WHERE `u`.`UserId` = @__userId_0" (0723d8ff)
+2021-12-30T17:25:34.6454403+01:00 0HMEBM3T3MN4P:00000025 [INF] Executed DbCommand ("2"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2021-12-30T17:25:34.6687295+01:00 0HMEBM3T3MN4P:00000025 [INF] Executed DbCommand ("3"ms) [Parameters=["@__role_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`ClaimType`, `r`.`ClaimValue`
+FROM `RoleClaims` AS `r`
+WHERE `r`.`RoleId` = @__role_Id_0" (0723d8ff)
+2021-12-30T17:25:34.6779027+01:00 0HMEBM3T3MN4P:00000025 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2021-12-30T17:25:34.6860901+01:00 0HMEBM3T3MN4P:00000025 [INF] Executed DbCommand ("2"ms) [Parameters=["@__role_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`ClaimType`, `r`.`ClaimValue`
+FROM `RoleClaims` AS `r`
+WHERE `r`.`RoleId` = @__role_Id_0" (0723d8ff)
+2021-12-30T17:25:34.6919064+01:00 0HMEBM3T3MN4P:00000025 [INF] Executed DbCommand ("2"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2021-12-30T17:25:34.6981840+01:00 0HMEBM3T3MN4P:00000025 [INF] Executed DbCommand ("2"ms) [Parameters=["@__role_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`ClaimType`, `r`.`ClaimValue`
+FROM `RoleClaims` AS `r`
+WHERE `r`.`RoleId` = @__role_Id_0" (0723d8ff)
+2021-12-30T17:25:34.7310713+01:00 0HMEBM3T3MN4P:00000025 [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2021-12-30T17:25:34.7466816+01:00 0HMEBM3T3MN4P:00000025 [INF] Executing RedirectResult, redirecting to "/". (d98d540e)
+2021-12-30T17:25:34.7495591+01:00 0HMEBM3T3MN4P:00000025 [INF] Executed action "Musilu.Eshop.Web.Areas.Security.Controllers.AccountController.Login (Musilu.Eshop.Web)" in 911.0032ms (afa2e885)
+2021-12-30T17:25:34.7508570+01:00 0HMEBM3T3MN4P:00000025 [INF] Executed endpoint '"Musilu.Eshop.Web.Areas.Security.Controllers.AccountController.Login (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-30T17:25:34.7550919+01:00 0HMEBM3T3MN4P:00000025 [INF] Request finished HTTP/2 POST https://localhost:5001/Security/Account/Login application/x-www-form-urlencoded 210 - 302 0 - 1003.5497ms (791a596a)
+2021-12-30T17:25:34.7644096+01:00 0HMEBM3T3MN4P:00000027 [INF] Request starting HTTP/2 GET https://localhost:5001/ - - (ca22a1cb)
+2021-12-30T17:25:34.7695217+01:00 0HMEBM3T3MN4P:00000027 [WRN] Error unprotecting the session cookie. (65f95c31)
+System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-12-30T17:25:34.7780344+01:00 0HMEBM3T3MN4P:00000027 [INF] Executing endpoint '"Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)"' (500cc934)
+2021-12-30T17:25:34.7784187+01:00 0HMEBM3T3MN4P:00000027 [INF] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "Musilu.Eshop.Web.Controllers.HomeController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-30T17:25:34.7848366+01:00 0HMEBM3T3MN4P:00000027 [INF] Loaded Home Index (d3450aae)
+2021-12-30T17:25:34.7855016+01:00 0HMEBM3T3MN4P:00000027 [INF] Entity Framework Core "5.0.11" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-30T17:25:34.7877024+01:00 0HMEBM3T3MN4P:00000027 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`ID`, `c`.`ImageAlt`, `c`.`ImageSource`
+FROM `CarouselItem` AS `c`" (0723d8ff)
+2021-12-30T17:25:34.7898940+01:00 0HMEBM3T3MN4P:00000027 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `p`.`ID`, `p`.`Category`, `p`.`Description`, `p`.`ImageAlt`, `p`.`ImageSource`, `p`.`Name`, `p`.`Price`
+FROM `Products` AS `p`" (0723d8ff)
+2021-12-30T17:25:34.7907536+01:00 0HMEBM3T3MN4P:00000027 [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2021-12-30T17:25:34.8031518+01:00 0HMEBM3T3MN4P:00000027 [INF] Executed ViewResult - view "Index" executed in 12.5377ms. (f66409e9)
+2021-12-30T17:25:34.8033805+01:00 0HMEBM3T3MN4P:00000027 [INF] Executed action "Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)" in 24.8435ms (afa2e885)
+2021-12-30T17:25:34.8035391+01:00 0HMEBM3T3MN4P:00000027 [INF] Executed endpoint '"Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-30T17:25:34.8039413+01:00 0HMEBM3T3MN4P:00000027 [INF] Request finished HTTP/2 GET https://localhost:5001/ - - - 200 - text/html;+charset=utf-8 39.5154ms (791a596a)
+2021-12-30T17:25:34.8562851+01:00 0HMEBM3T3MN4P:00000029 [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - (ca22a1cb)
+2021-12-30T17:25:34.8635653+01:00 0HMEBM3T3MN4P:00000029 [WRN] Error unprotecting the session cookie. (65f95c31)
+System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-12-30T17:25:34.8658155+01:00 0HMEBM3T3MN4P:00000029 [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - - 404 0 - 9.6184ms (791a596a)
+2021-12-30T17:25:36.9316425+01:00 0HMEBM3T3MN4P:0000002B [INF] Request starting HTTP/2 GET https://localhost:5001/Admin/OrderItems - - (ca22a1cb)
+2021-12-30T17:25:36.9370700+01:00 0HMEBM3T3MN4P:0000002B [WRN] Error unprotecting the session cookie. (65f95c31)
+System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-12-30T17:25:36.9589009+01:00 0HMEBM3T3MN4P:0000002B [INF] Authorization was successful. (0d575a54)
+2021-12-30T17:25:36.9599448+01:00 0HMEBM3T3MN4P:0000002B [INF] Executing endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.OrderItemsController.Index (Musilu.Eshop.Web)"' (500cc934)
+2021-12-30T17:25:36.9650390+01:00 0HMEBM3T3MN4P:0000002B [INF] Route matched with "{area = \"Admin\", action = \"Index\", controller = \"OrderItems\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "Musilu.Eshop.Web.Areas.Admin.Controllers.OrderItemsController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-30T17:25:36.9710279+01:00 0HMEBM3T3MN4P:0000002B [INF] Entity Framework Core "5.0.11" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-30T17:25:37.1744873+01:00 0HMEBM3T3MN4P:0000002B [ERR] Failed executing DbCommand ("37"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `o`.`ID`, `o`.`Amount`, `o`.`OrderID`, `o`.`Price`, `o`.`ProductID`, `o0`.`ID`, `o0`.`DateTimeCreated`, `o0`.`OrderNumber`, `o0`.`TotalPrice`, `o0`.`UserId`, `p`.`ID`, `p`.`Category`, `p`.`Description`, `p`.`ImageAlt`, `p`.`ImageSource`, `p`.`Name`, `p`.`Price`
+FROM `OrderItem` AS `o`
+INNER JOIN `Order` AS `o0` ON `o`.`OrderID` = `o0`.`ID`
+INNER JOIN `Products` AS `p` ON `o`.`ProductID` = `p`.`ID`" (627a98df)
+2021-12-30T17:25:37.6263052+01:00 0HMEBM3T3MN4P:0000002B [ERR] An exception occurred while iterating over the results of a query for context type '"Musilu.Eshop.Web.Models.Database.EshopDbContext"'."
+""MySqlConnector.MySqlException (0x80004005): Table 'musilu.eshop.orderitem' doesn't exist
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsyncAwaited(ValueTask`1 task) in /_/src/MySqlConnector/Core/ServerSession.cs:line 890
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 50
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 135
+   at MySqlConnector.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 444
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList`1 commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 60
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 319
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 312
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()" (f5c7ac34)
+MySqlConnector.MySqlException (0x80004005): Table 'musilu.eshop.orderitem' doesn't exist
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsyncAwaited(ValueTask`1 task) in /_/src/MySqlConnector/Core/ServerSession.cs:line 890
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 50
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 135
+   at MySqlConnector.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 444
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList`1 commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 60
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 319
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 312
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Musilu.Eshop.Web.Areas.Admin.Controllers.OrderItemsController.Index() in D:\Program Files\VisualStudio\Musilu.Eshop.Web\Musilu.Eshop.Web\Musilu.Eshop.Web\Areas\Admin\Controllers\OrderItemsController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+2021-12-30T17:25:38.5628645+01:00 0HMEBM3T3MN4P:0000002D [INF] Request starting HTTP/2 GET https://localhost:5001/Admin/Orders - - (ca22a1cb)
+2021-12-30T17:25:38.5775430+01:00 0HMEBM3T3MN4P:0000002D [WRN] Error unprotecting the session cookie. (65f95c31)
+System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-12-30T17:25:38.5810526+01:00 0HMEBM3T3MN4P:0000002B [INF] Executed action "Musilu.Eshop.Web.Areas.Admin.Controllers.OrderItemsController.Index (Musilu.Eshop.Web)" in 1615.6902ms (afa2e885)
+2021-12-30T17:25:38.5834137+01:00 0HMEBM3T3MN4P:0000002B [INF] Executed endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.OrderItemsController.Index (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-30T17:25:38.5896816+01:00 0HMEBM3T3MN4P:0000002D [INF] Authorization was successful. (0d575a54)
+2021-12-30T17:25:38.5902865+01:00 0HMEBM3T3MN4P:0000002D [INF] Executing endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.OrdersController.Index (Musilu.Eshop.Web)"' (500cc934)
+2021-12-30T17:25:38.6008449+01:00 0HMEBM3T3MN4P:0000002D [INF] Route matched with "{area = \"Admin\", action = \"Index\", controller = \"Orders\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "Musilu.Eshop.Web.Areas.Admin.Controllers.OrdersController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-30T17:25:38.6061189+01:00 0HMEBM3T3MN4P:0000002D [INF] Entity Framework Core "5.0.11" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-30T17:25:38.6408567+01:00 0HMEBM3T3MN4P:0000002D [ERR] Failed executing DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `o`.`ID`, `o`.`DateTimeCreated`, `o`.`OrderNumber`, `o`.`TotalPrice`, `o`.`UserId`, `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Order` AS `o`
+INNER JOIN `Users` AS `u` ON `o`.`UserId` = `u`.`Id`" (627a98df)
+2021-12-30T17:25:38.6536679+01:00 0HMEBM3T3MN4P:0000002B [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+MySqlConnector.MySqlException (0x80004005): Table 'musilu.eshop.orderitem' doesn't exist
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsyncAwaited(ValueTask`1 task) in /_/src/MySqlConnector/Core/ServerSession.cs:line 890
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 50
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 135
+   at MySqlConnector.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 444
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList`1 commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 60
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 319
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 312
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Musilu.Eshop.Web.Areas.Admin.Controllers.OrderItemsController.Index() in D:\Program Files\VisualStudio\Musilu.Eshop.Web\Musilu.Eshop.Web\Musilu.Eshop.Web\Areas\Admin\Controllers\OrderItemsController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-12-30T17:25:38.6876705+01:00 0HMEBM3T3MN4P:0000002D [ERR] An exception occurred while iterating over the results of a query for context type '"Musilu.Eshop.Web.Models.Database.EshopDbContext"'."
+""MySqlConnector.MySqlException (0x80004005): Table 'musilu.eshop.order' doesn't exist
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsyncAwaited(ValueTask`1 task) in /_/src/MySqlConnector/Core/ServerSession.cs:line 890
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 50
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 135
+   at MySqlConnector.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 444
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList`1 commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 60
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 319
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 312
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()" (f5c7ac34)
+MySqlConnector.MySqlException (0x80004005): Table 'musilu.eshop.order' doesn't exist
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsyncAwaited(ValueTask`1 task) in /_/src/MySqlConnector/Core/ServerSession.cs:line 890
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 50
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 135
+   at MySqlConnector.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 444
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList`1 commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 60
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 319
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 312
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Musilu.Eshop.Web.Areas.Admin.Controllers.OrdersController.Index() in D:\Program Files\VisualStudio\Musilu.Eshop.Web\Musilu.Eshop.Web\Musilu.Eshop.Web\Areas\Admin\Controllers\OrdersController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-12-30T17:25:38.9127793+01:00 0HMEBM3T3MN4P:0000002D [INF] Executed action "Musilu.Eshop.Web.Areas.Admin.Controllers.OrdersController.Index (Musilu.Eshop.Web)" in 311.6834ms (afa2e885)
+2021-12-30T17:25:38.9134749+01:00 0HMEBM3T3MN4P:0000002D [INF] Executed endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.OrdersController.Index (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-30T17:25:38.9496101+01:00 0HMEBM3T3MN4P:0000002D [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+MySqlConnector.MySqlException (0x80004005): Table 'musilu.eshop.order' doesn't exist
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsyncAwaited(ValueTask`1 task) in /_/src/MySqlConnector/Core/ServerSession.cs:line 890
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 50
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 135
+   at MySqlConnector.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 444
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList`1 commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 60
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 319
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 312
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Musilu.Eshop.Web.Areas.Admin.Controllers.OrdersController.Index() in D:\Program Files\VisualStudio\Musilu.Eshop.Web\Musilu.Eshop.Web\Musilu.Eshop.Web\Areas\Admin\Controllers\OrdersController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-12-30T17:25:39.0439199+01:00 0HMEBM3T3MN4P:0000002B [INF] Request finished HTTP/2 GET https://localhost:5001/Admin/OrderItems - - - 500 - text/html;+charset=utf-8 2112.3704ms (791a596a)
+2021-12-30T17:25:39.0444511+01:00 0HMEBM3T3MN4P:0000002D [INF] Request finished HTTP/2 GET https://localhost:5001/Admin/Orders - - - 500 - text/html;+charset=utf-8 482.1264ms (791a596a)
+2021-12-30T17:25:42.1676996+01:00 0HMEBM3T3MN4P:0000002F [INF] Request starting HTTP/2 GET https://localhost:5001/Admin/Product/Select - - (ca22a1cb)
+2021-12-30T17:25:42.1732820+01:00 0HMEBM3T3MN4P:0000002F [WRN] Error unprotecting the session cookie. (65f95c31)
+System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-12-30T17:25:42.1746063+01:00 0HMEBM3T3MN4P:0000002F [INF] Executing endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Select (Musilu.Eshop.Web)"' (500cc934)
+2021-12-30T17:25:42.1767701+01:00 0HMEBM3T3MN4P:0000002F [INF] Route matched with "{area = \"Admin\", action = \"Select\", controller = \"Product\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Select()" on controller "Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-30T17:25:42.1776231+01:00 0HMEBM3T3MN4P:0000002F [INF] Entity Framework Core "5.0.11" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-30T17:25:42.1788613+01:00 0HMEBM3T3MN4P:0000002F [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `p`.`ID`, `p`.`Category`, `p`.`Description`, `p`.`ImageAlt`, `p`.`ImageSource`, `p`.`Name`, `p`.`Price`
+FROM `Products` AS `p`" (0723d8ff)
+2021-12-30T17:25:42.1813652+01:00 0HMEBM3T3MN4P:0000002F [INF] Executing ViewResult, running view "Select". (c83d0e25)
+2021-12-30T17:25:42.5944510+01:00 0HMEBM3T3MN4P:0000002F [INF] Executed ViewResult - view "Select" executed in 414.2396ms. (f66409e9)
+2021-12-30T17:25:42.5946241+01:00 0HMEBM3T3MN4P:0000002F [INF] Executed action "Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Select (Musilu.Eshop.Web)" in 417.7527ms (afa2e885)
+2021-12-30T17:25:42.5946848+01:00 0HMEBM3T3MN4P:0000002F [INF] Executed endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.ProductController.Select (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-30T17:25:42.5949028+01:00 0HMEBM3T3MN4P:0000002F [INF] Request finished HTTP/2 GET https://localhost:5001/Admin/Product/Select - - - 200 - text/html;+charset=utf-8 427.2272ms (791a596a)
+2021-12-30T17:25:42.6532810+01:00 0HMEBM3T3MN4P:00000031 [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - (ca22a1cb)
+2021-12-30T17:25:42.6595540+01:00 0HMEBM3T3MN4P:00000031 [WRN] Error unprotecting the session cookie. (65f95c31)
+System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-12-30T17:25:42.6604614+01:00 0HMEBM3T3MN4P:00000033 [INF] Request starting HTTP/2 GET https://localhost:5001/js/alerts.js - - (ca22a1cb)
+2021-12-30T17:25:42.6618187+01:00 0HMEBM3T3MN4P:00000031 [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - - 404 0 - 8.5449ms (791a596a)
+2021-12-30T17:25:42.6944618+01:00 0HMEBM3T3MN4P:00000033 [INF] Sending file. Request path: '"/js/alerts.js"'. Physical path: '"D:\Program Files\VisualStudio\Musilu.Eshop.Web\Musilu.Eshop.Web\Musilu.Eshop.Web\wwwroot\js\alerts.js"' (27b0a520)
+2021-12-30T17:25:42.6946904+01:00 0HMEBM3T3MN4P:00000033 [INF] Request finished HTTP/2 GET https://localhost:5001/js/alerts.js - - - 200 89 application/javascript 34.2985ms (791a596a)

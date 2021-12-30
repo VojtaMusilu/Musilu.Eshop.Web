@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Musilu.Eshop.Web-main\Musilu.Eshop.Web.csproj" />
+    <ProjectReference Include="..\Musilu.Eshop.Web\Musilu.Eshop.Web.csproj" />
   </ItemGroup>
 
 </Project>

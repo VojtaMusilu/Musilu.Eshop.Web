@@ -827,3 +827,103 @@ MySqlConnector.MySqlException (0x80004005): Table 'musilu.eshop.order' doesn't e
    at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
    at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
 2021-12-29T16:08:48.4729089+01:00 0HMEARINK8O0O:00000053 [INF] Request finished HTTP/2 GET https://localhost:5001/Customer/CustomerOrders - - - 500 - text/html;+charset=utf-8 505.6568ms (791a596a)
+2021-12-29T17:07:16.9734058+01:00  [INF] Entity Framework Core "5.0.11" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-29T17:07:17.4761107+01:00  [INF] Executed DbCommand ("51"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'Musilu.Eshop'" (0723d8ff)
+2021-12-29T17:07:17.6645249+01:00  [INF] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM `CarouselItem` AS `c`" (0723d8ff)
+2021-12-29T17:07:17.7184774+01:00  [INF] User profile is available. Using '"C:\Users\vojte\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2021-12-29T17:07:17.9541204+01:00  [INF] Executed DbCommand ("20"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2021-12-29T17:07:18.0129396+01:00  [WRN] Role "(null)" validation failed: "DuplicateRoleName". (60d773c7)
+2021-12-29T17:07:18.0343873+01:00  [INF] Executed DbCommand ("5"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2021-12-29T17:07:18.0409307+01:00  [WRN] Role "(null)" validation failed: "DuplicateRoleName". (60d773c7)
+2021-12-29T17:07:18.0451888+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2021-12-29T17:07:18.0466926+01:00  [WRN] Role "(null)" validation failed: "DuplicateRoleName". (60d773c7)
+2021-12-29T17:07:18.0645147+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2021-12-29T17:07:18.1114832+01:00  [INF] Executed DbCommand ("4"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2021-12-29T17:07:18.4919784+01:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2021-12-29T17:07:18.4936760+01:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-12-29T17:07:18.4955929+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-12-29T17:07:18.4973894+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-12-29T17:07:18.4993895+01:00  [INF] Content root path: "D:\Program Files\VisualStudio\Musilu.Eshop.Web\Musilu.Eshop.Web\Musilu.Eshop.Web" (b5d60022)
+2021-12-29T17:07:19.9090817+01:00 0HMEASL51OLN7:00000001 [INF] Request starting HTTP/2 GET https://localhost:5001/ - - (ca22a1cb)
+2021-12-29T17:07:19.9941036+01:00 0HMEASL51OLN7:00000001 [WRN] Error unprotecting the session cookie. (65f95c31)
+System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-12-29T17:07:20.0508562+01:00 0HMEASL51OLN7:00000001 [INF] Executing endpoint '"Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)"' (500cc934)
+2021-12-29T17:07:20.0742669+01:00 0HMEASL51OLN7:00000001 [INF] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "Musilu.Eshop.Web.Controllers.HomeController" ("Musilu.Eshop.Web"). (122b2fdf)
+2021-12-29T17:07:20.0832833+01:00 0HMEASL51OLN7:00000001 [INF] Loaded Home Index (d3450aae)
+2021-12-29T17:07:20.0853156+01:00 0HMEASL51OLN7:00000001 [INF] Entity Framework Core "5.0.11" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2021-12-29T17:07:20.0913451+01:00 0HMEASL51OLN7:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`ID`, `c`.`ImageAlt`, `c`.`ImageSource`
+FROM `CarouselItem` AS `c`" (0723d8ff)
+2021-12-29T17:07:20.1032678+01:00 0HMEASL51OLN7:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `p`.`ID`, `p`.`Category`, `p`.`Description`, `p`.`ImageAlt`, `p`.`ImageSource`, `p`.`Name`, `p`.`Price`
+FROM `Products` AS `p`" (0723d8ff)
+2021-12-29T17:07:20.1451950+01:00 0HMEASL51OLN7:00000001 [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2021-12-29T17:07:20.3260420+01:00 0HMEASL51OLN7:00000001 [INF] Executed ViewResult - view "Index" executed in 183.0268ms. (f66409e9)
+2021-12-29T17:07:20.3271888+01:00 0HMEASL51OLN7:00000001 [INF] Executed action "Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)" in 252.2944ms (afa2e885)
+2021-12-29T17:07:20.3273028+01:00 0HMEASL51OLN7:00000001 [INF] Executed endpoint '"Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)"' (99874f2b)
+2021-12-29T17:07:20.3398928+01:00 0HMEASL51OLN7:00000001 [INF] Request finished HTTP/2 GET https://localhost:5001/ - - - 200 - text/html;+charset=utf-8 434.2053ms (791a596a)
+2021-12-29T17:07:20.3639782+01:00 0HMEASL51OLN7:00000003 [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - (ca22a1cb)
+2021-12-29T17:07:20.3684217+01:00 0HMEASL51OLN7:00000003 [WRN] Error unprotecting the session cookie. (65f95c31)
+System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-12-29T17:07:20.3724548+01:00 0HMEASL51OLN7:00000003 [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - - 404 0 - 8.4351ms (791a596a)
+2021-12-29T17:07:20.4080344+01:00 0HMEASL51OLN7:00000005 [INF] Request starting HTTP/2 GET https://localhost:5001/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - (ca22a1cb)
+2021-12-29T17:07:20.4080714+01:00 0HMEASL51OLN7:00000007 [INF] Request starting HTTP/2 GET https://localhost:5001/img/CarouselItems/jsfqjsxy.s1v.png - - (ca22a1cb)
+2021-12-29T17:07:20.4080777+01:00 0HMEASL51OLN7:00000009 [INF] Request starting HTTP/2 GET https://localhost:5001/img/CarouselItems/adxdqax3.gz3.jpg - - (ca22a1cb)
+2021-12-29T17:07:20.4082879+01:00 0HMEASL51OLN7:0000000D [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/eotsxlsz.mlv.jpg - - (ca22a1cb)
+2021-12-29T17:07:20.4082879+01:00 0HMEASL51OLN7:0000000B [INF] Request starting HTTP/2 GET https://localhost:5001/img/3.jpg - - (ca22a1cb)
+2021-12-29T17:07:20.4084292+01:00 0HMEASL51OLN7:0000000F [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/5bysv2zz.lu4.jpg - - (ca22a1cb)
+2021-12-29T17:07:20.4086688+01:00 0HMEASL51OLN7:00000011 [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/krn4bv0d.pbn.jpeg - - (ca22a1cb)
+2021-12-29T17:07:20.4144362+01:00 0HMEASL51OLN7:00000005 [INF] The file "/js/site.js" was not modified (f1f8d725)
+2021-12-29T17:07:20.4144521+01:00 0HMEASL51OLN7:0000000B [INF] The file "/img/3.jpg" was not modified (f1f8d725)
+2021-12-29T17:07:20.4144361+01:00 0HMEASL51OLN7:00000009 [INF] The file "/img/CarouselItems/adxdqax3.gz3.jpg" was not modified (f1f8d725)
+2021-12-29T17:07:20.4144361+01:00 0HMEASL51OLN7:00000011 [INF] The file "/img/ProductItems/krn4bv0d.pbn.jpeg" was not modified (f1f8d725)
+2021-12-29T17:07:20.4144362+01:00 0HMEASL51OLN7:0000000D [INF] The file "/img/ProductItems/eotsxlsz.mlv.jpg" was not modified (f1f8d725)
+2021-12-29T17:07:20.4144583+01:00 0HMEASL51OLN7:00000007 [INF] The file "/img/CarouselItems/jsfqjsxy.s1v.png" was not modified (f1f8d725)
+2021-12-29T17:07:20.4144361+01:00 0HMEASL51OLN7:0000000F [INF] The file "/img/ProductItems/5bysv2zz.lu4.jpg" was not modified (f1f8d725)
+2021-12-29T17:07:20.4152959+01:00 0HMEASL51OLN7:00000007 [INF] Request finished HTTP/2 GET https://localhost:5001/img/CarouselItems/jsfqjsxy.s1v.png - - - 304 - image/png 7.2671ms (791a596a)
+2021-12-29T17:07:20.4153662+01:00 0HMEASL51OLN7:0000000F [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/5bysv2zz.lu4.jpg - - - 304 - image/jpeg 6.9970ms (791a596a)
+2021-12-29T17:07:20.4154175+01:00 0HMEASL51OLN7:0000000B [INF] Request finished HTTP/2 GET https://localhost:5001/img/3.jpg - - - 304 - image/jpeg 7.2001ms (791a596a)
+2021-12-29T17:07:20.4154176+01:00 0HMEASL51OLN7:0000000D [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/eotsxlsz.mlv.jpg - - - 304 - image/jpeg 7.1839ms (791a596a)
+2021-12-29T17:07:20.4154425+01:00 0HMEASL51OLN7:00000005 [INF] Request finished HTTP/2 GET https://localhost:5001/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - - 304 - application/javascript 7.5457ms (791a596a)
+2021-12-29T17:07:20.4154476+01:00 0HMEASL51OLN7:00000009 [INF] Request finished HTTP/2 GET https://localhost:5001/img/CarouselItems/adxdqax3.gz3.jpg - - - 304 - image/jpeg 7.4302ms (791a596a)
+2021-12-29T17:07:20.4154577+01:00 0HMEASL51OLN7:00000011 [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/krn4bv0d.pbn.jpeg - - - 304 - image/jpeg 6.9082ms (791a596a)
+2021-12-29T17:07:20.4289338+01:00 0HMEASL51OLN7:00000013 [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/nmvjnbr1.aud.jpg - - (ca22a1cb)
+2021-12-29T17:07:20.4295474+01:00 0HMEASL51OLN7:00000013 [INF] The file "/img/ProductItems/nmvjnbr1.aud.jpg" was not modified (f1f8d725)
+2021-12-29T17:07:20.4301848+01:00 0HMEASL51OLN7:00000013 [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/nmvjnbr1.aud.jpg - - - 304 - image/jpeg 1.4196ms (791a596a)
