@@ -7,15 +7,18 @@ using System.Linq;
 using System.Threading.Tasks;
 using Musilu.Eshop.Web.Models.Database;
 using Musilu.Eshop.Web.Models.Entity;
+using Musilu.Eshop.Web.Models.Identity;
 using Musilu.Eshop.Web.Models.Implementation;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Musilu.Eshop.Web.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = nameof(Roles.Admin) + ", " + nameof(Roles.Manager))]
     public class ProductController : Controller
     {
         readonly EshopDbContext eshopDbContext;
-        IWebHostEnvironment env;
+        readonly IWebHostEnvironment env;
         public ProductController(EshopDbContext eshopDB, IWebHostEnvironment env)
         {
             eshopDbContext = eshopDB;
@@ -30,8 +33,6 @@ namespace Musilu.Eshop.Web.Areas.Admin.Controllers
         {
             return View();
         }
-        
-
 
         [HttpPost]
         public async Task<IActionResult> Create(Product product)
@@ -39,13 +40,16 @@ namespace Musilu.Eshop.Web.Areas.Admin.Controllers
             if (product != null && product.Image != null)
             {
                 FileUpload fileUpload = new FileUpload(env.WebRootPath, "img/ProductItems", "image");
-                product.ImageSource = await fileUpload.FileUploadAsync(product.Image);
-                if (String.IsNullOrWhiteSpace(product.ImageSource) == false)
+                if (fileUpload.CheckFileContent(product.Image) && fileUpload.CheckFileLength(product.Image))
                 {
-                    
-                    eshopDbContext.Products.Add(product);
-                    await eshopDbContext.SaveChangesAsync();
-                    return RedirectToAction(nameof(ProductController.Select));
+                    product.ImageSource = await fileUpload.FileUploadAsync(product.Image);
+                    if (String.IsNullOrWhiteSpace(product.ImageSource) == false)
+                    {
+
+                        eshopDbContext.Products.Add(product);
+                        await eshopDbContext.SaveChangesAsync();
+                        return RedirectToAction(nameof(ProductController.Select));
+                    }
                 }
             }
 

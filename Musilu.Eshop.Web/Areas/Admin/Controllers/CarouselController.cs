@@ -74,7 +74,7 @@ namespace Musilu.Eshop.Web.Areas.Admin.Controllers
             if (carouselItem != null)
             {
 
-                if (cItem != null && cItem.Image != null)
+                if (cItem.Image != null)
                 {
                     FileUpload fileUpload = new FileUpload(env.WebRootPath, "img/CarouselItems", "image");
 
@@ -98,14 +98,10 @@ namespace Musilu.Eshop.Web.Areas.Admin.Controllers
                     await eshopDbContext.SaveChangesAsync();
                     return RedirectToAction(nameof(CarouselController.Select));
                 }
-
-                return NotFound();
-
             }
-            else
-            {
-                return NotFound();
-            }
+
+            return View(carouselItem);
+
         }
         public async Task<IActionResult> Delete(int ID)
         {

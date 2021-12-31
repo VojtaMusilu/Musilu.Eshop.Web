@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Musilu.Eshop.Web.Models.Database;
 using Musilu.Eshop.Web.Models.Entity;
 using Musilu.Eshop.Web.Models.Identity;
-using Microsoft.AspNetCore.Authorization;
 
 namespace Musilu.Eshop.Web.Areas.Admin.Controllers
 {
@@ -50,13 +50,11 @@ namespace Musilu.Eshop.Web.Areas.Admin.Controllers
             return View(orderItem);
         }
 
-
-
         // GET: Admin/OrderItems/Create
         public IActionResult Create()
         {
             ViewData["OrderID"] = new SelectList(_context.Orders, "ID", "OrderNumber");
-            ViewData["ProductID"] = new SelectList(_context.Products, "ID", "About");
+            ViewData["ProductID"] = new SelectList(_context.Products, "ID", "Description");
             return View();
         }
 
@@ -74,7 +72,7 @@ namespace Musilu.Eshop.Web.Areas.Admin.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["OrderID"] = new SelectList(_context.Orders, "ID", "OrderNumber", orderItem.OrderID);
-            ViewData["ProductID"] = new SelectList(_context.Products, "ID", "About", orderItem.ProductID);
+            ViewData["ProductID"] = new SelectList(_context.Products, "ID", "Description", orderItem.ProductID);
             return View(orderItem);
         }
 
@@ -92,7 +90,7 @@ namespace Musilu.Eshop.Web.Areas.Admin.Controllers
                 return NotFound();
             }
             ViewData["OrderID"] = new SelectList(_context.Orders, "ID", "OrderNumber", orderItem.OrderID);
-            ViewData["ProductID"] = new SelectList(_context.Products, "ID", "About", orderItem.ProductID);
+            ViewData["ProductID"] = new SelectList(_context.Products, "ID", "Description", orderItem.ProductID);
             return View(orderItem);
         }
 
@@ -129,7 +127,7 @@ namespace Musilu.Eshop.Web.Areas.Admin.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["OrderID"] = new SelectList(_context.Orders, "ID", "OrderNumber", orderItem.OrderID);
-            ViewData["ProductID"] = new SelectList(_context.Products, "ID", "About", orderItem.ProductID);
+            ViewData["ProductID"] = new SelectList(_context.Products, "ID", "Description", orderItem.ProductID);
             return View(orderItem);
         }
 

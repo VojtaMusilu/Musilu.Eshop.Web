@@ -7,12 +7,16 @@
   <ItemGroup>
     <Compile Remove="Areas\Admin\Data\**" />
     <Compile Remove="Areas\Admin\Models\**" />
+    <Compile Remove="Areas\Home\**" />
     <Content Remove="Areas\Admin\Data\**" />
     <Content Remove="Areas\Admin\Models\**" />
+    <Content Remove="Areas\Home\**" />
     <EmbeddedResource Remove="Areas\Admin\Data\**" />
     <EmbeddedResource Remove="Areas\Admin\Models\**" />
+    <EmbeddedResource Remove="Areas\Home\**" />
     <None Remove="Areas\Admin\Data\**" />
     <None Remove="Areas\Admin\Models\**" />
+    <None Remove="Areas\Home\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -31,9 +35,25 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Areas\Home\Controllers\" />
-    <Folder Include="Areas\Home\Views\Product\" />
     <Folder Include="Views\Product\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Areas\Admin\Views\OrderItems\Create.cshtml" />
+    <None Include="Areas\Admin\Views\OrderItems\Delete.cshtml" />
+    <None Include="Areas\Admin\Views\OrderItems\Details.cshtml" />
+    <None Include="Areas\Admin\Views\OrderItems\Edit.cshtml" />
+    <None Include="Areas\Admin\Views\OrderItems\Index.cshtml" />
+    <None Include="Areas\Admin\Views\Orders\Create.cshtml" />
+    <None Include="Areas\Admin\Views\Orders\Delete.cshtml" />
+    <None Include="Areas\Admin\Views\Orders\Details.cshtml" />
+    <None Include="Areas\Admin\Views\Orders\Edit.cshtml" />
+    <None Include="Areas\Admin\Views\Orders\Index.cshtml" />
+    <None Include="Areas\Admin\Views\Users\Create.cshtml" />
+    <None Include="Areas\Admin\Views\Users\Delete.cshtml" />
+    <None Include="Areas\Admin\Views\Users\Details.cshtml" />
+    <None Include="Areas\Admin\Views\Users\Edit.cshtml" />
+    <None Include="Areas\Admin\Views\Users\Index.cshtml" />
   </ItemGroup>
 
 </Project>

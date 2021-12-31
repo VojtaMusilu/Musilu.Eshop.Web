@@ -16,10 +16,19 @@ namespace Musilu.Eshop.Web.Areas.Home.Controllers
     {
         readonly EshopDbContext eshopDbContext;
         IWebHostEnvironment env;
+
         public IActionResult Detail(int id)
         {
             Product pi = eshopDbContext.Products.FirstOrDefault(p => p.ID == id);
-            return View(pi);
+
+            if (pi != null)
+            {
+                return View(pi);
+            }
+            else
+            {
+                return NotFound();
+            }
         }
     }
 }
