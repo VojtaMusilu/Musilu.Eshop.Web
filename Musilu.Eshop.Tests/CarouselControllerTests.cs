@@ -102,13 +102,14 @@ namespace Musilu.Eshop.Tests
         [Fact]
         public async Task CarouselCreate_InvalidFailure()
         {
-            //zkuste doplnit tak, aby objekt pro CarouselItem nebyl validní, což bude správný výsledek testu ;-)
-
             // Arrange
             var mockIWebHostEnvironment = new Mock<IWebHostEnvironment>();
             mockIWebHostEnvironment.Setup(webHostEnv => webHostEnv.WebRootPath).Returns(Directory.GetCurrentDirectory());
 
-
+            //Nainstalován Nuget package: Microsoft.EntityFrameworkCore.InMemory
+            //databazi vytvori v pameti
+            //Jsou zde konkretni tridy, takze to neni uplne OK - mely by se vyuzit interface jako treba pres IUnitOfWork, IRepository<T>, nebo pres vlastni IDbContext (je pak ale nutne vyuzivat interface i v hlavnim projektu, jinak v unit testech nebude spravne fungovat mockovani)
+            //takto to ale v krizovych situacich taky jde :-)
             DbContextOptions options = new DbContextOptionsBuilder<EshopDbContext>()
                                        .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
                                        .Options;
@@ -120,17 +121,27 @@ namespace Musilu.Eshop.Tests
             controller.ObjectValidator = new ObjectValidator();
             IActionResult iActionResult = null;
 
+
+
             CarouselItem testCarousel = GetTestCarouselItemInvalid();
 
-            iActionResult = await controller.Create(testCarousel);
-
             // Assert
-            ViewResult redirectFail = Assert.IsType<ViewResult>(iActionResult);
-            Assert.Matches(redirectFail.ToString(), nameof(CarouselController.Select));
 
+            iActionResult = await controller.Create(testCarousel);
+            /*
+            ViewResult redirect = Assert.IsType<ViewResult>(iActionResult);
+            Assert.Matches(redirect.ViewName, nameof(CarouselController.Select));
+            */
+
+
+            var viewResult = Assert.IsType<ViewResult>(iActionResult);
+            var model = Assert.IsAssignableFrom<CarouselItem>(viewResult.ViewData.Model);
+            
 
             int carouselCount = (await databaseContext.CarouselItems.ToListAsync()).Count;
             Assert.Equal(0, carouselCount);
+
+            Assert.Empty(await databaseContext.CarouselItems.ToListAsync());
 
 
         }

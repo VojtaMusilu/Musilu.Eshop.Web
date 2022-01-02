@@ -1,0 +1,291 @@
+2022-01-02T09:34:04.5559943+01:00  [INF] Entity Framework Core "5.0.11" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2022-01-02T09:34:05.4863827+01:00  [INF] Executed DbCommand ("48"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'Musilu.Eshop'" (0723d8ff)
+2022-01-02T09:34:05.9970329+01:00  [INF] Executed DbCommand ("7"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM `CarouselItem` AS `c`" (0723d8ff)
+2022-01-02T09:34:06.1064001+01:00  [INF] User profile is available. Using '"C:\Users\vojte\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2022-01-02T09:34:06.4665767+01:00  [INF] Executed DbCommand ("41"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2022-01-02T09:34:06.5616882+01:00  [WRN] Role "(null)" validation failed: "DuplicateRoleName". (60d773c7)
+2022-01-02T09:34:06.5984828+01:00  [INF] Executed DbCommand ("9"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2022-01-02T09:34:06.6106946+01:00  [WRN] Role "(null)" validation failed: "DuplicateRoleName". (60d773c7)
+2022-01-02T09:34:06.6223388+01:00  [INF] Executed DbCommand ("3"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2022-01-02T09:34:06.6245555+01:00  [WRN] Role "(null)" validation failed: "DuplicateRoleName". (60d773c7)
+2022-01-02T09:34:06.6384515+01:00  [INF] Executed DbCommand ("2"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2022-01-02T09:34:06.6935070+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2022-01-02T09:34:07.3381552+01:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2022-01-02T09:34:07.3412241+01:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2022-01-02T09:34:07.3440160+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-01-02T09:34:07.3466869+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-01-02T09:34:07.3490038+01:00  [INF] Content root path: "D:\Program Files\VisualStudio\Musilu.Eshop.Web\Musilu.Eshop.Web\Musilu.Eshop.Web" (b5d60022)
+2022-01-02T09:34:10.6215922+01:00 0HMEDPAI747UF:00000001 [INF] Request starting HTTP/2 GET https://localhost:5001/ - - (ca22a1cb)
+2022-01-02T09:34:10.7511616+01:00 0HMEDPAI747UF:00000001 [INF] Executing endpoint '"Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)"' (500cc934)
+2022-01-02T09:34:10.7901016+01:00 0HMEDPAI747UF:00000001 [INF] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "Musilu.Eshop.Web.Controllers.HomeController" ("Musilu.Eshop.Web"). (122b2fdf)
+2022-01-02T09:34:10.8093244+01:00 0HMEDPAI747UF:00000001 [INF] Loaded Home Index (d3450aae)
+2022-01-02T09:34:10.8151110+01:00 0HMEDPAI747UF:00000001 [INF] Entity Framework Core "5.0.11" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2022-01-02T09:34:10.8357245+01:00 0HMEDPAI747UF:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`ID`, `c`.`ImageAlt`, `c`.`ImageSource`
+FROM `CarouselItem` AS `c`" (0723d8ff)
+2022-01-02T09:34:10.8725746+01:00 0HMEDPAI747UF:00000001 [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `p`.`ID`, `p`.`Category`, `p`.`Description`, `p`.`ImageAlt`, `p`.`ImageSource`, `p`.`Name`, `p`.`Price`
+FROM `Products` AS `p`" (0723d8ff)
+2022-01-02T09:34:11.0938252+01:00 0HMEDPAI747UF:00000001 [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2022-01-02T09:34:12.0979027+01:00 0HMEDPAI747UF:00000001 [INF] Executed ViewResult - view "Index" executed in 1076.2268ms. (f66409e9)
+2022-01-02T09:34:12.0992149+01:00 0HMEDPAI747UF:00000001 [INF] Executed action "Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)" in 1307.8404ms (afa2e885)
+2022-01-02T09:34:12.0994912+01:00 0HMEDPAI747UF:00000001 [INF] Executed endpoint '"Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)"' (99874f2b)
+2022-01-02T09:34:12.1165396+01:00 0HMEDPAI747UF:00000001 [INF] Request finished HTTP/2 GET https://localhost:5001/ - - - 200 - text/html;+charset=utf-8 1501.3278ms (791a596a)
+2022-01-02T09:34:12.1470662+01:00 0HMEDPAI747UF:00000003 [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - (ca22a1cb)
+2022-01-02T09:34:12.1471142+01:00 0HMEDPAI747UF:00000005 [INF] Request starting HTTP/2 GET https://localhost:5001/css/site.css - - (ca22a1cb)
+2022-01-02T09:34:12.1474437+01:00 0HMEDPAI747UF:00000007 [INF] Request starting HTTP/2 GET https://localhost:5001/lib/bootstrap/dist/css/bootstrap.min.css - - (ca22a1cb)
+2022-01-02T09:34:12.1508197+01:00 0HMEDPAI747UF:00000009 [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_hompage.css - - (ca22a1cb)
+2022-01-02T09:34:12.1646732+01:00 0HMEDPAI747UF:00000009 [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_hompage.css - - - 404 0 - 13.5819ms (791a596a)
+2022-01-02T09:34:12.1646700+01:00 0HMEDPAI747UF:00000003 [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - - 404 0 - 17.3618ms (791a596a)
+2022-01-02T09:34:12.1710716+01:00 0HMEDPAI747UF:00000005 [INF] The file "/css/site.css" was not modified (f1f8d725)
+2022-01-02T09:34:12.1711563+01:00 0HMEDPAI747UF:00000007 [INF] The file "/lib/bootstrap/dist/css/bootstrap.min.css" was not modified (f1f8d725)
+2022-01-02T09:34:12.1737599+01:00 0HMEDPAI747UF:00000007 [INF] Request finished HTTP/2 GET https://localhost:5001/lib/bootstrap/dist/css/bootstrap.min.css - - - 304 - text/css 26.4548ms (791a596a)
+2022-01-02T09:34:12.1737593+01:00 0HMEDPAI747UF:00000005 [INF] Request finished HTTP/2 GET https://localhost:5001/css/site.css - - - 304 - text/css 26.5381ms (791a596a)
+2022-01-02T09:34:12.2215006+01:00 0HMEDPAI747UF:0000000B [INF] Request starting HTTP/2 GET https://localhost:5001/lib/jquery/dist/jquery.min.js - - (ca22a1cb)
+2022-01-02T09:34:12.2221111+01:00 0HMEDPAI747UF:0000000D [INF] Request starting HTTP/2 GET https://localhost:5001/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - (ca22a1cb)
+2022-01-02T09:34:12.2222808+01:00 0HMEDPAI747UF:0000000B [INF] The file "/lib/jquery/dist/jquery.min.js" was not modified (f1f8d725)
+2022-01-02T09:34:12.2239476+01:00 0HMEDPAI747UF:0000000D [INF] The file "/lib/bootstrap/dist/js/bootstrap.bundle.min.js" was not modified (f1f8d725)
+2022-01-02T09:34:12.2240604+01:00 0HMEDPAI747UF:0000000B [INF] Request finished HTTP/2 GET https://localhost:5001/lib/jquery/dist/jquery.min.js - - - 304 - application/javascript 2.9585ms (791a596a)
+2022-01-02T09:34:12.2242827+01:00 0HMEDPAI747UF:0000000F [INF] Request starting HTTP/2 GET https://localhost:5001/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - (ca22a1cb)
+2022-01-02T09:34:12.2284036+01:00 0HMEDPAI747UF:0000000F [INF] The file "/js/site.js" was not modified (f1f8d725)
+2022-01-02T09:34:12.2284186+01:00 0HMEDPAI747UF:0000000D [INF] Request finished HTTP/2 GET https://localhost:5001/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 304 - application/javascript 2.2416ms (791a596a)
+2022-01-02T09:34:12.2286929+01:00 0HMEDPAI747UF:0000000F [INF] Request finished HTTP/2 GET https://localhost:5001/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - - 304 - application/javascript 4.3660ms (791a596a)
+2022-01-02T09:34:12.2287992+01:00 0HMEDPAI747UF:00000011 [INF] Request starting HTTP/2 GET https://localhost:5001/js/Product.js - - (ca22a1cb)
+2022-01-02T09:34:12.2288402+01:00 0HMEDPAI747UF:00000013 [INF] Request starting HTTP/2 GET https://localhost:5001/img/CarouselItems/adxdqax3.gz3.jpg - - (ca22a1cb)
+2022-01-02T09:34:12.2289412+01:00 0HMEDPAI747UF:00000015 [INF] Request starting HTTP/2 GET https://localhost:5001/img/CarouselItems/jsfqjsxy.s1v.png - - (ca22a1cb)
+2022-01-02T09:34:12.2291794+01:00 0HMEDPAI747UF:00000017 [INF] Request starting HTTP/2 GET https://localhost:5001/img/3.jpg - - (ca22a1cb)
+2022-01-02T09:34:12.2293906+01:00 0HMEDPAI747UF:00000019 [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/iphone.png - - (ca22a1cb)
+2022-01-02T09:34:12.2295004+01:00 0HMEDPAI747UF:00000017 [INF] The file "/img/3.jpg" was not modified (f1f8d725)
+2022-01-02T09:34:12.2291977+01:00 0HMEDPAI747UF:00000013 [INF] The file "/img/CarouselItems/adxdqax3.gz3.jpg" was not modified (f1f8d725)
+2022-01-02T09:34:12.2293876+01:00 0HMEDPAI747UF:00000015 [INF] The file "/img/CarouselItems/jsfqjsxy.s1v.png" was not modified (f1f8d725)
+2022-01-02T09:34:12.2298200+01:00 0HMEDPAI747UF:00000019 [INF] The file "/img/ProductItems/iphone.png" was not modified (f1f8d725)
+2022-01-02T09:34:12.2299427+01:00 0HMEDPAI747UF:00000017 [INF] Request finished HTTP/2 GET https://localhost:5001/img/3.jpg - - - 304 - image/jpeg 0.7950ms (791a596a)
+2022-01-02T09:34:12.2299886+01:00 0HMEDPAI747UF:00000013 [INF] Request finished HTTP/2 GET https://localhost:5001/img/CarouselItems/adxdqax3.gz3.jpg - - - 304 - image/jpeg 1.1223ms (791a596a)
+2022-01-02T09:34:12.2300864+01:00 0HMEDPAI747UF:00000015 [INF] Request finished HTTP/2 GET https://localhost:5001/img/CarouselItems/jsfqjsxy.s1v.png - - - 304 - image/png 1.1451ms (791a596a)
+2022-01-02T09:34:12.2301217+01:00 0HMEDPAI747UF:00000019 [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/iphone.png - - - 304 - image/png 0.8184ms (791a596a)
+2022-01-02T09:34:12.2310198+01:00 0HMEDPAI747UF:0000001B [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/samsung s10.jfif - - (ca22a1cb)
+2022-01-02T09:34:12.2312406+01:00 0HMEDPAI747UF:0000001B [INF] The file "/img/ProductItems/samsung s10.jfif" was not modified (f1f8d725)
+2022-01-02T09:34:12.2314527+01:00 0HMEDPAI747UF:0000001B [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/samsung s10.jfif - - - 304 - image/pjpeg 0.4023ms (791a596a)
+2022-01-02T09:34:12.2723000+01:00 0HMEDPAI747UF:0000001D [INF] Request starting HTTP/2 GET https://localhost:5001/img/it.jpg - - (ca22a1cb)
+2022-01-02T09:34:12.2767516+01:00 0HMEDPAI747UF:0000001D [INF] Request finished HTTP/2 GET https://localhost:5001/img/it.jpg - - - 404 0 - 4.4707ms (791a596a)
+2022-01-02T09:34:12.3353576+01:00 0HMEDPAI747UF:00000011 [INF] Sending file. Request path: '"/js/Product.js"'. Physical path: '"D:\Program Files\VisualStudio\Musilu.Eshop.Web\Musilu.Eshop.Web\Musilu.Eshop.Web\wwwroot\js\Product.js"' (27b0a520)
+2022-01-02T09:34:12.3357152+01:00 0HMEDPAI747UF:00000011 [INF] Request finished HTTP/2 GET https://localhost:5001/js/Product.js - - - 200 766 application/javascript 106.8591ms (791a596a)
+2022-01-02T09:34:17.0062454+01:00 0HMEDPAI747UF:0000001F [INF] Request starting HTTP/2 GET https://localhost:5001/Security/Account/Login - - (ca22a1cb)
+2022-01-02T09:34:17.0073402+01:00 0HMEDPAI747UF:0000001F [INF] Executing endpoint '"Musilu.Eshop.Web.Areas.Security.Controllers.AccountController.Login (Musilu.Eshop.Web)"' (500cc934)
+2022-01-02T09:34:17.0092173+01:00 0HMEDPAI747UF:0000001F [INF] Route matched with "{area = \"Security\", action = \"Login\", controller = \"Account\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Login()" on controller "Musilu.Eshop.Web.Areas.Security.Controllers.AccountController" ("Musilu.Eshop.Web"). (122b2fdf)
+2022-01-02T09:34:17.1295567+01:00 0HMEDPAI747UF:0000001F [INF] Executing ViewResult, running view "Login". (c83d0e25)
+2022-01-02T09:34:17.3624763+01:00 0HMEDPAI747UF:0000001F [INF] Executed ViewResult - view "Login" executed in 350.2161ms. (f66409e9)
+2022-01-02T09:34:17.3628714+01:00 0HMEDPAI747UF:0000001F [INF] Executed action "Musilu.Eshop.Web.Areas.Security.Controllers.AccountController.Login (Musilu.Eshop.Web)" in 353.5179ms (afa2e885)
+2022-01-02T09:34:17.3630867+01:00 0HMEDPAI747UF:0000001F [INF] Executed endpoint '"Musilu.Eshop.Web.Areas.Security.Controllers.AccountController.Login (Musilu.Eshop.Web)"' (99874f2b)
+2022-01-02T09:34:17.3635559+01:00 0HMEDPAI747UF:0000001F [INF] Request finished HTTP/2 GET https://localhost:5001/Security/Account/Login - - - 200 - text/html;+charset=utf-8 357.2411ms (791a596a)
+2022-01-02T09:34:17.4174347+01:00 0HMEDPAI747UF:00000021 [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - (ca22a1cb)
+2022-01-02T09:34:17.4184086+01:00 0HMEDPAI747UF:00000023 [INF] Request starting HTTP/2 GET https://localhost:5001/css/login.css - - (ca22a1cb)
+2022-01-02T09:34:17.4187354+01:00 0HMEDPAI747UF:00000023 [INF] The file "/css/login.css" was not modified (f1f8d725)
+2022-01-02T09:34:17.4190046+01:00 0HMEDPAI747UF:00000023 [INF] Request finished HTTP/2 GET https://localhost:5001/css/login.css - - - 304 - text/css 0.9872ms (791a596a)
+2022-01-02T09:34:17.4201876+01:00 0HMEDPAI747UF:00000021 [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - - 404 0 - 3.0492ms (791a596a)
+2022-01-02T09:34:18.6100253+01:00 0HMEDPAI747UF:00000025 [INF] Request starting HTTP/2 POST https://localhost:5001/Security/Account/Login application/x-www-form-urlencoded 210 (ca22a1cb)
+2022-01-02T09:34:18.6125342+01:00 0HMEDPAI747UF:00000025 [INF] Executing endpoint '"Musilu.Eshop.Web.Areas.Security.Controllers.AccountController.Login (Musilu.Eshop.Web)"' (500cc934)
+2022-01-02T09:34:18.6454000+01:00 0HMEDPAI747UF:00000025 [INF] Route matched with "{area = \"Security\", action = \"Login\", controller = \"Account\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Musilu.Eshop.Web.Models.ViewModels.LoginViewModel)" on controller "Musilu.Eshop.Web.Areas.Security.Controllers.AccountController" ("Musilu.Eshop.Web"). (122b2fdf)
+2022-01-02T09:34:18.8472930+01:00 0HMEDPAI747UF:00000025 [INF] Entity Framework Core "5.0.11" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2022-01-02T09:34:18.8587528+01:00 0HMEDPAI747UF:00000025 [INF] Executed DbCommand ("2"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2022-01-02T09:34:19.1205076+01:00 0HMEDPAI747UF:00000025 [INF] Executed DbCommand ("8"ms) [Parameters=["@__user_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`ClaimType`, `u`.`ClaimValue`, `u`.`UserId`
+FROM `UserClaims` AS `u`
+WHERE `u`.`UserId` = @__user_Id_0" (0723d8ff)
+2022-01-02T09:34:19.1976476+01:00 0HMEDPAI747UF:00000025 [INF] Executed DbCommand ("2"ms) [Parameters=["@__userId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Name`
+FROM `UserRoles` AS `u`
+INNER JOIN `Roles` AS `r` ON `u`.`RoleId` = `r`.`Id`
+WHERE `u`.`UserId` = @__userId_0" (0723d8ff)
+2022-01-02T09:34:19.2076230+01:00 0HMEDPAI747UF:00000025 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2022-01-02T09:34:19.2265856+01:00 0HMEDPAI747UF:00000025 [INF] Executed DbCommand ("2"ms) [Parameters=["@__role_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`ClaimType`, `r`.`ClaimValue`
+FROM `RoleClaims` AS `r`
+WHERE `r`.`RoleId` = @__role_Id_0" (0723d8ff)
+2022-01-02T09:34:19.2373491+01:00 0HMEDPAI747UF:00000025 [INF] Executed DbCommand ("3"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2022-01-02T09:34:19.2465414+01:00 0HMEDPAI747UF:00000025 [INF] Executed DbCommand ("3"ms) [Parameters=["@__role_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`ClaimType`, `r`.`ClaimValue`
+FROM `RoleClaims` AS `r`
+WHERE `r`.`RoleId` = @__role_Id_0" (0723d8ff)
+2022-01-02T09:34:19.2546264+01:00 0HMEDPAI747UF:00000025 [INF] Executed DbCommand ("2"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2022-01-02T09:34:19.2597907+01:00 0HMEDPAI747UF:00000025 [INF] Executed DbCommand ("1"ms) [Parameters=["@__role_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`ClaimType`, `r`.`ClaimValue`
+FROM `RoleClaims` AS `r`
+WHERE `r`.`RoleId` = @__role_Id_0" (0723d8ff)
+2022-01-02T09:34:19.2702891+01:00 0HMEDPAI747UF:00000025 [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2022-01-02T09:34:19.2786059+01:00 0HMEDPAI747UF:00000025 [INF] Executing RedirectResult, redirecting to "/". (d98d540e)
+2022-01-02T09:34:19.2799473+01:00 0HMEDPAI747UF:00000025 [INF] Executed action "Musilu.Eshop.Web.Areas.Security.Controllers.AccountController.Login (Musilu.Eshop.Web)" in 634.4369ms (afa2e885)
+2022-01-02T09:34:19.2806618+01:00 0HMEDPAI747UF:00000025 [INF] Executed endpoint '"Musilu.Eshop.Web.Areas.Security.Controllers.AccountController.Login (Musilu.Eshop.Web)"' (99874f2b)
+2022-01-02T09:34:19.2845706+01:00 0HMEDPAI747UF:00000025 [INF] Request finished HTTP/2 POST https://localhost:5001/Security/Account/Login application/x-www-form-urlencoded 210 - 302 0 - 674.4794ms (791a596a)
+2022-01-02T09:34:19.2943881+01:00 0HMEDPAI747UF:00000027 [INF] Request starting HTTP/2 GET https://localhost:5001/ - - (ca22a1cb)
+2022-01-02T09:34:19.3025562+01:00 0HMEDPAI747UF:00000027 [INF] Executing endpoint '"Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)"' (500cc934)
+2022-01-02T09:34:19.3029374+01:00 0HMEDPAI747UF:00000027 [INF] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "Musilu.Eshop.Web.Controllers.HomeController" ("Musilu.Eshop.Web"). (122b2fdf)
+2022-01-02T09:34:19.3091123+01:00 0HMEDPAI747UF:00000027 [INF] Loaded Home Index (d3450aae)
+2022-01-02T09:34:19.3100065+01:00 0HMEDPAI747UF:00000027 [INF] Entity Framework Core "5.0.11" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2022-01-02T09:34:19.3118329+01:00 0HMEDPAI747UF:00000027 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`ID`, `c`.`ImageAlt`, `c`.`ImageSource`
+FROM `CarouselItem` AS `c`" (0723d8ff)
+2022-01-02T09:34:19.3136395+01:00 0HMEDPAI747UF:00000027 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `p`.`ID`, `p`.`Category`, `p`.`Description`, `p`.`ImageAlt`, `p`.`ImageSource`, `p`.`Name`, `p`.`Price`
+FROM `Products` AS `p`" (0723d8ff)
+2022-01-02T09:34:19.3141871+01:00 0HMEDPAI747UF:00000027 [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2022-01-02T09:34:19.3247772+01:00 0HMEDPAI747UF:00000027 [INF] Executed ViewResult - view "Index" executed in 10.7161ms. (f66409e9)
+2022-01-02T09:34:19.3250480+01:00 0HMEDPAI747UF:00000027 [INF] Executed action "Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)" in 22.0038ms (afa2e885)
+2022-01-02T09:34:19.3251213+01:00 0HMEDPAI747UF:00000027 [INF] Executed endpoint '"Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)"' (99874f2b)
+2022-01-02T09:34:19.3253786+01:00 0HMEDPAI747UF:00000027 [INF] Request finished HTTP/2 GET https://localhost:5001/ - - - 200 - text/html;+charset=utf-8 31.3396ms (791a596a)
+2022-01-02T09:34:19.3965957+01:00 0HMEDPAI747UF:00000029 [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - (ca22a1cb)
+2022-01-02T09:34:19.3968044+01:00 0HMEDPAI747UF:0000002B [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_hompage.css - - (ca22a1cb)
+2022-01-02T09:34:19.3989506+01:00 0HMEDPAI747UF:0000002B [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_hompage.css - - - 404 0 - 2.2957ms (791a596a)
+2022-01-02T09:34:19.3990870+01:00 0HMEDPAI747UF:00000029 [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - - 404 0 - 2.7047ms (791a596a)
+2022-01-02T09:34:21.0006084+01:00 0HMEDPAI747UG:00000001 [INF] Request starting HTTP/2 GET https://localhost:5001/Admin/Carousel/Select - - (ca22a1cb)
+2022-01-02T09:34:21.0327506+01:00 0HMEDPAI747UG:00000001 [INF] Authorization was successful. (0d575a54)
+2022-01-02T09:34:21.0338079+01:00 0HMEDPAI747UG:00000001 [INF] Executing endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.CarouselController.Select (Musilu.Eshop.Web)"' (500cc934)
+2022-01-02T09:34:21.0355321+01:00 0HMEDPAI747UG:00000001 [INF] Route matched with "{area = \"Admin\", action = \"Select\", controller = \"Carousel\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Select()" on controller "Musilu.Eshop.Web.Areas.Admin.Controllers.CarouselController" ("Musilu.Eshop.Web"). (122b2fdf)
+2022-01-02T09:34:21.0373744+01:00 0HMEDPAI747UG:00000001 [INF] Entity Framework Core "5.0.11" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2022-01-02T09:34:21.0388618+01:00 0HMEDPAI747UG:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`ID`, `c`.`ImageAlt`, `c`.`ImageSource`
+FROM `CarouselItem` AS `c`" (0723d8ff)
+2022-01-02T09:34:21.0411648+01:00 0HMEDPAI747UG:00000001 [INF] Executing ViewResult, running view "Select". (c83d0e25)
+2022-01-02T09:34:22.0768522+01:00 0HMEDPAI747UG:00000001 [INF] Executed ViewResult - view "Select" executed in 1036.7217ms. (f66409e9)
+2022-01-02T09:34:22.0771933+01:00 0HMEDPAI747UG:00000001 [INF] Executed action "Musilu.Eshop.Web.Areas.Admin.Controllers.CarouselController.Select (Musilu.Eshop.Web)" in 1041.5323ms (afa2e885)
+2022-01-02T09:34:22.0773184+01:00 0HMEDPAI747UG:00000001 [INF] Executed endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.CarouselController.Select (Musilu.Eshop.Web)"' (99874f2b)
+2022-01-02T09:34:22.0777946+01:00 0HMEDPAI747UG:00000001 [INF] Request finished HTTP/2 GET https://localhost:5001/Admin/Carousel/Select - - - 200 - text/html;+charset=utf-8 1077.3811ms (791a596a)
+2022-01-02T09:34:22.1582849+01:00 0HMEDPAI747UG:00000003 [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - (ca22a1cb)
+2022-01-02T09:34:22.1610601+01:00 0HMEDPAI747UG:00000003 [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - - 404 0 - 3.0934ms (791a596a)
+2022-01-02T09:34:22.1617215+01:00 0HMEDPAI747UG:00000005 [INF] Request starting HTTP/2 GET https://localhost:5001/js/alerts.js - - (ca22a1cb)
+2022-01-02T09:34:22.1623763+01:00 0HMEDPAI747UG:00000005 [INF] The file "/js/alerts.js" was not modified (f1f8d725)
+2022-01-02T09:34:22.1626714+01:00 0HMEDPAI747UG:00000005 [INF] Request finished HTTP/2 GET https://localhost:5001/js/alerts.js - - - 304 - application/javascript 1.2392ms (791a596a)
+2022-01-02T09:34:24.7340084+01:00 0HMEDPAI747UG:00000007 [INF] Request starting HTTP/2 GET https://localhost:5001/Admin/Carousel/Create - - (ca22a1cb)
+2022-01-02T09:34:24.7391810+01:00 0HMEDPAI747UG:00000007 [INF] Authorization was successful. (0d575a54)
+2022-01-02T09:34:24.7394083+01:00 0HMEDPAI747UG:00000007 [INF] Executing endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.CarouselController.Create (Musilu.Eshop.Web)"' (500cc934)
+2022-01-02T09:34:24.7407713+01:00 0HMEDPAI747UG:00000007 [INF] Route matched with "{area = \"Admin\", action = \"Create\", controller = \"Carousel\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Create()" on controller "Musilu.Eshop.Web.Areas.Admin.Controllers.CarouselController" ("Musilu.Eshop.Web"). (122b2fdf)
+2022-01-02T09:34:24.7429672+01:00 0HMEDPAI747UG:00000007 [INF] Executing ViewResult, running view "Create". (c83d0e25)
+2022-01-02T09:34:24.8411654+01:00 0HMEDPAI747UG:00000007 [INF] Executed ViewResult - view "Create" executed in 99.6543ms. (f66409e9)
+2022-01-02T09:34:24.8413992+01:00 0HMEDPAI747UG:00000007 [INF] Executed action "Musilu.Eshop.Web.Areas.Admin.Controllers.CarouselController.Create (Musilu.Eshop.Web)" in 100.5364ms (afa2e885)
+2022-01-02T09:34:24.8416366+01:00 0HMEDPAI747UG:00000007 [INF] Executed endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.CarouselController.Create (Musilu.Eshop.Web)"' (99874f2b)
+2022-01-02T09:34:24.8420363+01:00 0HMEDPAI747UG:00000007 [INF] Request finished HTTP/2 GET https://localhost:5001/Admin/Carousel/Create - - - 200 - text/html;+charset=utf-8 108.0262ms (791a596a)
+2022-01-02T09:34:24.8927753+01:00 0HMEDPAI747UG:00000009 [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - (ca22a1cb)
+2022-01-02T09:34:24.8945410+01:00 0HMEDPAI747UG:0000000B [INF] Request starting HTTP/2 GET https://localhost:5001/lib/jquery-validation/dist/jquery.validate.js - - (ca22a1cb)
+2022-01-02T09:34:24.8953212+01:00 0HMEDPAI747UG:0000000D [INF] Request starting HTTP/2 GET https://localhost:5001/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js - - (ca22a1cb)
+2022-01-02T09:34:24.8955621+01:00 0HMEDPAI747UG:00000009 [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - - 404 0 - 2.7445ms (791a596a)
+2022-01-02T09:34:24.8956401+01:00 0HMEDPAI747UG:0000000F [INF] Request starting HTTP/2 GET https://localhost:5001/js/FileContentTypeValidation.js - - (ca22a1cb)
+2022-01-02T09:34:24.8973745+01:00 0HMEDPAI747UG:0000000F [INF] Sending file. Request path: '"/js/FileContentTypeValidation.js"'. Physical path: '"D:\Program Files\VisualStudio\Musilu.Eshop.Web\Musilu.Eshop.Web\Musilu.Eshop.Web\wwwroot\js\FileContentTypeValidation.js"' (27b0a520)
+2022-01-02T09:34:24.8976938+01:00 0HMEDPAI747UG:0000000F [INF] Request finished HTTP/2 GET https://localhost:5001/js/FileContentTypeValidation.js - - - 200 796 application/javascript 2.2230ms (791a596a)
+2022-01-02T09:34:25.0526830+01:00 0HMEDPAI747UG:0000000B [INF] Sending file. Request path: '"/lib/jquery-validation/dist/jquery.validate.js"'. Physical path: '"D:\Program Files\VisualStudio\Musilu.Eshop.Web\Musilu.Eshop.Web\Musilu.Eshop.Web\wwwroot\lib\jquery-validation\dist\jquery.validate.js"' (27b0a520)
+2022-01-02T09:34:25.0532290+01:00 0HMEDPAI747UG:0000000B [INF] Request finished HTTP/2 GET https://localhost:5001/lib/jquery-validation/dist/jquery.validate.js - - - 200 50276 application/javascript 158.5192ms (791a596a)
+2022-01-02T09:34:25.2668286+01:00 0HMEDPAI747UG:0000000D [INF] Sending file. Request path: '"/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"'. Physical path: '"D:\Program Files\VisualStudio\Musilu.Eshop.Web\Musilu.Eshop.Web\Musilu.Eshop.Web\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js"' (27b0a520)
+2022-01-02T09:34:25.2673458+01:00 0HMEDPAI747UG:0000000D [INF] Request finished HTTP/2 GET https://localhost:5001/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js - - - 200 19798 application/javascript 372.3040ms (791a596a)
+2022-01-02T09:34:30.5216221+01:00 0HMEDPAI747UG:00000011 [INF] Request starting HTTP/2 POST https://localhost:5001/Admin/Carousel/Create multipart/form-data;+boundary=----WebKitFormBoundaryP0BpZXdkQgPAstnx 598 (ca22a1cb)
+2022-01-02T09:34:30.5235744+01:00 0HMEDPAI747UG:00000011 [INF] Authorization was successful. (0d575a54)
+2022-01-02T09:34:30.5238481+01:00 0HMEDPAI747UG:00000011 [INF] Executing endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.CarouselController.Create (Musilu.Eshop.Web)"' (500cc934)
+2022-01-02T09:34:30.5313544+01:00 0HMEDPAI747UG:00000011 [INF] Route matched with "{area = \"Admin\", action = \"Create\", controller = \"Carousel\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Musilu.Eshop.Web.Models.Entity.CarouselItem)" on controller "Musilu.Eshop.Web.Areas.Admin.Controllers.CarouselController" ("Musilu.Eshop.Web"). (122b2fdf)
+2022-01-02T09:34:30.5741953+01:00 0HMEDPAI747UG:00000011 [INF] Executing ViewResult, running view "Create". (c83d0e25)
+2022-01-02T09:34:30.5829835+01:00 0HMEDPAI747UG:00000011 [INF] Executed ViewResult - view "Create" executed in 8.8563ms. (f66409e9)
+2022-01-02T09:34:30.5832549+01:00 0HMEDPAI747UG:00000011 [INF] Executed action "Musilu.Eshop.Web.Areas.Admin.Controllers.CarouselController.Create (Musilu.Eshop.Web)" in 51.6905ms (afa2e885)
+2022-01-02T09:34:30.5833795+01:00 0HMEDPAI747UG:00000011 [INF] Executed endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.CarouselController.Create (Musilu.Eshop.Web)"' (99874f2b)
+2022-01-02T09:34:30.5840040+01:00 0HMEDPAI747UG:00000011 [INF] Request finished HTTP/2 POST https://localhost:5001/Admin/Carousel/Create multipart/form-data;+boundary=----WebKitFormBoundaryP0BpZXdkQgPAstnx 598 - 200 - text/html;+charset=utf-8 62.3512ms (791a596a)
+2022-01-02T09:34:30.6595167+01:00 0HMEDPAI747UG:00000013 [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - (ca22a1cb)
+2022-01-02T09:34:30.6615202+01:00 0HMEDPAI747UG:00000013 [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - - 404 0 - 2.0935ms (791a596a)
+2022-01-02T09:34:32.8834230+01:00 0HMEDPAI747UG:00000015 [INF] Request starting HTTP/2 POST https://localhost:5001/Admin/Carousel/Create multipart/form-data;+boundary=----WebKitFormBoundary73sn8ZSmxBSCAxUW 598 (ca22a1cb)
+2022-01-02T09:34:32.8851315+01:00 0HMEDPAI747UG:00000015 [INF] Authorization was successful. (0d575a54)
+2022-01-02T09:34:32.8852269+01:00 0HMEDPAI747UG:00000015 [INF] Executing endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.CarouselController.Create (Musilu.Eshop.Web)"' (500cc934)
+2022-01-02T09:34:32.8854387+01:00 0HMEDPAI747UG:00000015 [INF] Route matched with "{area = \"Admin\", action = \"Create\", controller = \"Carousel\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Musilu.Eshop.Web.Models.Entity.CarouselItem)" on controller "Musilu.Eshop.Web.Areas.Admin.Controllers.CarouselController" ("Musilu.Eshop.Web"). (122b2fdf)
+2022-01-02T09:34:32.8883131+01:00 0HMEDPAI747UG:00000015 [INF] Executing ViewResult, running view "Create". (c83d0e25)
+2022-01-02T09:34:32.8909130+01:00 0HMEDPAI747UG:00000015 [INF] Executed ViewResult - view "Create" executed in 2.6464ms. (f66409e9)
+2022-01-02T09:34:32.8910764+01:00 0HMEDPAI747UG:00000015 [INF] Executed action "Musilu.Eshop.Web.Areas.Admin.Controllers.CarouselController.Create (Musilu.Eshop.Web)" in 5.5596ms (afa2e885)
+2022-01-02T09:34:32.8911419+01:00 0HMEDPAI747UG:00000015 [INF] Executed endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.CarouselController.Create (Musilu.Eshop.Web)"' (99874f2b)
+2022-01-02T09:34:32.8914945+01:00 0HMEDPAI747UG:00000015 [INF] Request finished HTTP/2 POST https://localhost:5001/Admin/Carousel/Create multipart/form-data;+boundary=----WebKitFormBoundary73sn8ZSmxBSCAxUW 598 - 200 - text/html;+charset=utf-8 8.0342ms (791a596a)
+2022-01-02T09:34:32.9255832+01:00 0HMEDPAI747UG:00000017 [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - (ca22a1cb)
+2022-01-02T09:34:32.9272483+01:00 0HMEDPAI747UG:00000017 [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - - 404 0 - 1.6696ms (791a596a)
+2022-01-02T09:34:33.6470652+01:00 0HMEDPAI747UG:00000019 [INF] Request starting HTTP/2 POST https://localhost:5001/Admin/Carousel/Create multipart/form-data;+boundary=----WebKitFormBoundaryFweRyJVWldd3rA38 598 (ca22a1cb)
+2022-01-02T09:34:33.6477870+01:00 0HMEDPAI747UG:00000019 [INF] Authorization was successful. (0d575a54)
+2022-01-02T09:34:33.6478694+01:00 0HMEDPAI747UG:00000019 [INF] Executing endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.CarouselController.Create (Musilu.Eshop.Web)"' (500cc934)
+2022-01-02T09:34:33.6480271+01:00 0HMEDPAI747UG:00000019 [INF] Route matched with "{area = \"Admin\", action = \"Create\", controller = \"Carousel\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Musilu.Eshop.Web.Models.Entity.CarouselItem)" on controller "Musilu.Eshop.Web.Areas.Admin.Controllers.CarouselController" ("Musilu.Eshop.Web"). (122b2fdf)
+2022-01-02T09:34:33.6488481+01:00 0HMEDPAI747UG:00000019 [INF] Executing ViewResult, running view "Create". (c83d0e25)
+2022-01-02T09:34:33.6507970+01:00 0HMEDPAI747UG:00000019 [INF] Executed ViewResult - view "Create" executed in 1.9501ms. (f66409e9)
+2022-01-02T09:34:33.6508996+01:00 0HMEDPAI747UG:00000019 [INF] Executed action "Musilu.Eshop.Web.Areas.Admin.Controllers.CarouselController.Create (Musilu.Eshop.Web)" in 2.8084ms (afa2e885)
+2022-01-02T09:34:33.6509957+01:00 0HMEDPAI747UG:00000019 [INF] Executed endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.CarouselController.Create (Musilu.Eshop.Web)"' (99874f2b)
+2022-01-02T09:34:33.6512104+01:00 0HMEDPAI747UG:00000019 [INF] Request finished HTTP/2 POST https://localhost:5001/Admin/Carousel/Create multipart/form-data;+boundary=----WebKitFormBoundaryFweRyJVWldd3rA38 598 - 200 - text/html;+charset=utf-8 4.1175ms (791a596a)
+2022-01-02T09:34:33.6875637+01:00 0HMEDPAI747UG:0000001B [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - (ca22a1cb)
+2022-01-02T09:34:33.6886482+01:00 0HMEDPAI747UG:0000001B [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - - 404 0 - 1.5254ms (791a596a)
+2022-01-02T09:34:36.8849068+01:00 0HMEDPAI747UG:0000001D [INF] Request starting HTTP/2 GET https://localhost:5001/Admin/Carousel/Create - - (ca22a1cb)
+2022-01-02T09:34:36.8859070+01:00 0HMEDPAI747UG:0000001D [INF] Authorization was successful. (0d575a54)
+2022-01-02T09:34:36.8859989+01:00 0HMEDPAI747UG:0000001D [INF] Executing endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.CarouselController.Create (Musilu.Eshop.Web)"' (500cc934)
+2022-01-02T09:34:36.8861883+01:00 0HMEDPAI747UG:0000001D [INF] Route matched with "{area = \"Admin\", action = \"Create\", controller = \"Carousel\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Create()" on controller "Musilu.Eshop.Web.Areas.Admin.Controllers.CarouselController" ("Musilu.Eshop.Web"). (122b2fdf)
+2022-01-02T09:34:36.8863236+01:00 0HMEDPAI747UG:0000001D [INF] Executing ViewResult, running view "Create". (c83d0e25)
+2022-01-02T09:34:36.8882619+01:00 0HMEDPAI747UG:0000001D [INF] Executed ViewResult - view "Create" executed in 1.8882ms. (f66409e9)
+2022-01-02T09:34:36.8884206+01:00 0HMEDPAI747UG:0000001D [INF] Executed action "Musilu.Eshop.Web.Areas.Admin.Controllers.CarouselController.Create (Musilu.Eshop.Web)" in 2.1719ms (afa2e885)
+2022-01-02T09:34:36.8885244+01:00 0HMEDPAI747UG:0000001D [INF] Executed endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.CarouselController.Create (Musilu.Eshop.Web)"' (99874f2b)
+2022-01-02T09:34:36.8887715+01:00 0HMEDPAI747UG:0000001D [INF] Request finished HTTP/2 GET https://localhost:5001/Admin/Carousel/Create - - - 200 - text/html;+charset=utf-8 4.2418ms (791a596a)
+2022-01-02T09:34:38.1529784+01:00 0HMEDPAI747UG:0000001F [INF] Request starting HTTP/2 POST https://localhost:5001/Admin/Carousel/Create multipart/form-data;+boundary=----WebKitFormBoundary4sFjvvNcrXS5lpgU 598 (ca22a1cb)
+2022-01-02T09:34:38.1539307+01:00 0HMEDPAI747UG:0000001F [INF] Authorization was successful. (0d575a54)
+2022-01-02T09:34:38.1540228+01:00 0HMEDPAI747UG:0000001F [INF] Executing endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.CarouselController.Create (Musilu.Eshop.Web)"' (500cc934)
+2022-01-02T09:34:38.1541742+01:00 0HMEDPAI747UG:0000001F [INF] Route matched with "{area = \"Admin\", action = \"Create\", controller = \"Carousel\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Musilu.Eshop.Web.Models.Entity.CarouselItem)" on controller "Musilu.Eshop.Web.Areas.Admin.Controllers.CarouselController" ("Musilu.Eshop.Web"). (122b2fdf)
+2022-01-02T09:34:38.1549948+01:00 0HMEDPAI747UG:0000001F [INF] Executing ViewResult, running view "Create". (c83d0e25)
+2022-01-02T09:34:38.1568334+01:00 0HMEDPAI747UG:0000001F [INF] Executed ViewResult - view "Create" executed in 1.8523ms. (f66409e9)
+2022-01-02T09:34:38.1570145+01:00 0HMEDPAI747UG:0000001F [INF] Executed action "Musilu.Eshop.Web.Areas.Admin.Controllers.CarouselController.Create (Musilu.Eshop.Web)" in 2.7732ms (afa2e885)
+2022-01-02T09:34:38.1571135+01:00 0HMEDPAI747UG:0000001F [INF] Executed endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.CarouselController.Create (Musilu.Eshop.Web)"' (99874f2b)
+2022-01-02T09:34:38.1573676+01:00 0HMEDPAI747UG:0000001F [INF] Request finished HTTP/2 POST https://localhost:5001/Admin/Carousel/Create multipart/form-data;+boundary=----WebKitFormBoundary4sFjvvNcrXS5lpgU 598 - 200 - text/html;+charset=utf-8 4.4892ms (791a596a)
+2022-01-02T09:34:38.2089136+01:00 0HMEDPAI747UG:00000021 [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - (ca22a1cb)
+2022-01-02T09:34:38.2103110+01:00 0HMEDPAI747UG:00000021 [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - - 404 0 - 1.5080ms (791a596a)
+2022-01-02T09:34:39.3252483+01:00 0HMEDPAI747UG:00000023 [INF] Request starting HTTP/2 GET https://localhost:5001/Admin/Carousel/Create - - (ca22a1cb)
+2022-01-02T09:34:39.3260512+01:00 0HMEDPAI747UG:00000023 [INF] Authorization was successful. (0d575a54)
+2022-01-02T09:34:39.3261220+01:00 0HMEDPAI747UG:00000023 [INF] Executing endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.CarouselController.Create (Musilu.Eshop.Web)"' (500cc934)
+2022-01-02T09:34:39.3263141+01:00 0HMEDPAI747UG:00000023 [INF] Route matched with "{area = \"Admin\", action = \"Create\", controller = \"Carousel\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Create()" on controller "Musilu.Eshop.Web.Areas.Admin.Controllers.CarouselController" ("Musilu.Eshop.Web"). (122b2fdf)
+2022-01-02T09:34:39.3264621+01:00 0HMEDPAI747UG:00000023 [INF] Executing ViewResult, running view "Create". (c83d0e25)
+2022-01-02T09:34:39.3278512+01:00 0HMEDPAI747UG:00000023 [INF] Executed ViewResult - view "Create" executed in 1.38ms. (f66409e9)
+2022-01-02T09:34:39.3279632+01:00 0HMEDPAI747UG:00000023 [INF] Executed action "Musilu.Eshop.Web.Areas.Admin.Controllers.CarouselController.Create (Musilu.Eshop.Web)" in 1.5855ms (afa2e885)
+2022-01-02T09:34:39.3280146+01:00 0HMEDPAI747UG:00000023 [INF] Executed endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.CarouselController.Create (Musilu.Eshop.Web)"' (99874f2b)
+2022-01-02T09:34:39.3282074+01:00 0HMEDPAI747UG:00000023 [INF] Request finished HTTP/2 GET https://localhost:5001/Admin/Carousel/Create - - - 200 - text/html;+charset=utf-8 3.1718ms (791a596a)
+2022-01-02T09:34:40.2181057+01:00 0HMEDPAI747UG:00000025 [INF] Request starting HTTP/2 POST https://localhost:5001/Admin/Carousel/Create multipart/form-data;+boundary=----WebKitFormBoundaryCL46RiKDAScVeGmf 598 (ca22a1cb)
+2022-01-02T09:34:40.2189801+01:00 0HMEDPAI747UG:00000025 [INF] Authorization was successful. (0d575a54)
+2022-01-02T09:34:40.2190492+01:00 0HMEDPAI747UG:00000025 [INF] Executing endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.CarouselController.Create (Musilu.Eshop.Web)"' (500cc934)
+2022-01-02T09:34:40.2191978+01:00 0HMEDPAI747UG:00000025 [INF] Route matched with "{area = \"Admin\", action = \"Create\", controller = \"Carousel\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Musilu.Eshop.Web.Models.Entity.CarouselItem)" on controller "Musilu.Eshop.Web.Areas.Admin.Controllers.CarouselController" ("Musilu.Eshop.Web"). (122b2fdf)
+2022-01-02T09:34:40.2199322+01:00 0HMEDPAI747UG:00000025 [INF] Executing ViewResult, running view "Create". (c83d0e25)
+2022-01-02T09:34:40.2226637+01:00 0HMEDPAI747UG:00000025 [INF] Executed ViewResult - view "Create" executed in 2.7552ms. (f66409e9)
+2022-01-02T09:34:40.2228773+01:00 0HMEDPAI747UG:00000025 [INF] Executed action "Musilu.Eshop.Web.Areas.Admin.Controllers.CarouselController.Create (Musilu.Eshop.Web)" in 3.5425ms (afa2e885)
+2022-01-02T09:34:40.2229954+01:00 0HMEDPAI747UG:00000025 [INF] Executed endpoint '"Musilu.Eshop.Web.Areas.Admin.Controllers.CarouselController.Create (Musilu.Eshop.Web)"' (99874f2b)
+2022-01-02T09:34:40.2232600+01:00 0HMEDPAI747UG:00000025 [INF] Request finished HTTP/2 POST https://localhost:5001/Admin/Carousel/Create multipart/form-data;+boundary=----WebKitFormBoundaryCL46RiKDAScVeGmf 598 - 200 - text/html;+charset=utf-8 5.4521ms (791a596a)
+2022-01-02T09:34:40.2728312+01:00 0HMEDPAI747UG:00000027 [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - (ca22a1cb)
+2022-01-02T09:34:40.2749964+01:00 0HMEDPAI747UG:00000027 [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - - 404 0 - 2.6163ms (791a596a)
