@@ -32,7 +32,7 @@ namespace Musilu.Eshop.Tests
         }
 
         [Fact]
-        public async Task CarouselCreate_ValidSuccess()
+        public async Task CarouselCreate_Success()
         {
             // Arrange
             var mockIWebHostEnvironment = new Mock<IWebHostEnvironment>();
@@ -91,25 +91,15 @@ namespace Musilu.Eshop.Tests
         }
 
 
-        /*[Fact]
-        public async Task CarouselCreate_ValidFailure()
-        {
-            
-        }*/
-
 
         
         [Fact]
-        public async Task CarouselCreate_InvalidFailure()
+        public async Task CarouselCreate_Failure()
         {
             // Arrange
             var mockIWebHostEnvironment = new Mock<IWebHostEnvironment>();
             mockIWebHostEnvironment.Setup(webHostEnv => webHostEnv.WebRootPath).Returns(Directory.GetCurrentDirectory());
 
-            //Nainstalován Nuget package: Microsoft.EntityFrameworkCore.InMemory
-            //databazi vytvori v pameti
-            //Jsou zde konkretni tridy, takze to neni uplne OK - mely by se vyuzit interface jako treba pres IUnitOfWork, IRepository<T>, nebo pres vlastni IDbContext (je pak ale nutne vyuzivat interface i v hlavnim projektu, jinak v unit testech nebude spravne fungovat mockovani)
-            //takto to ale v krizovych situacich taky jde :-)
             DbContextOptions options = new DbContextOptionsBuilder<EshopDbContext>()
                                        .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
                                        .Options;
@@ -128,11 +118,6 @@ namespace Musilu.Eshop.Tests
             // Assert
 
             iActionResult = await controller.Create(testCarousel);
-            /*
-            ViewResult redirect = Assert.IsType<ViewResult>(iActionResult);
-            Assert.Matches(redirect.ViewName, nameof(CarouselController.Select));
-            */
-
 
             var viewResult = Assert.IsType<ViewResult>(iActionResult);
             var model = Assert.IsAssignableFrom<CarouselItem>(viewResult.ViewData.Model);
@@ -140,9 +125,7 @@ namespace Musilu.Eshop.Tests
 
             int carouselCount = (await databaseContext.CarouselItems.ToListAsync()).Count;
             Assert.Equal(0, carouselCount);
-
             Assert.Empty(await databaseContext.CarouselItems.ToListAsync());
-
 
         }
 
