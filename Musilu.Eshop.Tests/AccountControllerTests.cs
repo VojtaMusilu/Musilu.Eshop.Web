@@ -19,13 +19,14 @@ using System.Security.Claims;
 using System.Security.Principal;
 using Microsoft.AspNetCore.Http;
 using Musilu.Eshop.Web.Models.ApplicationServices.Implementation;
+using Musilu.Eshop.Tests.Helpers;
 
 namespace Musilu.Eshop.Tests
 {
     public class AccountControllerTests
     {
         [Fact]
-        public async Task Login_ValidSuccess()
+        public async Task Login_Valid()
         {
             // Arrange
             var mockISecurityApplicationService = new Mock<ISecurityApplicationService>();
@@ -42,11 +43,7 @@ namespace Musilu.Eshop.Tests
             //});});
 
 
-            LoginViewModel loginViewModel = new LoginViewModel()
-            {
-                Username = "superadmin",
-                Password = "123"
-            };
+            LoginViewModel loginViewModel = GetLoginVM_Valid();
 
 
             AccountController controller = new AccountController(mockISecurityApplicationService.Object);
@@ -66,6 +63,47 @@ namespace Musilu.Eshop.Tests
             Assert.Matches(redirect.ControllerName, nameof(HomeController).Replace("Controller", String.Empty));
             Assert.Matches(redirect.RouteValues.Single((pair) => pair.Key == "area").Value.ToString(), String.Empty);
 
+
+        }
+        
+        [Fact]
+        public async Task Login_Invalid()
+        {
+            // Arrange
+            var mockISecurityApplicationService = new Mock<ISecurityApplicationService>();
+            mockISecurityApplicationService.Setup(security => security.Login(It.IsAny<LoginViewModel>()))
+            .Returns<LoginViewModel>((loginVM) => { return Task<bool>.Run(() =>
+               {
+                   if (loginVM.Username == "superadmin" && loginVM.Password == "123")
+                   { return true; }
+                   else
+                   { return false; }
+
+               });
+            });
+
+            LoginViewModel loginViewModel = GetLoginVM_Invalid();
+
+
+            AccountController controller = new AccountController(mockISecurityApplicationService.Object);
+            //pokud chci vypnout validaci, tak nenastavuju ObjectValidator
+            //(je to na vás, jak to u Unit Testů uděláte, ale pokud v controlleru používáte TryValidateModel(model), tak jej nějak nastavit musíte ... stejně tak pokud chcete testovat případ, kdy objekt není validní)
+            controller.ObjectValidator = new ObjectValidator();
+            IActionResult iActionResult = null;
+
+
+            //Act
+            iActionResult = await controller.Login(loginViewModel);
+
+
+            // Assert
+            ViewResult redirect = Assert.IsType<ViewResult>(iActionResult);
+
+
+            var model = Assert.IsAssignableFrom<LoginViewModel>(redirect.ViewData.Model);
+            
+
+            Assert.True(model.LoginFailed);
 
         }
 
@@ -96,7 +134,7 @@ namespace Musilu.Eshop.Tests
             };
 
             mockISecurityApplicationService.Setup(security => security.Register(rVM, Roles.Customer));
-            
+
 
             AccountController controller = new AccountController(mockISecurityApplicationService.Object);
             IActionResult iActionResult = null;
@@ -151,5 +189,26 @@ namespace Musilu.Eshop.Tests
             var mockHttpContext = new Mock<HttpContext>();
             mockHttpContext.Setup(m => m.User).Returns(claimsPrincipal);
         }
+
+
+        LoginViewModel GetLoginVM_Valid()
+        {
+            return new LoginViewModel()
+            {
+                Username = "superadmin",
+                Password = "123"
+            };
+        }
+        
+        LoginViewModel GetLoginVM_Invalid()
+        {
+            return new LoginViewModel()
+            {
+                Username = "userInvalid",
+                Password = "xxx",
+                LoginFailed = false
+            };
+        }
+        
     }
 }
