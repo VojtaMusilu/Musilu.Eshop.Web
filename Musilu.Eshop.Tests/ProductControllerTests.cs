@@ -33,7 +33,7 @@ namespace Musilu.Eshop.Tests
 
 
         [Fact]
-        public async Task CarouselCreate_Success()
+        public async Task ProductCreate_Success()
         {
             // Arrange
             var mockIWebHostEnvironment = new Mock<IWebHostEnvironment>();
@@ -88,6 +88,49 @@ namespace Musilu.Eshop.Tests
 
         }
 
+
+
+
+
+
+        [Fact]
+        public async Task ProductCreate_Failure()
+        {
+            // Arrange
+            var mockIWebHostEnvironment = new Mock<IWebHostEnvironment>();
+            mockIWebHostEnvironment.Setup(webHostEnv => webHostEnv.WebRootPath).Returns(Directory.GetCurrentDirectory());
+
+            DbContextOptions options = new DbContextOptionsBuilder<EshopDbContext>()
+                                       .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
+                                       .Options;
+            var databaseContext = new EshopDbContext(options);
+            databaseContext.Database.EnsureCreated();
+
+
+            ProductController controller = new ProductController(databaseContext, mockIWebHostEnvironment.Object);
+            controller.ObjectValidator = new ObjectValidator();
+            IActionResult iActionResult = null;
+
+
+
+            Product testCarousel = GetTestProductInvalid();
+
+            // Assert
+
+            iActionResult = await controller.Create(testCarousel);
+
+            var viewResult = Assert.IsType<ViewResult>(iActionResult);
+            var model = Assert.IsAssignableFrom<Product>(viewResult.ViewData.Model);
+
+
+            int productCount = (await databaseContext.Products.ToListAsync()).Count;
+            Assert.Equal(0, productCount);
+            Assert.Empty(await databaseContext.Products.ToListAsync());
+
+        }
+
+
+
         Product GetTestProduct(IFormFile iff)
         {
             return new Product()
@@ -99,6 +142,19 @@ namespace Musilu.Eshop.Tests
                 Description = "testDescription",
                 Category = "testCategory",
                 Price = 100
+                
+            };
+        }
+        
+        Product GetTestProductInvalid()
+        {
+            return new Product()
+            {
+                ImageSource = null,
+                ImageAlt = "image",
+                Name = "testProduct",
+                Description = "testDescription",
+                Category = "testCategory",
                 
             };
         }
