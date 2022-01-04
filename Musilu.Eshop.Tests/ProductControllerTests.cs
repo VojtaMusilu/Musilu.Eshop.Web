@@ -68,10 +68,10 @@ namespace Musilu.Eshop.Tests
                 {
                     IFormFileMockHelper iffMockHelper = new IFormFileMockHelper(_testOutputHelper);
                     Mock<IFormFile> iffMock = iffMockHelper.MockIFormFile(ms, writer, fileName, content, "image/png");
-                    Product testCarousel = GetTestProduct(iffMock.Object);
+                    Product testProduct = GetTestProduct(iffMock.Object);
 
                     //Act
-                    iActionResult = await controller.Create(testCarousel);
+                    iActionResult = await controller.Create(testProduct);
 
                 }
             }
@@ -81,8 +81,8 @@ namespace Musilu.Eshop.Tests
             Assert.Matches(redirect.ActionName, nameof(ProductController.Select));
 
 
-            int carouselCount = (await databaseContext.Products.ToListAsync()).Count;
-            Assert.Equal(1, carouselCount);
+            int ProductCount = (await databaseContext.Products.ToListAsync()).Count;
+            Assert.Equal(1, ProductCount);
 
             Assert.Single(await databaseContext.Products.ToListAsync());
 
@@ -94,7 +94,7 @@ namespace Musilu.Eshop.Tests
 
 
         [Fact]
-        public async Task ProductCreate_Failure()
+        public async Task ProductCreate_Fail()
         {
             // Arrange
             var mockIWebHostEnvironment = new Mock<IWebHostEnvironment>();
@@ -113,11 +113,11 @@ namespace Musilu.Eshop.Tests
 
 
 
-            Product testCarousel = GetTestProductInvalid();
+            Product testProduct = GetTestProductInvalid();
 
             // Assert
 
-            iActionResult = await controller.Create(testCarousel);
+            iActionResult = await controller.Create(testProduct);
 
             var viewResult = Assert.IsType<ViewResult>(iActionResult);
             var model = Assert.IsAssignableFrom<Product>(viewResult.ViewData.Model);
@@ -131,10 +131,302 @@ namespace Musilu.Eshop.Tests
 
 
 
+
+
+
+        [Fact]
+        public async Task ProductEdit_Success()
+        {
+            // Arrange
+            var mockIWebHostEnvironment = new Mock<IWebHostEnvironment>();
+            mockIWebHostEnvironment.Setup(webHostEnv => webHostEnv.WebRootPath).Returns(Directory.GetCurrentDirectory());
+
+            DbContextOptions options = new DbContextOptionsBuilder<EshopDbContext>()
+                                       .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
+                                       .Options;
+            var databaseContext = new EshopDbContext(options);
+            databaseContext.Database.EnsureCreated();
+
+
+            ProductController controller = new ProductController(databaseContext, mockIWebHostEnvironment.Object);
+            controller.ObjectValidator = new ObjectValidator();
+            IActionResult iActionResult = null;
+
+
+
+            string content = "‰PNG" + "FakeImageContent";
+            string fileName = "UploadImageFile.png";
+            
+            string contentEdit = "‰PNG" + "FakeImageContentEdited";
+            string fileNameEdit = "UploadImageFileEdit.png";
+
+            Directory.CreateDirectory(Path.Combine(Directory.GetCurrentDirectory() + relativeProductDirectoryPath));
+
+            Product testProduct = null;
+            Product testProduct_Edit = null;
+
+
+            //nastavení fakeové IFormFile pomocí MemoryStream
+            using (var ms = new MemoryStream())
+            {
+                using (var writer = new StreamWriter(ms))
+                {
+                    IFormFileMockHelper iffMockHelper = new IFormFileMockHelper(_testOutputHelper);
+                    Mock<IFormFile> iffMock = iffMockHelper.MockIFormFile(ms, writer, fileName, content, "image/png");
+                    Mock<IFormFile> iffMockEdit = iffMockHelper.MockIFormFile(ms, writer, fileNameEdit, contentEdit, "image/png");
+                    testProduct = GetTestProduct(iffMock.Object);
+                    testProduct_Edit = GetTestProduct_EditAll(iffMockEdit.Object);
+
+                    databaseContext.Add(testProduct);
+                    databaseContext.SaveChanges();
+
+
+                    //Act
+                    iActionResult = await controller.Edit(testProduct_Edit);
+
+                    testProduct = GetTestProduct(iffMock.Object);
+
+
+                }
+            }
+
+            // Assert
+
+
+            var redirect = Assert.IsType<RedirectToActionResult>(iActionResult);
+            Assert.Matches(redirect.ActionName, nameof(ProductController.Select));
+
+
+            int ProductCount = (await databaseContext.Products.ToListAsync()).Count;
+            Assert.Equal(1, ProductCount);
+            Assert.Single(await databaseContext.Products.ToListAsync());
+
+            var ProductFromDb = (await databaseContext.Products.ToListAsync()).FirstOrDefault();
+            Assert.Equal(testProduct_Edit.ID, ProductFromDb.ID);
+            Assert.Equal(testProduct_Edit.ImageSource, ProductFromDb.ImageSource);
+            Assert.Equal(testProduct_Edit.ImageAlt, ProductFromDb.ImageAlt);
+            Assert.Equal(testProduct_Edit.Name, ProductFromDb.Name);
+            Assert.Equal(testProduct_Edit.Price, ProductFromDb.Price);
+            Assert.Equal(testProduct_Edit.Description, ProductFromDb.Description);
+            Assert.Equal(testProduct_Edit.Category, ProductFromDb.Category);
+
+        }
+
+
+        [Fact]
+        public async Task ProductEdit_Fail()
+        {
+            // Arrange
+            var mockIWebHostEnvironment = new Mock<IWebHostEnvironment>();
+            mockIWebHostEnvironment.Setup(webHostEnv => webHostEnv.WebRootPath).Returns(Directory.GetCurrentDirectory());
+
+            DbContextOptions options = new DbContextOptionsBuilder<EshopDbContext>()
+                                       .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
+                                       .Options;
+            var databaseContext = new EshopDbContext(options);
+            databaseContext.Database.EnsureCreated();
+
+
+            ProductController controller = new ProductController(databaseContext, mockIWebHostEnvironment.Object);
+            controller.ObjectValidator = new ObjectValidator();
+            IActionResult iActionResult = null;
+
+
+
+            string content = "‰PNG" + "FakeImageContent";
+            string fileName = "UploadImageFile.png";
+            
+
+            Directory.CreateDirectory(Path.Combine(Directory.GetCurrentDirectory() + relativeProductDirectoryPath));
+
+            Product testProduct = null;
+            Product testProduct_Edit = null;
+
+
+            //nastavení fakeové IFormFile pomocí MemoryStream
+            using (var ms = new MemoryStream())
+            {
+                using (var writer = new StreamWriter(ms))
+                {
+                    IFormFileMockHelper iffMockHelper = new IFormFileMockHelper(_testOutputHelper);
+                    Mock<IFormFile> iffMock = iffMockHelper.MockIFormFile(ms, writer, fileName, content, "image/png");
+                    testProduct = GetTestProduct(iffMock.Object);
+
+                    databaseContext.Add(testProduct);
+                    databaseContext.SaveChanges();
+
+                    testProduct.ID = 2;
+
+                    //Act
+                    iActionResult = await controller.Edit(testProduct);
+
+                    testProduct.ID = 1;
+
+
+                }
+            }
+
+            // Assert
+
+
+            var redirect = Assert.IsType<NotFoundResult>(iActionResult);
+
+
+            int ProductCount = (await databaseContext.Products.ToListAsync()).Count;
+            Assert.Equal(1, ProductCount);
+            Assert.Single(await databaseContext.Products.ToListAsync());
+
+            var ProductFromDb = (await databaseContext.Products.ToListAsync()).FirstOrDefault();
+            Assert.Equal(testProduct.ID, ProductFromDb.ID);
+            Assert.Equal(testProduct.ImageSource, ProductFromDb.ImageSource);
+            Assert.Equal(testProduct.ImageAlt, ProductFromDb.ImageAlt);
+            Assert.Equal(testProduct.Name, ProductFromDb.Name);
+            Assert.Equal(testProduct.Price, ProductFromDb.Price);
+            Assert.Equal(testProduct.Description, ProductFromDb.Description);
+            Assert.Equal(testProduct.Category, ProductFromDb.Category);
+
+        }
+
+
+
+
+
+        [Fact]
+        public async Task ProductDelete_Success()
+        {
+            // Arrange
+            var mockIWebHostEnvironment = new Mock<IWebHostEnvironment>();
+            mockIWebHostEnvironment.Setup(webHostEnv => webHostEnv.WebRootPath).Returns(Directory.GetCurrentDirectory());
+
+            DbContextOptions options = new DbContextOptionsBuilder<EshopDbContext>()
+                                       .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
+                                       .Options;
+            var databaseContext = new EshopDbContext(options);
+            databaseContext.Database.EnsureCreated();
+
+
+            ProductController controller = new ProductController(databaseContext, mockIWebHostEnvironment.Object);
+            controller.ObjectValidator = new ObjectValidator();
+            IActionResult iActionResult = null;
+
+
+
+            string content = "‰PNG" + "FakeImageContent";
+            string fileName = "UploadImageFile.png";
+
+            Directory.CreateDirectory(Path.Combine(Directory.GetCurrentDirectory() + relativeProductDirectoryPath));
+
+            Product testProduct = null;
+
+
+            //nastavení fakeové IFormFile pomocí MemoryStream
+            using (var ms = new MemoryStream())
+            {
+                using (var writer = new StreamWriter(ms))
+                {
+                    IFormFileMockHelper iffMockHelper = new IFormFileMockHelper(_testOutputHelper);
+                    Mock<IFormFile> iffMock = iffMockHelper.MockIFormFile(ms, writer, fileName, content, "image/png");
+                    testProduct = GetTestProduct(iffMock.Object);
+
+                    databaseContext.Add(testProduct);
+                    databaseContext.SaveChanges();
+
+                }
+            }
+
+
+
+            //Act
+            iActionResult = await controller.Delete(1);
+
+
+            // Assert
+
+
+            var redirect = Assert.IsType<RedirectToActionResult>(iActionResult);
+            Assert.Matches(redirect.ActionName, nameof(ProductController.Select));
+
+
+            int ProductCount = (await databaseContext.Products.ToListAsync()).Count;
+            Assert.Equal(0, ProductCount);
+            Assert.Empty(await databaseContext.Products.ToListAsync());
+
+
+        }
+
+
+        [Fact]
+        public async Task ProductDelete_Fail()
+        {
+            // Arrange
+            var mockIWebHostEnvironment = new Mock<IWebHostEnvironment>();
+            mockIWebHostEnvironment.Setup(webHostEnv => webHostEnv.WebRootPath).Returns(Directory.GetCurrentDirectory());
+
+            DbContextOptions options = new DbContextOptionsBuilder<EshopDbContext>()
+                                       .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
+                                       .Options;
+            var databaseContext = new EshopDbContext(options);
+            databaseContext.Database.EnsureCreated();
+
+
+            ProductController controller = new ProductController(databaseContext, mockIWebHostEnvironment.Object);
+            controller.ObjectValidator = new ObjectValidator();
+            IActionResult iActionResult = null;
+
+
+
+            string content = "‰PNG" + "FakeImageContent";
+            string fileName = "UploadImageFile.png";
+
+            Directory.CreateDirectory(Path.Combine(Directory.GetCurrentDirectory() + relativeProductDirectoryPath));
+
+            Product testProduct = null;
+
+
+            //nastavení fakeové IFormFile pomocí MemoryStream
+            using (var ms = new MemoryStream())
+            {
+                using (var writer = new StreamWriter(ms))
+                {
+                    IFormFileMockHelper iffMockHelper = new IFormFileMockHelper(_testOutputHelper);
+                    Mock<IFormFile> iffMock = iffMockHelper.MockIFormFile(ms, writer, fileName, content, "image/png");
+                    testProduct = GetTestProduct(iffMock.Object);
+
+                    databaseContext.Add(testProduct);
+                    databaseContext.SaveChanges();
+
+                }
+            }
+
+
+
+            //Act
+            iActionResult = await controller.Delete(2);
+
+
+            // Assert
+
+
+            var redirect = Assert.IsType<RedirectToActionResult>(iActionResult);
+            Assert.Matches(redirect.ActionName, nameof(ProductController.Select));
+
+
+            int ProductCount = (await databaseContext.Products.ToListAsync()).Count;
+            Assert.Equal(1, ProductCount);
+            Assert.Single(await databaseContext.Products.ToListAsync());
+
+
+        }
+
+
+
+
+
         Product GetTestProduct(IFormFile iff)
         {
             return new Product()
             {
+                ID = 1,
                 ImageSource = null,
                 ImageAlt = "image",
                 Image = iff,
@@ -142,6 +434,22 @@ namespace Musilu.Eshop.Tests
                 Description = "testDescription",
                 Category = "testCategory",
                 Price = 100
+                
+            };
+        }
+        
+        Product GetTestProduct_EditAll(IFormFile iff)
+        {
+            return new Product()
+            {
+                ID = 1,
+                ImageSource = null,
+                ImageAlt = "image edited",
+                Image = iff,
+                Name = "testProduct edited",
+                Description = "testDescription edited",
+                Category = "testCategory edited",
+                Price = 50
                 
             };
         }
