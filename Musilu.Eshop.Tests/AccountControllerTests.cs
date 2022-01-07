@@ -108,24 +108,7 @@ namespace Musilu.Eshop.Tests
         }
 
 
-        /*
         
-        // validace že RegisterViewModel má všechny atributy v poho (required, regex hesla atd...) udělat mimo
-
-        [Fact]
-        public void test_validation()
-        {
-            RegisterViewModel sut = GetRegisterVM_Valid();
-            // Set some properties here
-
-            var context = new ValidationContext(sut, null, null);
-            var results = new List<ValidationResult>();
-            var isModelStateValid = Validator.TryValidateObject(sut, context, results, true);
-
-            // Assert here
-
-        }
-        */
 
 
         [Fact]
@@ -280,6 +263,34 @@ namespace Musilu.Eshop.Tests
 
         }
 
+
+
+        [Fact]
+        public async Task Logout_Success()
+        {
+            // Arrange
+            var mockISecurityApplicationService = new Mock<ISecurityApplicationService>();
+            mockISecurityApplicationService.Setup(security => security.Logout())
+           .Returns(() => Task<bool>.Run(() => true));
+
+
+            LoginViewModel loginViewModel = GetLoginVM_Valid();
+
+
+            AccountController controller = new AccountController(mockISecurityApplicationService.Object);
+            IActionResult iActionResult = null;
+
+
+            //Act
+            iActionResult = await controller.Logout();
+
+
+            // Assert
+            RedirectToActionResult redirect = Assert.IsType<RedirectToActionResult>(iActionResult);
+            Assert.Matches(redirect.ActionName, nameof(AccountController.Login));
+
+
+        }
 
 
 
