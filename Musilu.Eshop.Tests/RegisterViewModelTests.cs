@@ -1,29 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 using Xunit;
-using Moq;
 
-using Musilu.Eshop.Web.Areas.Security.Controllers;
-using Musilu.Eshop.Web.Controllers;
-using Musilu.Eshop.Web.Models.ApplicationServices.Abstraction;
 using Musilu.Eshop.Web.Models.ViewModels;
-using Musilu.Eshop.Web.Models.Identity;
-using Musilu.Eshop.Web.Models.Database;
-using System.Security.Claims;
-using System.Security.Principal;
-using Microsoft.AspNetCore.Http;
-using Musilu.Eshop.Web.Models.ApplicationServices.Implementation;
-using Musilu.Eshop.Tests.Helpers;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.Extensions.Options;
-using Microsoft.Extensions.Logging;
-using System.ComponentModel.DataAnnotations;
+
 
 namespace Musilu.Eshop.Tests
 {
