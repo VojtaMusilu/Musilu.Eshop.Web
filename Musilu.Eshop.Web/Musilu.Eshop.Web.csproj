@@ -35,10 +35,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Product\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Include="Areas\Admin\Views\OrderItems\Create.cshtml" />
     <None Include="Areas\Admin\Views\OrderItems\Delete.cshtml" />
     <None Include="Areas\Admin\Views\OrderItems\Details.cshtml" />

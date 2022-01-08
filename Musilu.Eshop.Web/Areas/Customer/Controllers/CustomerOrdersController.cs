@@ -33,12 +33,14 @@ namespace Musilu.Eshop.Web.Areas.Customer.Controllers
                 User currentUser = await iSecure.GetCurrentUser(User);
                 if (currentUser != null)
                 {
+
                     IList<Order> userOrders = await this.EshopDbContext.Orders
                                                                         .Where(or => or.UserId == currentUser.Id)
                                                                         .Include(o => o.User)
                                                                         .Include(o => o.OrderItems)
                                                                         .ThenInclude(oi => oi.Product)
-                                                                        .ToListAsync();
+                                                                        .ToListAsync(); ;
+
                     return View(userOrders);
                 }
             }

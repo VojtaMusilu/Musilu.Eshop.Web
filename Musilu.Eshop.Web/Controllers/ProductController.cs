@@ -8,14 +8,20 @@ using System.Threading.Tasks;
 using Musilu.Eshop.Web.Models.Database;
 using Musilu.Eshop.Web.Models.Entity;
 using Musilu.Eshop.Web.Models.Implementation;
+using Microsoft.Extensions.Logging;
 
-
-namespace Musilu.Eshop.Web.Areas.Home.Controllers
+namespace Musilu.Eshop.Web.Controllers
 { 
     public class ProductController : Controller
     {
+        private readonly ILogger<ProductController> _logger;
         readonly EshopDbContext eshopDbContext;
-        IWebHostEnvironment env;
+
+        public ProductController(ILogger<ProductController> logger, EshopDbContext eshopDb)
+        {
+            _logger = logger;
+            eshopDbContext = eshopDb;
+        }
 
         public IActionResult Detail(int id)
         {

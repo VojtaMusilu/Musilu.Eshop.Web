@@ -21,11 +21,6 @@ namespace Musilu.Eshop.Web.Controllers
         readonly EshopDbContext eshopDbContext;
         IWebHostEnvironment env;
 
-        public IActionResult Detail(int id)
-        {
-            Product pi = eshopDbContext.Products.FirstOrDefault(p => p.ID == id);
-            return View(pi);
-        }
         public HomeController(ILogger<HomeController> logger, EshopDbContext eshopDB, IWebHostEnvironment env)
         {
             _logger = logger;
