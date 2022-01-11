@@ -46,24 +46,6 @@ namespace Musilu.Eshop.Tests
             _logger = Mock.Of<ILogger<HomeController>>();
 
 
-            /*
-             _mockISecurityApplicationService
-                .Setup(security => security.GetCurrentUser(It.IsAny<ClaimsPrincipal>()))
-                .Returns<User>((loginVM) => {
-                    return Task<bool>.Run(() =>
-                    {
-                        return new User
-                        {
-                            Id = 1,
-                            FirstName = "testFirst",
-                            LastName = "testLast"
-                        };
-
-                    });
-                });
-            
-             */
-
             _mockISecurityApplicationService
                 .Setup(security => security.GetCurrentUser(It.IsAny<ClaimsPrincipal>()))
                 .Returns(() => {
@@ -139,6 +121,28 @@ namespace Musilu.Eshop.Tests
 
             IList<Order> orderList = viewResult.ViewData.Model as List<Order>;
             Assert.Equal(1, orderList.Count);
+        } 
+
+
+
+
+        [Fact]
+        public async Task Index_Fail()
+        {
+
+            _controller.ControllerContext = new ControllerContext
+            {
+                HttpContext = new DefaultHttpContext
+                {
+                    
+                }
+            };
+
+
+            IActionResult iActionResult = await _controller.Index();
+
+            NotFoundResult viewResult = Assert.IsType<NotFoundResult>(iActionResult);
+
         } 
 
 
