@@ -13,45 +13,45 @@ namespace Musilu.Eshop.Tests
         [Fact]
         public void LoginViewModel_Valid()
         {
-            LoginViewModel sut = GetLoginVM_Valid();
-            // Set some properties here
-
-            var context = new ValidationContext(sut, null, null);
+            //Arrange
+            LoginViewModel loginVM = GetLoginVM_Valid();
+            var context = new ValidationContext(loginVM, null, null);
             var results = new List<ValidationResult>();
-            var isModelStateValid = Validator.TryValidateObject(sut, context, results, true);
+
+            //Act
+            var isModelStateValid = Validator.TryValidateObject(loginVM, context, results, true);
 
             // Assert
-
             Assert.True(isModelStateValid);
         }
         
         [Fact]
         public void LoginViewModel_MissingUsername_Invalid()
         {
-            LoginViewModel sut = GetLoginVM_MissingUsername();
-            // Set some properties here
-
-            var context = new ValidationContext(sut, null, null);
+            //Arrange
+            LoginViewModel loginVM = GetLoginVM_MissingUsername();
+            var context = new ValidationContext(loginVM, null, null);
             var results = new List<ValidationResult>();
-            var isModelStateValid = Validator.TryValidateObject(sut, context, results, true);
+
+            //Act
+            var isModelStateValid = Validator.TryValidateObject(loginVM, context, results, true);
 
             // Assert
-
             Assert.False(isModelStateValid);
         }
 
         [Fact]
         public void LoginViewModel_MissingPassword_Invalid()
         {
-            LoginViewModel sut = GetLoginVM_MissingPassword();
-            // Set some properties here
-
-            var context = new ValidationContext(sut, null, null);
+            //Arrange
+            LoginViewModel loginVM = GetLoginVM_MissingPassword();
+            var context = new ValidationContext(loginVM, null, null);
             var results = new List<ValidationResult>();
-            var isModelStateValid = Validator.TryValidateObject(sut, context, results, true);
+
+            //Act
+            var isModelStateValid = Validator.TryValidateObject(loginVM, context, results, true);
 
             // Assert
-
             Assert.False(isModelStateValid);
         }
 

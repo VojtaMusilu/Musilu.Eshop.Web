@@ -1,0 +1,98 @@
+2022-01-14T20:22:38.0033230+01:00  [INF] Entity Framework Core "5.0.11" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2022-01-14T20:22:39.3502686+01:00  [INF] Executed DbCommand ("593"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'Musilu.Eshop'" (0723d8ff)
+2022-01-14T20:22:39.5814366+01:00  [INF] Executed DbCommand ("22"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM `CarouselItem` AS `c`" (0723d8ff)
+2022-01-14T20:22:39.6350554+01:00  [INF] User profile is available. Using '"C:\Users\vojte\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2022-01-14T20:22:39.7507628+01:00  [INF] Executed DbCommand ("22"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2022-01-14T20:22:39.8071498+01:00  [WRN] Role "(null)" validation failed: "DuplicateRoleName". (60d773c7)
+2022-01-14T20:22:39.9289537+01:00  [INF] Executed DbCommand ("111"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2022-01-14T20:22:39.9321692+01:00  [WRN] Role "(null)" validation failed: "DuplicateRoleName". (60d773c7)
+2022-01-14T20:22:39.9351997+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`Name`, `r`.`NormalizedName`
+FROM `Roles` AS `r`
+WHERE `r`.`NormalizedName` = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2022-01-14T20:22:39.9369831+01:00  [WRN] Role "(null)" validation failed: "DuplicateRoleName". (60d773c7)
+2022-01-14T20:22:39.9541454+01:00  [INF] Executed DbCommand ("8"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2022-01-14T20:22:40.0085687+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2022-01-14T20:22:40.3784162+01:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2022-01-14T20:22:40.3801235+01:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2022-01-14T20:22:40.3827953+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-01-14T20:22:40.3849359+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-01-14T20:22:40.3864882+01:00  [INF] Content root path: "D:\Program Files\VisualStudio\Musilu.Eshop.Web\Musilu.Eshop.Web\Musilu.Eshop.Web" (b5d60022)
+2022-01-14T20:22:41.6363192+01:00 0HMENICTK3A3B:00000001 [INF] Request starting HTTP/2 GET https://localhost:5001/ - - (ca22a1cb)
+2022-01-14T20:22:41.6873885+01:00 0HMENICTK3A3B:00000001 [INF] Executing endpoint '"Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)"' (500cc934)
+2022-01-14T20:22:41.7019583+01:00 0HMENICTK3A3B:00000001 [INF] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "Musilu.Eshop.Web.Controllers.HomeController" ("Musilu.Eshop.Web"). (122b2fdf)
+2022-01-14T20:22:41.7069891+01:00 0HMENICTK3A3B:00000001 [INF] Loaded Home Index (d3450aae)
+2022-01-14T20:22:41.7092563+01:00 0HMENICTK3A3B:00000001 [INF] Entity Framework Core "5.0.11" initialized '"EshopDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "ServerVersion 8.0.26-mysql " (9958f5bb)
+2022-01-14T20:22:41.7153211+01:00 0HMENICTK3A3B:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`ID`, `c`.`ImageAlt`, `c`.`ImageSource`
+FROM `CarouselItem` AS `c`" (0723d8ff)
+2022-01-14T20:22:41.7294099+01:00 0HMENICTK3A3B:00000001 [INF] Executed DbCommand ("7"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT `p`.`ID`, `p`.`Category`, `p`.`Description`, `p`.`ImageAlt`, `p`.`ImageSource`, `p`.`Name`, `p`.`Price`
+FROM `Products` AS `p`" (0723d8ff)
+2022-01-14T20:22:41.7898634+01:00 0HMENICTK3A3B:00000001 [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2022-01-14T20:22:41.9483495+01:00 0HMENICTK3A3B:00000001 [INF] Executed ViewResult - view "Index" executed in 169.9553ms. (f66409e9)
+2022-01-14T20:22:41.9491168+01:00 0HMENICTK3A3B:00000001 [INF] Executed action "Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)" in 246.7226ms (afa2e885)
+2022-01-14T20:22:41.9492253+01:00 0HMENICTK3A3B:00000001 [INF] Executed endpoint '"Musilu.Eshop.Web.Controllers.HomeController.Index (Musilu.Eshop.Web)"' (99874f2b)
+2022-01-14T20:22:41.9565237+01:00 0HMENICTK3A3B:00000001 [INF] Request finished HTTP/2 GET https://localhost:5001/ - - - 200 - text/html;+charset=utf-8 322.1874ms (791a596a)
+2022-01-14T20:22:41.9797808+01:00 0HMENICTK3A3B:00000003 [INF] Request starting HTTP/2 GET https://localhost:5001/lib/bootstrap/dist/css/bootstrap.min.css - - (ca22a1cb)
+2022-01-14T20:22:41.9797807+01:00 0HMENICTK3A3B:00000007 [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - (ca22a1cb)
+2022-01-14T20:22:41.9798039+01:00 0HMENICTK3A3B:00000009 [INF] Request starting HTTP/2 GET https://localhost:5001/css/shop_hompage.css - - (ca22a1cb)
+2022-01-14T20:22:41.9798375+01:00 0HMENICTK3A3B:00000005 [INF] Request starting HTTP/2 GET https://localhost:5001/css/site.css - - (ca22a1cb)
+2022-01-14T20:22:41.9836959+01:00 0HMENICTK3A3B:00000007 [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_homepage.css - - - 404 0 - 4.1287ms (791a596a)
+2022-01-14T20:22:41.9837356+01:00 0HMENICTK3A3B:00000009 [INF] Request finished HTTP/2 GET https://localhost:5001/css/shop_hompage.css - - - 404 0 - 3.9287ms (791a596a)
+2022-01-14T20:22:42.0129980+01:00 0HMENICTK3A3B:00000005 [INF] Sending file. Request path: '"/css/site.css"'. Physical path: '"D:\Program Files\VisualStudio\Musilu.Eshop.Web\Musilu.Eshop.Web\Musilu.Eshop.Web\wwwroot\css\site.css"' (27b0a520)
+2022-01-14T20:22:42.0133089+01:00 0HMENICTK3A3B:00000005 [INF] Request finished HTTP/2 GET https://localhost:5001/css/site.css - - - 200 3095 text/css 33.7414ms (791a596a)
+2022-01-14T20:22:42.0162801+01:00 0HMENICTK3A3B:0000000B [INF] Request starting HTTP/2 GET https://localhost:5001/lib/jquery/dist/jquery.min.js - - (ca22a1cb)
+2022-01-14T20:22:42.0306699+01:00 0HMENICTK3A3B:0000000D [INF] Request starting HTTP/2 GET https://localhost:5001/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - (ca22a1cb)
+2022-01-14T20:22:42.0309565+01:00 0HMENICTK3A3B:0000000F [INF] Request starting HTTP/2 GET https://localhost:5001/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - (ca22a1cb)
+2022-01-14T20:22:42.0309565+01:00 0HMENICTK3A3B:00000011 [INF] Request starting HTTP/2 GET https://localhost:5001/js/Product.js - - (ca22a1cb)
+2022-01-14T20:22:42.0313090+01:00 0HMENICTK3A3B:00000013 [INF] Request starting HTTP/2 GET https://localhost:5001/img/CarouselItems/adxdqax3.gz3.jpg - - (ca22a1cb)
+2022-01-14T20:22:42.0326643+01:00 0HMENICTK3A3B:0000000F [INF] Sending file. Request path: '"/js/site.js"'. Physical path: '"D:\Program Files\VisualStudio\Musilu.Eshop.Web\Musilu.Eshop.Web\Musilu.Eshop.Web\wwwroot\js\site.js"' (27b0a520)
+2022-01-14T20:22:42.0326643+01:00 0HMENICTK3A3B:00000015 [INF] Request starting HTTP/2 GET https://localhost:5001/img/3.jpg - - (ca22a1cb)
+2022-01-14T20:22:42.0336480+01:00 0HMENICTK3A3B:0000000F [INF] Request finished HTTP/2 GET https://localhost:5001/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - - 200 230 application/javascript 2.4217ms (791a596a)
+2022-01-14T20:22:42.0336534+01:00 0HMENICTK3A3B:00000017 [INF] Request starting HTTP/2 GET https://localhost:5001/img/CarouselItems/jsfqjsxy.s1v.png - - (ca22a1cb)
+2022-01-14T20:22:42.0336481+01:00 0HMENICTK3A3B:00000019 [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/iphone.png - - (ca22a1cb)
+2022-01-14T20:22:42.0534659+01:00 0HMENICTK3A3B:0000001B [INF] Request starting HTTP/2 GET https://localhost:5001/img/ProductItems/samsung s10.jfif - - (ca22a1cb)
+2022-01-14T20:22:42.0577816+01:00 0HMENICTK3A3B:0000000D [INF] Sending file. Request path: '"/lib/bootstrap/dist/js/bootstrap.bundle.min.js"'. Physical path: '"D:\Program Files\VisualStudio\Musilu.Eshop.Web\Musilu.Eshop.Web\Musilu.Eshop.Web\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js"' (27b0a520)
+2022-01-14T20:22:42.0577816+01:00 0HMENICTK3A3B:00000003 [INF] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.min.css"'. Physical path: '"D:\Program Files\VisualStudio\Musilu.Eshop.Web\Musilu.Eshop.Web\Musilu.Eshop.Web\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css"' (27b0a520)
+2022-01-14T20:22:42.0577816+01:00 0HMENICTK3A3B:00000013 [INF] Sending file. Request path: '"/img/CarouselItems/adxdqax3.gz3.jpg"'. Physical path: '"D:\Program Files\VisualStudio\Musilu.Eshop.Web\Musilu.Eshop.Web\Musilu.Eshop.Web\wwwroot\img\CarouselItems\adxdqax3.gz3.jpg"' (27b0a520)
+2022-01-14T20:22:42.0603793+01:00 0HMENICTK3A3B:0000000D [INF] Request finished HTTP/2 GET https://localhost:5001/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 200 78641 application/javascript 29.6379ms (791a596a)
+2022-01-14T20:22:42.0603793+01:00 0HMENICTK3A3B:00000013 [INF] Request finished HTTP/2 GET https://localhost:5001/img/CarouselItems/adxdqax3.gz3.jpg - - - 200 81444 image/jpeg 29.0901ms (791a596a)
+2022-01-14T20:22:42.0603793+01:00 0HMENICTK3A3B:00000003 [INF] Request finished HTTP/2 GET https://localhost:5001/lib/bootstrap/dist/css/bootstrap.min.css - - - 200 155764 text/css 80.8427ms (791a596a)
+2022-01-14T20:22:42.0717687+01:00 0HMENICTK3A3B:0000001D [INF] Request starting HTTP/2 GET https://localhost:5001/img/1.jpg - - (ca22a1cb)
+2022-01-14T20:22:42.1025684+01:00 0HMENICTK3A3B:0000001B [INF] Sending file. Request path: '"/img/ProductItems/samsung s10.jfif"'. Physical path: '"D:\Program Files\VisualStudio\Musilu.Eshop.Web\Musilu.Eshop.Web\Musilu.Eshop.Web\wwwroot\img\ProductItems\samsung s10.jfif"' (27b0a520)
+2022-01-14T20:22:42.1026925+01:00 0HMENICTK3A3B:0000001B [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/samsung s10.jfif - - - 200 42537 image/pjpeg 49.2295ms (791a596a)
+2022-01-14T20:22:42.1115992+01:00 0HMENICTK3A3B:00000019 [INF] Sending file. Request path: '"/img/ProductItems/iphone.png"'. Physical path: '"D:\Program Files\VisualStudio\Musilu.Eshop.Web\Musilu.Eshop.Web\Musilu.Eshop.Web\wwwroot\img\ProductItems\iphone.png"' (27b0a520)
+2022-01-14T20:22:42.1117739+01:00 0HMENICTK3A3B:00000019 [INF] Request finished HTTP/2 GET https://localhost:5001/img/ProductItems/iphone.png - - - 200 53247 image/png 78.4236ms (791a596a)
+2022-01-14T20:22:42.1170503+01:00 0HMENICTK3A3B:00000011 [INF] Sending file. Request path: '"/js/Product.js"'. Physical path: '"D:\Program Files\VisualStudio\Musilu.Eshop.Web\Musilu.Eshop.Web\Musilu.Eshop.Web\wwwroot\js\Product.js"' (27b0a520)
+2022-01-14T20:22:42.1171537+01:00 0HMENICTK3A3B:00000011 [INF] Request finished HTTP/2 GET https://localhost:5001/js/Product.js - - - 200 766 application/javascript 86.1887ms (791a596a)
+2022-01-14T20:22:42.1289504+01:00 0HMENICTK3A3B:00000015 [INF] Sending file. Request path: '"/img/3.jpg"'. Physical path: '"D:\Program Files\VisualStudio\Musilu.Eshop.Web\Musilu.Eshop.Web\Musilu.Eshop.Web\wwwroot\img\3.jpg"' (27b0a520)
+2022-01-14T20:22:42.1291889+01:00 0HMENICTK3A3B:00000015 [INF] Request finished HTTP/2 GET https://localhost:5001/img/3.jpg - - - 200 82883 image/jpeg 97.7496ms (791a596a)
+2022-01-14T20:22:42.1323434+01:00 0HMENICTK3A3B:0000001D [INF] Sending file. Request path: '"/img/1.jpg"'. Physical path: '"D:\Program Files\VisualStudio\Musilu.Eshop.Web\Musilu.Eshop.Web\Musilu.Eshop.Web\wwwroot\img\1.jpg"' (27b0a520)
+2022-01-14T20:22:42.1326241+01:00 0HMENICTK3A3B:0000001D [INF] Request finished HTTP/2 GET https://localhost:5001/img/1.jpg - - - 200 117502 image/jpeg 60.7733ms (791a596a)
+2022-01-14T20:22:42.1389293+01:00 0HMENICTK3A3B:0000000B [INF] Sending file. Request path: '"/lib/jquery/dist/jquery.min.js"'. Physical path: '"D:\Program Files\VisualStudio\Musilu.Eshop.Web\Musilu.Eshop.Web\Musilu.Eshop.Web\wwwroot\lib\jquery\dist\jquery.min.js"' (27b0a520)
+2022-01-14T20:22:42.1391043+01:00 0HMENICTK3A3B:0000000B [INF] Request finished HTTP/2 GET https://localhost:5001/lib/jquery/dist/jquery.min.js - - - 200 89478 application/javascript 122.7980ms (791a596a)
+2022-01-14T20:22:42.1564273+01:00 0HMENICTK3A3B:00000017 [INF] Sending file. Request path: '"/img/CarouselItems/jsfqjsxy.s1v.png"'. Physical path: '"D:\Program Files\VisualStudio\Musilu.Eshop.Web\Musilu.Eshop.Web\Musilu.Eshop.Web\wwwroot\img\CarouselItems\jsfqjsxy.s1v.png"' (27b0a520)
+2022-01-14T20:22:42.1565650+01:00 0HMENICTK3A3B:00000017 [INF] Request finished HTTP/2 GET https://localhost:5001/img/CarouselItems/jsfqjsxy.s1v.png - - - 200 87127 image/png 123.3449ms (791a596a)

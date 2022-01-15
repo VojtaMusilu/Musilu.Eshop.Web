@@ -16,21 +16,23 @@ using Xunit;
 
 namespace Musilu.Eshop.Tests
 {
-    public class HomeControllerTests
+    public class HomeFixture
     {
-        private readonly ILogger<HomeController> _logger;
-        private Mock<IWebHostEnvironment> _mockIWebHostEnvironment = new Mock<IWebHostEnvironment>();
-        private DbContextOptions _options = new DbContextOptionsBuilder<EshopDbContext>()
+        public Mock<IWebHostEnvironment> _mockIWebHostEnvironment = new Mock<IWebHostEnvironment>();
+        public DbContextOptions _options = new DbContextOptionsBuilder<EshopDbContext>()
                                        .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
                                        .Options;
-        private EshopDbContext _databaseContext;
-        private HomeController _controller;
+        public EshopDbContext _databaseContext;
+        public HomeController _controller;
+        private readonly ILogger<HomeController> _logger;
 
-        private readonly string _traceIdentifier = "traceIdentifierTest";
 
-        public HomeControllerTests()
+        public readonly string _traceIdentifier = "traceIdentifierTest";
+
+        public HomeFixture()
         {
             _logger = Mock.Of<ILogger<HomeController>>();
+
             _mockIWebHostEnvironment.Setup(webHostEnv => webHostEnv.WebRootPath).Returns(Directory.GetCurrentDirectory());
 
             _databaseContext = new EshopDbContext(_options);
@@ -50,11 +52,23 @@ namespace Musilu.Eshop.Tests
                 }
             };
         }
+    }
+
+
+
+    public class HomeControllerTests : IClassFixture<HomeFixture>
+    {
+        HomeFixture fixture;
+
+        public HomeControllerTests(HomeFixture fixture)
+        {
+            this.fixture = fixture;
+        }
         [Fact]
         public async Task Index_Success()
         {
             // Arrange
-            IActionResult iActionResult = _controller.Index();
+            IActionResult iActionResult = fixture._controller.Index();
 
             var viewResult = Assert.IsType<ViewResult>(iActionResult);
 
@@ -66,7 +80,7 @@ namespace Musilu.Eshop.Tests
         [Fact]
         public async Task Privacy_Success()
         {
-            IActionResult iActionResult = _controller.Privacy();
+            IActionResult iActionResult = fixture._controller.Privacy();
 
             Assert.IsType<ViewResult>(iActionResult);
 
@@ -75,11 +89,11 @@ namespace Musilu.Eshop.Tests
         [Fact]
         public async Task Error_Success()
         {
-            IActionResult iActionResult = _controller.Error();
+            IActionResult iActionResult = fixture._controller.Error();
 
             var viewResult = Assert.IsType<ViewResult>(iActionResult);
             var error = Assert.IsAssignableFrom<ErrorViewModel>(viewResult.Model);
-            Assert.Equal(_traceIdentifier, error.RequestId);
+            Assert.Equal(fixture._traceIdentifier, error.RequestId);
 
         }
 

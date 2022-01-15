@@ -27,19 +27,34 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Musilu.Eshop.Tests
 {
-    public class AccountControllerTests
+
+    public class AccountFixture
     {
-      
-        [Fact]
-        public async Task Login_Success()
+        public string _ValidUsername = "superadmin";
+        public string _ValidPassword = "123";
+
+        public Mock<ISecurityApplicationService> _mockISecurityApplicationService;
+        public EshopDbContext _databaseContext;
+
+
+        public AccountFixture()
         {
-            // Arrange
-            var mockISecurityApplicationService = new Mock<ISecurityApplicationService>();
-            mockISecurityApplicationService.Setup(security => security.Login(It.IsAny<LoginViewModel>()))
+
+            DbContextOptions options = new DbContextOptionsBuilder<EshopDbContext>()
+                                       .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
+                                       .Options;
+            _databaseContext = new EshopDbContext(options);
+            _databaseContext.Database.EnsureCreated();
+
+
+
+
+            _mockISecurityApplicationService = new Mock<ISecurityApplicationService>();
+            _mockISecurityApplicationService.Setup(security => security.Login(It.IsAny<LoginViewModel>()))
            .Returns<LoginViewModel>((loginVM) => {
                return Task<bool>.Run(() =>
                {
-                   if (loginVM.Username == "superadmin" && loginVM.Password == "123")
+                   if (loginVM.Username == _ValidUsername && loginVM.Password == _ValidPassword)
                    { return true; }
                    else
                    { return false; }
@@ -47,11 +62,65 @@ namespace Musilu.Eshop.Tests
                });
            });
 
+            _mockISecurityApplicationService.Setup(security => security.Register(It.IsAny<RegisterViewModel>(), Roles.Customer))
+                .Returns((RegisterViewModel vm, Roles role) => {
+                    return Task<string[]>.Run(() =>
+                    {
 
+                        User user = new User()
+                        {
+                            UserName = vm.Username,
+                            FirstName = vm.FirstName,
+                            LastName = vm.LastName,
+                            Email = vm.Email,
+                            PhoneNumber = vm.Phone
+                        };
+
+                        string[] errors = null;
+                        var result = _databaseContext.Users.AddAsync(user);
+                        _databaseContext.SaveChanges();
+
+                        if (result.IsCompletedSuccessfully == false)
+                        {
+                            errors.Append("couldnt insert into db");
+                        }
+
+
+                        return errors;
+
+                    });
+                });
+
+
+
+
+
+
+        }
+
+
+
+    }
+
+
+
+    public class AccountControllerTests : IClassFixture<AccountFixture>
+    {
+        AccountFixture fixture;
+
+        public AccountControllerTests(AccountFixture fixture){
+
+            this.fixture = fixture;
+
+        }
+
+        [Fact]
+        public async Task Login_Success()
+        {
+            // Arrange
             LoginViewModel loginViewModel = GetLoginVM_Valid();
 
-
-            AccountController controller = new AccountController(mockISecurityApplicationService.Object);
+            AccountController controller = new AccountController(fixture._mockISecurityApplicationService.Object);
             IActionResult iActionResult = null;
 
 
@@ -64,31 +133,15 @@ namespace Musilu.Eshop.Tests
             Assert.Matches(redirect.ActionName, nameof(HomeController.Index));
             Assert.Matches(redirect.ControllerName, nameof(HomeController).Replace("Controller", String.Empty));
             Assert.Matches(redirect.RouteValues.Single((pair) => pair.Key == "area").Value.ToString(), String.Empty);
-
-
         }
         
+
         [Fact]
         public async Task Login_Fail()
         {
             // Arrange
-            var mockISecurityApplicationService = new Mock<ISecurityApplicationService>();
-            mockISecurityApplicationService.Setup(security => security.Login(It.IsAny<LoginViewModel>()))
-            .Returns<LoginViewModel>((loginVM) => { return Task<bool>.Run(() =>
-               {
-                   if (loginVM.Username == "superadmin" && loginVM.Password == "123")
-                   { return true; }
-                   else
-                   { return false; }
-
-               });
-            });
-
             LoginViewModel loginViewModel = GetLoginVM_Invalid();
-
-
-            AccountController controller = new AccountController(mockISecurityApplicationService.Object);
-            controller.ObjectValidator = new ObjectValidator();
+            AccountController controller = new AccountController(fixture._mockISecurityApplicationService.Object);
             IActionResult iActionResult = null;
 
 
@@ -98,11 +151,8 @@ namespace Musilu.Eshop.Tests
 
             // Assert
             ViewResult redirect = Assert.IsType<ViewResult>(iActionResult);
-
-
-            var model = Assert.IsAssignableFrom<LoginViewModel>(redirect.ViewData.Model);
             
-
+            var model = Assert.IsAssignableFrom<LoginViewModel>(redirect.ViewData.Model);
             Assert.True(model.LoginFailed);
 
         }
@@ -115,70 +165,27 @@ namespace Musilu.Eshop.Tests
         public async Task Register_Success()
         {
 
-            DbContextOptions options = new DbContextOptionsBuilder<EshopDbContext>()
-                                       .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
-                                       .Options;
-            var databaseContext = new EshopDbContext(options);
-            databaseContext.Database.EnsureCreated();
-
-
-            var mockISecurityApplicationService = new Mock<ISecurityApplicationService>();
-            var mockSecurityIdentityApplicationService = new Mock<SecurityIdentityApplicationService>();
-
-
+            //Arrange
             RegisterViewModel rVM = GetRegisterVM_Valid();
 
+            AccountController controller = new AccountController(fixture._mockISecurityApplicationService.Object);
+            controller.ModelState.Clear();
 
-            AccountController controller = new AccountController(mockISecurityApplicationService.Object);
             IActionResult iActionResult = null;
 
 
-
-
-            mockISecurityApplicationService.Setup(security => security.Register(It.IsAny<RegisterViewModel>(), Roles.Customer))
-                .Returns((RegisterViewModel vm, Roles role) => {
-                    return Task<string[]>.Run(() =>
-                    {
-                        
-                        User user = new User()
-                        {
-                            UserName = vm.Username,
-                            FirstName = vm.FirstName,
-                            LastName = vm.LastName,
-                            Email = vm.Email,
-                            PhoneNumber = vm.Phone
-                        };
-
-                        string[] errors = null;
-                        var result = databaseContext.Users.AddAsync(user);
-                        databaseContext.SaveChanges();
-
-                        if (result.IsCompletedSuccessfully == false)
-                        {
-                            errors.Append("couldnt insert into db");
-                        }
-
-
-                        return errors;
-
-                    });
-                });
-
-
-            controller.ModelState.Clear();
-
+            //Act
             iActionResult = await controller.Register(rVM);
-
 
 
             // Assert
             RedirectToActionResult redirect = Assert.IsType<RedirectToActionResult>(iActionResult);
             Assert.Matches(redirect.ActionName, nameof(AccountController.Login));
 
-            int userCount = (await databaseContext.Users.ToListAsync()).Count;
+            int userCount = (await fixture._databaseContext.Users.ToListAsync()).Count;
             Assert.Equal(1, userCount);
 
-            Assert.Single(await databaseContext.Users.ToListAsync());
+            Assert.Single(await fixture._databaseContext.Users.ToListAsync());
 
 
         }
@@ -189,76 +196,28 @@ namespace Musilu.Eshop.Tests
         [Fact]
         public async Task Register_Fail()
         {
-            DbContextOptions options = new DbContextOptionsBuilder<EshopDbContext>()
-                                       .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
-                                       .Options;
-            var databaseContext = new EshopDbContext(options);
-            databaseContext.Database.EnsureCreated();
-
-
-            var mockISecurityApplicationService = new Mock<ISecurityApplicationService>();
-            var mockSecurityIdentityApplicationService = new Mock<SecurityIdentityApplicationService>();
-
-
+           
+            //Arrange
             RegisterViewModel rVM = GetRegisterVM_Invalid();
-
-
-            
-            mockISecurityApplicationService.Setup(security => security.Register(It.IsAny<RegisterViewModel>(), Roles.Customer))
-                .Returns((RegisterViewModel vm, Roles role) => {
-                    return Task<string[]>.Run(() =>
-                    {
-                        // nafejkování metody security.Register(registerVM, Models.Identity.Roles.Customer)
-                        User user = new User()
-                        {
-                            UserName = vm.Username,
-                            FirstName = vm.FirstName,
-                            LastName = vm.LastName,
-                            Email = vm.Email,
-                            PhoneNumber = vm.Phone
-                        };
-
-                        // asi by se to nemělo takhle napřímo dávat do databáze, a měl by se spíš namockovat userManager ?????
-                        // ale to mi furt nejde :)))))))
-                        string[] errors = null;
-                        var result = databaseContext.Users.AddAsync(user);
-                        databaseContext.SaveChanges();
-                        
-                        if (result.IsCompletedSuccessfully == false)
-                        {
-                            errors.Append("couldnt insert into db");
-                        }
-
-
-                        return errors;
-
-                    });
-                });
-
-
-            AccountController controller = new AccountController(mockISecurityApplicationService.Object);
+            AccountController controller = new AccountController(fixture._mockISecurityApplicationService.Object);
             IActionResult iActionResult = null;
 
-
-            // explicitní nastavení že registerViewModel je invalid,
-            // protože controller ho validovat neumí,
-            // takže i když se mu pošle blbej registerViewModel, tak bez tohodle nastavení test vždy projde
-            // https://stackoverflow.com/a/22563585
+            // nastavení že registerViewModel není valid,
             controller.ModelState.AddModelError("test", "test");
 
 
-
+            // Act
             iActionResult = await controller.Register(rVM);
 
 
 
             // Assert
-            ViewResult redirect = Assert.IsType<ViewResult>(iActionResult);
+            Assert.IsType<ViewResult>(iActionResult);
 
-            int userCount = (await databaseContext.Users.ToListAsync()).Count;
+            int userCount = (await fixture._databaseContext.Users.ToListAsync()).Count;
             Assert.Equal(0, userCount);
 
-            Assert.Empty(await databaseContext.Users.ToListAsync());
+            Assert.Empty(await fixture._databaseContext.Users.ToListAsync());
 
 
         }
@@ -269,15 +228,9 @@ namespace Musilu.Eshop.Tests
         public async Task Logout_Success()
         {
             // Arrange
-            var mockISecurityApplicationService = new Mock<ISecurityApplicationService>();
-            mockISecurityApplicationService.Setup(security => security.Logout())
-           .Returns(() => Task<bool>.Run(() => true));
-
-
             LoginViewModel loginViewModel = GetLoginVM_Valid();
 
-
-            AccountController controller = new AccountController(mockISecurityApplicationService.Object);
+            AccountController controller = new AccountController(fixture._mockISecurityApplicationService.Object);
             IActionResult iActionResult = null;
 
 
@@ -298,8 +251,8 @@ namespace Musilu.Eshop.Tests
         {
             return new LoginViewModel()
             {
-                Username = "superadmin",
-                Password = "123"
+                Username = fixture._ValidUsername,
+                Password = fixture._ValidPassword
             };
         }
         

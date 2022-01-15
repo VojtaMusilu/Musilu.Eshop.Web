@@ -4,7 +4,7 @@ for details on configuring this project to bundle and minify static web assets. 
 
 .parallax {
     /* The image used */
-    background-image: url(/img/it.jpg);
+    background-image: url(/img/bg.jpg);
     /* Set a specific height */
     min-height: 100%;
     /* Create the parallax scrolling effect */

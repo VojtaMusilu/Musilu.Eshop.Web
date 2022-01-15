@@ -39,10 +39,6 @@ namespace Musilu.Eshop.Tests
             var mockIWebHostEnvironment = new Mock<IWebHostEnvironment>();
             mockIWebHostEnvironment.Setup(webHostEnv => webHostEnv.WebRootPath).Returns(Directory.GetCurrentDirectory());
 
-            //Nainstalován Nuget package: Microsoft.EntityFrameworkCore.InMemory
-            //databazi vytvori v pameti
-            //Jsou zde konkretni tridy, takze to neni uplne OK - mely by se vyuzit interface jako treba pres IUnitOfWork, IRepository<T>, nebo pres vlastni IDbContext (je pak ale nutne vyuzivat interface i v hlavnim projektu, jinak v unit testech nebude spravne fungovat mockovani)
-            //takto to ale v krizovych situacich taky jde :-)
             DbContextOptions options = new DbContextOptionsBuilder<EshopDbContext>()
                                        .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
                                        .Options;
@@ -75,6 +71,9 @@ namespace Musilu.Eshop.Tests
 
                 }
             }
+
+
+
 
             // Assert
             RedirectToActionResult redirect = Assert.IsType<RedirectToActionResult>(iActionResult);
@@ -111,17 +110,20 @@ namespace Musilu.Eshop.Tests
             controller.ObjectValidator = new ObjectValidator();
             IActionResult iActionResult = null;
 
-
-
+            
             Product testProduct = GetTestProductInvalid();
+
+
+            
+            //Act
+            
+            iActionResult = await controller.Create(testProduct);
+
 
             // Assert
 
-            iActionResult = await controller.Create(testProduct);
-
             var viewResult = Assert.IsType<ViewResult>(iActionResult);
             var model = Assert.IsAssignableFrom<Product>(viewResult.ViewData.Model);
-
 
             int productCount = (await databaseContext.Products.ToListAsync()).Count;
             Assert.Equal(0, productCount);
@@ -184,11 +186,12 @@ namespace Musilu.Eshop.Tests
                     //Act
                     iActionResult = await controller.Edit(testProduct_Edit);
 
-                    testProduct = GetTestProduct(iffMock.Object);
-
-
                 }
             }
+
+
+
+
 
             // Assert
 
@@ -243,7 +246,6 @@ namespace Musilu.Eshop.Tests
             Product testProduct_Edit = null;
 
 
-            //nastavení fakeové IFormFile pomocí MemoryStream
             using (var ms = new MemoryStream())
             {
                 using (var writer = new StreamWriter(ms))
@@ -342,10 +344,8 @@ namespace Musilu.Eshop.Tests
 
             // Assert
 
-
             var redirect = Assert.IsType<RedirectToActionResult>(iActionResult);
             Assert.Matches(redirect.ActionName, nameof(ProductController.Select));
-
 
             int ProductCount = (await databaseContext.Products.ToListAsync()).Count;
             Assert.Equal(0, ProductCount);
@@ -383,7 +383,6 @@ namespace Musilu.Eshop.Tests
             Product testProduct = null;
 
 
-            //nastavení fakeové IFormFile pomocí MemoryStream
             using (var ms = new MemoryStream())
             {
                 using (var writer = new StreamWriter(ms))

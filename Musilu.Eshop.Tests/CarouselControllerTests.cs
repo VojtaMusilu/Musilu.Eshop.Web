@@ -21,27 +21,44 @@ using Musilu.Eshop.Tests.Helpers;
 
 namespace Musilu.Eshop.Tests
 {
-    public class CarouselControllerTests
+
+    public class CarouselFixture
     {
+
+        public Mock<IWebHostEnvironment> _mockIWebHostEnvironment;
+        public CarouselFixture()
+        {
+
+            _mockIWebHostEnvironment = new Mock<IWebHostEnvironment>();
+            _mockIWebHostEnvironment.Setup(webHostEnv => webHostEnv.WebRootPath).Returns(Directory.GetCurrentDirectory());
+
+        }
+    }
+
+    public class CarouselControllerTests : IClassFixture<CarouselFixture>
+    {
+        CarouselFixture fixture;
+
         const string relativeCarouselDirectoryPath = "/img/CarouselItems";
+        const string content = "‰PNG" + "FakeImageContent";
+        const string fileName = "UploadImageFile.png";
 
         private readonly ITestOutputHelper _testOutputHelper;
-        public CarouselControllerTests(ITestOutputHelper testOutputHelper)
+        public CarouselControllerTests(ITestOutputHelper testOutputHelper, CarouselFixture fixture)
         {
             _testOutputHelper = testOutputHelper;
+            this.fixture = fixture;
+
+            Directory.CreateDirectory(Path.Combine(Directory.GetCurrentDirectory() + relativeCarouselDirectoryPath));
+
         }
+
 
         [Fact]
         public async Task CarouselCreate_Success()
         {
             // Arrange
-            var mockIWebHostEnvironment = new Mock<IWebHostEnvironment>();
-            mockIWebHostEnvironment.Setup(webHostEnv => webHostEnv.WebRootPath).Returns(Directory.GetCurrentDirectory());
 
-            //Nainstalován Nuget package: Microsoft.EntityFrameworkCore.InMemory
-            //databazi vytvori v pameti
-            //Jsou zde konkretni tridy, takze to neni uplne OK - mely by se vyuzit interface jako treba pres IUnitOfWork, IRepository<T>, nebo pres vlastni IDbContext (je pak ale nutne vyuzivat interface i v hlavnim projektu, jinak v unit testech nebude spravne fungovat mockovani)
-            //takto to ale v krizovych situacich taky jde :-)
             DbContextOptions options = new DbContextOptionsBuilder<EshopDbContext>()
                                        .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
                                        .Options;
@@ -49,16 +66,11 @@ namespace Musilu.Eshop.Tests
             databaseContext.Database.EnsureCreated();
 
 
-            CarouselController controller = new CarouselController(databaseContext, mockIWebHostEnvironment.Object);
+            CarouselController controller = new CarouselController(databaseContext, fixture._mockIWebHostEnvironment.Object);
             controller.ObjectValidator = new ObjectValidator();
             IActionResult iActionResult = null;
 
 
-
-            string content = "‰PNG" + "FakeImageContent";
-            string fileName = "UploadImageFile.png";
-
-            Directory.CreateDirectory(Path.Combine(Directory.GetCurrentDirectory() + relativeCarouselDirectoryPath));
 
             //nastavení fakeové IFormFile pomocí MemoryStream
             using (var ms = new MemoryStream())
@@ -79,10 +91,6 @@ namespace Musilu.Eshop.Tests
             RedirectToActionResult redirect = Assert.IsType<RedirectToActionResult>(iActionResult);
             Assert.Matches(redirect.ActionName, nameof(CarouselController.Select));
 
-            /*var viewResult = Assert.IsType<ViewResult>(iActionResult);
-            var model = Assert.IsAssignableFrom<IList<CarouselItem>>(viewResult.ViewData.Model);
-            */
-
             int carouselCount = (await databaseContext.CarouselItems.ToListAsync()).Count;
             Assert.Equal(1, carouselCount);
 
@@ -90,13 +98,11 @@ namespace Musilu.Eshop.Tests
 
         }
 
-        
+
         [Fact]
         public async Task CarouselCreate_Fail()
         {
             // Arrange
-            var mockIWebHostEnvironment = new Mock<IWebHostEnvironment>();
-            mockIWebHostEnvironment.Setup(webHostEnv => webHostEnv.WebRootPath).Returns(Directory.GetCurrentDirectory());
 
             DbContextOptions options = new DbContextOptionsBuilder<EshopDbContext>()
                                        .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
@@ -104,8 +110,7 @@ namespace Musilu.Eshop.Tests
             var databaseContext = new EshopDbContext(options);
             databaseContext.Database.EnsureCreated();
 
-
-            CarouselController controller = new CarouselController(databaseContext, mockIWebHostEnvironment.Object);
+            CarouselController controller = new CarouselController(databaseContext, fixture._mockIWebHostEnvironment.Object);
             controller.ObjectValidator = new ObjectValidator();
             IActionResult iActionResult = null;
 
@@ -113,13 +118,15 @@ namespace Musilu.Eshop.Tests
 
             CarouselItem testCarousel = GetTestCarouselItemInvalid();
 
-            // Assert
-
+           
+            // Act
             iActionResult = await controller.Create(testCarousel);
-
+            
+            
+            // Assert
             var viewResult = Assert.IsType<ViewResult>(iActionResult);
             var model = Assert.IsAssignableFrom<CarouselItem>(viewResult.ViewData.Model);
-            
+
 
             int carouselCount = (await databaseContext.CarouselItems.ToListAsync()).Count;
             Assert.Equal(0, carouselCount);
@@ -131,29 +138,18 @@ namespace Musilu.Eshop.Tests
 
 
         [Fact]
-        public async Task CarouselEdit_Success ()
+        public async Task CarouselEdit_Success()
         {
             // Arrange
-            var mockIWebHostEnvironment = new Mock<IWebHostEnvironment>();
-            mockIWebHostEnvironment.Setup(webHostEnv => webHostEnv.WebRootPath).Returns(Directory.GetCurrentDirectory());
-
             DbContextOptions options = new DbContextOptionsBuilder<EshopDbContext>()
                                        .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
                                        .Options;
             var databaseContext = new EshopDbContext(options);
             databaseContext.Database.EnsureCreated();
 
-
-            CarouselController controller = new CarouselController(databaseContext, mockIWebHostEnvironment.Object);
+            CarouselController controller = new CarouselController(databaseContext, fixture._mockIWebHostEnvironment.Object);
             controller.ObjectValidator = new ObjectValidator();
             IActionResult iActionResult = null;
-
-
-
-            string content = "‰PNG" + "FakeImageContent";
-            string fileName = "UploadImageFile.png";
-
-            Directory.CreateDirectory(Path.Combine(Directory.GetCurrentDirectory() + relativeCarouselDirectoryPath));
 
             CarouselItem testCarousel = null;
             CarouselItem testCarousel_Edit = null;
@@ -172,7 +168,7 @@ namespace Musilu.Eshop.Tests
                     databaseContext.Add(testCarousel);
                     databaseContext.SaveChanges();
 
-                    
+
                     //Act
                     iActionResult = await controller.Edit(testCarousel_Edit);
 
@@ -191,7 +187,7 @@ namespace Musilu.Eshop.Tests
 
 
             int carouselCount = (await databaseContext.CarouselItems.ToListAsync()).Count;
-            Assert.Equal(1, carouselCount); 
+            Assert.Equal(1, carouselCount);
             Assert.Single(await databaseContext.CarouselItems.ToListAsync());
 
             var carouselFromDb = (await databaseContext.CarouselItems.ToListAsync()).FirstOrDefault();
@@ -209,9 +205,6 @@ namespace Musilu.Eshop.Tests
         public async Task CarouselEdit_Fail()
         {
             // Arrange
-            var mockIWebHostEnvironment = new Mock<IWebHostEnvironment>();
-            mockIWebHostEnvironment.Setup(webHostEnv => webHostEnv.WebRootPath).Returns(Directory.GetCurrentDirectory());
-
             DbContextOptions options = new DbContextOptionsBuilder<EshopDbContext>()
                                        .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
                                        .Options;
@@ -219,14 +212,10 @@ namespace Musilu.Eshop.Tests
             databaseContext.Database.EnsureCreated();
 
 
-            CarouselController controller = new CarouselController(databaseContext, mockIWebHostEnvironment.Object);
+            CarouselController controller = new CarouselController(databaseContext, fixture._mockIWebHostEnvironment.Object);
             controller.ObjectValidator = new ObjectValidator();
             IActionResult iActionResult = null;
 
-            string content = "‰PNG" + "FakeImageContent";
-            string fileName = "UploadImageFile.png";
-
-            Directory.CreateDirectory(Path.Combine(Directory.GetCurrentDirectory() + relativeCarouselDirectoryPath));
 
             CarouselItem testCarousel = null;
             CarouselItem testCarousel_Edit = null;
@@ -259,7 +248,7 @@ namespace Musilu.Eshop.Tests
             // Assert
 
 
-            var viewResult = Assert.IsType<ViewResult>(iActionResult);
+            Assert.IsType<ViewResult>(iActionResult);
 
             int carouselCount = (await databaseContext.CarouselItems.ToListAsync()).Count;
             Assert.Equal(1, carouselCount);
@@ -281,9 +270,6 @@ namespace Musilu.Eshop.Tests
         public async Task CarouselDelete_Success()
         {
             // Arrange
-            var mockIWebHostEnvironment = new Mock<IWebHostEnvironment>();
-            mockIWebHostEnvironment.Setup(webHostEnv => webHostEnv.WebRootPath).Returns(Directory.GetCurrentDirectory());
-
             DbContextOptions options = new DbContextOptionsBuilder<EshopDbContext>()
                                        .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
                                        .Options;
@@ -291,16 +277,9 @@ namespace Musilu.Eshop.Tests
             databaseContext.Database.EnsureCreated();
 
 
-            CarouselController controller = new CarouselController(databaseContext, mockIWebHostEnvironment.Object);
+            CarouselController controller = new CarouselController(databaseContext, fixture._mockIWebHostEnvironment.Object);
             controller.ObjectValidator = new ObjectValidator();
             IActionResult iActionResult = null;
-
-
-
-            string content = "‰PNG" + "FakeImageContent";
-            string fileName = "UploadImageFile.png";
-
-            Directory.CreateDirectory(Path.Combine(Directory.GetCurrentDirectory() + relativeCarouselDirectoryPath));
 
             CarouselItem testCarousel = null;
 
@@ -339,15 +318,12 @@ namespace Musilu.Eshop.Tests
 
 
         }
-        
-        
+
+
         [Fact]
         public async Task CarouselDelete_Fail()
         {
             // Arrange
-            var mockIWebHostEnvironment = new Mock<IWebHostEnvironment>();
-            mockIWebHostEnvironment.Setup(webHostEnv => webHostEnv.WebRootPath).Returns(Directory.GetCurrentDirectory());
-
             DbContextOptions options = new DbContextOptionsBuilder<EshopDbContext>()
                                        .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
                                        .Options;
@@ -355,16 +331,11 @@ namespace Musilu.Eshop.Tests
             databaseContext.Database.EnsureCreated();
 
 
-            CarouselController controller = new CarouselController(databaseContext, mockIWebHostEnvironment.Object);
+            CarouselController controller = new CarouselController(databaseContext, fixture._mockIWebHostEnvironment.Object);
             controller.ObjectValidator = new ObjectValidator();
             IActionResult iActionResult = null;
 
 
-
-            string content = "‰PNG" + "FakeImageContent";
-            string fileName = "UploadImageFile.png";
-
-            Directory.CreateDirectory(Path.Combine(Directory.GetCurrentDirectory() + relativeCarouselDirectoryPath));
 
             CarouselItem testCarousel = null;
 
@@ -419,7 +390,7 @@ namespace Musilu.Eshop.Tests
                 Image = iff
             };
         }
-        
+
         CarouselItem GetTestCarouselItem_EditAlt(IFormFile iff)
         {
             return new CarouselItem()

@@ -21,46 +21,21 @@ using Musilu.Eshop.Web.Models.Entity;
 using Microsoft.AspNetCore.Http;
 using System.Security.Principal;
 using System.Collections.Generic;
+using Musilu.Eshop.Tests.Helpers;
 
 namespace Musilu.Eshop.Tests
 {
-    public class CustomerOrdersControllerTests
+    public class CustomerOrdersControllerTests : IClassFixture<OrdersFixture>
     {
         private readonly ILogger<HomeController> _logger;
-        private Mock<IWebHostEnvironment> _mockIWebHostEnvironment = new Mock<IWebHostEnvironment>();
+        OrdersFixture fixture;
 
-        private CustomerOrdersController _controller;
-
-        private Mock<ISecurityApplicationService> _mockISecurityApplicationService = new Mock<ISecurityApplicationService>();
-        private DbContextOptions _options = new DbContextOptionsBuilder<EshopDbContext>()
-                               .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
-                               .Options;
-        private EshopDbContext _databaseContext;
-        public CustomerOrdersControllerTests()
+        public CustomerOrdersControllerTests(OrdersFixture fixture)
         {
-            _mockIWebHostEnvironment
-                .Setup(webHostEnv => webHostEnv.WebRootPath)
-                .Returns(Directory.GetCurrentDirectory());
-
 
             _logger = Mock.Of<ILogger<HomeController>>();
 
-
-            _mockISecurityApplicationService
-                .Setup(security => security.GetCurrentUser(It.IsAny<ClaimsPrincipal>()))
-                .Returns(() => {
-                    return Task<bool>.Run(() =>
-                    {
-                        return getTestUser();
-
-                    });
-                });
-
-            _databaseContext = new EshopDbContext(_options);
-
-            _databaseContext.Database.EnsureCreated();
-
-            _controller = new CustomerOrdersController(_mockISecurityApplicationService.Object, _databaseContext);
+            this.fixture = fixture;
 
         }
 
@@ -68,7 +43,7 @@ namespace Musilu.Eshop.Tests
         public async Task Index_Success()
         {
 
-            _controller.ControllerContext = new ControllerContext
+            fixture._ordersController.ControllerContext = new ControllerContext
             {
                 HttpContext = new DefaultHttpContext
                 {
@@ -82,39 +57,39 @@ namespace Musilu.Eshop.Tests
 
             Product product = new Product()
             {
-                ID = 1
+                ID = 5
             };
 
             List<OrderItem> orderItems = new List<OrderItem>()
             {
-                new OrderItem { OrderID = 1,ID = 1,ProductID=1, Product = product}
+                new OrderItem { OrderID = 5,ID = 5,ProductID=5, Product = product}
             };
 
 
-            await _databaseContext.AddAsync(new Order { 
-                UserId = 1, 
-                ID = 1, 
+            await fixture._databaseContext.AddAsync(new Order { 
+                UserId = 5, 
+                ID = 5, 
                 TotalPrice=100, 
-                OrderNumber= "123", 
+                OrderNumber= "55567", 
                 User = getTestUser(),
                 OrderItems = orderItems
 
             });
 
-            await _databaseContext.AddAsync(new Order
+            await fixture._databaseContext.AddAsync(new Order
             {
-                UserId = 2,
-                ID = 2,
-                TotalPrice = 200,
-                OrderNumber = "456",
+                UserId = 20,
+                ID = 20,
+                TotalPrice = 2000,
+                OrderNumber = "45679822",
                 User = getTestUser2(),
                 OrderItems = orderItems
             });
 
-            await _databaseContext.SaveChangesAsync();
+            await fixture._databaseContext.SaveChangesAsync();
 
 
-            IActionResult iActionResult = await _controller.Index();
+            IActionResult iActionResult = await fixture._ordersController.Index();
 
             ViewResult viewResult = Assert.IsType<ViewResult>(iActionResult);
             Assert.IsAssignableFrom<IList<Order>>(viewResult.ViewData.Model);
@@ -130,7 +105,7 @@ namespace Musilu.Eshop.Tests
         public async Task Index_Fail()
         {
 
-            _controller.ControllerContext = new ControllerContext
+            fixture._ordersController.ControllerContext = new ControllerContext
             {
                 HttpContext = new DefaultHttpContext
                 {
@@ -139,9 +114,9 @@ namespace Musilu.Eshop.Tests
             };
 
 
-            IActionResult iActionResult = await _controller.Index();
+            IActionResult iActionResult = await fixture._ordersController.Index();
 
-            NotFoundResult viewResult = Assert.IsType<NotFoundResult>(iActionResult);
+            Assert.IsType<NotFoundResult>(iActionResult);
 
         } 
 
@@ -151,9 +126,9 @@ namespace Musilu.Eshop.Tests
         {
             return new User
             {
-                Id = 1,
-                FirstName = "testFirst",
-                LastName = "testLast"
+                Id = fixture._UserID,
+                FirstName = fixture._UserFName,
+                LastName = fixture._UserLName
             };
         }
         

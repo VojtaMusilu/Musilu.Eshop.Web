@@ -24,6 +24,16 @@ namespace Musilu.Eshop.Web.Models.Database
                 }
                 eshopDbContext.SaveChanges();
             }
+            
+            if (eshopDbContext.Products.Count() == 0)
+            {
+                IList<Product> ps = GenerateProducts();
+                foreach (Product p in ps)
+                {
+                    eshopDbContext.Add(p);
+                }
+                eshopDbContext.SaveChanges();
+            }
         }
 
 
@@ -31,9 +41,9 @@ namespace Musilu.Eshop.Web.Models.Database
         {
             List<CarouselItem> carouselItems = new List<CarouselItem>();
 
-            CarouselItem ci1 = new CarouselItem() { ImageSource = @"\img\1.jpg", ImageAlt = "First slide" };
-            CarouselItem ci2 = new CarouselItem() { ImageSource = @"\img\2.jpg", ImageAlt = "Second slide" };
-            CarouselItem ci3 = new CarouselItem() { ImageSource = @"\img\3.jpg", ImageAlt = "Third slide" };
+            CarouselItem ci1 = new CarouselItem() { ImageSource = @"\img\CarouselItems\1.jpg", ImageAlt = "First slide" };
+            CarouselItem ci2 = new CarouselItem() { ImageSource = @"\img\CarouselItems\2.jpg", ImageAlt = "Second slide" };
+            CarouselItem ci3 = new CarouselItem() { ImageSource = @"\img\CarouselItems\3.jpg", ImageAlt = "Third slide" };
 
             carouselItems.Add(ci1);
             carouselItems.Add(ci2);
@@ -45,13 +55,17 @@ namespace Musilu.Eshop.Web.Models.Database
         {
             List<Product> Products = new List<Product>();
 
-            Product p1 = new Product() { Name = "phone", Category = "electronics", ImageSource = @"\img\products\1.jpg" };
-            Product p2 = new Product() { Name = "phone 2", Category = "electronics" };
-            Product p3 = new Product() { Name = "shirt", Category = "clothes" };
+            Product p1 = new Product() { Name = "phone", Category = "electronics", ImageSource = @"\img\ProductItems\phone1.jpg", Description = "great phone very fast super pretty buy it pls", Price = 10000 };
+            Product p2 = new Product() { Name = "phone 2", Category = "electronics", ImageSource = @"\img\ProductItems\phone2.jpg", Description = "greatest phone even faster much prettier buy it pls", Price = 20000 };
+            Product p3 = new Product() { Name = "shirt", Category = "clothes", ImageSource = @"\img\ProductItems\shirt1.jpg", Description = "a bad shirt. dont buy it", Price = 100 };
+            Product p4 = new Product() { Name = "another shirt", Category = "clothes", ImageSource = @"\img\ProductItems\shirt2.jpg", Description = "worst shirt ever. dont even look at it", Price = 20 };
+            Product p5 = new Product() { Name = "tissues", Category = "toiletries", ImageSource = @"\img\ProductItems\tissues.jpg", Description = "to wipe your tears after spending so much money on those phones only to realize theyre actually bad", Price = 35 };
 
             Products.Add(p1);
             Products.Add(p2);
             Products.Add(p3);
+            Products.Add(p4);
+            Products.Add(p5);
 
             return Products;
         }

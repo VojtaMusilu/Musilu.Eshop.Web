@@ -11,126 +11,123 @@ namespace Musilu.Eshop.Tests
     public class RegisterViewModelTests
     {
 
-        
-        // validace že RegisterViewModel má všechny atributy v poho (required, regex hesla atd...) udělat mimo
-
         [Fact]
         public void RegisterViewModel_Valid()
         {
-            RegisterViewModel sut = GetRegisterVM_Valid();
-            // Set some properties here
-
-            var context = new ValidationContext(sut, null, null);
+            //Arrange
+            RegisterViewModel registerVM = GetRegisterVM_Valid();
+            var context = new ValidationContext(registerVM, null, null);
             var results = new List<ValidationResult>();
-            var isModelStateValid = Validator.TryValidateObject(sut, context, results, true);
+
+            //Act
+            var isModelStateValid = Validator.TryValidateObject(registerVM, context, results, true);
 
             // Assert
-
             Assert.True(isModelStateValid);
         }
 
         [Fact]
         public void RegisterViewModel_InvalidUsername()
         {
-            RegisterViewModel sut = GetRegisterVM_InvalidUsername();
-            
-
-            var context = new ValidationContext(sut, null, null);
+            //Arrange
+            RegisterViewModel registerVM = GetRegisterVM_InvalidUsername();
+            var context = new ValidationContext(registerVM, null, null);
             var results = new List<ValidationResult>();
-            var isModelStateValid = Validator.TryValidateObject(sut, context, results, true);
+
+            //Act
+            var isModelStateValid = Validator.TryValidateObject(registerVM, context, results, true);
 
             // Assert
-
             Assert.False(isModelStateValid);
         }
 
         [Fact]
         public void RegisterViewModel_InvalidPassword_Short()
         {
-            RegisterViewModel sut = GetRegisterVM_InvalidPassword_Short();
-
-
-            var context = new ValidationContext(sut, null, null);
+            //Arrange
+            RegisterViewModel registerVM = GetRegisterVM_InvalidPassword_Short();
+            var context = new ValidationContext(registerVM, null, null);
             var results = new List<ValidationResult>();
-            var isModelStateValid = Validator.TryValidateObject(sut, context, results, true);
+            
+            //Act
+            var isModelStateValid = Validator.TryValidateObject(registerVM, context, results, true);
 
             // Assert
-
             Assert.False(isModelStateValid);
         }
         
         [Fact]
         public void RegisterViewModel_InvalidPassword_NoNumbers()
         {
-            RegisterViewModel sut = GetRegisterVM_InvalidPassword_NoNumbers();
-
-
-            var context = new ValidationContext(sut, null, null);
+            //Arrange
+            RegisterViewModel registerVM = GetRegisterVM_InvalidPassword_NoNumbers();
+            var context = new ValidationContext(registerVM, null, null);
             var results = new List<ValidationResult>();
-            var isModelStateValid = Validator.TryValidateObject(sut, context, results, true);
+
+            //Act
+            var isModelStateValid = Validator.TryValidateObject(registerVM, context, results, true);
 
             // Assert
-
             Assert.False(isModelStateValid);
         }
         
         [Fact]
         public void RegisterViewModel_InvalidPassword_NoSpecialCharacters()
         {
-            RegisterViewModel sut = GetRegisterVM_InvalidPassword_NoSpecialCharacters();
-
-
-            var context = new ValidationContext(sut, null, null);
+            //Arrange
+            RegisterViewModel registerVM = GetRegisterVM_InvalidPassword_NoSpecialCharacters();
+            var context = new ValidationContext(registerVM, null, null);
             var results = new List<ValidationResult>();
-            var isModelStateValid = Validator.TryValidateObject(sut, context, results, true);
+
+            //Act
+            var isModelStateValid = Validator.TryValidateObject(registerVM, context, results, true);
 
             // Assert
-
             Assert.False(isModelStateValid);
         }
         
         [Fact]
         public void RegisterViewModel_InvalidPassword_NoLowercase()
         {
-            RegisterViewModel sut = GetRegisterVM_InvalidPassword_NoLowercase();
-
-
-            var context = new ValidationContext(sut, null, null);
+            //Arrange
+            RegisterViewModel registerVM = GetRegisterVM_InvalidPassword_NoLowercase();
+            var context = new ValidationContext(registerVM, null, null);
             var results = new List<ValidationResult>();
-            var isModelStateValid = Validator.TryValidateObject(sut, context, results, true);
+
+            //Act
+            var isModelStateValid = Validator.TryValidateObject(registerVM, context, results, true);
 
             // Assert
-
             Assert.False(isModelStateValid);
         }
         
         [Fact]
         public void RegisterViewModel_InvalidPassword_NoUppercase()
         {
-            RegisterViewModel sut = GetRegisterVM_InvalidPassword_NoUppercase();
-
-
-            var context = new ValidationContext(sut, null, null);
+            //Arrange
+            RegisterViewModel registerVM = GetRegisterVM_InvalidPassword_NoUppercase();
+            var context = new ValidationContext(registerVM, null, null);
             var results = new List<ValidationResult>();
-            var isModelStateValid = Validator.TryValidateObject(sut, context, results, true);
+
+            //Act
+            var isModelStateValid = Validator.TryValidateObject(registerVM, context, results, true);
 
             // Assert
-
             Assert.False(isModelStateValid);
         }
         
         [Fact]
         public void RegisterViewModel_InvalidRepeatedPassword()
         {
-            RegisterViewModel sut = GetRegisterVM_InvalidRepeatedPassword();
-
-
-            var context = new ValidationContext(sut, null, null);
+            //Arrange
+            RegisterViewModel registerVM = GetRegisterVM_InvalidRepeatedPassword();
+            var context = new ValidationContext(registerVM, null, null);
             var results = new List<ValidationResult>();
-            var isModelStateValid = Validator.TryValidateObject(sut, context, results, true);
+
+            //Act
+            var isModelStateValid = Validator.TryValidateObject(registerVM, context, results, true);
 
             // Assert
-
             Assert.False(isModelStateValid);
         }
         
@@ -138,30 +135,30 @@ namespace Musilu.Eshop.Tests
         [Fact]
         public void RegisterViewModel_InvalidEmail()
         {
-            RegisterViewModel sut = GetRegisterVM_InvalidEmail();
-
-
-            var context = new ValidationContext(sut, null, null);
+            //Arrange
+            RegisterViewModel registerVM = GetRegisterVM_InvalidEmail();
+            var context = new ValidationContext(registerVM, null, null);
             var results = new List<ValidationResult>();
-            var isModelStateValid = Validator.TryValidateObject(sut, context, results, true);
+
+            //Act
+            var isModelStateValid = Validator.TryValidateObject(registerVM, context, results, true);
 
             // Assert
-
             Assert.False(isModelStateValid);
         }
         
         [Fact]
         public void RegisterViewModel_InvalidPhone_Short()
         {
-            RegisterViewModel sut = GetRegisterVM_InvalidPhone_Short();
-
-
-            var context = new ValidationContext(sut, null, null);
+            //Arrange
+            RegisterViewModel registerVM = GetRegisterVM_InvalidPhone_Short();
+            var context = new ValidationContext(registerVM, null, null);
             var results = new List<ValidationResult>();
-            var isModelStateValid = Validator.TryValidateObject(sut, context, results, true);
+
+            //Act
+            var isModelStateValid = Validator.TryValidateObject(registerVM, context, results, true);
 
             // Assert
-
             Assert.False(isModelStateValid);
         }
         
@@ -169,15 +166,15 @@ namespace Musilu.Eshop.Tests
         [Fact]
         public void RegisterViewModel_InvalidPhone_Letters()
         {
-            RegisterViewModel sut = GetRegisterVM_InvalidPhone_Letters();
-
-
-            var context = new ValidationContext(sut, null, null);
+            //Arrange
+            RegisterViewModel registerVM = GetRegisterVM_InvalidPhone_Letters();
+            var context = new ValidationContext(registerVM, null, null);
             var results = new List<ValidationResult>();
-            var isModelStateValid = Validator.TryValidateObject(sut, context, results, true);
+
+            //Act
+            var isModelStateValid = Validator.TryValidateObject(registerVM, context, results, true);
 
             // Assert
-
             Assert.False(isModelStateValid);
         }
 
